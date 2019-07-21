@@ -67,7 +67,7 @@ Old collaborators welcome to join the repository, however it's still preferred t
 * in ``_mina_002_1`` line 481 slightly mismatches apparently because of the chemical name - need to check if the name is correct in the PS2 audio
 * ~~in ``_mina_002_1`` line 562 has no voice~~
 * ~~in ``_mina_002_1`` lines 750 and 765 for some reason has no voices~~ found voice for line 750, voices for 756 are missing
-# * in ``_mina_002_1`` lines 758-760 has no voices (unknown if it was meant to have or not)
+* in ``_mina_002_1`` lines 758-760 has no voices (unknown if it was meant to have or not)
 * ~~in ``_mina_002_1`` line 2633 seems to be slightly censored (KFC reference?) - PS2 check here~~
 * ~~in ``_mina_002_1`` line 5251 has no voices~~
 * ~~in ``_mina_004`` line 251, there is a minor censorship~~
