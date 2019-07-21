@@ -221,7 +221,7 @@ Old collaborators welcome to join the repository, however it's still preferred t
 * in ``_mina_ep`` line 2702 to 2709 were cut from the PS3 script
 * in ``_mina_ep`` line 2718 to 2758 were cut from the PS3 script
 * in ``_mina_tips_004`` line 55 was censored in the PS3 script
-* in ``_mina_tips_004`` lines 233 and 236 were cut from the PS3 script
-* in ``_mina_tips_004`` lines 278 to 292 were cut from the PS3 script
-* in ``_mina_tips_004`` lines 340 to 356 were cut from the PS3 script
-* in ``_mina_tips_004`` line 408 was cut from the PS3 script
+* in ``_mina_tips_008`` lines 233 and 236 were cut from the PS3 script
+* in ``_mina_tips_009`` lines 278 to 292 were cut from the PS3 script
+* in ``_mina_tips_009`` lines 340 to 356 were cut from the PS3 script
+* in ``_mina_tips_009`` line 408 was cut from the PS3 script
