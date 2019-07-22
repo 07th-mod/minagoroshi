@@ -6,62 +6,6 @@ README's going to be updated as the patch is developed. Refer to our [wiki](http
 
 Old collaborators welcome to join the repository, however it's still preferred to fork the repository and update through pull requests.
 
-## Scripts progress
-
-> All scripts are done! Now entering test and bug fixing
-
-- [x] _mina_001.txt
-- [x] _mina_002_1.txt
-- [x] _mina_002_1a.txt
-- [x] _mina_002_1b.txt
-- [x] _mina_002_2.txt
-- [x] _mina_003_1.txt
-- [x] _mina_003_2.txt
-- [x] _mina_004.txt
-- [x] _mina_005.txt
-- [x] _mina_006.txt
-- [x] _mina_007.txt
-- [x] _mina_008.txt
-- [x] _mina_009_1.txt
-- [x] _mina_009_2.txt
-- [x] _mina_010.txt
-- [x] _mina_011_1.txt
-- [x] _mina_011_2.txt
-- [x] _mina_012.txt
-- [x] _mina_013.txt
-- [x] _mina_014.txt
-- [x] _mina_015_1.txt
-- [x] _mina_015_2.txt
-- [x] _mina_016.txt
-- [x] _mina_017.txt
-- [x] _mina_018.txt
-- [x] _mina_019.txt
-- [x] _mina_020.txt
-- [x] _mina_021.txt
-- [x] _mina_022.txt
-- [x] _mina_023_1.txt
-- [x] _mina_023_2.txt
-- [x] _mina_024.txt
-- [x] _mina_025.txt
-- [x] _mina_026.txt
-- [x] _mina_027.txt
-- [x] _mina_028.txt
-- [x] _mina_ep.txt
-- [x] _mina_op.txt
-- [x] _mina_tips_001.txt
-- [x] _mina_tips_002.txt
-- [x] _mina_tips_003.txt
-- [x] _mina_tips_004.txt
-- [x] _mina_tips_005.txt
-- [x] _mina_tips_006.txt
-- [x] _mina_tips_007.txt
-- [x] _mina_tips_008.txt
-- [x] _mina_tips_009.txt
-- [x] _mina_tips_010.txt
-- [x] _mina_tips_011.txt
-- [x] _mina_tips_012.txt
-- [x] _mina_tips_013.txt
-
 ## Known issues (for fixing)
 
 * in ``_mina_002_1`` line 481 slightly mismatches apparently because of the chemical name - need to check if the name is correct in the PS2 audio
