@@ -1,6 +1,6 @@
 # PS3 Voice and Graphics Patch (in progress)
 
-Currently hosting only the automated placed lines. All files need manual fixing, avoid placing them on your game.
+Currently hosting only the automated placed lines. All files need manual fixing, **do not place them on your game**.
 
 README's going to be updated as the patch is developed. Refer to our [wiki](https://07th-mod.com/wiki) for more details about the patch.
 
@@ -8,7 +8,7 @@ Old collaborators welcome to join the repository, however it's still preferred t
 
 ## Scripts progress
 
->Bold lines means "in progress"
+> All scripts are done! Now entering test and bug fixing
 
 - [x] _mina_001.txt
 - [x] _mina_002_1.txt
@@ -36,28 +36,28 @@ Old collaborators welcome to join the repository, however it's still preferred t
 - [x] _mina_017.txt
 - [x] _mina_018.txt
 - [x] _mina_019.txt
-- [ ] **_mina_020.txt**
-- [ ] _mina_021.txt
-- [ ] _mina_022.txt
-- [ ] _mina_023_1.txt
-- [ ] _mina_023_2.txt
-- [ ] _mina_024.txt
-- [ ] _mina_025.txt
-- [ ] _mina_026.txt
-- [ ] _mina_027.txt
-- [ ] _mina_028.txt
-- [ ] _mina_ep.txt
-- [ ] _mina_op.txt
+- [x] _mina_020.txt
+- [x] _mina_021.txt
+- [x] _mina_022.txt
+- [x] _mina_023_1.txt
+- [x] _mina_023_2.txt
+- [x] _mina_024.txt
+- [x] _mina_025.txt
+- [x] _mina_026.txt
+- [x] _mina_027.txt
+- [x] _mina_028.txt
+- [x] _mina_ep.txt
+- [x] _mina_op.txt
 - [x] _mina_tips_001.txt
-- [ ] _mina_tips_002.txt
+- [x] _mina_tips_002.txt
 - [x] _mina_tips_003.txt
-- [ ] _mina_tips_004.txt
-- [ ] _mina_tips_005.txt
+- [x] _mina_tips_004.txt
+- [x] _mina_tips_005.txt
 - [x] _mina_tips_006.txt
 - [x] _mina_tips_007.txt
-- [ ] _mina_tips_008.txt
-- [ ] _mina_tips_009.txt
-- [ ] _mina_tips_010.txt
+- [x] _mina_tips_008.txt
+- [x] _mina_tips_009.txt
+- [x] _mina_tips_010.txt
 - [x] _mina_tips_011.txt
 - [x] _mina_tips_012.txt
 - [x] _mina_tips_013.txt
@@ -197,3 +197,31 @@ Old collaborators welcome to join the repository, however it's still preferred t
 * in ``_mina_019`` line 5516 was censored in the PS3 script
 * in ``_mina_019`` lines 5635 and 5638 were cut from the PS3 script (S12/03/180300671 and S12/03/180300672)
 * in ``_mina_019`` line 5665 was cut from the PS3 script
+* in ``_mina_020`` lines 749 to 770 were cut from the PS3 script
+* in ``_mina_022`` line 2078 was cut from the PS3 script
+* in ``_mina_023_1`` line 593 was cut from the PS3 script (S12/11/280700134)
+* in ``_mina_025`` lines 2019 to 2028 were cut from the PS3 script
+* in ``_mina_027`` line 144 was cut from the PS3 script
+* in ``_mina_027`` line 662 was cut from the PS3 script
+* in ``_mina_028`` line 285 was cut from the PS3 script
+* in ``_mina_ep`` line 913 to 931 were cut from the PS3 script
+* in ``_mina_ep`` line 956 to 962 were cut from the PS3 script
+* in ``_mina_ep`` line 1005 to 1126 were cut from the PS3 script
+* in ``_mina_ep`` line 1133 to 1249 were cut from the PS3 script
+* in ``_mina_ep`` line 1262 to 1300 were cut from the PS3 script
+* in ``_mina_ep`` line 1331 was cut from the PS3 script
+* in ``_mina_ep`` line 1461 to 1489 were cut from the PS3 script
+* in ``_mina_ep`` line 1507 to 1584 were cut from the PS3 script
+* in ``_mina_ep`` line 1681 was cut from the PS3 script
+* in ``_mina_ep`` line 1716 to 1795 were cut from the PS3 script
+* in ``_mina_ep`` line 1962 to 1974 were cut from the PS3 script
+* in ``_mina_ep`` line 2131 was cut from the PS3 script
+* in ``_mina_ep`` line 2359 and 2362 were cut from the PS3 script
+* in ``_mina_ep`` line 2670 was cut from the PS3 script
+* in ``_mina_ep`` line 2702 to 2709 were cut from the PS3 script
+* in ``_mina_ep`` line 2718 to 2758 were cut from the PS3 script
+* in ``_mina_tips_004`` line 55 was censored in the PS3 script
+* in ``_mina_tips_004`` lines 233 and 236 were cut from the PS3 script
+* in ``_mina_tips_004`` lines 278 to 292 were cut from the PS3 script
+* in ``_mina_tips_004`` lines 340 to 356 were cut from the PS3 script
+* in ``_mina_tips_004`` line 408 was cut from the PS3 script
