@@ -1,0 +1,1076 @@
+void main()
+{
+
+	DrawScene( "black", 1000 );
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	PlayBGM( 0, "yorumushi", 120, 0 );
+	DrawScene( "JYT1", 1000 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	PlayBGM( 1, "Suzume", 120, 0 );
+	DrawScene( "JT1", 1000 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	DrawSceneWithMask( "white", "maskm1", 1, 0, 1300 );
+	DrawScene( "Ma1", 1000 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	DrawSceneWithMask( "white", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "M_Hi1", "maskright", 1, 0, 300 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "white", 400 );
+	DrawScene( "Ie2", 0 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Sa_DefA1#", "maskup", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, FALSE );
+	DrawBustshotWithFiltering( 1, "Ri_DefA1#", "maskup", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 1300, TRUE );
+	DisplayWindow();
+	PlayBGM( 0, "z2_hig2", 120, 0 );
+	FadeOutBGM( 1, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+
+	SetSpeedOfMessage( FALSE, 0 );
+
+	OutputLine(NULL, "　待ち合わせ場所には、もう沙都子と梨花ちゃんが待っていた。",
+		   NULL, "Satoko and Rika-chan were already there waiting for me.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　顔中にべたべたと張られた絆創膏が痛々しかったが、",
+		   NULL, "While the injuries on her face (covered with band-aids) looked painful, Satoko seemed to be full of life.", Line_WaitForInput);
+	OutputLine(NULL, "沙都子自身はすこぶる元気で、まるでその傷が、はしゃぎ過ぎた遊びの怪我か何かのような感じさえした。",
+		   NULL, " It almost looked as though her wounds were from playing too hard or something.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「じゃあ、昨夜は結局診療所に泊まったのか。」",
+		   NULL, "\"So you stayed at the clinic last night?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 2, "Sa_AkireruB1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「えぇ、私は全然平気ですのよって言ったんですけど、監督たちが一晩様子を見たいなんて仰りますもので。」",
+		   NULL, "\"Yes. I told him I was fine, but the coach wanted to keep an eye on me.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「お医者さんがそうしろって言うんだから、素直に従った方がいいと思うけどなぁ。」",
+		   NULL, "\"If that's what the doctor said, then you should listen to him.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshot( 0, "Me_AkuwaraiA2#", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「あはははは、わかったー。",
+		   NULL, "\"Ahahahaha, I see!", Line_WaitForInput);
+	OutputLine(NULL, "診療所でひとりでお泊りするのが怖かったんでしょー！",
+		   NULL, " You were scared to stay at the clinic alone, weren't you?", Line_WaitForInput);
+	OutputLine(NULL, "　夜の診療所には成仏してない霊がいっぱいいるそうだからね〜〜！」",
+		   NULL, " I heard there are lots of ghosts inside hospitals!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 1, "Ri_WaraiA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「……沙都子はボクと一緒でないと眠れない体になってしまったのですよ。」",
+		   NULL, "\"......Satoko can't sleep without me.\"", Line_Normal);
+	ClearMessage();
+
+	DrawBustshotWithFiltering( 2, "Re_KaiiB1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawSceneWithMask( "Ie2", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "「はぅ〜！",
+		   NULL, "\"Hauuu!", Line_WaitForInput);
+	OutputLine(NULL, "　どうして一緒じゃないと眠れないのかな、かな！」",
+		   NULL, " Why can't you sleep without her? Why?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Si_TokuiA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「それはですね、",
+		   NULL, "\"That's because...", Line_WaitForInput);
+	OutputLine(NULL, "梨花ちゃまじゃないと沙都子の体の夜泣きを、」",
+		   NULL, " Rika-chama is the only one who can give her comfort...\"", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_furu", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 200 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 128, 64 );
+	DrawScene( "white", 0 );
+	DrawScene( "Ie2", 10 );
+
+	OutputLine(NULL, "　魅音が何か妙なことを言い出そうとした瞬間、どこからともなくタライが飛んできて顔面に当った。",
+		   NULL, "No sooner had Shion finished that sentence than a bucket went flying into her face.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　そして始まる沙都子と詩音の追いかけっこ。",
+		   NULL, "Satoko started chasing Shion in circles, like they were playing tag.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　そんなドタバタがものすごく懐かしい。",
+		   NULL, "I really missed this rambunctious fun.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Re_DefA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「こんな当り前の風景が、もう取り戻せないかもしれないって思ってた。」",
+		   NULL, "\"I thought I'd never see this again.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「…そうだな。",
+		   NULL, "\"...I felt the same.", Line_WaitForInput);
+	OutputLine(NULL, "でもな、取り返したぜ。",
+		   NULL, " But we got it back.", Line_WaitForInput);
+	OutputLine(NULL, "俺たちでな。」",
+		   NULL, " We did this.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Ri_NikoA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「……主に頑張ったのは圭一だと思いますですよ。",
+		   NULL, "\"......I think you did the most.", Line_WaitForInput);
+	OutputLine(NULL, "圭一が相談所に訴えようと自分で言い出して、圭一がみんなで押し掛けようと言ってみんなに声を掛けたのです。」",
+		   NULL, " It was your idea to go to the child consultation center, and you were the one who asked everyone for their support.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshot( 0, "Me_WinkA1#", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「そうだねぇ。",
+		   NULL, "\"I agree.", Line_WaitForInput);
+	OutputLine(NULL, "圭ちゃんが最大の功労者であるのは私も認めるよ。",
+		   NULL, " I think Kei-chan contributed the most.", Line_WaitForInput);
+	OutputLine(NULL, "今回の一件で、雛見沢に前原圭一ありってのはだいぶ知れ渡ったと思うからねぇ！」",
+		   NULL, " Most people in Hinamizawa know who Keiichi Maebara is by now!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 2, "Re_HauA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「はぅ。",
+		   NULL, "\"Hau.", Line_WaitForInput);
+	OutputLine(NULL, "圭一くん有名になってモテモテになっちゃうのかな、かなぁ…？」",
+		   NULL, " Is Keiichi-kun going to be a popular guy now? Is he?\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ChangeBustshot( 0, "Me_WaraiA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「そりゃあモテモテになるねぇ！",
+		   NULL, "\"I bet he'll be incredibly popular!", Line_WaitForInput);
+	OutputLine(NULL, "　婦人会のおばさま方にちやほやされちゃうよ。",
+		   NULL, " Popular among old ladies, that is.", Line_WaitForInput);
+	OutputLine(NULL, "いよ、モテる男は辛いねぇ！」",
+		   NULL, " Ah, I really I envy him!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　そのおばさま方の年齢が３で割ればちょうどいいってのが泣けるけどな…。",
+		   NULL, "I'd be fine with that if I could divide their ages by three...", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "white", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "JOK1", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "　たくさんの人が浴衣姿ですれ違う。",
+		   NULL, "Many people were wearing yukatas.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　こんなのを見てると、まだ６月なのにもう夏真っ盛りという気分になってくる。",
+		   NULL, "It was still June, but it felt more like it was the middle of summer.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "white", "maskup", 1, 0, 300 );
+	DrawScene( "JE1", 1000 );
+
+	OutputLine(NULL, "　境内への階段を上がると、",
+		   NULL, "Once we finished climbing the stairs,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……そこは祭り一色だ。",
+		   NULL, " we could see the festival and the crowd enjoying it.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　古手神社は以前来た時の様子からは想像もつかないくらいの大賑わいを見せていた。",
+		   NULL, "The Furude Shrine was packed with people, leaving the grounds looking nothing like their usual, quiet self.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　色とりどりの提灯が並び、連なる露店やそれに群がる人々の雑多な雰囲気が、とても心地よい。",
+		   NULL, "Lanterns of various colors were hung about, and people were swaming the various festival booths, giving the whole place an unorganized yet pleasant atmosphere.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "JE2", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "「すげぇ人だなぁ！！",
+		   NULL, "\"What a crowd!!", Line_WaitForInput);
+	OutputLine(NULL, "　雛見沢ってこんなに人がいたんだ…。」",
+		   NULL, " I had no idea there were even this many people in Hinamizawa...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Re_WaraiA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「綿流しのお祭りはみんな来るよ。",
+		   NULL, "\"Everyone comes to this festival.", Line_WaitForInput);
+	OutputLine(NULL, "多分、雛見沢の人の半分くらいは来てるんじゃないかな。」",
+		   NULL, " I think at least half of the population of the village is here.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Me_DefA2#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「それだけじゃないよ。",
+		   NULL, "\"There's more than just them.", Line_WaitForInput);
+	OutputLine(NULL, "近隣の町の町会や子供会も招待してる。」",
+		   NULL, " The neighboring town councils and youth groups are invited too.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「そうだよな。",
+		   NULL, "\"I see.", Line_WaitForInput);
+	OutputLine(NULL, "俺たちの学校、あれしか生徒いないのに。",
+		   NULL, " We only have a few students in our school.", Line_WaitForInput);
+	OutputLine(NULL, "今日は子供の姿がやたらたくさんある。」",
+		   NULL, " That explains why there are so many kids around today.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_WaraiA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「お祭りのにぎやかさは、やっぱり子供のにぎやかさだからね。」",
+		   NULL, "\"Hearing the happy cheers of children is the best part of the festival.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　そうだよな。",
+		   NULL, "She's right.", Line_WaitForInput);
+	OutputLine(NULL, "同感だ。",
+		   NULL, " I'm in agreement there.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "JE3", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "　祭りの花の露店もたくさん出ていた。",
+		   NULL, "There were lots of booths around too; they were by far the best part of the festival.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　たこ焼き、やきそば、カキ氷。あんず飴にソースせんべい、チョコバナナ。",
+		   NULL, "Booths selling takoyaki, yakisoba, shaved ice, apricot candy, sauce senbei, chocolate bananas...", Line_WaitForInput);
+	OutputLine(NULL, "ヨーヨーすくいに金魚すくい、射的屋と本当にいっぱいあり、それらにたくさんに人々が群がっていた。",
+		   NULL, " There was a yo-yo game, a goldfish game, a shooting gallery... There were countless booths here.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Me_WaraiA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「露天商は町からわざわざ来てくれてるんだよ。",
+		   NULL, "\"Those booth runners all came from the city.", Line_WaitForInput);
+	OutputLine(NULL, "やっぱりこういうのがないとお祭りは盛り上がらないよねぇ！！」",
+		   NULL, " You can't call it a festival without festival booths!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「で、それを俺たちは荒して回るわけか。",
+		   NULL, "\"So we're going to have a battle in every one of them, huh?", Line_WaitForInput);
+	OutputLine(NULL, "…どんな勝負にせよ、俺は負けないぜ！！」",
+		   NULL, " I'm not going to lose today!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Re_WaraiA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「そうだね。",
+		   NULL, "\"Yeah, same here.", Line_WaitForInput);
+
+	DisableWindow();
+	ChangeBustshot( 1, "Re_HauB1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "……えへへ…がんばろ！」",
+		   NULL, " ...Heh heh... let's do it!\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 2, "Si_WinkB1#", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「はろろーん！",
+		   NULL, "\"Y'ello!!", Line_WaitForInput);
+	OutputLine(NULL, "　遅れて申し訳ないです。",
+		   NULL, " Sorry I'm late.", Line_WaitForInput);
+	OutputLine(NULL, "私がビリでした？",
+		   NULL, " Am I the last one?", Line_WaitForInput);
+	OutputLine(NULL, "　ならこれで全員揃いましたね！」",
+		   NULL, " Everyone's here now, huh?\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "JD1", "maskleft", 1, 0, 300 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Sa_WaraiB1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「このメンバーが揃うと、のんびりお祭りを楽しもうということにはなりませんのねぇ！」",
+		   NULL, "\"Once our club gets together, there's no way we can just sit back and enjoy the festival!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Me_AkuwaraiA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「そりゃあそうだよ！！",
+		   NULL, "\"Of course not!!", Line_WaitForInput);
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_WaraiA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "　今年も行くよー！！",
+		   NULL, " We're doing it again this year!!", Line_WaitForInput);
+	OutputLine(NULL, "　綿流祭、えっと、６人か！",
+		   NULL, " This Watanagashi festival, for this six of us...", Line_WaitForInput);
+	SetSpeedOfMessage( TRUE, 128 );
+
+	PlaySE( 0, "s_furu", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 150 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_furu", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 150 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_furu", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 150 );
+	SetValidityOfInput( TRUE );
+
+	OutputLine(NULL, "　六凶爆闘ぉおぉ！！」",
+		   NULL, " Will be the battle of six evils!!\"", Line_ContinueAfterTyping);
+
+	DrawScene( "F_a", 0 );
+	PlaySE( 0, "s_daidageki", 128, 64 );
+	StartShakingOfWindow( 248, 40, 0, 2, 4*2, FALSE );
+	StartShakingOfAllObjects( 248, 40, 0, 2, 4*2, TRUE );
+
+	OutputLineAll(NULL, "", Line_Normal);
+
+	ClearMessage();
+	DrawScene( "black", 400 );
+	DrawSceneWithMask( "JE2", "maskup", 1, 0, 300 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Ri_WaraiA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「……沙都子。",
+		   NULL, "\"......Satoko.", Line_WaitForInput);
+	OutputLine(NULL, "今年は気兼ねしないで、思いっきり楽しみましょうなのです。」",
+		   NULL, " There's no reason to hold back this year. Let's enjoy the festival with all our might.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Sa_AkuwaraiA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「をっほっほっほ！",
+		   NULL, "\"Oh ho ho!!", Line_WaitForInput);
+	OutputLine(NULL, "　頼まれなくても気兼ねなどしませんわ！",
+		   NULL, " You don't even need to mention it!", Line_WaitForInput);
+	OutputLine(NULL, "　大暴れさせていただきますのよー！！」",
+		   NULL, " I, too, declare that I will be the victor!!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「よっしゃ、沙都子！",
+		   NULL, "\"Yeah, Satoko!", Line_WaitForInput);
+	OutputLine(NULL, "　その意気だぜ！！」",
+		   NULL, " You go, girl!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshot( 2, "Si_WaraiA1#", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「昨日までのことなんか、今夜で吹き飛ばしちゃいましょう！」",
+		   NULL, "\"Let's put everything that happened before tonight behind us!\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 2, "Re_WaraiB1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「今日はみんなで思い切り遊ぼう！",
+		   NULL, "\"Let's play with everything we've got!", Line_WaitForInput);
+	OutputLine(NULL, "　全員が揃うなんて一週間ぶりだもんね！」",
+		   NULL, " It's been a good week since we all got together!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 1, "Me_WinkA2#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「そうさそうさ！",
+		   NULL, "\"Yeah, yeah!", Line_WaitForInput);
+	OutputLine(NULL, "　今夜は全員で祭りを遊び倒すよー！！」",
+		   NULL, " Tonight we're all enjoying this festival to its fullest!!\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	PlayBGM( 0, "B01_Akarui", 120, 0 );
+	DrawBustshotWithFiltering( 0, "Me_DefA1#", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
+	DrawSceneWithMask( "JD3", "maskright", 1, 0, 300 );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	DisableWindow();
+	ChangeBustshot( 0, "Me_AkuwaraiA1#", 200, TRUE );
+	DisplayWindow();
+	Wait( 1000 );
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 0, "mask00" , 0, FALSE, 0, 0, 400, FALSE );
+	DrawBustshot( 2, "Kei_Def1#", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	DisplayWindow();
+	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Sa_AkuwaraiA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+	Wait( 800 );
+	PlaySE( 0, "s_boyoon", 128, 64 );
+	DisableWindow();
+	DrawBustshot( 2, "Kei_Komaru#", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, FALSE );
+	ChangeBustshot( 1, "Sa_OdorokiA1#", 200, TRUE );
+	DisplayWindow();
+	Wait( 1000 );
+	PlaySE( 0, "s_furu", 128, 64 );
+	DrawScene( "F_a", 0 );
+	PlaySE( 0, "s_Down", 128, 64 );
+	Wait( 200 );
+	DrawBustshot( 1, "Sa_OdorokiB1#", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 8, 0, FALSE );
+	DrawScene( "JD3", 10 );
+	Wait( 100 );
+	DrawScene( "F_b", 0 );
+	PlaySE( 0, "s_Down", 128, 64 );
+	Wait( 200 );
+	DrawScene( "JD3", 400 );
+	PlaySE( 0, "s_boyoon", 128, 64 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 0, "Re_KaiiB1#", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
+	DisplayWindow();
+	Wait( 1000 );
+	PlaySE( 0, "s_Kamera", 128, 64 );
+	DrawScene( "white", 10 );
+	DrawScene( "JD2", 0 );
+	DisableWindow();
+	DrawBustshot( 2, "Tomi_Def#", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, FALSE );
+	DrawBustshot( 1, "Ta_Def#", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 8, 400, TRUE );
+	DisplayWindow();
+	Wait( 1000 );
+	DrawSceneWithMask( "JE2", "maskright", 1, 0, 300 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Ta_Def#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Me_WinkA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	DisableWindow();
+	ChangeBustshot( 2, "Ta_Warai#", 200, TRUE );
+	DisplayWindow();
+	PlaySE( 0, "s_Down", 128, 64 );
+	DisableWindow();
+	DrawBustshot( 1, "Me_TohohoA1#", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 8, 0, TRUE );
+	DisplayWindow();
+	StartShakingOfWindow( 248, 40, 0, 2, 3*2, FALSE );
+	StartShakingOfAllObjects( 248, 40, 0, 2, 3*2, TRUE );
+	DisableWindow();
+	DrawBustshotWithFiltering( 0, "Si_AkuwaraiA1#", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
+	DisplayWindow();
+	Wait( 500 );
+	DisableWindow();
+	ChangeBustshot( 0, "Si_TokuiA1#", 200, TRUE );
+	DisplayWindow();
+	Wait( 400 );
+	DisableWindow();
+	ChangeBustshot( 1, "Me_OdorokiA1#", 200, TRUE );
+	DisplayWindow();
+	DisableWindow();
+	ChangeBustshot( 0, "Si_WinkA1#", 200, TRUE );
+	DisplayWindow();
+	DisableWindow();
+	FadeBustshotWithFiltering( 0, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	ChangeBustshot( 2, "Ta_Akuwarai#", 200, TRUE );
+	DisplayWindow();
+	PlaySE( 0, "s_cork", 128, 64 );
+	DisableWindow();
+	ChangeBustshot( 1, "Me_HauA1#", 200, TRUE );
+	DisplayWindow();
+	Wait( 1000 );
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	DrawScene( "JE3", 0 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Tie1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, FALSE );
+	DrawBustshotWithFiltering( 1, "Iri_Def2#", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
+	DisplayWindow();
+	PlaySE( 0, "s_jikuu", 128, 64 );
+	DisableWindow();
+	ChangeBustshot( 2, "Iri_Warai#", 200, TRUE );
+	DisplayWindow();
+	PlaySE( 0, "s_Down", 128, 64 );
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "maskdown" , 7, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 1, "Sa_YareyareA1#", "maskleft", 7, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Ri_WaraiA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+	PlaySE( 0, "s_boyoon", 128, 64 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 0, "Iri_Warai#", "maskup", 7, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
+	DisplayWindow();
+	PlaySE( 0, "s_Down", 128, 64 );
+	DrawScene( "white", 0 );
+	DrawScene( "JE3", 0 );
+	DisableWindow();
+	DrawBustshot( 2, "Ri_WaraiA1#", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, FALSE );
+	DrawBustshot( 1, "Sa_YareyareA1#", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 8, 200, TRUE );
+	//ChangeBustshot( 1, "Sa_YareyareA1#", 200, TRUE );
+	DisplayWindow();
+	Wait( 500 );
+	DisableWindow();
+	ChangeBustshot( 1, "Sa_AkireruB1#", 200, TRUE );
+	DisplayWindow();
+	Wait( 800 );
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	DrawBustshot( 0, "Kei_Warai#", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 0, FALSE );
+	DrawScene( "JE2", 400 );
+	DisableWindow();
+	DrawBustshot( 2, "Re_WaraiA1#", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, FALSE );
+	DrawBustshot( 1, "Tomi_Warai#", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 8, 400, TRUE );
+	DisplayWindow();
+
+
+	DisableWindow();
+
+	DrawSpriteWithFiltering( 10, "R_black", "maskright", 1, -320, -240, FALSE, FALSE, 0, 0, 14, 1300, TRUE );
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+
+
+	//fixed size version forces the sprite to a specific size, regardless of the source image size
+	DrawSpriteFixedSize( 11, "Mina1", NULL, 50, -240, 0, 0, 0, 257, 480, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	//DrawSprite( 1, "Mina1", NULL, 50, -240, 0, 0, 0, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	Wait( 20000 );
+	DisplayWindow();
+
+	DrawScene( "black", 1000 );
+	DrawBustshotWithFiltering( 2, "Oisi2", "maskup", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawSceneWithMask( "JD3", "maskup", 1, 0, 300 );
+	SetSpeedOfMessage( FALSE, 0 );
+
+	OutputLine(NULL, "「おや皆さん、さっそくはしゃぎ回っているようですねぇ。」",
+		   NULL, "\"My, hello. You all seem to be enjoying yourselves.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Aks_Warai", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「やぁ、梨花ちゃん。",
+		   NULL, "\"Hi, Rika-chan.", Line_WaitForInput);
+	OutputLine(NULL, "約束どおりに来たよ。",
+		   NULL, " I'm here like I promised.", Line_WaitForInput);
+	OutputLine(NULL, "盛大に盛り上がってるね。」",
+		   NULL, " The festival sure has grown into a splendor.\"", Line_Normal);
+	ClearMessage();
+
+	DrawBustshotWithFiltering( 2, "Sa_DefA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawSceneWithMask( "JE3", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "「どちら様でございますのかしら。",
+		   NULL, "\"Who's this guy?", Line_WaitForInput);
+	OutputLine(NULL, "梨花の知り合いですの？」",
+		   NULL, " You know him, Rika?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Ri_DefA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「……赤坂は肝心な時にいなくて使えないのです。」",
+		   NULL, "\"......Akasaka is never there when I need him.\"", Line_Normal);
+	ClearMessage();
+	DrawSceneWithMask( "JD3", "maskleft", 1, 0, 300 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Aks_Def", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「え？",
+		   NULL, "\"Huh?", Line_WaitForInput);
+	OutputLine(NULL, "　何だろう。",
+		   NULL, " What are you talking about?", Line_WaitForInput);
+	OutputLine(NULL, "私、怒らせるようなこと、しましたか…？」",
+		   NULL, " Did I do something to make you upset...?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Oisi2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「なっはっはっは。",
+		   NULL, "\"Na ha ha ha.", Line_WaitForInput);
+	OutputLine(NULL, "実はですね、赤坂さんが温泉へ行かれているほんの一週間ほどの間にですね、とても大変なことがあったんです。」",
+		   NULL, " While you were at the hot springs with your wife, things sure got hectic around here.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "mask00" , 0, FALSE, 0, 0, 400, FALSE );
+	FadeBustshotWithFiltering( 2, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
+	DrawBustshot( 0, "Re_HauA1#", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「はぅ、梨花ちゃんが知らないお兄さんと一緒だ。",
+		   NULL, "\"Hau, Rika-chan is talking with some strange older guy.", Line_WaitForInput);
+	OutputLine(NULL, "知り合いかな、かな！」",
+		   NULL, " I wonder if he's someone she knows. I wonder!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Me_TohohoA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「何よ〜どちら様？どちら様？！",
+		   NULL, "\"Who is he? Who is he?!", Line_WaitForInput);
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_WinkA2#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "　おじさんたちにも紹介してよ〜！！」",
+		   NULL, " Introduce him to this ol' man, too!\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	DrawScene( "JE4", 1000 );
+
+
+	DisableWindow();
+
+	DrawSpriteWithFiltering( 0, "L_black", "maskleft", 1, -320, -240, FALSE, FALSE, 0, 0, 14, 1300, TRUE );
+
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+
+	DrawSpriteFixedSize( 1, "Mina2", NULL, -307, -240, 0, 0, 0, 257, 480, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	Wait( 30000 );
+	DisplayWindow();
+
+	DrawScene( "JE1", 1000 );
+	SetSpeedOfMessage( FALSE, 0 );
+
+	OutputLine(NULL, "「おんや！",
+		   NULL, "\"Hey!", Line_WaitForInput);
+	OutputLine(NULL, "　前原の坊主じゃないかー！",
+		   NULL, " Maebara boy!!", Line_WaitForInput);
+	OutputLine(NULL, "　噂には聞いてるぜ！」",
+		   NULL, " I heard what you did!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「うんうん聞いたよ！",
+		   NULL, "\"I heard about it too!", Line_WaitForInput);
+	OutputLine(NULL, "　何でもお魎の婆さんと日本刀ぶつけ合って納得させたって言うじゃないか！",
+		   NULL, " I heard you fought Oryou-san with a sword until she finally gave in!", Line_WaitForInput);
+	OutputLine(NULL, "　やるねぇ！！」",
+		   NULL, " Good on you!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「そそ、そんなことしてないっす！",
+		   NULL, "\"I-I-I didn't do that...!", Line_WaitForInput);
+	OutputLine(NULL, "　平和に話し合いをしただけですよ…！」",
+		   NULL, " We just had a peaceful negotiation...!\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "JD2", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "「しかし偉いな！",
+		   NULL, "\"Still, I'm proud of you!", Line_WaitForInput);
+	OutputLine(NULL, "　みんなを率いてお役所とちゃんと交渉したんだもんな！」",
+		   NULL, " You led everyone and actually negotiated with the center!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「前原のお兄ちゃん、あんず飴サービスするよ！",
+		   NULL, "\"Hey you, I'll give you some apricot candy!", Line_WaitForInput);
+	OutputLine(NULL, "　何本いる？！」",
+		   NULL, " How many do you want?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Re_WaraiA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「圭一くん、いいないいな！",
+		   NULL, "\"Wow Keiichi-kun!", Line_WaitForInput);
+	OutputLine(NULL, "　今日はモテモテだね！」",
+		   NULL, " You're so popular today!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Ri_WaraiA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「……圭一は熟した果実がお好きに違いないのです。」",
+		   NULL, "\"...I'm sure Keiichi is into old ladies, too.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 2, "Sa_AkireruA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「梨花が何を言ってるかわかりませんが、どうせロクな意味ではありませんわね…。」",
+		   NULL, "\"I don't know what Rika's trying to say, and I don't even want to know...\"", Line_Normal);
+	ClearMessage();
+
+
+	DrawSceneWithMask( "black", "maskright", 1, 0, 1300 );
+	DrawSceneWithMask( "JE2", "maskright", 1, 0, 1300 );
+
+	DisableWindow();
+
+	DrawSpriteWithFiltering( 0, "R_black", "maskright", 1, -320, -240, FALSE, FALSE, 0, 0, 14, 1300, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+
+	DrawSpriteFixedSize( 1, "Mina3", NULL, 50, -240, 0, 0, 0, 257, 480, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	Wait( 30000 );
+
+	DrawSpriteFixedSize( 1, "Mina4", NULL, 50, -240, 0, 0, 0, 257, 480, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	Wait( 30000 );
+	DisplayWindow();
+
+
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	DrawScene( "JY2", 1000 );
+
+	SetSpeedOfMessage( FALSE, 0 );
+
+	OutputLine(NULL, "「あ、昨日助けに来てくれたおじさん…！",
+		   NULL, "\"Oh, that's the guy who helped us yesterday...!", Line_WaitForInput);
+	OutputLine(NULL, "　昨日はどうもありがとうございました！」",
+		   NULL, " Thank you so very much for your assistance!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Me_WinkA2#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「あー、紹介が遅れてるね。",
+		   NULL, "\"Oh, I should've introduced him to you then.", Line_WaitForInput);
+	OutputLine(NULL, "県議会議員をされてる三郎叔父さんだよ。",
+		   NULL, " This is my uncle Saburou, who's in the prefectural assembly.", Line_WaitForInput);
+	OutputLine(NULL, "こっちは市議会議員をされてる健叔父さん。」",
+		   NULL, " This is my other uncle Ken, and he's in the city council.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「昨日は来るのが遅くなってすまんかったね！",
+		   NULL, "\"Sorry that we were late yesterday!", Line_WaitForInput);
+	OutputLine(NULL, "　相談所への道を一本間違えちゃってなぁ、がっはっはっは！」",
+		   NULL, " We got lost on our way there. Gah ha ha ha ha!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Si_WaraiB1#", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「いやぁ、でも頼もしかったです！",
+		   NULL, "\"No, no, you both were a great help!", Line_WaitForInput);
+	OutputLine(NULL, "　やっぱり議員は強いですねー！」",
+		   NULL, " I was really impressed to see the power of elected officials!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「住民の代わりに喧嘩をするのが仕事だからの！",
+		   NULL, "\"Well, we're chosen to fight in place of the citizens!", Line_WaitForInput);
+	OutputLine(NULL, "　強くて当然だわい！」",
+		   NULL, " Of course we're strong!\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「沙都子ちゃんも無事で本当に良かった。",
+		   NULL, "\"We're glad Satoko-chan is safe.", Line_WaitForInput);
+	OutputLine(NULL, "これからは何かあったらいつでも相談してください。",
+		   NULL, " Talk to us again if there's anything you need.", Line_WaitForInput);
+	OutputLine(NULL, "必ず味方になりますよ！」",
+		   NULL, " We'll be glad to help!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　そう頼もしく言いながら、彼らは沙都子の頭を撫でてくれた。",
+		   NULL, "They rubbed Satoko's head while they spoke.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawBustshot( 1, "Sa_HauA1#", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 8, 400, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「あ、……ありがとうございますですわ…。」",
+		   NULL, "\"Th... Thank you very much...\"", Line_Normal);
+	ClearMessage();
+
+	FadeBustshotWithFiltering( 1, "mask00" , 0, FALSE, 0, 0, 1000, TRUE );
+
+	DisableWindow();
+
+	DrawSpriteWithFiltering( 0, "L_black", "maskleft", 1, -320, -240, FALSE, FALSE, 0, 0, 14, 1300, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+
+	DrawSpriteFixedSize( 1, "Mina5", NULL, -307, -240, 0, 0, 0, 257, 480, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	Wait( 30000 );
+	DisplayWindow();
+
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	DrawScene( "JE1", 1000 );
+	SetSpeedOfMessage( FALSE, 0 );
+
+	OutputLine(NULL, "「本当に立派なお子さんをお持ちで羨ましいですなぁ！」",
+		   NULL, "\"You must be proud of your son!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「いえいえ、圭一なんてとんでもない…！",
+		   NULL, "\"Oh, no, it's not really a big deal...!", Line_WaitForInput);
+	OutputLine(NULL, "　お！　圭一〜！",
+		   NULL, " Hey, Keiichi!", Line_WaitForInput);
+	OutputLine(NULL, "　お父さんたちも来たぞ〜！」",
+		   NULL, " We're here too!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Re_WaraiA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「あー、圭一くんのご両親だー！",
+		   NULL, "\"Keiichi-kun's parents are here!", Line_WaitForInput);
+
+	DisableWindow();
+	ChangeBustshot( 2, "Re_WaraiB1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "　こんばんは〜！」",
+		   NULL, " Good evening!\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "JE2", "maskleft", 1, 0, 300 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Ri_WaraiA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「……初めましてなのです。",
+		   NULL, "\"Nice to meet you.", Line_WaitForInput);
+	OutputLine(NULL, "圭一のにゃーにゃーをしております、梨花なのです。」",
+		   NULL, " I'm Keiichi's meow meow, Rika.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Sa_OdorokiA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「ど、どうも初めましてですわ。",
+		   NULL, "\"Nice to meet you.", Line_WaitForInput);
+	OutputLine(NULL, "北条沙都子と申しますわ。」",
+		   NULL, " My name is Satoko Houjou.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「あなたが沙都子ちゃんね。",
+		   NULL, "\"So you're Satoko-chan.", Line_WaitForInput);
+	OutputLine(NULL, "こんなに酷い怪我をして本当に可哀想に。」",
+		   NULL, " Such a poor little girl... look at her face!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「今後も何かあったら圭一をぜひこき使ってやってください！",
+		   NULL, "\"You can make use of Keiichi if anything happens again!", Line_WaitForInput);
+	OutputLine(NULL, "　それと引き換えと言っては何ですが、どうですかお嬢さん、ぜひ今度モデルに…！！」",
+		   NULL, " In return... what would you think about modeling for me....?!\"", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_furu", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 200 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_tataku", 128, 64 );
+	StartShakingOfWindow( 248, 40, 0, 2, 3*2, FALSE );
+	StartShakingOfAllObjects( 248, 40, 0, 2, 3*2, TRUE );
+
+	DrawBustshotWithFiltering( 0, "Sa_AkireruA1#", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
+	DrawSceneWithMask( "JE2", "maskleft", 1, 0, 300 );
+
+	OutputLine(NULL, "「な、何だか監督と近い属性を感じるお父さまですわね…。」",
+		   NULL, "\"Y-Your father reminds me a bit of the coach...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「すまん…。",
+		   NULL, "\"Sorry...", Line_WaitForInput);
+	OutputLine(NULL, "こーゆう親父なんだ…。」",
+		   NULL, " That's just the kind of person he is...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 0, "Sa_WaraiB1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「でも、温かくて楽しそうなお父さまでしてよ…！」",
+		   NULL, "\"Still, he seems very nice and fun to be around...!\"", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+	DrawSceneWithMask( "JE3", "maskleft", 1, 0, 300 );
+
+	DisableWindow();
+
+	DrawSpriteWithFiltering( 0, "R_black", "maskright", 1, -320, -240, FALSE, FALSE, 0, 0, 14, 1300, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+
+	DrawSpriteFixedSize( 1, "Mina6", NULL, 50, -240, 0, 0, 0, 257, 480, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	Wait( 30000 );
+	DisplayWindow();
+
+	DrawScene( "JE3", 400 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 0, "Ha_WaraiA1%", "maskc", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9*2, 1300, TRUE );
+	DisplayWindow();
+
+	SetSpeedOfMessage( FALSE, 0 );
+
+	OutputLine(NULL, "「……こんな楽しい綿流しのお祭りは、僕も初めて見ますのです。」",
+		   NULL, "\"......This is the best Watanagashi festival I've ever had.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「そうね。",
+		   NULL, "\"Yes...", Line_WaitForInput);
+	OutputLine(NULL, "…私も初めてよ。",
+		   NULL, " I feel the same way...", Line_WaitForInput);
+	OutputLine(NULL, "…というか、あんたの方が長生きしてるんだもの。",
+		   NULL, " You've been around a lot longer than me.", Line_WaitForInput);
+	OutputLine(NULL, "あんたが初めてなら私にとっても初めてに決まってるじゃないない。」",
+		   NULL, " If it's your best one, then it must be mine too.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 0, "Ha_AuA1%", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「……あぅあぅ。",
+		   NULL, "\"...Au au.", Line_WaitForInput);
+	OutputLine(NULL, "でもきっと、綿流しという名前のお祭りになってからの中でも、一番賑やかで楽しいお祭りだと思いますです。」",
+		   NULL, " Still, I think this is most fun and exciting festival we've had since it became known as Watanagashi.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「そもそも綿流しのお祭りが、楽しいお祭りになったのはここ数年のことでしょう？",
+		   NULL, "\"The Watanagashi festival only became like this just a few years ago, didn't it?", Line_WaitForInput);
+	OutputLine(NULL, "　明治以降は退屈な古手家の儀式だし。",
+		   NULL, " It used to be just a boring traditional ceremony that the Furude family held.", Line_WaitForInput);
+	OutputLine(NULL, "それ以前は鷹野好みのお祭りだったはず。」",
+		   NULL, " And before that, it used to be something different, more like the things that Takano is interested in...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「……あうあうあぅ。」",
+		   NULL, "\"......Au au au.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「ふふ、ごめん。",
+		   NULL, "\"Sorry...", Line_WaitForInput);
+	OutputLine(NULL, "今日は意地悪はなしね。",
+		   NULL, " I'll try not to be mean to you today.", Line_WaitForInput);
+	OutputLine(NULL, "楽しみましょう。",
+		   NULL, " Let's go have fun.", Line_WaitForInput);
+	OutputLine(NULL, "私たちも。",
+		   NULL, " The both of us.", Line_WaitForInput);
+	OutputLine(NULL, "私とあなたを祀る夜なんだから。」",
+		   NULL, " It's a special night for both me and you.\"", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 1000 );
+	DrawSceneWithMask( "Moon", "maskup", 1, 0, 300 );
+
+	DisableWindow();
+
+	DrawSpriteWithFiltering( 0, "L_black", "maskleft", 1, -320, -240, FALSE, FALSE, 0, 0, 14, 1300, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+
+	DrawSpriteFixedSize( 1, "Mina7", NULL, -307, -240, 0, 0, 0, 257, 480, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	Wait( 30000 );
+
+	DrawSpriteFixedSize( 1, "Mina8", NULL, -307, -240, 0, 0, 0, 257, 480, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	Wait( 30000 );
+
+	DrawSpriteFixedSize( 1, "Mina9", NULL, -307, -240, 0, 0, 0, 257, 480, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	Wait( 30000 );
+
+	DrawSpriteFixedSize( 1, "Mina10", NULL, -307, -240, 0, 0, 0, 257, 480, 0, FALSE, FALSE, 0, 0, 15, 1000, TRUE );
+	Wait( 30000 );
+	DisplayWindow();
+
+	DrawScene( "Moon", 400 );
+
+	CallScript( "&eyeCamp" );
+	SetValidityOfSkipping( FALSE );
+	DrawSceneWithMask( "GetTIP_mina020", "mask1900", 7, 0, 400 );
+	Wait( 5000 );
+	DrawSceneWithMask( "black", "mask1900", 7, 0, 400 );
+	SetValidityOfSkipping( TRUE );
+
+}

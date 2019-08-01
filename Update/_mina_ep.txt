@@ -1,0 +1,2852 @@
+void main()
+{
+
+	PlayBGM( 0, "higurashi", 120, 0 );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　　　　　",
+		   NULL, "              ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "緊急マニュアル第１号",
+		   NULL, "Emergency Manual 1:", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　自然発生的末期発症者（以下Ｌ５と表記）が確認された場合、施設長はＬ５が異常的社会行為を起こす前に迅速に事態を収拾しなくてはならない。",
+		   NULL, "If the existence of a terminal patient (L5) is confirmed, the Institute Director must resolve the situation before the L5 begins engaging in antisocial behavior.", Line_WaitForInput);
+	OutputLine(NULL, "ただし、機密保持に厳重に注意すること。",
+		   NULL, " However, they must ensure that the secret remains hidden.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　その際、施設長は機密保持部隊に対し応援を要請できるものとする。",
+		   NULL, "To that end, the Director may also request assitance from the Secrecy Preservation Unit.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　機密保持部隊は、確保に当たり必要と判断した場合は発砲許可を施設長に対し申請することができる。",
+		   NULL, "As for the Secrecy Preservation Unit, they may request permission to fire from the Institute Director if necessary.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　Ｌ５の確保は極力、生体であることが望ましいが、機密保持上の理由でそれが困難である場合、生死を問わないものとする。",
+		   NULL, "All efforts should be made to secure the L5 subject is alive, but if that proves obstructive to maintaining secrecy, their life may be forfeit.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　全てにおいて機密保持と外部発覚阻止を最優先とすること。",
+		   NULL, "At all times, maintaining secrecy and preventing exposure will be of the highest priority.", Line_WaitForInput);
+	OutputLine(NULL, "ただし、機密保持は外部発覚阻止に優先するものとする。",
+		   NULL, " However, preserving secrecy will take priority over preventing exposure.", Line_Normal);
+	ClearMessage();
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	PlaySE( 0, "s_page", 128, 64 );
+	PlayBGM( 0, "B_Dive", 120, 0 );
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　　　　",
+		   NULL, "        ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "緊急マニュアル付録９　問答集",
+		   NULL, "Emergency Manual Appendix 9 FAQ", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "問．Ｌ５が同時多発的に発生し機密保持部隊の処理能力を超えたと判断される場合、緊急マニュアル第３４号は適用されるのか。",
+		   NULL, "Q. Can Emergency Manual 34 be administered if an outbreak of L5 occurs, putting matters beyond the control of the Secrecy Preservation Unit?", Line_WaitForInput);
+	OutputLine(NULL, "また処理能力超過の判断権限者は施設長と考えて良いのか。",
+		   NULL, " Additionally, is the Institute Director responsible for determining what constitues an out-of-control situation?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "解．上記お見込みの通り。",
+		   NULL, "A. Yes.", Line_Normal);
+	ClearMessage();
+	PlaySE( 0, "s_page", 128, 64 );
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "問．研究施設の致命的な事故により外部に危険物（H170番台）が流出し、Ｌ５の大量発生が見込まれる場合、見込みのみで緊急マニュアル第３４号は適用されるのか。",
+		   NULL, "Q. If an accident occurs and a hazardous material (the H170 series) is exposed to the public, can Emergency Manual 34 be administered?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "解．上記お見込みの通り。",
+		   NULL, "A. Yes.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "問．研究施設の致命的な事故により外部に秘匿施設が露呈した場合、通常は機密保持部隊が対処するが、露呈の規模により部隊の処理能力を超えたと判断される場合、機密保持のために、緊急マニュアル第３４号は適用してもよいのか。また処理能力超過の判断権限者は施設長と考えて良いのか。",
+		   NULL, "Q. If an accident has occurred and the nature of the Institute is revealed to the public, the Secrecy Preservation Unit will take steps to resolve the situation. However, if this information is spread too widely, can Emergency Manual 34 still be administered? Additionally, is the Institute Director responsible for making that decision?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "解．上記お見込みの通り。",
+		   NULL, "A. Yes.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "問．緊急マニュアル第３４号の適用には慎重な判断が必要で、最高決裁者の決裁が必須であると思われるが、著しく緊急性が求められると施設長が判断した場合、決裁手順は簡素化できるのか。",
+		   NULL, "Q. The decision to execute Emergency Manual 34 must be carefully deliberated over and sanctioned by an official. However, in the case of emergency, does the Institute Director have the right to make the final decision?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "解．如何なる場合においても緊急マニュアル第３４号の適用は最高決裁者の決裁を待つものとする。",
+		   NULL, "A. The execution of Emergency Manual 34 must be sanctioned by an official at all times.", Line_WaitForInput);
+	OutputLine(NULL, "ただし施設長は緊急性を決裁時に具申することができる。",
+		   NULL, " However, the Institute Director may petition the urgency of its use to an official.", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	PlaySE( 0, "s_page", 128, 64 );
+	PlaySE( 0, "s_suzu", 128, 64 );
+	SetColorOfMessage( TRUE, 0xff, 0x00, 0x00 );
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　　　　　",
+		   NULL, "             ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "緊急マニュアル第３４号",
+		   NULL, "Emergency Manual  34", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　　　　　　　　　　　",
+		   NULL, "     ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "複写厳禁・持出厳禁",
+		   NULL, "Reproduction or removal of this document is prohibited.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　本マニュアルの許可なき閲覧はこれを厳禁とする。",
+		   NULL, "This manual may only be read with the appropriate permissions.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　本マニュアルは最高決裁者の決裁を以ってのみ適用される。",
+		   NULL, "This manual will only apply upon approval by the highest authority.", Line_WaitForInput);
+	OutputLine(NULL, "如何なる簡易決裁もこれを認めない。",
+		   NULL, " Nothing short of official authorization shall count as approval.", Line_WaitForInput);
+	OutputLine(NULL, "また決裁者は本マニュアル適用の決裁に当たっては可及的速やかに判断すること。",
+		   NULL, " Furthermore, those authorized to apply this manual must make their decision as soon as possible when it is required.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+	PlayBGM( 0, "B08_Izyou", 120, 0 );
+
+	OutputLine(NULL, "　対処不能な事態が発生し最高決裁者がそれを認められる場合、機密保持と外部発覚阻止のため、入江機関（以下、機関と表記）は最終的解決をしなければならない。",
+		   NULL, "If the situation threatens to spiral out of control, and the official accedes that this is the case, the Irie Insitute must make the final decision to preserve the secret and prevent its detection by others.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　最終的解決とは以下を指す。",
+		   NULL, "The following is an outline of how to execute that final resolution:", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "・Ｌ２以上の潜在患者全員の処分。",
+		   NULL, "- Terminate all patients above L2.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "・機関施設の完全な証拠隠滅。",
+		   NULL, "- Destroy all evidence inside the\n  Institute.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "・本マニュアル適用の隠蔽。",
+		   NULL, "- Conceal the fact that this manual was administered.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　施設長は上記を事態発生から４８時間以内に遂行しなくてはならない。",
+		   NULL, "The contents of this manual must be executed by the Institute Director within 48 hours of the incident.", Line_WaitForInput);
+	OutputLine(NULL, "不測の事態により施設長の指揮が困難な場合、長官がこれを兼務する。",
+		   NULL, " If the Director is not available, the chief officer must execute it in his place.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　遂行に当たり施設長は長官に対し応援を要請することができる。",
+		   NULL, "The Institute Director may demand support from the chief officer in executing this manual.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　長官は本マニュアルの適用が見込まれると判断する場合、予備命令を発令することができる。",
+		   NULL, "If this manual is expected to be executed, the chief officer may issue the preliminary orders.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　最終的解決は以下の手順で遂行される。",
+		   NULL, "The final resolution must be executed in the following steps.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "■ガス災害偽装、及び交通遮断",
+		   NULL, "- Disguise the incident as a natural gas disaster, and quarantine the area -", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　交通封鎖部隊は警察官に偽装し雛見沢地区を外部より遮断する。",
+		   NULL, "The quarantine unit must disguise themselves as police officers and isolate the Hinamizawa region from the outside world.", Line_WaitForInput);
+	OutputLine(NULL, "その際、自然ガス災害であるよう偽装すること。",
+		   NULL, " The official explanation must be that there is a gas disaster within the village.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　偽装のための装備は谷河内地区旧採石場跡に厳重に秘匿した上で備蓄するものとする。",
+		   NULL, "The equipment for the operation will be stored at a vacant lot, where Yagouchi Quarry used to be.", Line_WaitForInput);
+	OutputLine(NULL, "また装備は常時使用に備え維持点検を行なうこと。",
+		   NULL, " The equipment must undergo routine maintenance.", Line_Normal);
+	ClearMessage();
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　外部からの侵入、内部からの脱出に対しては、偽装ガスもしくは退去命令を以ってしても応じない場合、発砲を許可するものとする。",
+		   NULL, "In the event of external breach or internal escape, if they do not respond to notice of the gas disaster or orders to evacuate, use of firearms is authorized.", Line_WaitForInput);
+	OutputLine(NULL, "許可権限は機密保持部隊長が交通封鎖部隊長に委譲するものとする。",
+		   NULL, " The approval to use firearms is given by the chief of the Secrecy Preservation Unit to the chief of the Traffic Blockade Unit.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "■通信手段の遮断",
+		   NULL, "- Shutting down communications -", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　通信工作部隊は雛見沢地区から外部へ発する有線無線を含む全ての通信手段を遮断すること。",
+		   NULL, "The Communication Sabotage Unit must ensure that all forms of communication, including radio, have been disabled in the Hinamizawa area.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　遮断に当たって外部に不信感を抱かれぬよう厳重に注意すると共に、作戦時の必要最低時間のみの運用とする。",
+		   NULL, "They must take care not to fall under suspicion, and communications must be disrupted for a minimum amount of time.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　通信施設は交通遮断地域内にあるため、通信工作部隊は通信施設に接近する全ての民間人に対し発砲を許可するものとする。",
+		   NULL, "The facility belonging to the telephone company is inside of the traffic blockade, so any civilians inside may be shot and killed.", Line_WaitForInput);
+	OutputLine(NULL, "許可権限は機密保持部隊長が通信工作部隊長に委譲するものとする。",
+		   NULL, " The chief of the Secrecy Preservation Unit may give permission to use lethal force to the chief of the Communications Sabotage Unit.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "■潜在患者の集合",
+		   NULL, "- Assembling the infected carriers -", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　機密保持部隊本隊は雛見沢地区災害時集合場所に潜在患者全員を集合させること。",
+		   NULL, "The Secrecy Preservation Unit must assemble the infected populace in the Hinamizawa regional disaster shelter.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　集合時手順は別紙参照のこと。",
+		   NULL, "Refer to the enclosed documents for gathering procedures.", Line_WaitForInput);
+	OutputLine(NULL, "集合後は厳重に点呼を行い全員の集合を確認すること。",
+		   NULL, " Upon assembly, the unit must count the number of the infected, and confirm that everyone is present.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　この際、ガス災害偽装を潜在患者に疑われないよう厳重に注意すること。",
+		   NULL, "Be sure to not allow the infected to expose the true nature of the gas disaster.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　また、集合の妨げとなるため家財の持ち出しは厳禁とする。",
+		   NULL, "Additionally, the infected must not be allowed to bring any large personal belongings with them.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　ただし疑惑を招かないため、通帳、印鑑の類の貴重品持ち出しを認めること。",
+		   NULL, "However, they may take their valuables, including bankbooks and cash.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　集合命令に従わない者に対しては止むを得ない場合にのみ発砲を許可するが、機密保持部隊長はこの許可を容易に出してはならないものとする。",
+		   NULL, "Infected who refuse to assemble may be shot, but the chief of the Secrecy Preservation Unit must carefully consider the decision to do so.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "■潜在患者の処分",
+		   NULL, "- Terminating the infected -", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　機密保持部隊本隊は集合させた潜在患者を速やかに完全処分すること。",
+		   NULL, "Once they are assembled, the Secrecy Preservation Unit must terminate all of the infected.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　処分にあたっては、ガス災害偽装を疑われないよう注意すること。",
+		   NULL, "Before that point, care must be taken to ensure that they are not suspicious of the story of the gas disaster.", Line_WaitForInput);
+	OutputLine(NULL, "また、人道的な手段を以って対応するよう努力しなければならない。",
+		   NULL, " Be sure that they are treated as humanely as possible.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　処分時にトラブルが発生し、鎮圧上止むを得ない場合にのみ機密保持部隊には発砲が許可される。",
+		   NULL, "If any problems occur, the unit has approval to fire their weapons.", Line_WaitForInput);
+	OutputLine(NULL, "許可権限は機密保持部隊長が持つものとする。",
+		   NULL, " The chief of the Secrecy Preservation Unit must also make that decision.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　射殺体は行方不明者として処分するため、偽装死体と混入しないよう注意。",
+		   NULL, "Bodies with gunshot wounds should not be placed together with those that have been poisoned.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "■機関施設の隠蔽",
+		   NULL, "- Concealment of the Institute -", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　施設処理部隊は機関施設の重要機密回収（別紙参照１９３点）と証拠隠滅を行なうこと。",
+		   NULL, "The Institute Concealment Unit must collect all of the classified items (refer to the 193 items in the appendix) in the Institute in order to suppress the evidence.", Line_WaitForInput);
+	OutputLine(NULL, "証拠隠滅に関しては別紙参照のこと。",
+		   NULL, " Refer to the appendix for more detailed instructions.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　重要機密回収にあたっては機関研究員の指示を受けること。",
+		   NULL, "The research staff at the Institute must assist with this operation.", Line_WaitForInput);
+	OutputLine(NULL, "危険物が含まれるため搬出には細心の注意を払うこと。",
+		   NULL, " This unit must exercise extreme caution, as they will be handling a number of toxic substances.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　秘匿区画は厳重封鎖とする。",
+		   NULL, "Strict quarantine must be maintained of the concealment block.", Line_WaitForInput);
+	OutputLine(NULL, "気密扉は溶接、地下区画は注水封鎖。",
+		   NULL, " The airproof door must be welded shut, and the underground area must be flooded.", Line_WaitForInput);
+	OutputLine(NULL, "区画入口は溶接の上、厳重に偽装すること。",
+		   NULL, " The entrance to the area must be welded shut and concealed completely.", Line_WaitForInput);
+	OutputLine(NULL, "なお、秘匿区画の完全撤去を３年以内に行なうものとする。",
+		   NULL, " Furthermore, the concealment block will be completely removed within three years.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　施設処理部隊は機関施設へ接近する全ての民間人を排除しなければならない。",
+		   NULL, "The Institute Concealment Unit must eliminate all civilians who would try to approach the Insitute.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　原則として発砲を禁止するが、止むを得ない場合に限り発砲を許可する。",
+		   NULL, "The use of firearms is not permitted, except in emergencies.", Line_WaitForInput);
+	OutputLine(NULL, "許可権限は機密保持部隊長が持つものとする。",
+		   NULL, " The chief of the Secrecy Preservation Unit may give the order to fire.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "■村内捜索",
+		   NULL, "- Searching the village -", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　機密保持部隊は村内の完全捜索を行い、生存者がいないことを厳重に確認すること。",
+		   NULL, "The Secrecy Preservation Unit must search the whole village for any survivors.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　特に潜在患者集合時の点呼で確認できなかった人間については要注意。",
+		   NULL, "Any person who was not present during the assembly must be found.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　なお、潜在患者の処分時刻以降に生存者を発見した場合には原則として即時射殺を許可する。",
+		   NULL, "Any survivors found after the termination of the infected may be shot immediately.", Line_WaitForInput);
+	OutputLine(NULL, "ただし投降の意思のある場合のみ例外とする。",
+		   NULL, " However, if the survivor is willing to surrender,", Line_WaitForInput);
+	OutputLine(NULL, "他隊が投降者を得た場合には速やかに機密保持部隊に引き渡すこと。",
+		   NULL, " do not shoot, and instead take them into the custody of the Secrecy Preservation Unit.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　機密保持部隊は投降者について、潜在患者処分と同じ方法にて処分すること。",
+		   NULL, "The Unit must then terminate the captive, using the same method as for the other infected.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "■後続一般部隊への引継ぎ",
+		   NULL, "- Post mission transfer to general forces -", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　災害派遣の一般部隊に現場を引き継ぐ。",
+		   NULL, "Transfer the job to the official disaster recovery team.", Line_WaitForInput);
+	OutputLine(NULL, "不信惑を持たれないよう厳重に注意すること。",
+		   NULL, " Make sure not to arouse suspicion.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "■完全撤収",
+		   NULL, "- Complete withdrawal -", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　全ての作戦を終了し、機密保持部隊は雛見沢地区から撤退する。",
+		   NULL, "After the completion of all operations, the Secrecy Protection Unit will retreat from the Hinamizawa area.", Line_WaitForInput);
+	OutputLine(NULL, "後続の一般部隊に不信感を持たれないよう厳重に注意すること。",
+		   NULL, " They must be careful not to be suspected by the disaster recovery team.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　なお、機関施設は秘匿区画の完全撤去が終了するまで継続警備とすること。",
+		   NULL, "Furthermore, the Institute will continue to secure the concealment block until complete removal is finished.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DrawScene( "File", 1000 );
+	SetColorOfMessage( TRUE, 0xff, 0xff, 0xff );
+
+	SetDrawingPointOfMessage( 0, 6 );
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "#ffffff",
+		   NULL, "          ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "＜女王感染者ト一般感染者ニツイテ＞",
+		   NULL, "[The queen and her carriers]", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 0, "Nazo", 120, 0 );
+
+	OutputLine(NULL, "　病原体ハ蟻ナドノ社会型生物ト同ジ習性ガアルモノト推定。",
+		   NULL, "It is assumed that the pathogen has the same characteristics as creatures such as ants.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　女王蟻ニ当タル女王感染者ガ常ニ１人オリ、ソレガ古手家代々ニ受ケ継ガレテイルモノト推定。",
+		   NULL, "There is a queen of the carriers of the disease, just like there is a queen ant, and this position has been passed down the line of the Furude family.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　此レラハ雛見沢村ニ関連スル古文書ノ数々カラ容易ニ推察サレル。",
+		   NULL, "This assumption is made based on the legends and ancient writings that have been passed down in the village.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　マタ、一般感染者ハ女王感染者ヲ庇護スル傾向ガ強ク、其レヲ容易ニ観察デキル。",
+		   NULL, "It is already confirmed that the carriers have a tendency to protect their queen.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　マタ、女王感染者ノ半径ニ束縛サレル一般感染者トハ違イ、女王感染者ハ土地ニ束縛サレルモノト推測。",
+		   NULL, "Additionally, the queen carrier can only survive within the boundary of the village.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	SetDrawingPointOfMessage( 0, 6 );
+
+	OutputLine(NULL, "＜感染者ノ発症確率ニツイテ＞",
+		   NULL, "          [Probability of outbreak]", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　一般感染者ハ女王感染者カラ離サレタ距離ト日数ニ比例シテ高イ発症確率ヲ持ツト推測。",
+		   NULL, "As ordinary patients will become ill when they travel far away from the queen, it's assumed that the further and longer they are away from her, the higher the chance of symptoms occuring becomes.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　マタ、精神状態ニモ強イ影響ヲ受ケ、特ニ情緒不安定ヤ郷里ヘノ思慕ガ強イ場合ノ発症確率ハサラニ高マルモノト推定。",
+		   NULL, "Also, mental state plays a strong factor as well, and it's estimated that those who are especially emotionally unstable or show strong yearning for their home are more likely to exhibit symptoms.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　発症ヲ抑エルタメニハ高野式精神安定法ガモットモ効果的ト思ワレルガ、ソレデモ改善ガ認メラレナイ場合、女王感染者ノ許ヘノ帰郷ノミガ有効。",
+		   NULL, "It is believed that the Takano relaxation method is the most effective means of suppressing symptoms, but if the patient still shows no improvement, only returning them to their home and the queen will be effective.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	SetDrawingPointOfMessage( 0, 6 );
+
+	OutputLine(NULL, "＜末期発症者ニツイテ＞",
+		   NULL, "        [Concerning terminal patients]", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　末期発症者ハ被害妄想ヲ著シク肥大サセル為、組織行動ヘノ従事ハ困難ヲ極メルモノト推定。",
+		   NULL, "Terminal patients, as they suffer from an extreme persecution complex, are incapable of functioning within society.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　確認事例デハ殺人ヤ放火、ソノ他異常行為ガ認メラレ、所属部隊ニ甚大ナ害ヲ齎スモノト予想。",
+		   NULL, "Cases of arson and murder have been confirmed. They may present severe problems for their units.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　雛見沢村文献デハ村内末期発症者ハ処刑サレタ記述ガアリ、末期発症者ハ帰郷ニヨッテモ改善シナイモノト推察。",
+		   NULL, "Records show that terminal patients appear even in Hinamizawa, and they will not recover even if relocated nearer the queen.", Line_WaitForInput);
+	OutputLine(NULL, "ヨッテ迅速ナ処分ガ求メラレル。",
+		   NULL, " Therefore, the decision to dispose of the problem must be made as soon as possible.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　未発症段階カラ感染者ヲ隔離スルコトモ極メテ有効。",
+		   NULL, "It's recommended that the infected be quarantined before they start behaving irregularly.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　雛見沢出身者ヲ追跡調査シ、専門医療機関付キトスルコトヲ提案ス。",
+		   NULL, "We suggest tracking down those formerly from Hinamizawa and placing them under special medical observation.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	SetDrawingPointOfMessage( 0, 6 );
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "＜感染者集落ノ崩壊ニツイテ＞",
+		   NULL, "[The collapse of the carrier community]", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　前述ノ理由カラ、女王感染者ガ死亡スルヨウナコトガアッタ場合、感染者集落ハ集落単位デ末期症状ヲ引キ起コスモノト推定。",
+		   NULL, "For the aforementioned reasons, we predict that should the queen carrier die, infected villagers will exhibit terminal symptoms on a village-wide scale.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　末期症状ハ急性発症ナラバ早クテ二十四時間以内、遅クトモ四十八時間デ発症スルタメ、",
+		   NULL, "Terminal symptoms will begin showing within 24 hours at the earliest and 48 at the latest.", Line_WaitForInput);
+	OutputLine(NULL, "四十八時間以内ニ最終的解決ヲ行ナワナカッタ場合、騒乱ハ極メテ甚大ニナルモノト推定。",
+		   NULL, " For that reason, the final decision must be made within 48 hours.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　マタ、集落規模カラ見テ、警察、憲兵程度デハ此レノ鎮圧ハ容易ナラザルモノト推定。",
+		   NULL, "Based on the size of the village, neither ordinary officers nor the military police may be able to control the chaos they may bring.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　反国家的武装蜂起ト位置付ケ、緊急ニ軍ヲ以ッテ鎮圧スルノガ最モ適当ト思ワレル。",
+		   NULL, "We believe the best response is to treat them as an armed, anti-national uprising, and immediately suppress them with the military.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	PlayBGM( 1, "type", 120, 0 );
+
+	SetSpeedOfMessage( TRUE, 0 );
+	OutputLine(NULL, "昭和二十年一月吉日",
+		   NULL, "January 1945", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 1, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+
+	Wait( 2000 );
+	PlayBGM( 1, "type", 120, 0 );
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "宛最高戦争指導会議　小泉大佐殿",
+		   NULL, "To: Colonel Koizumi of the Supreme Council for the Direction of War", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 1, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	Wait( 2000 );
+	PlayBGM( 1, "type", 120, 0 );
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "高野一二三記ス",
+		   NULL, "from Hifumi Takano", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 1, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+
+	OutputLine(NULL, "　　　　　　　　　　　",
+		   NULL, "    ", Line_Normal);
+	ClearMessage();
+	SetSpeedOfMessage( FALSE, 0 );
+
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	PlaySE( 0, "s_page", 128, 64 );
+
+	DrawScene( "black", 400 );
+	PlayBGM( 0, "semi", 120, 0 );
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLineAll(NULL, "    ", Line_ContinueAfterTyping);
+
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "昭和５８年６月２３日",
+		   NULL, "June 23rd, 1983", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　　　　　　　　　　　",
+		   NULL, "                              ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "58防総管エ４−２０号",
+		   NULL, "Document E4-20 for the 58th Defense Commissioner", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "第７３３装備実験中隊長",
+		   NULL, "and TECOM 733 Commander.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　第７３３装備実験中隊は２４時間以内に都市沈黙戦装備にて待機することをここに命ずる。",
+		   NULL, "TECOM 733 is hereby ordered to be on standby within 24hrs, armed for urban suppression.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　中隊長は添付の緊急マニュアル３４号を熟知すること。",
+		   NULL, "The company commander must also thoroughly study Emergency Manual 34.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　作戦参加人員は機密保持に最も重視を置いて選抜すること。",
+		   NULL, "Select personnel carefully with the preservation of secrecy in mind.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　また、国立感染症研究所出向職員の指示に従って予防薬適性検査を実施し、適合者のみで編制すること。",
+		   NULL, "Additionally, test the effectiveness of the vaccine with the support of the National Research Center of Infectious Diseases. Employ those with positive immunity.", Line_Normal);
+	ClearMessage();
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　　　　　　　　　　　",
+		   NULL, "    ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "昭和５８年６月２３日",
+		   NULL, "June 23rd, 1983", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　　　　　　　　　　　",
+		   NULL, "                              ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "58衛研総エ７−１１号",
+		   NULL, "Document E7-11 for the 58th Director of the NIHS", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "第７３３装備実験中隊長殿",
+		   NULL, "Attention equipment testing company commander 733", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　　　　　　　　　　　　　",
+		   NULL, "                  ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "国立感染症研究所",
+		   NULL, "The National Research Center of Infectious Diseases.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　　　　　　　　　　　　　",
+		   NULL, "     ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "感染病理部第13室",
+		   NULL, "Infectious Pathogen Department, Suite 13.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　　　　　　　　　　　　　",
+		   NULL, "                      ", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLine(NULL, "（公印省略）",
+		   NULL, "(Official seal omitted)", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	PlaySE( 0, "s_page", 128, 64 );
+	PlayBGM( 0, "B08_Izyou", 120, 0 );
+
+	SetDrawingPointOfMessage( 0, 8 );
+
+	OutputLine(NULL, "　雛見沢症候群について",
+		   NULL, "       - About the Hinamizawa Syndrome -", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　滅菌作戦の遂行に当たり、雛見沢症候群について申し送るものである。",
+		   NULL, "This is information regarding the Hinamizawa Syndrome.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　雛見沢症候群は人体に感染するウィルスによって引き起こされる感染症である。",
+		   NULL, "The Hinamizawa Syndrome is an infectious disease caused by a virus.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　基本的に自覚症状はないが、極度の精神不安定による回避可能な理由の他、女王感染者の死亡による不可避な理由によって劇的に発症する。",
+		   NULL, "There are no initial symptoms. Instead, their onset begins when the patient's emotional state becomes unstable, or if the queen carrier dies.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　主な症例は妄想と精神異常で、特に被害妄想の肥大が著しい。",
+		   NULL, "The main symptoms of the illness are hallucinations and emotional instability, paired with an extreme persecution complex.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　また自身の精神異常を自覚しないことが多く、その識別は検査以外ではほぼ不可能。",
+		   NULL, "Furthermore, patients are frequently unaware of their own mental abnormalities, making identification outside examination nearly impossible.", Line_WaitForInput);
+	OutputLine(NULL, "末期の異常行為から発症を類推することしかできない。",
+		   NULL, " The only way to do so is by observing symptoms indicative of terminal, abnormal behavior.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　また、多くの場合、被害妄想の肥大から何らかの反社会行動に訴えることが多く、この点が雛見沢症候群の最大の問題点と言える。",
+		   NULL, "In many cases, patients engage in antisocial behavior, which is the largest issue created by the Syndrome.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　ホルモンの分泌などに影響を与えるものと思われ、肉体でなく精神に主に作用する感染症のため、感染症型精神病とも言える。",
+		   NULL, "This behavior is caused by hormonal factors, as this disease mainly affects the mind, as opposed to the body.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　末期にはリンパ腺に強い痒みを訴えることがあり首筋、もしくは手首を掻き毟る可能性がある。",
+		   NULL, "In the end, the patients will experience extreme irritation in their lymph nodes, and they will claw at their throat or wrists.", Line_WaitForInput);
+	OutputLine(NULL, "これのみが唯一の自覚症状である。",
+		   NULL, " This is the only symptom that is recognized by the patient.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	SetDrawingPointOfMessage( 0, 7 );
+
+	OutputLine(NULL, "滅菌作戦注意事項について",
+		   NULL, "Important Points Regarding the Sterilization Operation", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　滅菌作戦の遂行に当たり、諸注意を申し送るものである。",
+		   NULL, "This is an advisory notice for virus control.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　病原体は基本的に空気感染で経皮からも感染する。",
+		   NULL, "The pathogen is an airborne infectious virus.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　事実上、感染は不可避であり予防薬の投与を必須とする。",
+		   NULL, "Therefore, no effective preventative methods exist, and inoculation is required.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　また、作戦終了後は感染検査を行ない、陽性反応者は直ちに申告し治療を受けること。",
+		   NULL, "After the mission is completed, all staff members must take a medical exam, and those with positive test results must come forward.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　特に注意を要するのは高度感染者（住民）との接触である。",
+		   NULL, "Be cautious when interacting with the carriers (villagers).", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　通常接触では問題ないが、粘膜・体液の接触で予防薬の投与に関わらず重度感染する。",
+		   NULL, "Even after inoculation, any contact with their bodily fluids will cause infection.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　高度感染者とは直接接触しないよう厳重に注意すること。",
+		   NULL, "Do not come into direct contact with them.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　接触を疑う者は直ちに検査用自動注射器を使用して別添に従い自己検査を行なうこと。",
+		   NULL, "If assumed infected, individuals must use the testing syringe and test themselves for the disease.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　特にリンパ腺に理不尽な痒みを覚えた場合は急性発症である可能性が極めて高い。",
+		   NULL, "If you feel an extreme irritation in your lymph nodes, it's likely you have terminal symptoms.", Line_WaitForInput);
+	OutputLine(NULL, "ただちに検査を行なうこと。",
+		   NULL, " In that case, you must get tested immediately.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　陽性反応が出た場合、治療薬C120自動注射器を使用すること。",
+		   NULL, "If test results comes out positive, inject the treatment medication C120.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　注射後１０分を経過しても痒みが引かない場合には２本目を使用する。",
+		   NULL, "If the irritation persists after 10 minutes, use a second injection.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　それでも改善が見られない場合には本部にて治療を受けること。",
+		   NULL, "If there is still no change in symptoms, seek treatment at HQ.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	OutputLine(NULL, "　また、C120は健常な人体には悪影響を及ぼすため、陽性反応を確認しない使用はこれを厳禁とする。",
+		   NULL, "Do not use C120 if your test results are not positive.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　健常な人体に使用した場合、１０分以内に全身の発疹、発熱、瞳孔の拡大、妄想を引き起こす。",
+		   NULL, "If used on a healthy body, symptoms of high fever, rashes, dilated pupils, and hallucination will be observable within 10 minutes.", Line_WaitForInput);
+	OutputLine(NULL, "これらを自覚した場合、本部にて治療を受けること。",
+		   NULL, " If this occurs, one must seek treatment at HQ.", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	PlaySE( 0, "s_page", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	PlayBGM( 0, "hitoe_2", 120, 0 );
+	DrawSceneWithMask( "white", "maskm1", 1, 0, 1300 );
+	DrawScene( "black", 400 );
+
+	OutputLine(NULL, "　高級なソファーに大理石のテーブル、クリスタルの灰皿のある高級な会議室で、政府高官たちが状況を説明していた。",
+		   NULL, "Government officials explained the entire situation in a luxurious meeting room adorned with a marble table and crystal ashtrays.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　…こんな目茶目茶な話は聞いたことがないと、官房長官はずっと猛り狂っていた。",
+		   NULL, "The Chief Cabinet Secretary was in a panic. He'd never heard about any of this before.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　当然だ。",
+		   NULL, "Feelings of panic were only natural.", Line_WaitForInput);
+	OutputLine(NULL, "たったひとりの少女が死ぬだけで、二千人の住民が暴徒化する。",
+		   NULL, " One girl's death was going to drive two thousand villagers into a frenzy.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　そんな奇病が存在しただけでも驚きであるばかりでなく、",
+		   NULL, "Hearing that a disease like that exists was surprising enough.", Line_WaitForInput);
+	OutputLine(NULL, "それが長年秘匿され軍事目的で研究されていて、しかも研究所長の汚職を巡るトラブルでこのような事態を引き起こすなんて。",
+		   NULL, " But on top of that, it was secretly researched for military use, and now there was a horrific situation caused by the director of the local research institute engaging in embezzlement.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「そんな危険な病気、初めて聞いたよ！",
+		   NULL, "\"I've never heard of such a dangerous disease!", Line_WaitForInput);
+	OutputLine(NULL, "　本当に治療の手段はないのか？！」",
+		   NULL, " There's no cure for it?\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「はい。",
+		   NULL, "\"No.", Line_WaitForInput);
+	OutputLine(NULL, "国立研究所の説明では、重度感染者の発症に対する治療法は確立したばかりで、全住民への対応は事実上不可能とのことです。",
+		   NULL, " According to the national research center, they have recently found a method of treatment for the carriers of the disease, but they're still not capable of administering that treatment to the whole village.", Line_WaitForInput);
+	OutputLine(NULL, "最短で２４時間以内、長くとも４８時間以内に山村の人口二千人が全て末期発症するとのことです。",
+		   NULL, " The entire populace is going to develop terminal symptoms within the next 24 to 48 hours.", Line_WaitForInput);
+	OutputLine(NULL, "甚大な被害と影響が予想されます。」",
+		   NULL, " It's going to be a disaster.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　「雛見沢症候群」がどれだけ危険で異常な奇病かは、すでに専門機関のスタッフから延々と説明を受けていた。",
+		   NULL, "The danger of this \"Hinamizawa Syndrome\" was explained over and over again to the Chief Secretary.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　だから改めて聞くまでもない。",
+		   NULL, "He didn't have anything more to say...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　でも、だからといって受け容れられるわけがない。",
+		   NULL, "but that didn't mean that he could blindly accept it, either.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　その事態に対し有効な対処法が、集団発症の前に感染者全員を抹殺する他ないなんて。",
+		   NULL, "He simply couldn't believe that the only way to resolve the situation was to kill all two thousand infected villagers.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「そりゃ大変なことになるのはわかるけど、住民を皆殺しにするなんて、そんなの許可できるわけないだろう！！",
+		   NULL, "\"I understand the urgency, but I can't give approval to kill an entire village!!", Line_WaitForInput);
+	OutputLine(NULL, "　そもそも、なんでこんな危険な病気を隠蔽して研究なんかしてたんだ？！",
+		   NULL, " Why was this disease being studied in secret, anyway?", Line_WaitForInput);
+	OutputLine(NULL, "　そもそもそういう事態を招いたのはその関係の連中の責任じゃないのかね！！",
+		   NULL, " Isn't this the responsibility of those who were funding the research?", Line_WaitForInput);
+	OutputLine(NULL, "　第一、こんな危険な研究は今や日本の国益に貢献しないどころか、損ないかねんぞ！！",
+		   NULL, " Such a dangerous disease can't possibly be of any benefit to this country!", Line_WaitForInput);
+	OutputLine(NULL, "　どうして昭和の５８年までこんな馬鹿げた研究をしていたんだ！",
+		   NULL, " It's the year 1983, for crying out loud!", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　報告書によれば、研究目的のために撲滅を意図的に遅らせていたそうじゃないか！",
+		   NULL, "According to these documents, they intentionally held off on exterminating the disease so they'd have more time to study it!", Line_WaitForInput);
+	OutputLine(NULL, "　しかも汚職を巡るトラブルの果てにこんな事態だ！",
+		   NULL, " On top of that, this chaos was all caused by a single researcher?", Line_WaitForInput);
+	OutputLine(NULL, "　これはテロだよテロ！！",
+		   NULL, " This is an act of a terrorism!!", Line_WaitForInput);
+	OutputLine(NULL, "　『東京』の老害だ！",
+		   NULL, " It's the fault of those old men in Tokyo!", Line_WaitForInput);
+	OutputLine(NULL, "　こんな研究を支持していた人間には全員責任を取ってもらうぞ！！",
+		   NULL, " They better take responsibility for this!!", Line_WaitForInput);
+	OutputLine(NULL, "　いつまでも大戦の亡霊に取り憑かれている連中を追放したまえ！！",
+		   NULL, " Get rid of the people who are still haunted by the ghost of the war!!", Line_WaitForInput);
+	OutputLine(NULL, "　これは『東京』の膿みを出すいい機会じゃないのかね？！」",
+		   NULL, " This is a good opportunity to rid Tokyo of its festering pus!\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "Ke5", "maskdown", 1, 0, 300 );
+	PlayBGM( 1, "higurashi", 120, 0 );
+
+	OutputLine(NULL, "「…………責任者の追及は必ず行ないますが、それより前に、対応を考えなければなりません。」",
+		   NULL, "\".......We will discuss the issue of responsibility in due time, but we must make a prompt decision about this.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　そのやり取りに背を向け、ブラインドから外を眺めていた人物が、ゆっくりと語ると官房長官は口をつぐんだ。",
+		   NULL, "A man standing by the window slowly turned around and opened his mouth.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「総理。",
+		   NULL, "\"Prime Minister.", Line_WaitForInput);
+	OutputLine(NULL, "ご決断を。」",
+		   NULL, " Please give us your decision.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「……………滅菌作戦を承認しない場合のシミュレートを聞かせてください。」",
+		   NULL, "\".........What happens if I don't approve this final resolution?\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「はい。",
+		   NULL, "\"Well...", Line_WaitForInput);
+	OutputLine(NULL, "今から３６時間後には村人のほぼ１０割が末期発症。",
+		   NULL, " Almost one hundred percent of the population in the village will develop terminal symptoms within 36 hours.", Line_WaitForInput);
+	OutputLine(NULL, "末期的な被害妄想に取り憑かれ反社会的な行為を行ないます。",
+		   NULL, " They will be overcome by persecution complexes, and they will begin behaving violently.", Line_WaitForInput);
+	OutputLine(NULL, "想定されるのは、自殺、殺人、放火、強盗、強姦。",
+		   NULL, " Suicide, murder, arson, robbery, and rape are some of the things we predict will happen.", Line_WaitForInput);
+	OutputLine(NULL, "治安の完全なる崩壊です。",
+		   NULL, " There will be no peace within the village.", Line_WaitForInput);
+	OutputLine(NULL, "騒動は恐らく雛見沢地区のみでなく周辺地区へも波及します。",
+		   NULL, " It probably won't stay within those boundaries either, but spread throughout the area.", Line_WaitForInput);
+	OutputLine(NULL, "結果、世界規模での注目を浴びることになるでしょう。",
+		   NULL, " As a result, the whole world will discover this disaster.", Line_WaitForInput);
+	OutputLine(NULL, "民間の独自調査の結果、奇病が原因であることが発覚するのは食い止められません。",
+		   NULL, " Sooner or later, they will find out about this mysterious disease.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　野党は奇病の対応の不手際を政争の具に次期選挙を有利に運ぶでしょう。",
+		   NULL, "This will be a great advantage for the opposition during the next election.", Line_WaitForInput);
+	OutputLine(NULL, "また『東京』内でも総理の対応に批判が高まるでしょう。",
+		   NULL, " 'Tokyo' will also voice their criticisms of the Prime Minister.", Line_WaitForInput);
+	OutputLine(NULL, "彼らの支持は総理の列島改造に欠かせません。",
+		   NULL, " You need their approval in order to make your political plans come to fruition.", Line_WaitForInput);
+	OutputLine(NULL, "そして何よりも、軍事目的での研究が政府内部から暴かれる可能性があります。",
+		   NULL, " More than anything, the government might reveal that this secret research was conducted for military purposes.", Line_WaitForInput);
+	OutputLine(NULL, "これだけは断固阻止しなくては我が国に致命的信用ダメージを与えかねません。」",
+		   NULL, " If this happens, this country will have a crisis of faith in their leadership.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「…………逆に、滅菌作戦を承認した場合はどうなりますか。」",
+		   NULL, "\".........What if I approve the final resolution?\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「はい。",
+		   NULL, "\"Well...", Line_WaitForInput);
+	OutputLine(NULL, "自然災害を装いますので、やはり対応の不手際の野党追及は避けられません。",
+		   NULL, " We will be disguising this as a natural disaster, so the opposition may still attack us for our blunder.", Line_WaitForInput);
+	OutputLine(NULL, "ただし、奇病研究について発覚することはないでしょう。",
+		   NULL, " However, they will not discover the existence of this mysterious disease.", Line_WaitForInput);
+	OutputLine(NULL, "もし万が一、奇病の軍事的研究が世界に発覚したら我が国はアジア地域でのイニシアチブを完全に喪失します。」",
+		   NULL, " If by chance the world were to discover our military research of the disease, our nation would completely lose its initiative in the Asian region.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「他国の援助を受ける政党は一大キャンペーンを張るな！",
+		   NULL, "\"Support from those nations is a necessity for us!", Line_WaitForInput);
+	OutputLine(NULL, "　売国奴どもめ！",
+		   NULL, " If we lose their trust,", Line_WaitForInput);
+	OutputLine(NULL, "　そうなれば野党の政権奪取は必至だよ！",
+		   NULL, " the opposition will definitely come into power after the next election!", Line_WaitForInput);
+	OutputLine(NULL, "　日本は宣戦布告なくして占領されるぞ！！」",
+		   NULL, " Japan will be finished!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「…シミュレートの結果では、第２党第３党が連立した場合、与野党の勢力は完全に反転します。",
+		   NULL, "\"According to our simulations, the balance of power will shift drastically if the second and third parties form a coalition government.", Line_WaitForInput);
+	OutputLine(NULL, "国際世論は我が国を一斉に非難。",
+		   NULL, " The whole world will hold us responsible.", Line_WaitForInput);
+	OutputLine(NULL, "国連に対しＮＢＣ兵器開発疑惑の査察を要求するでしょう。",
+		   NULL, " The United Nations will accuse us of developing WMDs.", Line_WaitForInput);
+	OutputLine(NULL, "近隣国は政府主導でバッシングキャンペーンを展開、高支持率を背景に対日外交を強硬路線に転換します。",
+		   NULL, " Neighboring countries' governments will lead smear campaigns against us, drawing a hard line of anti-Japan diplomatic policies with high approval ratings.", Line_WaitForInput);
+	OutputLine(NULL, "我が国は政治的焦土と化すでしょう。」",
+		   NULL, " In every way possible, the government of this country will be burned to the ground.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「国際信用はぺんぺん草一本残らんということかね。",
+		   NULL, "\"So we'll lose the trust of all our allies, huh.", Line_WaitForInput);
+	OutputLine(NULL, "……くそ。",
+		   NULL, "...Shit.", Line_WaitForInput);
+	OutputLine(NULL, "つまり雛見沢地区と周辺自治体の数十万人だけの問題では済まんということだな。",
+		   NULL, " So this isn't just the problem of the several hundred thousand people who live around the Hinamizawa area, is it...?", Line_WaitForInput);
+	OutputLine(NULL, "…………しかし！！",
+		   NULL, ".........But!!", Line_WaitForInput);
+	OutputLine(NULL, "　全てを闇に葬るための犠牲が二千人とは多過ぎる！」",
+		   NULL, " It's way too difficult to cover up two thousand casualties!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「…………日本国内において、生物兵器研究が行なわれていたことが露呈することだけは避けなければなりません。",
+		   NULL, "\".........The most important thing is to prevent the public from knowing that this country was secretly researching biological weapons.", Line_WaitForInput);
+	OutputLine(NULL, "……私は、どうやら大戦の亡霊の尻を拭くはめになりそうですね…。」",
+		   NULL, "...I guess we'll be wiping the ass of the ghost of the war...\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「滅菌作戦は計画通りに隠密で実行できるのかね？！",
+		   NULL, "\"Are you sure this operation can be performed secretly?", Line_WaitForInput);
+	OutputLine(NULL, "　滅菌作戦が発覚すれば奇病研究以上の大スキャンダルになるぞ？！」",
+		   NULL, " If this mission goes public, this will become a greater scandal than the research itself!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「はい、ご安心ください。",
+		   NULL, "\"Yes, it will be kept secret.", Line_WaitForInput);
+	OutputLine(NULL, "それにつきましては自衛隊内の機密保持に特化した専門部隊が当たります。",
+		   NULL, " There are special units working on this case.", Line_WaitForInput);
+	OutputLine(NULL, "このような事態を想定し研究と訓練を重ねた部隊です。",
+		   NULL, " They are trained specifically for situations like this.", Line_WaitForInput);
+	OutputLine(NULL, "万一の失敗はありえません。」",
+		   NULL, " You have nothing to worry about.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「都市沈黙戦という言葉は初めて聞きましたが、これはガスによる虐殺のことですね？",
+		   NULL, "\"I've never heard of any mission like this, but it's basically mass murder via gas, correct?", Line_WaitForInput);
+	OutputLine(NULL, "　自衛隊にガス戦を習熟した部隊があったとは驚きました。」",
+		   NULL, " I had no idea there were units specifically trained for that.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「ガス防護を知るにはガス戦を知らなければなりません。",
+		   NULL, "\"In order to know how to protect themselves from a gas attack, they must know what gas warfare is about.", Line_WaitForInput);
+	OutputLine(NULL, "ガス虐殺に備えるにはガス虐殺を知らねばなりません。",
+		   NULL, " In order to know how to fight against an enemy using gas, they must also know how to kill with it.", Line_WaitForInput);
+	OutputLine(NULL, "装備実験隊は日本国が受ける可能性のある全ての攻撃に対し、日夜、研究を重ねています。」",
+		   NULL, " The Equipment Research Unit is prepared for any kind of attack.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　小さなため息が漏れた。",
+		   NULL, "He let out a small sigh.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　……人道と非人道の境目がわからない。",
+		   NULL, "...He couldn't see the line between ethical and unethical.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　悪意に備えるという詭弁がまかり通るなら、あらゆる研究が許されるというのか。",
+		   NULL, "Can any research be justified by the excuse of preparing against hostilities?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　だが、それこそが備えるということでもある…。",
+		   NULL, "But that's also what preparation was all about...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　必要悪として認めてきたことでもあった。",
+		   NULL, "Some evils must be accepted as necessary.", Line_WaitForInput);
+	OutputLine(NULL, "……それは、入江機関の研究もまったく同じだ。",
+		   NULL, " The Irie Institute was one such evil...", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「………………明かせぬ研究を葬るために、明かせぬ方法を取るか……。」",
+		   NULL, "\".........So we have to make a secret decision in order to keep this research undisclosed.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「罪悪感の伴う任務だが、隊員から事実が漏れ出すことはないのかね？」",
+		   NULL, "\"Approving this is going to make us guilty. Are you sure that information will not leak from the members of this unit?\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「ありえません。",
+		   NULL, "\"That will not happen.", Line_WaitForInput);
+	OutputLine(NULL, "隊員は第一空挺から精鋭を選抜し、さらに高い忠誠心を持つ者のみで構成しております。",
+		   NULL, " The members were carefully selected from a group of extremely loyal men.", Line_WaitForInput);
+	OutputLine(NULL, "実戦はこれが初めてになりますが、練度は極めて高く、内部の機密保持も問題ありません。」",
+		   NULL, " We've never performed an operation such as this, but they are highly experienced, and they will not leak any information whatsoever.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「……………まさに暗殺の専門部隊ですね。」",
+		   NULL, "\".........They're an assassination unit, huh.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「総理。",
+		   NULL, "\"Prime Minister.", Line_WaitForInput);
+	OutputLine(NULL, "どうか緊急マニュアル第３４号の執行にご決裁をお願いいたします。」",
+		   NULL, " Please give us the approval to administer Emergency Manual 34.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「…………防衛庁長官。",
+		   NULL, "\"......Director General of Defense.", Line_WaitForInput);
+	OutputLine(NULL, "この作戦は必ず成功しますか？",
+		   NULL, " Are you sure this operation will succeed?", Line_WaitForInput);
+	OutputLine(NULL, "　事件が大騒ぎになる前に食い止められますか？",
+		   NULL, " Are you sure we can stop this from going public?", Line_WaitForInput);
+	OutputLine(NULL, "　いえ、……犠牲者を最小限に抑えられますか？」",
+		   NULL, " No... can you keep casualties to a minimum?\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「はい総理。",
+		   NULL, "\"Yes sir.", Line_WaitForInput);
+	OutputLine(NULL, "すでに予備命令を発し作戦準備に入っております。",
+		   NULL, " The preliminary orders have been sent out, and preparations are complete.", Line_WaitForInput);
+	OutputLine(NULL, "ご決裁がいただければ直ちに出動して作戦に入ります。」",
+		   NULL, " We will execute the mission as soon as we get your approval.\"", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 1, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+
+	OutputLine(NULL, "「……………私には人口二千人を虐殺する命令など下せません。",
+		   NULL, "\".........I can't give the approval to slaughter two thousand innocent people.", Line_WaitForInput);
+	OutputLine(NULL, "……ですが、内閣総理大臣として犠牲者を最小に抑える義務もあります。」",
+		   NULL, " ...However, as Prime Minister, I have an obligation to minimize the number of casualties.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「総理、…胸中をお察しします。」",
+		   NULL, "\"Prime Minister... I understand your dilemma.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「…………………長官。",
+		   NULL, "\"............Director General.", Line_WaitForInput);
+	OutputLine(NULL, "どうか、犠牲者が一番少なくて済む方法を選択してください。",
+		   NULL, " Please make a concerted effort to minimize the number of victims.", Line_WaitForInput);
+	OutputLine(NULL, "…二千人がどうしても治療できないなら、……不必要な犠牲者が出ないよう、迅速な対応をお願いいたします。」",
+		   NULL, " If these two thousand people can't be treated, please do what's best to prevent additional victims.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「はい！",
+		   NULL, "\"Yes sir!", Line_WaitForInput);
+	OutputLine(NULL, "　ご決裁を感謝いたします！",
+		   NULL, " Thank you for your approval!", Line_WaitForInput);
+	OutputLine(NULL, "　必ずや朗報をお持ちいたします！」",
+		   NULL, " We'll return with positive results!\"", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	OutputLine(NULL, "「…………二千人の犠牲が朗報と呼べるならですがね。",
+		   NULL, "\".........That's if you can call two thousand casualties a positive result.", Line_WaitForInput);
+	OutputLine(NULL, "…奥野くん。",
+		   NULL, " Okuno-kun...", Line_WaitForInput);
+	OutputLine(NULL, "東京の皆さんに近日中にお会いできる席を設けてください。",
+		   NULL, " Please set up a meeting with 'Tokyo' as soon as possible.", Line_WaitForInput);
+	OutputLine(NULL, "今回の件について、釈明を直接聞かせていただきたいと思います。」",
+		   NULL, " I have to hear an explanation directly from them.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「…わかりました。」",
+		   NULL, "\"...Understood.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「ところで、その問題の研究所長の入江氏は逮捕しましたか。」",
+		   NULL, "\"By the way, did they arrest that Irie, the Institute Director?\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「いえ、服毒自殺とのことです。",
+		   NULL, "\"No, he committed suicide by taking poison.", Line_WaitForInput);
+	OutputLine(NULL, "研究の終了が自身の人生を否定されたものと悲観しての発作的犯行と思われていますが、…何が目的だったやら。」",
+		   NULL, " He was in such a rage that his research was being shut down... that he felt as if his life itself was being denied.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「………彼を狂気に駆り立てた理由は永遠に闇の中ということですか。」",
+		   NULL, "\"......So no one will ever really know what made him commit such a horrific crime.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	PlayBGM( 1, "type", 120, 0 );
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　緊急マニュアル第３４号の適用をここに認める。",
+		   NULL, "The execution of Emergency Manual 34 is\napproved.", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 1, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	Wait( 2000 );
+
+	SetDrawingPointOfMessage( 0, 6 );
+	PlayBGM( 1, "type", 120, 0 );
+
+	OutputLine(NULL, "昭和５８年６月２３日",
+		   NULL, "    June 23rd, 1983", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 1, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	Wait( 2000 );
+
+	SetDrawingPointOfMessage( 0, 7 );
+	PlayBGM( 1, "type", 120, 0 );
+
+	OutputLine(NULL, "内閣総理大臣　ＸＸＸＸ",
+		   NULL, "                           Prime Minister XXXX", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 1, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	Wait( 2000 );
+
+	SetDrawingPointOfMessage( 0, 8 );
+	PlayBGM( 1, "type", 120, 0 );
+
+	OutputLine(NULL, "防衛庁長官　　ＸＸＸＸ",
+		   NULL, "   Director General of the Defense Agency XXXX", Line_ContinueAfterTyping);
+
+	FadeOutBGM( 1, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+
+	OutputLineAll(NULL, "", Line_Normal);
+
+	ClearMessage();
+	SetSpeedOfMessage( FALSE, 0 );
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DrawScene( "black", 400 );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "M_Y1", 1000 );
+	PlayBGM( 0, "Typewriter", 120, 0 );
+
+	OutputLine(NULL, "「皆さん、輸送の都合で荷物を持つことはできません！",
+		   NULL, "\"For logistical reasons, you may not bring any large items with you!", Line_WaitForInput);
+	OutputLine(NULL, "　手荷物は禁じます。",
+		   NULL, " You cannot carry any luggage.", Line_WaitForInput);
+	OutputLine(NULL, "繰り返します、手荷物は禁じます！",
+		   NULL, " I repeat, you cannot carry any luggage!", Line_WaitForInput);
+	OutputLine(NULL, "　現金、通帳、印鑑の類だけを携帯してください！",
+		   NULL, " You may carry only valuable items such as bankbooks and cash!", Line_WaitForInput);
+	OutputLine(NULL, "　混乱防止のため車両避難は禁じています！」",
+		   NULL, " Please do not use your own vehicle to evacuate. It will cause confusion!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　深夜。",
+		   NULL, "It was the middle of the night.", Line_WaitForInput);
+	OutputLine(NULL, "大勢の村人たちがぞろぞろと戸外に出ていた。",
+		   NULL, " And yet, countless villagers were out and about.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　ある者は戸締りをし、ある者は庭木に水をやり飼い犬の前にエサを山積みにしていた。",
+		   NULL, "Some of them were locking their doors, some of them were watering their plants, and some of them were piling up food in their dogs' dinner bowls.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　ただならぬ事態に泣き叫ぶ小さな子どもの声。",
+		   NULL, "Small children were crying in fear.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　怒鳴り声で点呼する町会の老人たち。",
+		   NULL, "Members of the town council were yelling angrily while counting up the villagers.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "M_Y2", "maskleft", 1, 0, 300 );
+
+	OutputLine(NULL, "　山中の数箇所から危険な火山ガスが噴出し、ガス流によって外部と寸断され、村が孤立したというのだ。",
+		   NULL, "Reportedly, the villlage had been cut off from the rest of the world after volcanic gas gushed out of the mountains.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　戸外に漂う強い硫黄臭と、いつの間にやら村中にいた警察と自衛隊員の姿に、人々は疑う術を持たなかった。",
+		   NULL, "The number of policemen and military units in the village, added to the strong smell of sulfur in the air, dispelled any doubts the villagers might have had.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　信心深い老人たちは、先日死んだ古手梨花の死による祟りだと信じ、ひたすら数珠を揉み続けていた。",
+		   NULL, "The more religious among the elderly were convinced that this was the curse of Rika Furude, who had passed away the day before.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　オヤシロさまの怒りに触れ、地獄の釜が開き、瘴気が村を飲み込む日が来たのだと信じた。",
+		   NULL, "They were certain that Oyashiro-sama was enraged, and that the door to Hell had been opened.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　そんな人々の列をガスマスクを着けた自衛隊員たちが避難誘導をしていた。",
+		   NULL, "Soldiers wearing gas masks guided the villagers to the evacuation center.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "M_Y3", "maskleft", 1, 0, 300 );
+
+	OutputLine(NULL, "「…何で兵隊さんは災害なのに鉄砲持ってきとるんしゃあ。」",
+		   NULL, "\"...Why do you all have guns?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「皆さんが避難した後の家屋を守るためです。",
+		   NULL, "\"These are to protect your homes after the evacuation.", Line_WaitForInput);
+	OutputLine(NULL, "また、災害に便乗して商店を襲撃する暴徒に対してです。」",
+		   NULL, " We're expecting looters.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「………雛見沢にそんな輩はおらんのしゃ…。」",
+		   NULL, "\"......No one in Hinamizawa would do something like that...\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "M_Y1", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "「第１小隊、避難誘導順調。",
+		   NULL, "\"This is the 1st Platoon. The evacuation is on schedule.", Line_WaitForInput);
+	OutputLine(NULL, "……了解！",
+		   NULL, " ...Roger that!", Line_WaitForInput);
+	OutputLine(NULL, "　一個分隊を応援に向わせます。」",
+		   NULL, " We'll send our platoon over.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「兵隊さん、爺さまの位牌を持ってんちゃならんがねぇ…！」",
+		   NULL, "\"Excuse me, I need to bring along my grandfather's mortuary tablet...!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「位牌は構いません！",
+		   NULL, "\"You may take that with you!", Line_WaitForInput);
+	OutputLine(NULL, "　急いでください！！",
+		   NULL, " Please hurry up!", Line_WaitForInput);
+	OutputLine(NULL, "　町会の方は点呼を怠らないように！！",
+		   NULL, " Make sure everyone in the village is here!", Line_WaitForInput);
+	OutputLine(NULL, "　歩行困難な方は申し出てください。",
+		   NULL, " Please come forward if you're unable to walk.", Line_WaitForInput);
+	OutputLine(NULL, "隊員が補助します！」",
+		   NULL, " A soldier will come and help you!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「おおぉぉ、梨花ちゃまが殺されたからオヤシロさまがお怒りになったのじゃ…。」",
+		   NULL, "\"Aaaah, Oyashiro-sama is angry because Rika-chama was murdered...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「オヤシロさまオヤシロさまオヤシロさま…、どうか怒りをお鎮めください…。」",
+		   NULL, "\"Oyashiro-sama... Oyashiro-sama... Please forgive our sins....\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「防災訓練どおりに避難すちゃれー！",
+		   NULL, "\"Remember our emergency drills!", Line_WaitForInput);
+	OutputLine(NULL, "　班長は点呼終わったら町会役員に連絡せんかいねー！」",
+		   NULL, " Group leaders have to contact a town council member when everyone in their group has shown up!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「鬼ヶ淵から瘴気が溢れ出したんね…。",
+		   NULL, "\"Miasma is coming out of the swamp...", Line_WaitForInput);
+	OutputLine(NULL, "オヤシロさまはお怒りだんね……。」",
+		   NULL, " Oyashiro-sama must be furious...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「こんなに大勢いるんじゃ、助かる方法なんかなかとよぉ。",
+		   NULL, "\"There are too many of us here! We'll never make it out alive!", Line_WaitForInput);
+	OutputLine(NULL, "村で死なせてくれなぁ！」",
+		   NULL, " Let me die in this village!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「大丈夫です。",
+		   NULL, "\"Don't worry.", Line_WaitForInput);
+	OutputLine(NULL, "輸送ヘリと防ガス仕様のバスが回されます。",
+		   NULL, " The helicopters and buses are on their way to transport everyone to safety.", Line_WaitForInput);
+	OutputLine(NULL, "必ず助かりますから！」",
+		   NULL, " You're all going to make it out okay!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「みんな営林署へ集まれぇぇ！！",
+		   NULL, "\"Everyone gather at the forestry service!", Line_WaitForInput);
+	OutputLine(NULL, "　４丁目は違うだろ、郵便局裏の公民館だぞ！！」",
+		   NULL, " No, not the people from District 4! You're supposed to go to the community center behind the post office!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「皆さん、防災訓練と同じです。",
+		   NULL, "\"It's exactly the same as in the emergency drills.", Line_WaitForInput);
+	OutputLine(NULL, "落ち着いて災害時避難場所に集合してください。",
+		   NULL, " Please calm down and head to your evacuation point.", Line_WaitForInput);
+	OutputLine(NULL, "団体行動をお願いします。",
+		   NULL, " Please move as a group.", Line_WaitForInput);
+	OutputLine(NULL, "一人の乱れが全体の足を引きます！",
+		   NULL, " Every person matters!", Line_WaitForInput);
+	OutputLine(NULL, "　どうか団体行動を！",
+		   NULL, " Everyone needs to stick together!", Line_WaitForInput);
+	OutputLine(NULL, "　家には必ず戻れます！」",
+		   NULL, " You will get home safely!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　隊員たちの表情はマスクを被っているから村人にはわからなかったが、",
+		   NULL, "The villagers couldn't see the expressions under the soldiers' gas masks.", Line_WaitForInput);
+	OutputLine(NULL, "……もしも見ることができたならどんな表情をしていたのだろう。",
+		   NULL, " They wondered what kind of expressions they were hiding under there...", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　絶対に家に戻ることなどないと知りながら、必ず帰れると嘘をつく自分をどう思っていたのか…。",
+		   NULL, "The soldiers were, of course, lying to the villagers, knowing that they would never return to their homes again.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　隊員の一人が涙を流したが、その気持ちは村人の誰にも伝わることはなかった…。",
+		   NULL, "One such trooper cried under his mask, but the villagers never saw his tears...", Line_Normal);
+	ClearMessage();
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "M_Y7", "maskleft", 1, 0, 300 );
+
+	OutputLine(NULL, "「引き返してください！！",
+		   NULL, "\"Please go back!", Line_WaitForInput);
+	OutputLine(NULL, "　車両での避難は禁止されています！",
+		   NULL, " You can't take your own vehicle to evacuate!", Line_WaitForInput);
+	OutputLine(NULL, "　この先はガス流で寸断されており危険です！！",
+		   NULL, " The road ahead is cut off by a gas stream, and it's dangerous!!", Line_WaitForInput);
+	OutputLine(NULL, "　あんたにも硫黄の臭いがわかるでしょ！」",
+		   NULL, " Can't you smell the sulfur?\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　徒歩の避難では家財を運べないので、指示を無視して自家用車で避難しようとする人もいた。",
+		   NULL, "Some people tried to leave in their cars, so as to take large items with them.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　だが、外部へ通じる車道は全て交通封鎖部隊が封鎖していた。",
+		   NULL, "However, the quarantine unit had sealed off all roads leading outside.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　隊員たちのガスマスクの異様さと、鼻を刺激する硫黄の臭いに彼らは納得し引き返さざるを得なかった。",
+		   NULL, "The gas masks of the troopers and the smell of the sulfur persuaded them to return and obey their instructions.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+	DrawScene( "Re_Tel", 400 );
+
+	OutputLine(NULL, "　また、ある者は興宮の親戚に電話をしようとしたが、電話は繋がらなかった。",
+		   NULL, "Some of them tried to contact Okinomiya, but their phones would not connect.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　いくら掛けても全て話し中だった。",
+		   NULL, "The lines were busy, no matter how much they tried.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　大災害で回線がパンクしてるんだろうと自分を納得させるほかなかった。",
+		   NULL, "They simply assumed that the phone lines were overwhelmed because of the disaster.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+
+	OutputLine(NULL, "　アマチュア無線を使える者もいた。",
+		   NULL, "Some of the villagers had access to radios.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　村の外の被害状況を知ろうとしたのだが、ものすごいノイズが聞こえてくるだけでまったく役に立たなかった。",
+		   NULL, "They tried to figure out what the situation was like outside, but all they could hear over the radio was loud static.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　それはテレビやラジオも同じだった。",
+		   NULL, "It was the same with the television.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　彼らは外部との連絡手段を完全に途絶されていたのだ。",
+		   NULL, "They couldn't contact anyone outside of the village, so they really were totally isolated.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　だから、自衛隊員と警察官に偽装した彼らの指示以外に信じるものがなかった。",
+		   NULL, "And so, they had nothing to rely on but the instructions of the police and the military.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　……暗闇に灯りが１粒だけあったら誰でもそっちへ向うのだ。",
+		   NULL, "...They were all like moths heading towards a light,", Line_WaitForInput);
+	OutputLine(NULL, "疑いもせず。",
+		   NULL, " never doubting that they would be safe there.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　無線機から聞こえるノイズを聞いて、戦争中に無線局にいた老人が呟く。",
+		   NULL, "One old war veteran listened to the noise from the radio and muttered.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「………アメさんの妨害電波食らった時もこんな音がしたんね…。」",
+		   NULL, "\"......This is exactly how it sounded when the Americans jammed the radio waves during the war...\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　それは正しかった。",
+		   NULL, "As it turned out, he was absolutely correct.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　だが、彼自身それを信じることができず、避難を促す息子夫婦に急かされ、慌てて無線のスイッチを切るのだった…。",
+		   NULL, "However, he turned off the radio when his son urged him to evacuate...", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "YGk2", 400 );
+
+	OutputLine(NULL, "　災害時に定められた集合場所に村人は集められていた。",
+		   NULL, "The villagers had all gathered at their evacuation points.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　それは学校であったり、公民館であったりした。",
+		   NULL, "Some of them were at the school, and some were at the community center.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　避難するための移動手段がやってくるまでということで、彼らは室内に集められていた。",
+		   NULL, "They were to stay in the building until the evacuation vehicles arrived.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　それは点呼上の都合ということになっていた。",
+		   NULL, "The soldiers told them to stay inside so they could keep track of the number of evacuees.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "YGk1", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "「万一のガス流に備えて窓は全て閉めてください。",
+		   NULL, "\"Please close all of the windows to prevent the gas from entering.", Line_WaitForInput);
+	OutputLine(NULL, "念のため窓ガラスはテープで目張りします。",
+		   NULL, " We'll be sealing the windows to be on the safe side.", Line_WaitForInput);
+	OutputLine(NULL, "申し訳ございませんがご協力をお願いいたします！」",
+		   NULL, " Your cooperation would be appreciated.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「よし来た！",
+		   NULL, "\"All right!", Line_WaitForInput);
+	OutputLine(NULL, "　若いのは率先して手伝えー！！」",
+		   NULL, " Let's help them out!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　人々は隊員たちが持ってきたガムテープの箱から次々に取り出し、窓や換気口を塞いでいく。",
+		   NULL, "People started to seal up all the windows and vents with the duct tape that was handed to them.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　時折、隊員たちが不穏そうな無線のやり取りをしているのが聞こえると、人々は余計に危機感を持ち、熱心にわずかの隙間も塞ぐのだった……。",
+		   NULL, "They completely sealed every opening, even as they heard the disquieting conversation of the soldiers...", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	OutputLine(NULL, "　そうする内に、時計は午前の３時を過ぎようとしていたが、誰もが緊張していて眠気を覚えなかった。",
+		   NULL, "It was long past 3 AM, but everyone was wide awake with fear.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　その雰囲気に、誰もが長い夜になることを疑わなかった。",
+		   NULL, "They were having an extremely long night.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　でも、…そうだと信じる彼らが皮肉なくらいに、彼らの終焉はすぐそこまで迫っていたのだ……。",
+		   NULL, "Coincidentally, the end to their night had almost arrived...", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "YGk3", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "「…ぜぇんぶ、",
+		   NULL, "\"...This is all", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 600 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "オヤシロさまの祟りなんしゃあ、",
+		   NULL, " Oyashiro-sama's curse!", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "梨花ちゃま梨花ちゃま…、",
+		   NULL, " Rika-chama... Rika-chama....", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "オヤシロさまオヤシロさま…。」",
+		   NULL, " Oyashiro-sama, Oyashiro-sama...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「やっぱり、古手神社の鬼隠しはオヤシロさまのお怒りの先触れだったんだ。」",
+		   NULL, "\"Oyashiro-sama demoned away those kids at the Furude Shrine in his fury...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「あの日、古手神社は鬼の国に飲み込まれたんよ…。",
+		   NULL, "\"The Furude Shrine was swallowed by the world of the demons that day...", Line_WaitForInput);
+	OutputLine(NULL, "梨花ちゃまは鬼たちに腸を食らわれたんじゃ…。」",
+		   NULL, " The demons chewed up her guts while she was still alive...\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　人々はこのガス災害がオヤシロさまの祟りで、その前夜にあった梨花の変死体とその友人たちと刑事の謎の失踪を、オカルト的な何かの仕業だと囁きあった。",
+		   NULL, "They all started saying that the gas disaster was caused by the curse of Oyashiro-sama, and Rika's death and the mysterious disappearance of her friends and the two detectives were also the result of the curse.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　「鬼隠し」という言葉があちこちで飛び交った。",
+		   NULL, "People started talking about being \"demoned away.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　だが、圭一たちの一夜の短い戦いが雛見沢の命運を分けたなど、誰も気付くことはなかった。",
+		   NULL, "They had no idea that Keiichi and his friends' short battle sealed their fate for that night.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+	DrawScene( "JYT2", 1000 );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　迷信に盲目とされた人々は、圭一たちと刑事は梨花の死によるオヤシロさまの怒りを鎮めるため、",
+		   NULL, "The more religious villagers had become convinced that the children and the detectives went missing", Line_WaitForInput);
+	OutputLine(NULL, "率先して生贄になったに違いないと大真面目に語った。",
+		   NULL, " because they volunteered to become a sacrifice to calm Oyashiro-sama's anger after Rika's death.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　気付かない。",
+		   NULL, "They didn't know the truth.", Line_WaitForInput);
+	OutputLine(NULL, "気付けない…。",
+		   NULL, " They couldn't know...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　誰も、圭一たちの努力が迷信に埋もれていくことに、気付けない。",
+		   NULL, "Not one realized that Keiichi and his friends' efforts had all been in vain...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　そう。",
+		   NULL, "Indeed.", Line_WaitForInput);
+	OutputLine(NULL, "雛見沢では、何が起こってもオヤシロさまの祟りになってしまうのだ。",
+		   NULL, " In Hinamizawa, everything that happens is the will of Oyashiro-sama.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 1000 );
+
+	OutputLine(NULL, "　でも………いつの間にそういうことになったのだろう。",
+		   NULL, "But...... why did it have to be that way?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　そもそも、オヤシロさまの祟りと呼ばれる連続怪死事件が起こるまで、",
+		   NULL, "Before the series of mysterious deaths occurred,", Line_WaitForInput);
+	OutputLine(NULL, "オヤシロさまの祟りなどという単語は信仰の中とダム戦争のスローガンに登場するだけで、口にする者が多いような言葉ではなかったはずなのに。",
+		   NULL, " no one really used the term \"the curse of Oyashiro-sama\" that frequently.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　誰かが、そういう風にした。",
+		   NULL, "In other words, who set them up?", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　この村にはオヤシロさまの祟りという物騒なことが、毎年起こって当り前という不思議な空気を生んだのだ。",
+		   NULL, "People in this village were set up to believe that the curse of Oyashiro-sama happens every year.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　でも、それに気付くには、あまりに彼らは迷信深すぎた。",
+		   NULL, "They really are just too superstitious.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "Torakku2", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "「三佐、全小隊が点呼を終了しました。",
+		   NULL, "\"Major, we've finished gathering the villagers together.", Line_WaitForInput);
+	OutputLine(NULL, "遅れていた自主避難者もさっき、最後の家族が合流したようです。",
+		   NULL, " The last family finally reached their assembly point.", Line_WaitForInput);
+	OutputLine(NULL, "全員揃いました。」",
+		   NULL, " We got everyone.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Ta_Def", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「………そう。",
+		   NULL, "\"......Good.", Line_WaitForInput);
+	OutputLine(NULL, "いよいよね。",
+		   NULL, " This is finally it.", Line_WaitForInput);
+	OutputLine(NULL, "…オヤシロさまの祟りが現実となる。",
+		   NULL, " The curse of Oyashiro-sama will become a reality tonight.", Line_WaitForInput);
+
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	PlayBGM( 1, "suzu", 120, 0 );
+	DisableWindow();
+	ChangeBustshot( 2, "Ta_AkuWarai", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "オヤシロさまの生まれ変わりである古手梨花を綿流しにするという冒涜によって、オヤシロさまの怒りが村に下される。",
+		   NULL, " For enacting Watanagashi on Rika Furude, Oyashiro-sama is punishing this village.", Line_WaitForInput);
+	OutputLine(NULL, "それで、この５年間の連続した祟りは本当の神罰に昇格される。",
+		   NULL, " The curses of the last five years are culminating in the biggest curse of them all.", Line_WaitForInput);
+	OutputLine(NULL, "もう誰にも事件なんて呼ばせない。",
+		   NULL, " This is not just a mysterious chain of murders.", Line_WaitForInput);
+	OutputLine(NULL, "これは、荒ぶる神の怒りなのだから。",
+		   NULL, " This is divine punishment from an enraged god.", Line_WaitForInput);
+	OutputLine(NULL, "……くすくすくすくす！",
+		   NULL, " ...Hee hee hee hee!", Line_WaitForInput);
+	OutputLine(NULL, "　始めなさい。」",
+		   NULL, " Let's begin.\"", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+
+	OutputLine(NULL, "「………中隊長より全隊員へ。",
+		   NULL, "\"...This the company commander.", Line_WaitForInput);
+	OutputLine(NULL, "………彼らのために１分間の黙祷を捧げよう。",
+		   NULL, " The men are requesting one minute of silence.", Line_WaitForInput);
+	OutputLine(NULL, "三佐、１分だけご許可を。」",
+		   NULL, " Can you let them have that, Major?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「お好きになさい。」",
+		   NULL, "\"Do as you like.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　鷹野は小馬鹿にするように笑う。",
+		   NULL, "Takano gave him a disparaging laugh.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　中隊長は胸元で十字を切り、全体に言った。",
+		   NULL, "The company commander crossed his heart, and began to speak.", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 0, "T1_Requiem", 120, 0 );
+
+	OutputLine(NULL, "「…………天に召します我らの父よ。",
+		   NULL, "\".........Dear Heavenly Father.", Line_WaitForInput);
+	OutputLine(NULL, "罪無き彼らをどうかお導きください。",
+		   NULL, " Please guide these innocent people.", Line_WaitForInput);
+	OutputLine(NULL, "彼らの尊き犠牲がそれ以上の犠牲を防ぐことをどうか報いてください。",
+		   NULL, " Their sacrifice will save the lives of many others to come.", Line_WaitForInput);
+	OutputLine(NULL, "そして願わくば罪深き我らをお赦しください。",
+		   NULL, " Please forgive us for committing this sin.", Line_WaitForInput);
+	OutputLine(NULL, "我らが今日ここに在ることをお赦しください…。」",
+		   NULL, " Please forgive us for being here today...\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　中隊長は別に敬虔な信者でも何でもない。",
+		   NULL, "The company commander isn't Christian.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　どちらかと言えば無宗教者だった。",
+		   NULL, "In fact, he doesn't follow any religion.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　……でも、何かに祈りたくて、何かに許しを請いたくて、",
+		   NULL, "However, he prayed because he felt the need to ask someone", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "言った。",
+		   NULL, " for forgiveness.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　うろ覚えでも、",
+		   NULL, "He wasn't even sure if he was saying it correctly,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 600 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "神に祈った。",
+		   NULL, " but he still prayed to God.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　虐殺に手を汚す罪の赦しを求めて、",
+		   NULL, "He asked forgiveness for committing his sin", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 500 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "祈った。",
+		   NULL, " and continued to pray.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　その後で鷹野が小声で言う。",
+		   NULL, "Takano was speaking in a soft voice.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　それは独り言だった。",
+		   NULL, "She was talking to herself.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ChangeBustshot( 2, "Ta_Def", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「……神がいつ降臨されるのかは誰も知らない。",
+		   NULL, "\"'...for ye know not what hour your Lord doth come.", Line_WaitForInput);
+	OutputLine(NULL, "それは例えるなら、泥棒がいつ訪れるのかわからないように。",
+		   NULL, " But know this, that if the goodman of the house had known in what watch the thief would come, ", Line_WaitForInput);
+	OutputLine(NULL, "だから予期せずしてその時を迎えて、不信心であったことに歯軋りすることがないよう、常に目を醒ましていなさい。",
+		   NULL, "he would have watched, and would not have suffered his house to be broken up.", Line_WaitForInput);
+	OutputLine(NULL, "似非預言者たちは神の降臨を声高に叫ぶであろうが、それに惑わされてはなりません、か。",
+		   NULL, " Therefore be ye also ready: for in such an hour as ye think not, the Son of Man cometh.'", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLine(NULL, "………くすくすくす。」",
+		   NULL, "......Hee hee hee.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　ひとりの通信士がそれを聞いていた。",
+		   NULL, "One man heard her murmurs.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「マタイの福音書ですね。」",
+		   NULL, "\"That's from the Gospel of Matthew.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「そうなの？",
+		   NULL, "\"Is it?", Line_WaitForInput);
+	OutputLine(NULL, "　祖父の好きだった言葉よ。",
+		   NULL, " My grandfather always said that to me.", Line_WaitForInput);
+	OutputLine(NULL, "報われる日がいつ訪れるかわからないから、常に勤勉であれって言葉だと思っていたけど。」",
+		   NULL, " He was telling me to work hard every day, because you'll never know when you will be rewarded.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「今日が、報われる日なのですか…？」",
+		   NULL, "\"Is this a reward for you...?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 2, "Ta_Akuwarai", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「そうよ。",
+		   NULL, "\"Yes.", Line_WaitForInput);
+	OutputLine(NULL, "あなたにはわからないでしょうけどね。",
+		   NULL, " Although you might never understand it.", Line_WaitForInput);
+	OutputLine(NULL, "くすくすくす。」",
+		   NULL, " Hee hee hee.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「……失礼ながら、主の降臨は慈悲深いものであるべきだと信じています。",
+		   NULL, "\"Excuse my rudeness, but I believe that the descent of God is a merciful thing.", Line_WaitForInput);
+	OutputLine(NULL, "このような日にそれを喩えられることは冒涜かと思います。」",
+		   NULL, " I think what you're saying is inappropriate for a time like this.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　虐殺作戦の開始命令前に、神の赦しを請うこの瞬間には、鷹野の引用は不適切だと通信士は言いたかったのだろう。",
+		   NULL, "He was trying to tell her that using that verse of the Bible was inappropriate for the occasion.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　だが鷹野は滑稽そうに笑う。",
+		   NULL, "However, Takano simply laughed as though she had heard something very funny.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「くすくすくす。",
+		   NULL, "\"Hee hee hee.", Line_WaitForInput);
+	OutputLine(NULL, "ごめんなさいね。",
+		   NULL, " I'm sorry.", Line_WaitForInput);
+	OutputLine(NULL, "……あなたは神に試されなさい。",
+		   NULL, " ...But you have no right to judge.", Line_WaitForInput);
+	OutputLine(NULL, "私は今日を境に試す側となるのよ。」",
+		   NULL, " Tonight is the night where I become a god.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「…………以上で、黙祷を終了する。」",
+		   NULL, "\"......The moment of silence has ended.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　そして、…全ての隊員が終わってほしくないと思った黙祷の時間が、終わりを告げた…。",
+		   NULL, "And with the end of the silence...", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「全小隊、滅菌を開始せよ。」",
+		   NULL, "\"Execute the operation now.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　これほど覇気のない合図は誰も聞いたことがなかっただろう…。",
+		   NULL, "The order was given in as hollow and reluctant a manner as an order can possibly be...", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "YGk3", "maskleft", 1, 0, 300 );
+
+	OutputLine(NULL, "　学校の教室の中には大勢の人たちがすし詰めの状態で不安に耐えていた。",
+		   NULL, "People were packed into the classroom. They were afraid.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　その教室の前後の引き戸を隊員たちが閉める。",
+		   NULL, "The troopers closed the door of the classroom.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　なぜそんなことをするのか人々には理解できなかった。",
+		   NULL, "The people inside had no idea why they were doing that.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　いや、不審にも思わなかった。",
+		   NULL, "However, they didn't suspect anything at all.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　暑くて息苦しいから、せめて廊下くらいは開けてくれと、",
+		   NULL, "One old man walked up to the door to open it", Line_WaitForInput);
+	OutputLine(NULL, "引き戸を開けようと近付いた老人が、",
+		   NULL, " because with it closed, it was far too hot inside the room.", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…ころんと綺麗に転んだ。",
+		   NULL, "...But he collapsed all of a sudden.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　その妻が、何をやっているんだかと手を貸そうと近付いた時、",
+		   NULL, "His wife tried to walk over to help him up, ", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 600 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "彼女も…ころんと、",
+		   NULL, "but she also collapsed", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "呆気なく転んだ。",
+		   NULL, " all of a sudden.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "　その、",
+		   NULL, "Then...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 600 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……ころん、",
+		   NULL, " other people", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 400 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "ころんが、",
+		   NULL, " also started collapsing", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 600 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…前後の扉から教室全体に広がっていく。",
+		   NULL, " inside of the room.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "", Line_Normal);
+
+	ClearMessage();
+	SetSpeedOfMessage( FALSE, 0 );
+
+	OutputLine(NULL, "　…それはとても不思議な光景。",
+		   NULL, "...It really was a very odd sight.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	PlaySE( 0, "s_Down", 100, 64 );
+
+	SetValidityOfInput( FALSE );
+	Wait( 200 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 100, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 500 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 100, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 200 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 100, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 200 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 100, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 300 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 100, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 100, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 200 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 100, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 150 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 100, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 200 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 100, 64 );
+
+	OutputLine(NULL, "　例えるなら、何なのか。",
+		   NULL, "What would make for a good example?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　………もしもこれがドミノ倒しのように見えたなら、さぞや愉快な光景に見えただろう。",
+		   NULL, "......It would be pretty amusing if they were dominoes.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	PlaySE( 0, "s_Down", 100, 64 );
+
+	OutputLine(NULL, "　でも、転ぶのはドミノではなく、人間だった…。",
+		   NULL, "However, they're human beings...", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　一番遠い窓際に座っていた数人がその異常な光景を目にする。",
+		   NULL, "People sitting by the window watched this strange event happen before their eyes.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　彼らは目の前で起きている光景が何か、理解しようと目を見開くことしかできなかった。",
+		   NULL, "They opened those eyes wider to try and understand what was going on.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "YGk2", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "　扉が少しだけ開き、そこからスプレー缶のような物を持った手が覗き、スプレー缶を教室奥へ２個、３個とさらに放り込んだ。",
+		   NULL, "The door creaked open slightly, and someone on the other side threw three spray canisters into the room.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　それによって、このドミノ倒しを目にできた人たちも、",
+		   NULL, "More people started to collapse...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……ドミノ倒しに加わった…。",
+		   NULL, " even those at the window...", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 0 );
+	PlaySE( 0, "s_Down", 100, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+
+	OutputLine(NULL, "　もちろん、この悲しい滑稽なドミノ倒しはここだけではない。",
+		   NULL, "This wasn't something that was happening only in one room.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　営林署の他の部屋でも同時に行なわれていた。",
+		   NULL, "It was happening in all the other rooms too.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　全ての避難場所で行なわれていた。",
+		   NULL, "It was happening in all the evacuation centers.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　人々が。",
+		   NULL, "People's dreams,", Line_WaitForInput);
+	OutputLine(NULL, "長い人生を刻み、これからの人生にさらに挑んでいこうとする夢や希望、未来というものが、",
+		   NULL, " their hopes, and their futures", Line_WaitForInput);
+	OutputLine(NULL, "パタパタパタ、ころころころんと、胸が好くくらいに面白く転んでいったのだ……。",
+		   NULL, " were taken away so quickly and easily...", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "YG2", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "　職員室脇の応接室でばたばたと騒ぎが起こる。",
+		   NULL, "There was a commotion in the reception room by the principal's office.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　勘のいい人がいて、ガス弾が投げ込まれたのに気付き、目張りのガムテープを引きちぎって窓を開けて校庭に逃れたのだ。",
+		   NULL, "Someone had figured out what was going on, broke the seal off the window, and escaped outside.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　同じように窓を開けて逃れようとした人たちも何人かいたが、",
+		   NULL, "Other people tried to remove the seal on their windows too,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…自らの目張りの頑丈さに手こずるわずか数秒が、",
+		   NULL, " but they collapsed", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "…彼らをやさしく転ばせた。",
+		   NULL, " in a matter of seconds.", Line_Normal);
+	ClearMessage();
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "GRY2", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "「応接室で脱走発生。",
+		   NULL, "\"Someone escaped from the reception room!", Line_WaitForInput);
+	OutputLine(NULL, "４名が窓から脱出！」",
+		   NULL, " Four people are loose!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「発砲許可！！",
+		   NULL, "\"You have permission to fire!!", Line_WaitForInput);
+	OutputLine(NULL, "　撃て撃て撃て撃て撃て撃てッ！！！」",
+		   NULL, " Shoot, shoot, shoot!!!\"", Line_Normal);
+	ClearMessage();
+
+	HideWindow( 0 );
+	DrawFilm( 2, 0xff, 0x00, 0x00, 256, 0, 0, TRUE );
+	DrawScene( "white", 0 );
+
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetSpeedOfMessage( FALSE, 0 );
+
+	OutputLine(NULL, "　隊員たちが窓から逃げる彼らの背中に自動小銃を掃射する。",
+		   NULL, "The soldiers shot the people who tried to escape in the back.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　美しいくらいの静寂を打ち破る無粋な連続の銃声。",
+		   NULL, "The sound of the gunshots echoed in the silence.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　…心地よき死のハーモニーに酔うにはそれはあまりに無粋。",
+		   NULL, "...It was a noise filled with cruelty.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　銃撃に倒れる人の転び方は、あまりにみすぼらしく…。",
+		   NULL, "They helplessly fell down to the ground...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　……死神ですら心を奪われそうになる静寂の虐殺葬送曲に比べたら無粋を極めるものだった。",
+		   NULL, "Their deaths were so pitiful compared to the silent deaths of those before them.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+
+	SetSpeedOfMessage( FALSE, 0 );
+	FadeFilm( 0, TRUE );
+	DisplayWindow();
+	DrawSceneWithMask( "GRY1", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "　４人の中には駐在警官が混じっていた。",
+		   NULL, "The residential police officer was one of the escapees.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_gun", 128, 64 );
+
+	OutputLine(NULL, "　彼は拳銃で反撃する。",
+		   NULL, "He tried to shoot back at them with his own gun.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　営林署外壁のどこかに着弾した音がした。",
+		   NULL, "His shots could be heard throughout the building.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　乾いた発砲音に隊員たちは一瞬身を潜める。",
+		   NULL, "The soldiers ducked into the shadows upon hearing the noise.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　警官はその隙を逃さず一目散に校門へと駆けたが、",
+		   NULL, "The officer seized his chance and ran towards the gate.", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "結局、意味などなかった。",
+		   NULL, " But that was just a waste of time...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　彼らの自動小銃の有効射程はこの校庭を往復するより長かったし、",
+		   NULL, "Not only is the range of the automatic weapons they were using longer than the length of the schoolyard,", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "また、彼らもこの程度の距離の移動目標など何の問題もなく命中させる技量を持っていたからだ。",
+		   NULL, " but as trained professionals, it would be nothing for them to shoot him from that distance.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+
+	DrawBustshot( 10, "Toketu1a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 10, TRUE );
+
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+
+	DrawBustshot( 10, "Toketu1b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 10, TRUE );
+
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+
+	DrawBustshot( 10, "Toketu1c", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 10, TRUE );
+
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+
+	DrawFilm( 2, 0xff, 0x00, 0x00, 256, 0, 0, TRUE );
+	DrawScene( "white", 10 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetSpeedOfMessage( FALSE, 0 );
+
+	OutputLine(NULL, "　だからつまり、至極当然の結果だった。",
+		   NULL, "The villagers had no choice.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　ガスで自分が意識を失うことにすら気付かずに倒れるか、",
+		   NULL, "Either they'd die from the gas without realizing what was happening,", Line_WaitForInput);
+	OutputLine(NULL, "殺されることに気付き怯えて駆けて、背中を鉛弾で貫かれて死ぬかを選ばされるだけだった。",
+		   NULL, " or they'd find out about the mission and be killed.", Line_Normal);
+	ClearMessage();
+	DrawScene( "black", 400 );
+	FadeFilm( 0, TRUE );
+	DrawScene( "YG2", 400 );
+
+	OutputLine(NULL, "「どうした！",
+		   NULL, "\"What happened?!", Line_WaitForInput);
+	OutputLine(NULL, "　反撃されたか！",
+		   NULL, " Did they fight back?!", Line_WaitForInput);
+	OutputLine(NULL, "　応答しろ！！」",
+		   NULL, " Respond!!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「脱走者は全員射殺。",
+		   NULL, "\"We've shot all the fugitives.", Line_WaitForInput);
+	OutputLine(NULL, "銃声は駐在警官が反撃したものです。」",
+		   NULL, " One of the residential policemen shot back.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「射殺体を回収しろ。",
+		   NULL, "\"Collect those bodies.", Line_WaitForInput);
+	OutputLine(NULL, "一般犠牲者と一緒にしないよう注意せよ。」",
+		   NULL, " Do not put them with the other corpses.\"", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "GRY1", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "　窓を乗り越えた隊員たちが４人の倒れる体に近付く…。",
+		   NULL, "The soldiers walked over to the four fallen bodies...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　そして４人が、倒れた体なのか、死んだ体なのかを判別し、全て後者であることを確認して引き摺っていくのだった。",
+		   NULL, "They needed to make sure that they were all dead, not just injured.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 3000 );
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	PlayBGM( 1, "suzu", 120, 0 );
+
+	OutputLine(NULL, "「第１小隊より本部。",
+		   NULL, "\"This is the First Platoon.", Line_WaitForInput);
+	OutputLine(NULL, "営林署の滅菌を終了。",
+		   NULL, " The forestry service building has been sterilized.", Line_WaitForInput);
+	OutputLine(NULL, "脱走者４名は射殺。」",
+		   NULL, " Four escaped. We took them down.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「第２小隊より本部。",
+		   NULL, "\"This is the Second Platoon.", Line_WaitForInput);
+	OutputLine(NULL, "滅菌終了。",
+		   NULL, " Sterlization complete.", Line_WaitForInput);
+	OutputLine(NULL, "脱走者なし。」",
+		   NULL, " No one escaped.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「第３小隊より本部。",
+		   NULL, "\"This is the Third Platoon.", Line_WaitForInput);
+	OutputLine(NULL, "脱走者１０名以上。",
+		   NULL, " More than ten escaped.", Line_WaitForInput);
+	OutputLine(NULL, "現在掃討中。",
+		   NULL, " We're conducting a sweep.", Line_WaitForInput);
+	OutputLine(NULL, "制圧は時間の問題。」",
+		   NULL, " It will be over soon.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「第４小隊より本部。",
+		   NULL, "\"This is the Fourth Platoon.", Line_WaitForInput);
+	OutputLine(NULL, "滅菌終了。",
+		   NULL, " Sterlization complete.", Line_WaitForInput);
+	OutputLine(NULL, "脱走者なし。」",
+		   NULL, " No one escaped.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "「第３小隊より本部。",
+		   NULL, "\"This is the Third Platoon.", Line_WaitForInput);
+	OutputLine(NULL, "脱走者１３名全員の射殺を確認。",
+		   NULL, " We've taken out all 13 fugitives.", Line_WaitForInput);
+	OutputLine(NULL, "全員の滅菌を終了。」",
+		   NULL, " Sterilization is now complete.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「了解。",
+		   NULL, "\"Roger.", Line_WaitForInput);
+	OutputLine(NULL, "機密保持部隊の全小隊は遺体数と点呼数の確認を厳重に行なわれたし。」",
+		   NULL, " Start counting the bodies. Make sure the total matches the original number taken earlier tonight.\"", Line_Normal);
+	ClearMessage();
+
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DrawScene( "Torakku2", 1000 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 0, "Ta_Akuwarai", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
+	DisplayWindow();
+	PlayBGM( 0, "T1_Requiem", 120, 0 );
+
+	OutputLine(NULL, "　鷹野は指揮車の中でひとり笑っていた。",
+		   NULL, "Takano was laughing to herself inside of the van.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　ここに居たから、鷹野には人々が音も無く倒れていく光景が見えたはずはない。",
+		   NULL, "She didn't physically see all those people dying silently.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　……でも、鷹野には見えていた。",
+		   NULL, "...But she saw it anyway.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　人々が、自分がこれから死ぬという自覚もなく順番に行儀よくパタパタと倒れていくのが、",
+		   NULL, "She saw countless people dying without even noticing it.", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "はっきりと目蓋の裏に浮かんでいたのだった。",
+		   NULL, " She saw it all in her mind.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「…………………………♪」",
+		   NULL, "\"...............♪\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　鷹野は手を振るうような仕草をしていた。",
+		   NULL, "Takano waved her arms in the air.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　……それは誰も見ていなかったが、仮に見たとしても、鷹野が何のためにやっているか理解することはできなかっただろう。",
+		   NULL, "No one was watching her, but no one would understand what she was doing even if they were.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　………彼女は、タクトを振るっていたのだ。",
+		   NULL, "......She was waving her baton.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　この死が重なり奏でる荘厳にして静寂の葬送曲がただただ心地よく、自らがその指揮者であることを思い出したに違いない。",
+		   NULL, "Takano was pretending that she was the conductor of this silent funeral march.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「三佐、滅菌の完全終了を確認。",
+		   NULL, "\"Major, the sterilization is complete.", Line_WaitForInput);
+	OutputLine(NULL, "通信妨害を終了しますがよろしいですか。」",
+		   NULL, " We are going to reconnect the phone lines.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「えぇいいわよ。",
+		   NULL, "\"Sure, go ahead.", Line_WaitForInput);
+	OutputLine(NULL, "くすくす。」",
+		   NULL, " Hee hee.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「施設処理部隊より定時連絡。",
+		   NULL, "\"This is the Institute Concealment Unit.", Line_WaitForInput);
+	OutputLine(NULL, "機密搬出と溶接封鎖を完了。",
+		   NULL, " We've removed all the classified items and welded the entrance shut.", Line_WaitForInput);
+	OutputLine(NULL, "現在、注水中。」",
+		   NULL, " We're currently flooding the underground facility.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「交通封鎖部隊より定時連絡。",
+		   NULL, "\"This is the Traffic Blockade Unit.", Line_WaitForInput);
+	OutputLine(NULL, "封鎖線は異常なし。」",
+		   NULL, " Everything is proceeding as scheduled.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「通信工作部隊より定時連絡。",
+		   NULL, "\"This is the Communications Sabotage Unit.", Line_WaitForInput);
+	OutputLine(NULL, "通信妨害を終了。",
+		   NULL, " We've reconnected the phone lines.", Line_WaitForInput);
+	OutputLine(NULL, "電話施設の現状復帰を開始。」",
+		   NULL, " The telephone facility is back to normal.\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　だが、鷹野はそれらを聞いてはいなかった。",
+		   NULL, "Takano was paying no attention to those reports.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　何か荘厳なオーケストラを口ずさみながら、上機嫌にそれらを聞き流していた。",
+		   NULL, "She continued to sing the melody of an orchestra.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　どうしても鷹野の上機嫌が理解できなくて、…近くにいた通信士が聞く。",
+		   NULL, "One operator spoke to her.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「……ご機嫌ですね。」",
+		   NULL, "\"You seem to be in a good mood...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 0, "Ta_Def", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「えぇ。",
+		   NULL, "\"Yes.", Line_WaitForInput);
+	OutputLine(NULL, "最高に気分がいい夜よ。",
+		   NULL, " It feels so good!", Line_WaitForInput);
+	OutputLine(NULL, "……あなたには聞こえないでしょうね。",
+		   NULL, " ...I bet you can't hear it.", Line_WaitForInput);
+	OutputLine(NULL, "この新しい神を讃える讃歌が。」",
+		   NULL, " This hymn that glorifies God.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「……讃歌、でありますか…。」",
+		   NULL, "\"...A hymn...?\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　くっくっく。",
+		   NULL, "Heh heh heh.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "black", 400 );
+
+	OutputLine(NULL, "　鷹野は聞こえるように笑うと、自慢の髪を翻して両手を広げながら言った。",
+		   NULL, "Takano laughed loudly, spreading her arms wide.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "「ええ、そうよ！",
+		   NULL, "\"That's right!", Line_WaitForInput);
+	OutputLine(NULL, "　讃える歌、讃歌！",
+		   NULL, " The hymn!", Line_WaitForInput);
+	OutputLine(NULL, "　……神のいなかったこの地に、新しい神が誕生した瞬間を讃える讃歌よ。",
+		   NULL, " A new god has descended to this village!", Line_WaitForInput);
+	OutputLine(NULL, "…この雛見沢には神などいなかった。",
+		   NULL, " There was no god in Hinamizawa.", Line_WaitForInput);
+	OutputLine(NULL, "オヤシロさまという名が残るだけ。",
+		   NULL, " Oyashiro-sama was just a name.", Line_WaitForInput);
+	OutputLine(NULL, "神がかつて存在した痕跡が残るだけのただの古ぼけた土地だった。",
+		   NULL, " This was an old backwater village with no real god.", Line_WaitForInput);
+	OutputLine(NULL, "その地に、私は再び神を取り戻させたの。",
+		   NULL, " But I brought a god to this place.", Line_WaitForInput);
+	OutputLine(NULL, "どういうことかわかる？",
+		   NULL, " Do you understand what that means?", Line_WaitForInput);
+	OutputLine(NULL, "　わからないでしょうねぇ、くすくすくす！",
+		   NULL, " I bet you don't, hee hee hee!", Line_WaitForInput);
+	OutputLine(NULL, "　今の世界に祟る神が何人いる？",
+		   NULL, " How many gods in this world have the power to curse people?", Line_WaitForInput);
+	OutputLine(NULL, "　人が試すことに耐えられる神が何人いる？",
+		   NULL, " How many of them can challenge people?", Line_WaitForInput);
+	OutputLine(NULL, "　１人もいやしない！",
+		   NULL, " None of them!", Line_WaitForInput);
+	OutputLine(NULL, "　それを私が祟った！！」",
+		   NULL, " But I did it!!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　…鷹野は誰にもわかるまいと馬鹿にしたように笑う。",
+		   NULL, "Takano laughed as if she was the only one who could comprehend what she was saying.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　…無論、指揮車の中にいる誰にも、鷹野の笑いを理解できるものなどいなかった。",
+		   NULL, "None of the operators inside the car could comprehend her laughter.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　その理解できないという表情がさらに鷹野を喜ばせるのだ。",
+		   NULL, "Takano was satisfied to know that.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "Moon", 400 );
+
+	OutputLine(NULL, "「祟りなきは神にあらず。",
+		   NULL, "\"A god is not a god without a curse.", Line_WaitForInput);
+	OutputLine(NULL, "祟るゆえに恐れられ、恐れられるゆえに崇められる。",
+		   NULL, " Gods are feared because of their curses, and they're worshipped because they're feared.", Line_WaitForInput);
+	OutputLine(NULL, "それこそが神の真実！",
+		   NULL, " That's the truth about gods!", Line_WaitForInput);
+	OutputLine(NULL, "　神が信仰を生み出すのではなく、信仰が神を生み出すのなら、神に祟りなど必要ないッ！！",
+		   NULL, " If faith alone is what creates a god, there's no need for curses!", Line_WaitForInput);
+	OutputLine(NULL, "　でも太古の神々は祟ったのよ。",
+		   NULL, " But the ancient gods all cursed humans.", Line_WaitForInput);
+	OutputLine(NULL, "では神の祟りとは何なのか！",
+		   NULL, " Then what is a god's curse?", Line_WaitForInput);
+	OutputLine(NULL, "　それこそが真の神の証だった！",
+		   NULL, " It's the proof that a god is real!", Line_WaitForInput);
+	OutputLine(NULL, "　祟らない神など、人間に強姦された神でしかないのよ！！",
+		   NULL, " Gods aren't gods if they don't curse people!!", Line_WaitForInput);
+	OutputLine(NULL, "　神の宿らぬ抜け殻の土地に神が確かに存在した痕跡を見た私は思ったわ。",
+		   NULL, " I found evidence of the existence of God in this poor village.", Line_WaitForInput);
+	OutputLine(NULL, "これは天の啓示だとッ！！",
+		   NULL, " I thought this was a message from Heaven!!", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　ダム戦争が終わるまで明治から百年にも渡り雛見沢は神を失ってきた。",
+		   NULL, "Hinamizawa was without a god for a hundred years, until the end of the dam conflict.", Line_WaitForInput);
+	OutputLine(NULL, "それを私が蘇らせろという神の啓示だと私は思ったわ！！",
+		   NULL, " I believe it's been my mission to restore the god's existence in this village!!", Line_WaitForInput);
+	OutputLine(NULL, "　そして天は私にありとあらゆる力を貸してくれた！",
+		   NULL, " Heaven supported me and granted me power!", Line_WaitForInput);
+	OutputLine(NULL, "　天が与えたわずかの偶然が積もり芽生えた祟りの芽を私が育てた！",
+		   NULL, " I have raised the bud of a curse plant with the faint seeds of coincidence granted to me by Heaven!", Line_WaitForInput);
+	OutputLine(NULL, "　育まれた祟りは今や結実し実をたわわに実らせてくれたわ！！",
+		   NULL, " And now this budding curse bears fruit and hangs ripe!!", Line_WaitForInput);
+	OutputLine(NULL, "　そうよわかる？！",
+		   NULL, " Do you understand?", Line_WaitForInput);
+	OutputLine(NULL, "　つまりは今宵は収穫祭！",
+		   NULL, " Tonight is the night of the harvest!", Line_WaitForInput);
+	OutputLine(NULL, "　オヤシロさまの伝説に刻まれた最後の神の祟りの日！！",
+		   NULL, " This is the final curse of Oyashiro-sama!!", Line_WaitForInput);
+	OutputLine(NULL, "　この日が訪れたからこそ、オヤシロさまの存在は今こそ絶対となる！！",
+		   NULL, " And from this day forth, Oyashiro-sama will be a real god!!", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　あなたたちは今はわからなくてもやがて知る。",
+		   NULL, "You may not see it now, but someday, you will understand.", Line_WaitForInput);
+	OutputLine(NULL, "私が成した偉業がどれほどのものか、どれだけ長く語り継がれるか、そして私がどれほどの存在となったのか！",
+		   NULL, " You'll see how grand this plan I accomplished was, how long it will be told in history, and how great I will become!", Line_WaitForInput);
+	OutputLine(NULL, "　神は祟る。",
+		   NULL, " Gods curse.", Line_WaitForInput);
+	OutputLine(NULL, "その祟りを私は起こす！！",
+		   NULL, " I make that curse happen!!", Line_WaitForInput);
+	OutputLine(NULL, "　今こそ我はオヤシロさまの祟りなり。",
+		   NULL, " I am the curse of Oyashiro-sama.", Line_WaitForInput);
+	OutputLine(NULL, "我を崇めよ、讃えよ、そして畏れよ！！",
+		   NULL, " Worship me, and be fearful!!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　我が紡ぐは祟りにあらず、死にあらず。",
+		   NULL, "I'm creating not only death.", Line_WaitForInput);
+	OutputLine(NULL, "我が紡ぐは歴史なり！",
+		   NULL, " I'm writing history!", Line_WaitForInput);
+	OutputLine(NULL, "　歴史は祟りを語り、我が存在を永劫に語り伝えるであろう。",
+		   NULL, " History will speak of this curse, and remember my existence forever.", Line_WaitForInput);
+	OutputLine(NULL, "我こそは祟りなり、肉で出来た身を超越せし者なり、この身が例え朽ち果てようとも、我が紡ぎし歴史は永遠に残り続けるであろう。",
+		   NULL, " I'm the curse itself. I've transcended this flesh. My legend will endure forever, beyond my mortal life.", Line_WaitForInput);
+	OutputLine(NULL, "今こそ我は永遠を得たり！！",
+		   NULL, " My existence is eternal now!!", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　我が身を呪えよ人間たち、身が朽ちれば後には何も残せぬ無力さを呪い悔やみ恐れるがいい！",
+		   NULL, "Curse yourselves, and curse your powerlessness!", Line_WaitForInput);
+	OutputLine(NULL, "　そして我が偉大さを知るがいいッ！！",
+		   NULL, " Realize how great I am!!", Line_WaitForInput);
+	OutputLine(NULL, "　我こそはオヤシロさまなり。",
+		   NULL, " I am Oyashiro-sama!", Line_WaitForInput);
+	OutputLine(NULL, "今こそ神の領域に至ったものなり。",
+		   NULL, " I'm a god now!", Line_WaitForInput);
+	OutputLine(NULL, "我は肉体が滅びようとも永遠にこの地で語り継がれるのだ！！",
+		   NULL, " My flesh may die eventually, but I'll remain in this world forever!!", Line_WaitForInput);
+	OutputLine(NULL, "　あははははは、はははははははは、あっはははははははは！！",
+		   NULL, " Ahahahahaha, hahahahahahahaha, ahhhahahahahahahaha!!", Line_WaitForInput);
+	OutputLine(NULL, "　はっははははははは、あーっはっはははははははは！！！」",
+		   NULL, " Haaahahahahahahahaha, aaaaaahhhhhhhaahahahahahahahaha!!!", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	SetValidityOfInput( FALSE );
+	Wait( 5000 );
+	SetValidityOfInput( TRUE );
+
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+
+	PlaySE( 0, "s_daidageki", 128, 64 );
+	DrawBustshot( 15, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DrawBustshot( 15, "End_1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	DrawBustshot( 15, "End_2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 800, TRUE );
+	DrawBustshot( 15, "End_3", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 3000, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "black", 4000 );
+	SetValidityOfInput( FALSE );
+	Wait( 8000 );
+	SetValidityOfInput( TRUE );
+
+	DrawSceneWithMask( "GetTip_minaep", "mask1900", 7, 0, 400 );
+	Wait( 5000 );
+	DrawSceneWithMask( "black", "mask1900", 7, 0, 400 );
+
+	DrawSceneWithMask( "Omake_Haikei", "mask4", 1, 0, 1500 );
+	PlaySE( 0, "s_jikuu", 128, 64 );
+	DrawSceneWithMask( "Omake_Jamp", "mask5", 1, 0, 1500 );
+	Wait( 10000 );
+	DrawSceneWithMask( "Omake_Haikei", "mask4", 1, 0, 1500 );
+	PlaySE( 0, "s_jikuu", 128, 64 );
+	DrawSceneWithMask( "Omake_Tip", "mask5", 1, 0, 1500 );
+	Wait( 10000 );
+	DrawSceneWithMask( "Omake_Haikei", "mask4", 1, 0, 1500 );
+	PlaySE( 0, "s_jikuu", 128, 64 );
+	DrawSceneWithMask( "Omake_staff", "mask5", 1, 0, 1500 );
+	Wait( 10000 );
+	DrawScene( "black", 1000 );
+}

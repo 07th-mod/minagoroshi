@@ -1,0 +1,47 @@
+void main()
+{
+	EnableJumpingOfReturnIcon();
+
+	SetSpeedOfMessage( TRUE, 128 );
+
+	OutputLine(NULL, "Ｎｏ．",
+		   NULL, "No.", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "昭和　　年　　月　　日（　　）",
+		   NULL, "Date:      Year: ", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "件　名　　北条サトコさんの件",
+		   NULL, "Subject: About Satoko Houjou-san.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "来訪者　　前原圭一　外４名（関係：友人）",
+		   NULL, "Visitor: Keiichi Maebara and four other\n         friends.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "・北条サトコさんが叔父に虐待を受けているので、一時保護をしてほしい旨、訴えがありました。",
+		   NULL, "- They are requesting protection for Satoko-Houjou-san, to save her from being abused by her uncle.", Line_WaitForInput);
+	OutputLine(NULL, "（対応中？）",
+		   NULL, " (Already being dealt with?)", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "・冷蔵庫の掃除をしますので、私物は今夕までに片付けてください。",
+		   NULL, "- I'm cleaning our the refrigerator, so please\n  remove your personal belongings by this\n  evening.", Line_Normal);
+	ClearMessage();
+
+	PlaySE( 0, "s_page", 128, 64 );
+
+	Wait( 1000 );
+	DrawScene( "black", 1000 );
+}

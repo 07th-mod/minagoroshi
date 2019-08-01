@@ -1,0 +1,364 @@
+void main()
+{
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 0, "mask00" , 0, FALSE, 0, 0, 400, FALSE );
+	FadeBustshotWithFiltering( 7, "mask00" , 0, FALSE, 0, 0, 400, FALSE );
+	DrawBustshot( 1, "Me_TohohoA2#", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 8, 400, FALSE );
+	DrawBustshot( 2, "Kei_Warai#", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "　魅音は真っ赤になりながら、自分にはこんな女の子っぽいのは似合わない、レナにあげた方がいいんじゃない？と、心にもないことをまくし立てていた。",
+		   NULL, "Mion, having turned red, insisted that the cute doll would be a much better fit for Rena.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　その様子は、もはや圭一にも完全にわかるらしくて、魅音が本当は欲しくて欲しくて仕方がないくせに素直になれないことを完全に見抜いていた。",
+		   NULL, "Her attitude made it clear that she really wanted the doll, but couldn't be honest about it.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_OdorokiA1#", 200, TRUE );
+	DisplayWindow();
+
+	SetSpeedOfMessage( TRUE, 128 );
+	OutputLine(NULL, "「だだ、",
+		   NULL, "\"I just...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "だからさおじさん、",
+		   NULL, " This ol' man just thinks that...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 600 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "こういう可愛いお人形はさ、",
+		   NULL, " cute dolls like this are...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "ちゃんとした可愛い女の子に渡した方が似合うと思うんだよね！",
+		   NULL, " more for girly girls, you know...?", Line_ContinueAfterTyping);
+	SetSpeedOfMessage( FALSE, 0 );
+	OutputLineAll(NULL, "", Line_WaitForInput);
+
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_HauA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "　私みたいな男女に渡してもほら、人形の方が可哀想というか、あはははは…！」",
+		   NULL, "This doll doesn't deserve to be owned by a tomboy like me... Ahahahahaha!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 2, "Kei_Def1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「欲しいくせにー！",
+		   NULL, "\"I know that you want it!", Line_WaitForInput);
+	OutputLine(NULL, "　顔に書いてあるじゃねぇかよ。",
+		   NULL, " It's written all over your face!", Line_WaitForInput);
+	OutputLine(NULL, "あははははは。」",
+		   NULL, " Ahahahahaha.\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_OdorokiA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「違うー！",
+		   NULL, "\"No!", Line_WaitForInput);
+	OutputLine(NULL, "　書いてなんかないよー！！",
+		   NULL, " It's not written on my face!", Line_WaitForInput);
+	OutputLine(NULL, "　嘘吐きー、意地悪ー！！」",
+		   NULL, " You're lying! Stop being mean!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　魅音は真っ赤になりながら、さもお人形に興味がないふりをしながらぶんぶんと振り回して見せていた。",
+		   NULL, "Mion shook her head with an embarrassed look, pretending she wasn't interested in the doll.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　知らぬは本人ばかりとはまさにこのことだ。",
+		   NULL, "Everyone here knew that she wanted it.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　今や圭一を含め、この場の全員が素直になれない魅音の狼狽っぷりをにやにやと笑いながら眺めていた。",
+		   NULL, "We all looked at Mion with big smiles on our faces.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ChangeBustshot( 2, "Kei_Warai#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「おいおい、別に女の子じゃないと人形は渡せないとか、そういう考え方じゃねぇぞ！",
+		   NULL, "\"Hey, it's not like I can only give this doll to a girl!", Line_WaitForInput);
+	OutputLine(NULL, "　こいつは俺と今日の部活で熱いにらみ合いをしてくれた親友への贈り物なんだぜ？」",
+		   NULL, " Just think of it as my gift to you, as a friend!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_TohohoA2#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「そ、そうなの？！",
+		   NULL, "\"I-Is that so?", Line_WaitForInput);
+	OutputLine(NULL, "　圭ちゃんは男の子の友達にも人形を渡すわけ？！」",
+		   NULL, " So you would give a doll to a boy too?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 2, "Kei_Majime#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「まぁ…確かに選べる範囲があるなら、わざわざ人形は選ばねぇな。",
+		   NULL, "\"Well... I would choose something else if I had a choice...", Line_WaitForInput);
+
+	DisableWindow();
+	ChangeBustshot( 2, "Kei_Def2#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "でもよ、男の世界じゃ、相手に悪意がない限り、贈り物は拒まねぇぜ？",
+		   NULL, " But anyway, guys would never reject a gift unless there's something shady going on.", Line_WaitForInput);
+	OutputLine(NULL, "　相手の気持ちなんだからよ、変に断られるとかえって男気がないよな！」",
+		   NULL, " It's just me being generous... Why would you refuse it?!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_HauA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「ふ、…ふ〜ん？",
+		   NULL, "\"Oh...", Line_WaitForInput);
+	OutputLine(NULL, "　じゃあ、その、女の子でなくても……人形を受け取ってもいいんだ…？」",
+		   NULL, " So I can accept this doll... even though I'm not a girly girl...?\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　魅音のやり取りがおかしくて、もう堪えきれないらしい。",
+		   NULL, "Everyone thought Mion's reaction was hilarious.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　レナはもう、くすくす笑いを隠しきれないようだった。",
+		   NULL, "Rena couldn't stop chuckling.", Line_WaitForInput);
+	OutputLine(NULL, "それに釣られ、私も沙都子も笑い出してしまう。",
+		   NULL, " Satoko and I burst out laughing too.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　魅音も自分が笑われてることに気付き、なお一層赤面した。",
+		   NULL, "Mion, having realized she was being laughed at, got even more embarrassed.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ChangeBustshot( 2, "Kei_Warai#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「男が仲間に贈ったもんだぜ！",
+		   NULL, "\"I'm offering this to you as a friend!", Line_WaitForInput);
+	OutputLine(NULL, "　大事にしなかったら承知しないぞ！」",
+		   NULL, " I don't want to hear that you're not cherishing it!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_OdorokiA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「う、",
+		   NULL, "\"O...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 600 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "……うん…。",
+		   NULL, " okay...", Line_WaitForInput);
+	OutputLine(NULL, "あ、あの！",
+		   NULL, " Umm...", Line_WaitForInput);
+	OutputLine(NULL, "　おじさんがこの人形が欲しいからもらうんじゃないよ？！",
+		   NULL, " This ol' man just wants to make it clear that he's not accepting this because he wants this doll!", Line_WaitForInput);
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_HauA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "　圭ちゃんが仲間に贈るって言ったから……",
+		   NULL, " He's taking it because you said it's a gift from you as a friend...", Line_ContinueAfterTyping);
+	SetValidityOfInput( FALSE );
+	Wait( 800 );
+	SetValidityOfInput( TRUE );
+	OutputLine(NULL, "圭ちゃんの顔を立てるために受け取るんだからね？！」",
+		   NULL, " He's taking it as a courtesy so he doesn't disrespect your generosity!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　羽入も堪えきれないようだった。",
+		   NULL, "Hanyuu was cracking up too.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　この微笑ましいやり取りに、自分の笑い声は聞こえないのをいいことに、声を隠すことなく笑う。",
+		   NULL, "She was laughing in a loud voice, knowing that no one could hear her anyway.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　でも、男友達に渡す贈り物ということでいいんだろうか？",
+		   NULL, "But was this really a good way to resolve the problem...?", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　…確か以前の世界では、圭一に女の子扱いしてもらえなくって話がおかしくなったんじゃなかったっけ…？",
+		   NULL, "I thought that Mion's issue in the previous life was that she <i>wanted</i> Keiichi to treat her like a girl...", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　お人形は確かにもらえたけど、相変わらず圭一に女の子扱いはしてもらっていないように思うのだが…。",
+		   NULL, "She got the doll, but Keiichi still wasn't treating her that way...", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　でも、魅音の嬉しそうな顔を見る限り、それは微細な問題のようだった。",
+		   NULL, "Still, Mion looked very happy. Maybe it wasn't a big deal after all.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　あのお人形、魅音は絶対今晩、抱きながら寝るに違いない。",
+		   NULL, "I'm sure that Mion will take that doll with her to bed tonight.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　お休みのキスもする。",
+		   NULL, "She'll kiss it good night, too.", Line_WaitForInput);
+	OutputLine(NULL, "賭けてもいい。",
+		   NULL, " I could bet on that.", Line_WaitForInput);
+	OutputLine(NULL, "そう顔に書いてあるから間違いない。",
+		   NULL, " It was written all over her face.", Line_Normal);
+	ClearMessage();
+
+	DrawBustshotWithFiltering( 0, "Kei_Def1#", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
+	DrawSceneWithMask( "Mati5", "maskright", 1, 0, 300 );
+
+	OutputLine(NULL, "「ようやく受け取ってくれたぜ。",
+		   NULL, "\"She's finally accepted it.", Line_WaitForInput);
+	OutputLine(NULL, "人形一個渡すのに手間のかかるやつだぜ。」",
+		   NULL, " It was a challenge just for me to give her a doll.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　圭一が私たちの方へ振り返り、笑いながら悪態をついた。",
+		   NULL, "Keiichi turns around to face us us, smiling bitterly.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 0, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
+	DrawBustshotWithFiltering( 2, "Re_WaraiA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「あはははは、圭一くん、百点満点かな、かな！」",
+		   NULL, "\"Ahahahaha, you did it though!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「……ボクもそう思いますです。",
+		   NULL, "\"......Yup. It was perfect.", Line_WaitForInput);
+	OutputLine(NULL, "あの意地っ張りの魅音によくお人形を渡せましたです。」",
+		   NULL, " I'm impressed that you managed it.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Sa_AkuwaraiA1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「魅音さんも笑っちゃいますわね。",
+		   NULL, "\"Mion-san was hilarious!", Line_WaitForInput);
+	OutputLine(NULL, "欲しいってあんなに顔に書いてあるのに痩せ我慢なんかしちゃって！」",
+		   NULL, " It was obvious the moment you looked that she really wanted the doll!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshot( 0, "Kei_Warai#", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「違いねぇな！",
+		   NULL, "\"Isn't that the truth!", Line_WaitForInput);
+	OutputLine(NULL, "　あははははははは！」",
+		   NULL, " Ahahahahahahahaha!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DrawBustshotWithFiltering( 1, "Me_OdorokiA2#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 0, FALSE );
+	DrawSceneWithMask( "mati_O6", "maskleft", 1, 0, 300 );
+
+	OutputLine(NULL, "「ここ、こらぁ！！",
+		   NULL, "\"Hey, you guys!", Line_WaitForInput);
+	OutputLine(NULL, "　おじさんの陰口を言ってるでしょー！",
+		   NULL, " Are you saying rude things about this ol' man?", Line_WaitForInput);
+	OutputLine(NULL, "　こらぁー！」",
+		   NULL, " Knock it off already!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Re_DefA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「魅ぃちゃん、バイト急がなくていいの？",
+		   NULL, "\"Don't you have to get to work?", Line_WaitForInput);
+
+	DisableWindow();
+	ChangeBustshot( 2, "Re_WaraiB1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "　遅刻しちゃうよ〜ぅ。」",
+		   NULL, " You're going to be late.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 1, "Me_TohohoA1#", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「もー！！　覚えてなよー？！」",
+		   NULL, "\"You guys better watch yourselves!\"", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "　魅音は名残を惜しんでいたが、腕時計とみんなの顔を見比べると、別れの挨拶をして走り去っていった。",
+		   NULL, "Mion seemed like she wanted to stay longer, but after looking at her watch she started heading to work.", Line_Normal);
+	ClearMessage();
+	DrawScene( "white", 1000 );
+	DrawSceneWithMask( "Sora2", "maskm1", 1, 0, 1300 );
+
+	OutputLine(NULL, "　笑い合うみんなの笑顔。",
+		   NULL, "Everyone was wearing smiles on their faces.", Line_WaitForInput);
+	OutputLine(NULL, "楽しかった今日の興奮が覚めない。",
+		   NULL, " Today was such a fun day.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　誰もが文句なしに楽しかった一日で、誰もが傷つかなかった一日。",
+		   NULL, "Everyone had lots of fun, and no one was hurt.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　何度も経験した世界のいくつかをなぞり直しているはずなのに。",
+		   NULL, "I've repeated this same day so many times before.", Line_WaitForInput);
+	OutputLine(NULL, "……今回は何かが違う。",
+		   NULL, " But this time, something was different...", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　サイコロを振ったら６が出て、",
+		   NULL, "It's like I rolled a die and got a six...", Line_WaitForInput);
+	OutputLine(NULL, "…もう一度運試しに振ったらまた６が出たような気持ち。",
+		   NULL, " and then I rolled it again, and got a six again.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　それが幸運が重なっただけなのか、そうなるべくしてなったのかはわからないけれど。",
+		   NULL, "I don't know if this was just a lucky coincidence, or if it was meant to be.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　まるで運命の神さまが、私が戦おうと決めた決意を祝福してくれているような、そんな幸先の良さを感じるのだった……。",
+		   NULL, "It's as if the god of fate is celebrating my motivation to fight against him...", Line_Normal);
+	ClearMessage();
+
+	CallScript( "&eyeCamp" );
+	SetValidityOfSkipping( FALSE );
+	DrawSceneWithMask( "GetTIP_mina002", "mask1900", 7, 0, 400 );
+	Wait( 5000 );
+	DrawSceneWithMask( "black", "mask1900", 7, 0, 400 );
+	SetValidityOfSkipping( TRUE );
+
+}

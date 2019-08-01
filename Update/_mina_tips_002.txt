@@ -1,0 +1,159 @@
+void main()
+{
+	EnableJumpingOfReturnIcon();
+
+	DrawSceneWithMask( "Hu_R2", "maskup", 1, 0, 300 );
+	PlayBGM( 0, "Iru", 120, 0 );
+
+	OutputLine(NULL, "　夕食後、私と沙都子と羽入はテレビを見ていた。",
+		   NULL, "I was watching TV with Satoko and Hanyuu after eating dinner.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　バラエティ番組の中で、お笑い芸人がどっと観客を沸かせる。",
+		   NULL, "It was a variety show, and the performers were making the audience laugh.", Line_WaitForInput);
+	OutputLine(NULL, "私たちも大笑いしていた。",
+		   NULL, " We were laughing too.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Sa_AkuwaraiB1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「ほっほっほっほ！",
+		   NULL, "\"Ho ho ho ho!", Line_WaitForInput);
+	OutputLine(NULL, "　ざまぁないでございますわねー！！」",
+		   NULL, " Look at you now!!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Ha_AuA1%", "maskleft", 1, -200, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+
+	DisplayWindow();
+
+	OutputLine(NULL, "「あぅあぅあぅ、でも、とっても痛そうなのです…。」",
+		   NULL, "\"Au au au... but it looks so painful...\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「……みー。",
+		   NULL, "\"...Meep.", Line_WaitForInput);
+	OutputLine(NULL, "にぱ〜☆」",
+		   NULL, " Nipah~☆\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　私の目から見ると３人での食後の団欒だが、実際には私と沙都子の２人しかいない。",
+		   NULL, "While the three of us were enjoying ourselves, in reality there was only Satoko and me in the room.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　羽入が見えるのは私だけだ。",
+		   NULL, "I'm the only one who can see Hanyuu.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　沙都子には当然見えていない。",
+		   NULL, "Satoko can't see her at all.", Line_Normal);
+	ClearMessage();
+
+	DisableWindow();
+	ChangeBustshot( 2, "Sa_WaraiA1#", 200, TRUE );
+	DisplayWindow();
+	DisableWindow();
+	ChangeBustshot( 1, "Ha_WaraiA1%", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "　沙都子が何かを言うたびに羽入も相槌を打つ。",
+		   NULL, "Hanyuu responds every time Satoko says anything.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　その相槌が沙都子に聞こえるわけではないのだが、羽入は機嫌がいい時にはよく相槌を打っていた。",
+		   NULL, "Satoko can't hear her, but Hanyuu still responds to her when she's in a good mood.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　それは例えるなら、テレビの中の人物の問いかけに返事をするような、決して双方向でない擬似的コミュニケーションでしかない。",
+		   NULL, "It's like she's answering a question asked on TV.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　…言ってみればコミュニケーションのままごとかもしれない。",
+		   NULL, "...You could even compare it to playing house.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　私以外の人間と意思を疎通できな羽入が、そういう遊びを覚えたのは必然と言えたに違いない。",
+		   NULL, "She started playing this game with other people, because she can't communicate with anyone else but me.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　だから、部活にも羽入はいつも一緒にいて、みんなの盛り上がりと一緒になって笑ったりハラハラしたりしているのだ。",
+		   NULL, "Hanyuu always attends our club meetings and has a good time there too.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　……もし、羽入が普通に会話をすることができたなら、私たちの良き仲間として迎え入れられてるだろうか。",
+		   NULL, "...If she could communicate with my other friends, she would've been a good match for us.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　…それを想像することは、かえって羽入を傷つけることになるので避けた。",
+		   NULL, "...But I don't want to hurt her feelings by thinking about that.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+
+	OutputLine(NULL, "　古手家に伝わる古い古文書に出て来る奇跡の話が、全て事実でそれが羽入を指すなら、",
+		   NULL, "If the story of the miracle written in the old scriptures is true, if it's really Hanyuu who performed it,", Line_WaitForInput);
+	OutputLine(NULL, "羽入は太古の昔、少なくない人々と交流しその力を示せた。",
+		   NULL, " she's someone who had tremendous power long ago.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　…それが今では神通力のジの字どころか、私以外には存在を感じ取ってもらうことすらできない。",
+		   NULL, "But now she doesn't have any spiritual power, and I'm the only one who can even see her.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　羽入がどうしてそういう、らしい力を喪失したのかは語られたことがない。",
+		   NULL, "Hanyuu has never told me how she lost her power.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　時代と近代化が進み、神々の居場所がなくなるにつれ羽入の力や存在は薄まっていったのだろうと納得するしかなかった。",
+		   NULL, "I just have to assume that her spiritual power diminished over time...", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　古手家に女子が七代続けば、オヤシロさまが蘇るという伝説。",
+		   NULL, "There's a legend in the Furude family that says that Oyashiro-sama will be reborn if a girl is born to the family seven generations in a row.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "Hu_R3", "maskup", 1, 0, 300 );
+
+	OutputLine(NULL, "　…確かに私の代になって羽入は久し振りにコミュニケーションができる人間と出会えた。",
+		   NULL, "With my birth, Hanyuu was finally able to communicate with a human for the first time in centuries.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　…それは人間側の見地からだと、オヤシロさまが蘇ったということになるのだろうか。",
+		   NULL, "Does that mean that Oyashiro-sama has returned...?", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　村人たちが崇めるオヤシロさまという存在と、そうだと主張する羽入の存在は時々重ならない。",
+		   NULL, "The villagers' image of Oyashiro-sama doesn't quite match up with that of Hanyuu.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	DrawScene( "Hu_R1", 0 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Ha_WaraiA1%", "maskright", 1, 120, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, FALSE );
+
+	DrawBustshotWithFiltering( 1, "Sa_WaraiA1#", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "　沙都子と一緒に並んでうつ伏せになって、頬杖をしながらテレビを楽しむその姿からはとてもとても。",
+		   NULL, "Especially when I see her lying on her belly and watching TV with Satoko.", Line_Normal);
+	ClearMessage();
+
+	Wait( 1000 );
+	DrawScene( "black", 1000 );
+}

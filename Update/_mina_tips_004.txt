@@ -1,0 +1,108 @@
+void main()
+{
+	EnableJumpingOfReturnIcon();
+
+	PlayBGM( 0, "semi", 120, 0 );
+	DrawScene( "Si_H2", 400 );
+
+	OutputLine(NULL, "「これが航空券だ。",
+		   NULL, "\"Here's your plane ticket.", Line_WaitForInput);
+	OutputLine(NULL, "遅れんなよ。",
+		   NULL, " Don't be late.", Line_WaitForInput);
+	OutputLine(NULL, "後のカネは現地だ。」",
+		   NULL, " You'll get the rest of the money when you get there.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「おおきにおおきに。",
+		   NULL, "\"Thanks a lot.", Line_WaitForInput);
+	OutputLine(NULL, "ほい間宮ン。」",
+		   NULL, " Here, Mamiya.\"", Line_Normal);
+	ClearMessage();
+
+	DrawBustshotWithFiltering( 0, "Rina_Warai", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
+	DrawSceneWithMask( "Hoteru", "maskleft", 1, 0, 300 );
+
+	OutputLine(NULL, "「きゃははは、サンキュー！",
+		   NULL, "\"Kyahahaha! Thank you!", Line_WaitForInput);
+	OutputLine(NULL, "　私、札幌って一度行ってみたかったのよねー。」",
+		   NULL, " I've always wanted to go to Sapporo.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「……北条の野郎にゃ気取られてねぇだろうな。」",
+		   NULL, "\"......Are you sure Houjou isn't suspicious of you?\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	DisableWindow();
+	ChangeBustshot( 0, "Rina_Def", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "「大丈夫だよ。",
+		   NULL, "\"Don't worry.", Line_WaitForInput);
+	OutputLine(NULL, "あいつ馬鹿だもん。",
+		   NULL, " He's stupid.", Line_WaitForInput);
+
+	DisableWindow();
+	ChangeBustshot( 0, "Rina_Warai", 200, TRUE );
+	DisplayWindow();
+
+	OutputLine(NULL, "でかいのはナニと態度だけー。」",
+		   NULL, " He's got a big dick and a big attitude, but that's all he's got going for him.\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「へははは、そうなのかよ。」",
+		   NULL, "\"Heehahaha, is that so?\"", Line_Normal);
+	ClearMessage();
+
+	PlayBGM( 0, "yabaisemi", 120, 0 );
+
+	OutputLine(NULL, "　その時、突然、タイヤの鋭い泣き声がいくつも聞こえてくる。",
+		   NULL, "The next moment, they heard several cars coming toward them.", Line_Normal);
+	ClearMessage();
+
+	DrawSceneWithMask( "black", "maskright", 7, 0, 300 );
+
+	OutputLine(NULL, "　ぎょっとして男がカーテンの隙間から外を見ると、黒い車が３台、アパートの前に乱暴な停め方をしたところだった。",
+		   NULL, "The man looked out of the window and saw three black cars screeching to a halt by the apartment building.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+
+	OutputLine(NULL, "　車からは見るからにガラの悪そうな男たちがわらわらと降りてきた。",
+		   NULL, "Several intimidating men emerged from those cars.", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　その男たちの何人かがこの窓を見上げる。",
+		   NULL, "Some of them even looked up toward the window.", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "　目が合った気がして慌ててカーテンのわずかの隙間を締めた。",
+		   NULL, "He quickly hid himself behind the curtain.", Line_Normal);
+	ClearMessage();
+
+	DrawScene( "Si_H2", 200 );
+
+	OutputLine(NULL, "「畜生、嗅ぎ付けやがった！！",
+		   NULL, "\"Shit! They're here!!", Line_WaitForInput);
+	OutputLine(NULL, "　ズラかれッ！！」",
+		   NULL, " Run!!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「ちょっと…、嘘、マジ？！",
+		   NULL, "\"Are you serious?!", Line_WaitForInput);
+	OutputLine(NULL, "　何で今日バレるのよ！」",
+		   NULL, " But why?!\"", Line_WaitForInput);
+	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+
+	OutputLine(NULL, "「間宮ン、ボケっとすんな！！",
+		   NULL, "\"Come on, Mamiya!!", Line_WaitForInput);
+	OutputLine(NULL, "　捕まったら殺されンぞ！！！」",
+		   NULL, " They're going to kill you!!!\"", Line_Normal);
+	ClearMessage();
+
+	OutputLine(NULL, "　非常階段を大勢が駆け上ってくる音と怒声はすぐそこまで迫ってきていた。",
+		   NULL, "They heard the men running up the stairs. They sounded angry.", Line_Normal);
+	ClearMessage();
+
+	Wait( 1000 );
+	DrawScene( "black", 1000 );
+}

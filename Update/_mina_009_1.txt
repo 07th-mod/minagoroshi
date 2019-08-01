@@ -1,0 +1,152 @@
+void main()
+{
+
+	FadeOutBGM( 0, 0, FALSE );
+	FadeOutBGM( 1, 0, FALSE );
+	FadeOutBGM( 2, 0, FALSE );
+	FadeOutBGM( 3, 0, FALSE );
+	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	ClearMessage();
+
+	PlayBGM( 0, "Iru", 120, 0 );
+	DrawSceneWithMask( "white", "maskm1", 1, 0, 1300 );
+	DrawScene( "Sora5", 1000 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	DrawSceneWithMask( "white", "maskc", 1, 0, 1300 );
+	DrawSceneWithMask( "M_Hi14", "maskdown", 1, 0, 1300 );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	DrawSceneWithMask( "white", "maskright", 1, 0, 1300 );
+	DrawSceneWithMask( "G1", "maskright", 1, 0, 1300 );
+	SetValidityOfInput( FALSE );
+	Wait( 1500 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "GR1", 400 );
+	DisableWindow();
+	DrawBustshot( 0, "Me_WinkA2$", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
+	DisplayWindow();
+
+	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	DisableWindow();
+	DrawSprite( 0, "Kei_eyexa2", NULL, 170-320, 300-240, 0, 0, 0, 0, FALSE, FALSE, 0, 256-150, 20, 0, TRUE );
+	MoveSprite( 0, 170-320-170, 300-240, 0, 0, 0, 0, 0, 20*17, TRUE );
+	DisplayWindow();
+
+	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	DisableWindow();
+	DrawSprite( 1, "Sa_eyexa1", NULL, -43-320, 100-240, 0, 0, 0, 0, FALSE, FALSE, 0, 256-150, 20, 0, TRUE );
+	MoveSprite( 1, -43-320+150, 100-240, 0, 0, 0, 0, 0, 20*10, TRUE );
+	DisplayWindow();
+
+	Wait( 400 );
+
+	PlaySE( 0, "s_boyoon", 128, 64 );
+	StartShakingOfWindow( 241, 40, 0, 2, 2*2, FALSE );
+	StartShakingOfAllObjects( 241, 40, 0, 2, 2*2, TRUE );
+	PlaySE( 0, "s_boyoon", 128, 64 );
+	StartShakingOfWindow( 241, 40, 0, 2, 2*2, FALSE );
+	StartShakingOfAllObjects( 241, 40, 0, 2, 2*2, TRUE );
+
+	//DrawBustshot( 0, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 30, 0, TRUE );
+	FadeBustshotWithFiltering( 0, "mask00" , 0, FALSE, 0, 0, 10, TRUE );
+
+	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	DisableWindow();
+	DrawSpriteFixedSize( 2, "Re_eyey1", NULL, 100-320, -50-240, 0, 0, 0, 75, 776, 0, FALSE, FALSE, 0, 256-150, 20, 0, TRUE );
+	MoveSprite( 2, 100-320, -50-240+50, 0, 0, 0, 0, 0, 20*10, TRUE );
+	DisplayWindow();
+
+	Wait( 400 );
+
+	PlaySE( 0, "s_furu", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 250 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_furu", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 250 );
+	SetValidityOfInput( TRUE );
+
+	PlaySE( 0, "s_daidageki", 128, 64 );
+	DrawScene( "F_a", 10 );
+	StartShakingOfWindow( 248, 40, 0, 2, 3*2, FALSE );
+	StartShakingOfAllObjects( 248, 40, 0, 2, 3*2, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 500 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_daidageki", 128, 64 );
+	DrawScene( "F_b", 10 );
+	StartShakingOfWindow( 248, 40, 0, 2, 3*2, FALSE );
+	StartShakingOfAllObjects( 248, 40, 0, 2, 3*2, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 500 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	DrawScene( "Bg0", 10 );
+	StartShakingOfWindow( 248, 40, 0, 2, 5*2, FALSE );
+	StartShakingOfAllObjects( 248, 40, 0, 2, 5*2, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 500 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "GR2", 400 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 0, "Ri_DefA1$", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
+	DisplayWindow();
+	SetValidityOfInput( FALSE );
+	Wait( 500 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "Me_AkuwaraiA1$", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
+	DisplayWindow();
+	SetValidityOfInput( FALSE );
+	Wait( 500 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Kyupiin", 128, 64 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "Kei_Warai", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+	PlaySE( 0, "s_furu", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 200 );
+	SetValidityOfInput( TRUE );
+	DisableWindow();
+	ChangeBustshot( 1, "Me_OdorokiA1$", 200, TRUE );
+	DisplayWindow();
+	PlaySE( 0, "s_daidageki", 128, 64 );
+	DrawScene( "F_a", 10 );
+	StartShakingOfWindow( 248, 40, 0, 2, 4*2, FALSE );
+	StartShakingOfAllObjects( 248, 40, 0, 2, 4*2, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 400 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_daidageki", 128, 64 );
+	DrawScene( "F_b", 10 );
+	StartShakingOfWindow( 248, 40, 0, 2, 4*2, FALSE );
+	StartShakingOfAllObjects( 248, 40, 0, 2, 4*2, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 400 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "black", 400 );
+	PlaySE( 0, "s_Down", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 100 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 100 );
+	SetValidityOfInput( TRUE );
+	DrawScene( "GR2", 0 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 0, "Ri_KomaruA1$", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, FALSE );
+	DrawBustshotWithFiltering( 2, "Re_KaiiB1&", "maskup", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	DisplayWindow();
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_jikuu", 128, 64 );
+
+}
