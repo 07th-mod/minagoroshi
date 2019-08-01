@@ -1150,9 +1150,9 @@ void main()
 
 	PlaySE( 0, "s_boyoon", 128, 64 );
 
-	PlaySE(4, "", 128, 64);
-	OutputLine(NULL, "　民明書房刊『古代麻雀暗黒史』より。」",
-		   NULL, "Oh, I got this info from the 'History of Ancient Mahjong'.\"", Line_Normal);
+	PlaySE(4, "ps2/06/180100344", 128, 64);
+	OutputLine(NULL, "　ちなみにこれは親父の受け売りなので真相は保証しない。」",
+		   NULL, "By the way, this is a second-hand story I got from my father, so I can't guarantee the authenticity.\"", Line_Normal);
 	ClearMessage();
 
 	DrawBustshotWithFiltering( 2, "Re_BikkuriB1#", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
@@ -1393,12 +1393,12 @@ void main()
 	ChangeBustshot( 1, "Me_TokuiA1#", 200, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "", 128, 64);
-	OutputLine(NULL, "　うーん、Ｎスクリプトで動画が流せればぜひ実際にご覧に入れたいシーンなんだけどねぇ！",
-		   NULL, " Hmm, this is a scene I'd love to show you all by running a video through Nscripter, but hey!", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
-	OutputLine(NULL, "　サウンドノベルなので文章での中継になるのが残念！」",
-		   NULL, " Unfortunately, I can't time that to the text in a sound novel!\"", Line_Normal);
+	PlaySE(4, "ps2/03/180300176", 128, 64);
+	OutputLine(NULL, "　ぜひ実際にアニメーションか何かでご覧に入れたいシーンなんだけどねぇ！",
+		   NULL, " This is a scene I'd love to show you all through an animation video or something...", Line_WaitForInput);
+	PlaySE(4, "ps2/03/180300177", 128, 64);
+	OutputLine(NULL, "　文章での中継なのでその辺は想像で補完してください！」",
+		   NULL, " Since we can only use words here, please make up for it with your imagination!\"", Line_Normal);
 	ClearMessage();
 
 	PlaySE(4, "ps3/s12/05/180500415", 128, 64);
@@ -1686,8 +1686,7 @@ void main()
 	ClearMessage();
 
 	SetSpeedOfMessage( TRUE, 128 );
-	PlaySE(4, "", 128, 64);
-	OutputLine(NULL, "「「ああーーーー……。」」",
+		OutputLine(NULL, "「「ああーーーー……。」」",
 		   NULL, "\"Oh no!!\"", Line_ContinueAfterTyping);
 
 	PlaySE( 0, "s_daidageki", 128, 64 );
