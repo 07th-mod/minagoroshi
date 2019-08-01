@@ -905,10 +905,10 @@ void main()
 	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	DrawSceneWithMask( "Ke5", "maskright", 1, 0, 300 );
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/182900063", 128, 64);
 	OutputLine(NULL, "「すごい人数です…。",
 		   NULL, "\"There are so many people out there...", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/182900064", 128, 64);
 	OutputLine(NULL, "何だか、もうじき入ってきそうな勢いですね…。」",
 		   NULL, " They might barge in at any minute...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -2630,10 +2630,10 @@ void main()
 	ChangeBustshot( 0, "Oisi4", 200, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/10/180700409", 128, 64);
 	OutputLine(NULL, "施設長である相談所長がですね、",
 		   NULL, " like how the caretaker of a building can order people to vacate their property,", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/10/180700410", 128, 64);
 	OutputLine(NULL, "彼らが入ると事務に支障があるってんで権限の範囲内で敷地からの退去を命じてるわけなんです。」",
 		   NULL, " if he thinks that they can cause trouble for his business.\"", Line_Normal);
 	ClearMessage();
@@ -2648,7 +2648,7 @@ void main()
 	PlaySE(4, "ps3/s12/00/sobe08002", 128, 64);
 	OutputLine(NULL, "園崎法律相談事務所より参りました、弁護士の園崎です。",
 		   NULL, " I'm the attorney, Sonozaki, from the Sonozaki Law Consultancy Office.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/sobe08003", 128, 64);
 	OutputLine(NULL, "市児童相談所施行条例は拝見させていただきましたが、本件は不当で職権濫用に当ります。",
 		   NULL, " I went over the laws that apply to the child consultation center. Their claim is unjust, and it could be considered an abuse of their official authority.", Line_WaitForInput);
 	PlaySE(4, "", 128, 64);
@@ -3212,16 +3212,15 @@ void main()
 		   NULL, " What are the police doing?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/182900068", 128, 64);
 	OutputLine(NULL, "「いえそれが……、県議と市議の園崎議員が両方おいでで…、",
 		   NULL, "\"Well, actually... both the prefectural and municipal Sonozaki representatives are here...", Line_ContinueAfterTyping);
 	SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 5000 );
 	SetValidityOfInput( TRUE );
-	PlaySE(4, "", 128, 64);
 	OutputLine(NULL, "あと弁護士らしき人もいます。",
 		   NULL, " They have a lawyer with them too.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/182900069", 128, 64);
 	OutputLine(NULL, "責任ある回答をといわれると、管理職以外では対応できません…。」",
 		   NULL, " They're asking for an answer, but only management has the authority to respond...\"", Line_Normal);
 	ClearMessage();
@@ -3243,7 +3242,7 @@ void main()
 		   NULL, " Meanwhile, I'll talk with the municipal manager about what to do next...!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/182900070", 128, 64);
 	OutputLine(NULL, "「……自治の係長からは、折れといた方がいいって、ご助言いただきませんでしたっけ……。」",
 		   NULL, "\"...I thought he told you to concede...\"", Line_Normal);
 	ClearMessage();
@@ -3342,7 +3341,7 @@ void main()
 		   NULL, " Aah, what should I do...?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/183000070", 128, 64);
 	OutputLine(NULL, "「だから私、申し上げましたよね所長ぅ…。」",
 		   NULL, "\"I did tell you this would happen...\"", Line_Normal);
 	ClearMessage();
@@ -3358,10 +3357,10 @@ void main()
 		   NULL, " It is your sworn duty to take care of this!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/183000071", 128, 64);
 	OutputLine(NULL, "「いや、別に自治はそういう係じゃありませんよ…はははは。",
 		   NULL, "\"That's not our job... hahahaha.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/183000072", 128, 64);
 	OutputLine(NULL, "自治の仕事は地域コミュニティの活性化と行政との連帯を…、」",
 		   NULL, " Our job is to support the growth of the local communities of the region, and...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -3374,22 +3373,21 @@ void main()
 		   NULL, " Can't you do something about this?\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/183000073", 128, 64);
 	OutputLine(NULL, "「こうなったら、向こうの言い分に譲歩するしかないですよ。",
 		   NULL, "\"At this point, you have no choice but to accept their request.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/183000074", 128, 64);
 	OutputLine(NULL, "建前はこの際、引っ込めた方がいいです。",
 		   NULL, " I think you should stop being so stubborn about policy.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/183000075", 128, 64);
 	OutputLine(NULL, "私どもも住民あっての行政なんですから。",
 		   NULL, " A government is there for its citizens.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/183000076", 128, 64);
 	OutputLine(NULL, "ねぇ所長さん…、",
 		   NULL, " Isn't that right...?", Line_ContinueAfterTyping);
 	SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlaySE(4, "", 128, 64);
 	OutputLine(NULL, "ちょっとここはひとつ穏便に妥協できませんかねぇ…？」",
 		   NULL, " Can't you just peacefully accept their appeal...?\"", Line_Normal);
 	ClearMessage();
@@ -3417,35 +3415,32 @@ void main()
 		   NULL, " I passed the administrator's exam because I always follow the rules!\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/183000077", 128, 64);
 	OutputLine(NULL, "「………まー、最終的な判断は所長にお任せします。",
 		   NULL, "\"......Well, it's your decision.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/183000078", 128, 64);
 	OutputLine(NULL, "…こちらも努力はしますが、",
 		   NULL, " We'll do our best to help...", Line_ContinueAfterTyping);
 	SetValidityOfInput( FALSE );
-	Wait( 600 );
+	Wait( 1500 );
 	SetValidityOfInput( TRUE );
 	SetSpeedOfMessage( TRUE, 128 );
-	PlaySE(4, "", 128, 64);
 	OutputLine(NULL, "……だから所長、",
 		   NULL, " but I told you,", Line_ContinueAfterTyping);
 	SetValidityOfInput( FALSE );
 	Wait( 800 );
 	SetValidityOfInput( TRUE );
-	PlaySE(4, "", 128, 64);
 	OutputLine(NULL, "私、",
 		   NULL, " didn't I?", Line_ContinueAfterTyping);
 	SetValidityOfInput( FALSE );
 	Wait( 900 );
 	SetValidityOfInput( TRUE );
-	PlaySE(4, "", 128, 64);
 	OutputLine(NULL, "言いましたよねぇ？",
 		   NULL, " I know I did.", Line_ContinueAfterTyping);
 	SetSpeedOfMessage( FALSE, 0 );
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/183000079", 128, 64);
 	OutputLine(NULL, "　連中を怒らしちゃいけないって！！」",
 		   NULL, "I know I told you not to get them upset!\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -4091,7 +4086,6 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
-	PlaySE(4, "", 128, 64);
 	OutputLine(NULL, "なあ？」",
 		   NULL, " alright?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -4176,7 +4170,7 @@ void main()
 	PlaySE(4, "ps3/s12/00/hara082304", 128, 64);
 	OutputLine(NULL, "いかがですかその後は。",
 		   NULL, " How's everything going so far?", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/00/182900099", 128, 64);
 	OutputLine(NULL, "鉄平さんとの生活は問題ありませんか？」",
 		   NULL, " Are you having any problems with Teppei-san?\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);

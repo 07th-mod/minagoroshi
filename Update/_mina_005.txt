@@ -1357,7 +1357,6 @@ void main()
 	OutputLine(NULL, "「理詰めで考えれば考えるほど、二人の運命と私の運命は繋がっているのね。",
 		   NULL, "\"The more I reason it out, the more I realize their fates are connected to mine.", Line_WaitForInput);
 	SetSpeedOfMessage( TRUE, 128 );
-	PlaySE(4, "ps3/s12/05/180500299", 128, 64);
 	OutputLine(NULL, "…",
 		   NULL, " ...", Line_ContinueAfterTyping);
 	SetValidityOfInput( FALSE );
@@ -1374,6 +1373,7 @@ void main()
 	Wait( 150 );
 	SetValidityOfInput( TRUE );
 	SetSpeedOfMessage( FALSE, 0 );
+	PlaySE(4, "ps3/s12/05/180500299", 128, 64);
 	OutputLine(NULL, "そうやって考えると、あの二人を見殺しにした時点で、私の運命は逃れられないものに決まってしまうのかもしれない。」",
 		   NULL, " Thinking from that point of view, my destiny becomes inescapable the moment I abandon them to die.\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -1388,7 +1388,7 @@ void main()
 		   NULL, "\"You should know what you have to do first then...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/04/180500300", 128, 64);
 	OutputLine(NULL, "「そうね。",
 		   NULL, "\"Yes.", Line_WaitForInput);
 	PlaySE(4, "ps3/s12/05/180500301", 128, 64);
