@@ -434,7 +434,7 @@ void main()
 	DrawBustshotWithFiltering( 2, "Iri_majime+", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask( "Ka1", "maskleft", 1, 0, 300 );
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/11/181000108", 128, 64);
 	OutputLine(NULL, "「……沙都子ちゃんのように、一度でもＬ５に至った場合、幻覚症状の再現、いわゆるフラッシュバックに近い現象が起こりやすくなります。",
 		   NULL, "\"...Once a patient reaches the L5 state like Satoko-chan has, it's easy for them to re-experience hallucinations, similar to a patient suffering from flashbacks.", Line_WaitForInput);
 	PlaySE(4, "ps3/s12/10/181000109", 128, 64);
@@ -449,10 +449,10 @@ void main()
 	DrawBustshotWithFiltering( 1, "Ta_Def+", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/09/180900156", 128, 64);
 	OutputLine(NULL, "「つまり一言で言えば心的外傷のことよ。",
 		   NULL, "\"In simpler terms, emotional trauma.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/09/180900157", 128, 64);
 	OutputLine(NULL, "しかも、前頭葉に直接ダメージを受けていることが考えられるので、一般的な心的外傷よりもずっと繊細なカウンセリングと長期の投薬が必要でしょう。」",
 		   NULL, " Worse yet, we suspect she may have suffered damage directly to her frontal lobe, so she needs more delicate counseling and long-term medication than the usual trauma patient.\"", Line_Normal);
 	ClearMessage();
@@ -462,21 +462,20 @@ void main()
 	DrawBustshotWithFiltering( 2, "Tomi_Def", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/08/180800074", 128, 64);
 	OutputLine(NULL, "「病気は治療できても、心の傷は治せない、",
 		   NULL, "\"You may be able to treat her illness, but you can't treat her mental health...", Line_ContinueAfterTyping);
 	SetValidityOfInput( FALSE );
 	Wait( 100 );
 	SetValidityOfInput( TRUE );
-	PlaySE(4, "", 128, 64);
-	OutputLine(NULL, "…ということかい。」",
-		   NULL, " is that what you are saying?\"", Line_WaitForInput);
+		OutputLine(NULL, "…ということかい。」",
+		   NULL, " is that what you are saying?\"", Line_ContinueAfterTyping);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
 
-	PlaySE(4, "", 128, 64);
+	
 	OutputLine(NULL, "「………心的外傷に苦しむ人は社会にも大勢いる。",
 		   NULL, "\"...There are plenty of people functioning in society with emotional trauma.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	
 	OutputLine(NULL, "その中の一人に混じれるだけでも、かつての沙都子ちゃんの症状を思えば、奇跡的な回復なんだしね…。」",
 		   NULL, " Even if she's just one more to the mix, that's still a miraculous recovery considering the state she used to be in...\"", Line_WaitForInput);
 	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
@@ -486,10 +485,10 @@ void main()
 	DrawBustshotWithFiltering( 2, "Iri_Def2+", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/11/181000111", 128, 64);
 	OutputLine(NULL, "「糖尿病などと同じに考えてください。",
 		   NULL, "\"Think about diabetic patients.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlaySE(4, "ps2/11/181000112", 128, 64);
 	OutputLine(NULL, "不治の病ではあっても、症状を抑えて元気に生活されている方も大勢います。」",
 		   NULL, " There's no cure, but many of them live happily by managing their condition.\"", Line_Normal);
 	ClearMessage();
@@ -610,15 +609,9 @@ void main()
 	ChangeBustshot( 2, "Iri_majime+", 200, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "", 128, 64);
-	OutputLine(NULL, "「…それを言えば、",
-		   NULL, "\"By the way...", Line_ContinueAfterTyping);
-	SetValidityOfInput( FALSE );
-	Wait( 800 );
-	SetValidityOfInput( TRUE );
 	PlaySE(4, "ps3/s12/10/181000117", 128, 64);
-	OutputLine(NULL, "………梨花ちゃんは本当に強い人ですね。",
-		   NULL, " Rika-chan is such a strong girl...", Line_WaitForInput);
+	OutputLine(NULL, "「………梨花ちゃんは本当に強い人ですね。",
+           NULL, "\"Rika-chan is such a strong girl...", Line_WaitForInput);
 
 	DisableWindow();
 	ChangeBustshot( 2, "Iri_Def1+", 200, TRUE );

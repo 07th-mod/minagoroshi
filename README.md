@@ -67,42 +67,42 @@ Old collaborators welcome to join the repository, however it's still preferred t
 * in ``_mina_002_1`` line 481 slightly mismatches apparently because of the chemical name - need to check if the name is correct in the PS2 audio
 * ~~in ``_mina_002_1`` line 562 has no voice~~
 * ~~in ``_mina_002_1`` lines 750 and 765 for some reason has no voices~~ found voice for line 750, voices for 756 are missing
-* in ``_mina_002_1`` lines 758-760 has no voices (unknown if it was meant to have or not)
+# * in ``_mina_002_1`` lines 758-760 has no voices (unknown if it was meant to have or not)
 * ~~in ``_mina_002_1`` line 2633 seems to be slightly censored (KFC reference?) - PS2 check here~~
 * ~~in ``_mina_002_1`` line 5251 has no voices~~
-* in ``_mina_004`` line 251, there is a minor censorship
-* in ``_mina_005`` line 174 is mildly censored
-* in ``_mina_006`` lines 1549 to 1614 were cut from the PS3 script
-* in ``_mina_006`` line 1620 was slightly censored (?)
-* in ``_mina_006`` line 1677 was cut from the PS3 script
-* in ``_mina_006`` lines 1749 to 1776 are a convoluted mess that needs splitting and proper checking
-* in ``_mina_006`` line 1810 was cut from the PS3 script (s12/09/180900102)
-* in ``_mina_006`` line 1818 was cut from the PS3 script (s12/09/180900104)
-* in ``_mina_006`` line 1821 was cut from the PS3 script (s12/09/180900105)
-* in ``_mina_006`` line 1841 was changed in the PS3 script
-* in ``_mina_006`` line 1944 was cut from the PS3 script (s12/09/180900128)
-* in ``_mina_006`` line 2033 was cut from the PS3 script (s12/12/181100107)
-* in ``_mina_007`` line 439 was cut from the PS3 script (maybe S12/10/181000108)
-* in ``_mina_007`` lines 453 to 495 were cut from the PS3 script
-* in ``_mina_007`` line 614 for some reason was cut from the PS3 script
-* in ``_mina_008`` line 1154 was changed in the PS3 script (S12/01/180100344)
-* in ``_mina_008`` lines 1397 and 1400 were changed in the PS3 script
-* in ``_mina_008`` line 1690, I'm unsure if it was meant to have voices there
-* in ``_mina_009_2`` lines 1149 to 1154 were matched in another chapter but are not matched in Minagoroshi. Needs checking
-* in ``_mina_009_2`` lines 1779 to 1796 were cut from the PS3 script
-* in ``_mina_009_2`` lines 1846 to 1853 were cut from the PS3 script
-* in ``_mina_009_2`` lines 2179 and 2182 were cut from the PS3 script
-* in ``_mina_009_2`` lines 2690 and 2692 were cut from the PS3 script
-* in ``_mina_010`` lines 344 to 391 were cut from the PS3 script
-* in ``_mina_010`` lines 525, 531 and 534 were cut from the PS3 script
-* in ``_mina_010`` lines 577 to 610 were cut from the PS3 script
-* in ``_mina_010`` lines 664 to 671 were cut from the PS3 script
-* in ``_mina_010`` lines 1319 to 1329 were cut from the PS3 script
-* in ``_mina_010`` line 1362 was cut from the PS3 script
-* in ``_mina_010`` line 1565 was cut from the PS3 script (S12/06/180600110)
-* in ``_mina_010`` line 2263 was cut from the PS3 script
-* in ``_mina_011_1`` line 94 was cut from the PS3 script
-* in ``_mina_011_1`` lines 117 to 142 were cut from the PS3 script
+* ~~in ``_mina_004`` line 251, there is a minor censorship~~
+* ~~in ``_mina_005`` line 174 is mildly censored~~
+* ~~in ``_mina_006`` lines 1549 to 1614 were cut from the PS3 script~~
+* ~~in ``_mina_006`` line 1620 was slightly censored (?)~~ -line wasn't censored-
+* ~~in ``_mina_006`` line 1677 was cut from the PS3 script~~
+* ~~in ``_mina_006`` lines 1749 to 1776 are a convoluted mess that needs splitting and proper checking~~
+* ~~in ``_mina_006`` line 1810 was cut from the PS3 script (s12/09/180900102)~~
+* ~~in ``_mina_006`` line 1818 was cut from the PS3 script (s12/09/180900104)~~
+* ~~in ``_mina_006`` line 1821 was cut from the PS3 script (s12/09/180900105)~~
+* ~~in ``_mina_006`` line 1841 was changed in the PS3 script~~
+* ~~in ``_mina_006`` line 1944 was cut from the PS3 script (s12/09/180900128)~~
+* ~~in ``_mina_006`` line 2033 was cut from the PS3 script (s12/12/181100107)~~
+* ~~in ``_mina_007`` line 439 was cut from the PS3 script (maybe S12/10/181000108)~~
+* ~~in ``_mina_007`` lines 453 to 495 were cut from the PS3 script~~
+* ~~in ``_mina_007`` line 614 for some reason was cut from the PS3 script~~
+* ~~in ``_mina_008`` line 1154 was changed in the PS3 script (S12/01/180100344)~~
+* ~~in ``_mina_008`` lines 1397 and 1400 were changed in the PS3 script~~
+* ~~in ``_mina_008`` line 1690, I'm unsure if it was meant to have voices there~~
+* ~~in ``_mina_009_2`` lines 1149 to 1154 were matched in another chapter but are not matched in Minagoroshi. Needs checking~~
+* ~~in ``_mina_009_2`` lines 1779 to 1796 were cut from the PS3 script~~ 1779 has voices. The rest of the lines are an elaboration. Not necessary. ****
+* ~~in ``_mina_009_2`` lines 1846 to 1853 were cut from the PS3 script~~
+* ~~in ``_mina_009_2`` lines 2179 and 2182 were cut from the PS3 script~~
+* ~~in ``_mina_009_2`` lines 2690 and 2692 were cut from the PS3 script~~
+* ~~in ``_mina_010`` lines 344 to 391 were cut from the PS3 script~~
+* ~~in ``_mina_010`` lines 525, 531 and 534 were cut from the PS3 script~~
+* ~~in ``_mina_010`` lines 577 to 610 were cut from the PS3 script~~
+* ~~in ``_mina_010`` lines 664 to 671 were cut from the PS3 script~~
+* ~~in ``_mina_010`` lines 1319 to 1329 were cut from the PS3 script~~
+* ~~in ``_mina_010`` line 1362 was cut from the PS3 script~~
+* ~~in ``_mina_010`` line 1565 was cut from the PS3 script (S12/06/180600110)~~
+* ~~in ``_mina_010`` line 2263 was cut from the PS3 script~~
+* ~~in ``_mina_011_1`` line 94 was cut from the PS3 script~~
+* ~~in ``_mina_011_1`` lines 117 to 142 were cut from the PS3 script~~
 * in ``_mina_011_1`` lines 211, 214 and 224 were cut from the PS3 script
 * in ``_mina_011_1`` lines 251 to 336 were cut from the PS3 script
 * in ``_mina_011_1`` lines 356 to 378 were cut from the PS3 script
