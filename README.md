@@ -204,24 +204,24 @@ Old collaborators welcome to join the repository, however it's still preferred t
 * in ``_mina_027`` line 144 was cut from the PS3 script
 * in ``_mina_027`` line 662 was cut from the PS3 script
 * in ``_mina_028`` line 285 was cut from the PS3 script
-* in ``_mina_ep`` line 913 to 931 were cut from the PS3 script
-* in ``_mina_ep`` line 956 to 962 were cut from the PS3 script
-* in ``_mina_ep`` line 1005 to 1126 were cut from the PS3 script
-* in ``_mina_ep`` line 1133 to 1249 were cut from the PS3 script
-* in ``_mina_ep`` line 1262 to 1300 were cut from the PS3 script
-* in ``_mina_ep`` line 1331 was cut from the PS3 script
-* in ``_mina_ep`` line 1461 to 1489 were cut from the PS3 script
-* in ``_mina_ep`` line 1507 to 1584 were cut from the PS3 script
-* in ``_mina_ep`` line 1681 was cut from the PS3 script
-* in ``_mina_ep`` line 1716 to 1795 were cut from the PS3 script
-* in ``_mina_ep`` line 1962 to 1974 were cut from the PS3 script
-* in ``_mina_ep`` line 2131 was cut from the PS3 script
-* in ``_mina_ep`` line 2359 and 2362 were cut from the PS3 script
-* in ``_mina_ep`` line 2670 was cut from the PS3 script
-* in ``_mina_ep`` line 2702 to 2709 were cut from the PS3 script
-* in ``_mina_ep`` line 2718 to 2758 were cut from the PS3 script
-* in ``_mina_tips_004`` line 55 was censored in the PS3 script
-* in ``_mina_tips_008`` lines 233 and 236 were cut from the PS3 script
-* in ``_mina_tips_009`` lines 278 to 292 were cut from the PS3 script
-* in ``_mina_tips_009`` lines 340 to 356 were cut from the PS3 script
-* in ``_mina_tips_009`` line 408 was cut from the PS3 script
+* ~~in ``_mina_ep`` line 913 to 931 were cut from the PS3 script~~
+* ~~in ``_mina_ep`` line 956 to 962 were cut from the PS3 script~~
+* ~~in ``_mina_ep`` line 1005 to 1126 were cut from the PS3 script~~
+* ~~in ``_mina_ep`` line 1133 to 1249 were cut from the PS3 script~~
+* ~~in ``_mina_ep`` line 1262 to 1300 were cut from the PS3 script~~
+* ~~in ``_mina_ep`` line 1331 was cut from the PS3 script~~
+* in ``_mina_ep`` line 1461 to 1489 were cut from the PS3 script.  Probably in the ps2 version, but no idea which files to use
+* in ``_mina_ep`` line 1507 to 1584 were cut from the PS3 script.  Probably in the ps2 version, but no idea which files to use
+* in ``_mina_ep`` line 1681 was cut from the PS3 script.  Probably in the ps2 version, but no idea which files to use
+* in ``_mina_ep`` line 1716 to 1795 were cut from the PS3 script.  Probably in the ps2 version, but no idea which files to use
+* ~~in ``_mina_ep`` line 1962 to 1974 were cut from the PS3 script~~
+* ~~in ``_mina_ep`` line 2131 was cut from the PS3 script~~
+* ~~in ``_mina_ep`` line 2359 and 2362 were cut from the PS3 script~~
+* ~~in ``_mina_ep`` line 2670 was cut from the PS3 script~~
+* ~~in ``_mina_ep`` line 2702 to 2709 were cut from the PS3 script~~
+* ~~in ``_mina_ep`` line 2718 to 2758 were cut from the PS3 script~~
+* ~~in ``_mina_tips_004`` line 55 was censored in the PS3 script, ps2 line was not a 100% match but close enough~~
+* ~~in ``_mina_tips_008`` lines 233 and 236 were cut from the PS3 script, also missing in ps2~~
+* ~~in ``_mina_tips_009`` lines 278 to 292 were cut from the PS3 script, also missing in ps2~~
+* ~~in ``_mina_tips_009`` lines 340 to 356 were cut from the PS3 script, also missing in ps2~~
+* ~~in ``_mina_tips_009`` line 408 was cut from the PS3 script~~
