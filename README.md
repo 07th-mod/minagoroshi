@@ -72,26 +72,26 @@ Old collaborators welcome to join the repository, however it's still preferred t
 * in ``_mina_013`` line 1180 is censored in the PS3 script
 * in ``_mina_013`` line 1185 was cut from the PS3 script (S12/00/jimuA18012)
 * in ``_mina_013`` lines 1349 to 2024 were cut from the PS3 script
-* in ``_mina_013`` line 2989 is censored in the PS3 script
-* in ``_mina_013`` lines 3524 to 3676 are censored in the PS3 script
-* in ``_mina_013`` lines 3930 to 3937 were cut from the PS3 script
-* in ``_mina_013`` lines 4175, 4181 and 4203 were cut from the PS3 script
-* in ``_mina_014`` line 285 was cut from the PS3 script
-* in ``_mina_014`` lines 664 to 743 were cut from the PS3 script
-* in ``_mina_014`` lines 789 to 806 were cut from the PS3 script
-* in ``_mina_014`` lines 1538 to 1592 were cut from the PS3 script
-* in ``_mina_014`` lines 1538 to 1592 were cut from the PS3 script
-* in ``_mina_014`` lines 1736 to 1792 were cut from the PS3 script
-* in ``_mina_014`` lines 1831 to 2074 were cut from the PS3 script
-* in ``_mina_014`` lines 2151 to 2192 were cut from the PS3 script
-* in ``_mina_015_1`` lines 85 and 88 were cut from the PS3 script
-* in ``_mina_015_1`` lines 277 to 380 were cut from the PS3 script
-* in ``_mina_015_1`` lines 642 and 648 were cut from the PS3 script (possibly s12/01/180101080)
-* in ``_mina_015_1`` lines 1043 and 1159 were cut from the PS3 script
-* in ``_mina_015_1`` lines 1179 was cut from the PS3 script
-* in ``_mina_015_1`` lines 1990 was cut from the PS3 script
-* in ``_mina_015_2`` lines 455 to 468 were cut from the PS3 script
-* in ``_mina_015_2`` line 497 was changed in the PS3 script
+* ~~in ``_mina_013`` line 2989 is censored in the PS3 script, ps2 script is censored~~
+* ~~in ``_mina_013`` lines 3524 to 3676 are censored in the PS3 script~~
+* ~~in ``_mina_013`` lines 3930 to 3937 were cut from the PS3 script~~
+* ~~in ``_mina_013`` lines 4175, 4181 and 4203 were cut from the PS3 script, ps2 script is censored~~
+* ~~in ``_mina_014`` line 285 was cut from the PS3 script~~
+* ~~in ``_mina_014`` lines 664 to 743 were cut from the PS3 script~~
+* ~~in ``_mina_014`` lines 789 to 806 were cut from the PS3 script~~
+* ~~in ``_mina_014`` lines 1538 to 1592 were cut from the PS3 script~~
+* ~~in ``_mina_014`` lines 1538 to 1592 were cut from the PS3 script~~
+* ~~in ``_mina_014`` lines 1736 to 1792 were cut from the PS3 script~~
+* ~~in ``_mina_014`` lines 1831 to 2074 were cut from the PS3 script~~
+* ~~in ``_mina_014`` lines 2151 to 2192 were cut from the PS3 script~~
+* ~~in ``_mina_015_1`` lines 85 and 88 were cut from the PS3 script~~
+* ~~in ``_mina_015_1`` lines 277 to 380 were cut from the PS3 script~~
+* ~~in ``_mina_015_1`` lines 642 and 648 were cut from the PS3 script (possibly s12/01/180101080)~~
+* ~~in ``_mina_015_1`` lines 1043 and 1159 were cut from the PS3 script~~
+* ~~in ``_mina_015_1`` lines 1179 was cut from the PS3 script~~
+* ~~in ``_mina_015_1`` lines 1990 was cut from the PS3 script, ps2 script is censored~~
+* ~~in ``_mina_015_2`` lines 455 to 468 were cut from the PS3 script~~
+* ~~in ``_mina_015_2`` line 497 was changed in the PS3 script~~
 * ~~in ``_mina_016`` line 177 was cut from the PS3 script~~
 * ~~in ``_mina_016`` lines 1121 to 1207 were cut from the PS3 script~~
 * ~~in ``_mina_016`` line 2127 was changed in the PS3 script (s12/01/180101194), ps2 script is censored~~
