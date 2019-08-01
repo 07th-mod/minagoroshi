@@ -103,11 +103,11 @@ Old collaborators welcome to join the repository, however it's still preferred t
 * ~~in ``_mina_010`` line 2263 was cut from the PS3 script~~
 * ~~in ``_mina_011_1`` line 94 was cut from the PS3 script~~
 * ~~in ``_mina_011_1`` lines 117 to 142 were cut from the PS3 script~~
-* in ``_mina_011_1`` lines 211, 214 and 224 were cut from the PS3 script
-* in ``_mina_011_1`` lines 251 to 336 were cut from the PS3 script
-* in ``_mina_011_1`` lines 356 to 378 were cut from the PS3 script
-* in ``_mina_011_1`` lines 632 to 671 were cut from the PS3 script
-* in ``_mina_011_2`` lines 676 to 708 were cut from the PS3 script
+* ~~in ``_mina_011_1`` lines 211, 214 and 224 were cut from the PS3 script~~
+* ~~in ``_mina_011_1`` lines 251 to 336 were cut from the PS3 script~~
+* ~~in ``_mina_011_1`` lines 356 to 378 were cut from the PS3 script~~
+* ~~in ``_mina_011_1`` lines 632 to 671 were cut from the PS3 script~~
+* ~~in ``_mina_011_2`` lines 676 to 708 were cut from the PS3 script~~
 * in ``_mina_011_2`` lines 791 to 811 were cut from the PS3 script
 * in ``_mina_011_2`` lines 828 to 839 were cut from the PS3 script
 * in ``_mina_011_2`` line 951 was cut from the PS3 script
