@@ -5,106 +5,130 @@ void main()
 	PlayBGM( 0, "Gray_2", 120, 0 );
 	DrawScene( "Ho_R1", 400 );
 
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子を学校に行かせずもう三日になる。",
-		   NULL, "It'd been three days since he told her to stay home.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "It'd been three days since he told her to stay home.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…あの知恵とかいう生意気な教師の電話がまたあり、怒鳴って切ってやった。",
 		   NULL, "He got another call from that annoying teacher again, so he yelled at her and hung up the phone.", Line_Normal);
 	ClearMessage();
 
 	DrawScene( "black", 400 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だがあいつはネチっこい女だ。",
-		   NULL, "That woman is too persistent, Teppei thought.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "That woman is too persistent, Teppei thought.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　きっとこのままでは済まない。",
 		   NULL, "She won't give up that easily.", Line_WaitForInput);
 	OutputLine(NULL, "また児童相談所に電話するだろう。",
 		   NULL, " He was sure that she'd call the child consultation center again.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鉄平が沙都子を学校に行かせない最大の理由は、きっと学校に行ったらそのまま助けを求めるだろうと思ったからだ。",
 		   NULL, "The biggest reason why Teppei refused to let Satoko go to school was his fear that she'd seek help when going there.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　相談所が訪問してきた時、確かに沙都子は口車を合わせてくれたが、それは隣に自分がいたからに他ならない。",
-		   NULL, "She pretended like nothing was wrong when the social worker from the child consultation center showed up, but that was only because he was right beside her.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "She pretended like nothing was wrong when the social worker from the child consultation center showed up, but that was only because he was right beside her.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　自分から解放されたらきっと裏切るに決まっている。",
 		   NULL, "She'd probably betray him as soon as she got her chance.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そうなれば相談所がすぐにもすっ飛んでくるだろう。",
-		   NULL, "Then the consultation center would show up immediately.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Then the consultation center would show up immediately.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　いや、それどころか沙都子に対する虐待だか何だかで警察沙汰にもなるかもしれない。",
-		   NULL, "No, maybe even the police would come and get him for assaulting Satoko.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "No, maybe even the police would come and get him for assaulting Satoko.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…相談所の連中は警察を伴うこともあると仲間の誰かに聞いていた。",
 		   NULL, "One of his friends had told him that the consultation center works with the police sometimes.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鉄平のスネは傷だらけだ。",
-		   NULL, "Teppei had a lot of weight on his shoulders.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "Teppei had a lot of weight on his shoulders.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　警察の厄介になったら最後、他のヤバい話にまで及ぶに決まってる。",
 		   NULL, "If the police came, they'd end up questioning him about the other trouble he was involved in.", Line_WaitForInput);
 	OutputLine(NULL, "それだけは断じてごめんだった。",
 		   NULL, " He couldn't let that happen.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　とにかく、金さえあれば。",
-		   NULL, "All he needed was the money.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "All he needed was the money.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　兄夫婦の残した通帳さえ見付かればこんな窮屈な村からおさらばできるのだ。",
 		   NULL, "Teppei could leave this awful village behind as soon as he found his brother's bankbook.", Line_Normal);
 	ClearMessage();
 
 	DrawSceneWithMask( "Ho_R1", "maskleft", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　外を歩くと、村人の目がきついように感じたので、鉄平は外には出なかった。",
-		   NULL, "Teppei usually stayed at home, as he found the way the other villagers looked at him unpleasant.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "Teppei usually stayed at home, as he found the way the other villagers looked at him unpleasant.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　でもそれでは暇なので、仲間を呼んでは麻雀をしていた。",
-		   NULL, "So when playing mahjong with his friends, he played it at Satoko's house.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "So when playing mahjong with his friends, he played it at Satoko's house.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが麻雀は４人集まらないとできない。",
-		   NULL, "But mahjong requires at least four people.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "But mahjong requires at least four people.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　人が集まらず、家の中でテレビを見ていることしかできない時間も短くなかった。",
 		   NULL, "When Teppei couldn't get that many people to come over, he just stayed home alone and watched TV instead.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　なので、そんな暇な時間を宝探しに費やすようになった。",
-		   NULL, "He started using this ample free time to sniff around the house for his treasure.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "He started using this ample free time to sniff around the house for his treasure.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　どう散らかしたって、沙都子に片付けさせればいいのだから気楽なものだ。",
-		   NULL, "Satoko would end up cleaning the mess he made.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Satoko would end up cleaning the mess he made.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　どうせ出て行く家だ。",
-		   NULL, "Besides, it wasn't his home anyway.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "Besides, it wasn't his home anyway.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　多少家具が壊れたって知ったことじゃない。",
 		   NULL, "What did it matter to him how much furniture he broke?", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鉄平は押入れの中身を全て引っ張り出して、天井の板を外してみたり、",
 		   NULL, "He cleared out the closet, and went up to the attic...", Line_ContinueAfterTyping);
 
@@ -124,14 +148,16 @@ void main()
 	OutputLineAll(NULL, "", Line_WaitForInput);
 
 	OutputLine(NULL, "タンスの引き出しを全て引っ張りだして中身をぶちまけ、引き出し全てを引っこ抜いてまで調べた。",
-		   NULL, " He also pulled out all the chests and searched them thoroughly.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, " He also pulled out all the chests and searched them thoroughly.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　守銭奴というのはへそくりの隠し方だって巧みだ。",
-		   NULL, "His wife had been a pretty clever woman.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "His wife had been a pretty clever woman.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　きっとこれくらいはしないと見付からない。",
 		   NULL, "She must have hid it somewhere very unusual.", Line_Normal);
 	ClearMessage();
@@ -139,6 +165,7 @@ void main()
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
 	DrawSceneWithMask( "Ho_2", "maskleft", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そんな調子で家の中を荒らし続け、",
 		   NULL, "He messed up the whole first floor", Line_WaitForInput);
 	OutputLine(NULL, "二階に上がり、手始めにこの部屋から探そうと思った時、",
@@ -160,12 +187,14 @@ void main()
 	DrawBustshotWithFiltering( 2, "Sa_SakebuB1", "maskright", 7, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "ps3/s20/04/440400094", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/04/440400094", 128);
 	OutputLine(NULL, "「に、にーにーの部屋は駄目ですの…ッ！！！」",
-		   NULL, "\"Not Nii-nii's room...!!!\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "\"Not Nii-nii's room...!!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE(4, "ps3/s20/21/442000012", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/21/442000012", 128);
 	OutputLine(NULL, "「何しさらすんじゃあぁ！！！」",
 		   NULL, "\"What the hell?!!\"", Line_Normal);
 	ClearMessage();
@@ -174,14 +203,16 @@ void main()
 	ChangeBustshot( 2, "Sa_NakuA1", 200, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "ps3/s20/04/440400095", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/04/440400095", 128);
 	OutputLine(NULL, "「駄目ですの、にーにーの部屋は止めてくださいですの…！！！」",
 		   NULL, "\"No! You can't go inside Nii-nii's room...!!!\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　最初、その過剰な反応は、この部屋にこそ通帳が隠されている証拠だと鉄平は考えた。",
-		   NULL, "Teppei immediately assumed that she was hiding the bankbook in there.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Teppei immediately assumed that she was hiding the bankbook in there.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 	PlaySE( 0, "s_furu", 128, 64 );
@@ -190,17 +221,20 @@ void main()
 	DisplayWindow();
 	PlaySE( 0, "s_Down", 128, 64 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鉄平は沙都子を振り払い、その部屋、悟史の部屋に無理に入ろうとする。",
-		   NULL, "He threw her off and forced his way inside the room.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "He threw her off and forced his way inside the room.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 	DisableWindow();
 	DrawBustshotWithFiltering( 0, "Sa_SakebuA1", "maskright", 7, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
 	DisplayWindow();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…だが沙都子は半狂乱になってそれを食い止めようとした。",
 		   NULL, "...However, Satoko tried to stop him with all of her might.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　無抵抗で言いなりの沙都子がこれだけの抵抗を見せるのは面白くもあったが、",
 		   NULL, "It was amusing for Teppei to see Satoko resisting him to that extent, but it also surprised him a little.", Line_WaitForInput);
 	OutputLine(NULL, "同時に意外でもあり、鉄平はどうして悟史の部屋に入るのだけが駄目なのか、沙都子の主張を聞かざるを得なかった。",
@@ -211,21 +245,23 @@ void main()
 	ChangeBustshot( 0, "Sa_NakuB1", 200, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "ps3/s20/04/440400096", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/04/440400096", 128);
 	OutputLine(NULL, "「……えっく！",
 		   NULL, "\"Hic......!", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/04/440400096", 128, 64);
+	PlayVoice(4, "ps3/s20/04/440400096", 128);
 	OutputLine(NULL, "　その部屋は…にーにーの部屋ですのよ…。",
 		   NULL, " That room belongs to... Nii-nii...", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/04/440400097", 128, 64);
+	PlayVoice(4, "ps3/s20/04/440400097", 128);
 	OutputLine(NULL, "…にーにーが帰ってきた時、大変なことになってたら…にーにーが悲しみますのよ…。",
 		   NULL, " Nii-nii will be hurt... if he comes home and... sees his room destroyed...", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/04/440400098", 128, 64);
+	PlayVoice(4, "ps3/s20/04/440400098", 128);
 	OutputLine(NULL, "うっく、えっぐ…！！」",
-		   NULL, " Ugh... ugh...!!\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " Ugh... ugh...!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE(4, "ps3/s20/21/442000013", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/21/442000013", 128);
 	OutputLine(NULL, "「何じゃい、兄貴の部屋だからって、それだけで駄目なんかい。",
 		   NULL, "\"You don't want me there just 'cause it's your brother's room?", Line_WaitForInput);
 	OutputLine(NULL, "悟史なんか生きとるかどうかもわからんわな。」",
@@ -236,116 +272,128 @@ void main()
 	ChangeBustshot( 0, "Sa_SakebuB1", 200, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "ps3/s20/04/440400099", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/04/440400099", 128);
 	OutputLine(NULL, "「にーにーは生きてるんですのよ！！",
 		   NULL, "\"Nii-nii is alive!!", Line_WaitForInput);
 	OutputLine(NULL, "　きっと帰ってきますのよ！！",
 		   NULL, " He will come back home!!", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/04/440400100", 128, 64);
+	PlayVoice(4, "ps3/s20/04/440400100", 128);
 	OutputLine(NULL, "　わああぁああぁあん！！",
 		   NULL, " Waaaaaaaah!!", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/04/440400101", 128, 64);
+	PlayVoice(4, "ps3/s20/04/440400101", 128);
 	OutputLine(NULL, "　荒らさないで、荒らさないで！！」",
 		   NULL, " Don't destroy his room!!\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/21/442000014", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/21/442000014", 128);
 	OutputLine(NULL, "「…何言うてんな。",
 		   NULL, "\"...What are you saying?", Line_WaitForInput);
 	OutputLine(NULL, "わしゃあ荒らすんと違う。",
 		   NULL, " I'm not going to destroy the room.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/21/442000015", 128, 64);
+	PlayVoice(4, "ps3/s20/21/442000015", 128);
 	OutputLine(NULL, "この部屋をな？",
 		   NULL, " I'm just...", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/21/442000016", 128, 64);
+	PlayVoice(4, "ps3/s20/21/442000016", 128);
 	OutputLine(NULL, "　ちょいとお掃除しようちゅうとんしゃあな。",
 		   NULL, " trying to clean it up.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/21/442000017", 128, 64);
+	PlayVoice(4, "ps3/s20/21/442000017", 128);
 	OutputLine(NULL, "いないヤツのために部屋を残しとく義理なんかあらんね。",
 		   NULL, " Why would you have to save this room for someone who's not here anymore?", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/21/442000018", 128, 64);
+	PlayVoice(4, "ps3/s20/21/442000018", 128);
 	OutputLine(NULL, "だからちょいとお片付けをするだけなんね。」",
 		   NULL, " I need to clean it up.\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「だめッ！！",
 		   NULL, "\"No!!", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "　だめええぇええええ、わああああああん、わああぁああぁあッ！！！",
 		   NULL, " No, you can't! Waaaaaaah!! Waaaaaaaaah!!", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "　にーにー、にーにーー！！！",
 		   NULL, " Nii-nii!! Nii-nii!!", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "　うわああああぁあぁあぁぁッ！！！」",
 		   NULL, " Waaaaaaaaah!!!\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「なッ、何じゃいな、そんなに嫌か、わしがこの部屋に入るんがそんなに嫌かい…！！」",
 		   NULL, "\"The hell? You really don't want me to go inside, huh...?\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子の抵抗があまりに半狂乱なので、さすがに鉄平もこれ以上はやめた方がいいと思った。",
-		   NULL, "Satoko's crazed behavior convinced him that he should stop provoking her for the moment.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Satoko's crazed behavior convinced him that he should stop provoking her for the moment.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……鉄平も脅しのプロだった。",
-		   NULL, "...While Teppei was very talented at threatening people,", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "...While Teppei was very talented at threatening people,", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　追い詰めすぎると素人ほど窮鼠、猫を噛む。",
 		   NULL, "despair makes cowards courageous.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だから、沙都子のこの異常な抵抗を無視してこの部屋を荒らせば、きっと家を飛び出しかねないと感じた。",
-		   NULL, "If he ignored Satoko and tore apart the room, she might just run away.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "If he ignored Satoko and tore apart the room, she might just run away.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　今や沙都子は、近くに置いておくのも煩わしいし、かといって手元から離すのも危険だという疫病神扱いだった。",
 		   NULL, "He didn't want Satoko to be nearby, but he also couldn't let her run loose.", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/21/442000019", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/21/442000019", 128);
 	OutputLine(NULL, "「わぁったわあった！！",
 		   NULL, "\"Fine then!!", Line_WaitForInput);
 	OutputLine(NULL, "　沙都子がいい子にしてたらわしもこの部屋には入らん。",
 		   NULL, " If you promise to be a good girl, I won't go inside this room.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/21/442000020", 128, 64);
+	PlayVoice(4, "ps3/s20/21/442000020", 128);
 	OutputLine(NULL, "な？",
 		   NULL, " Alright?", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/21/442000021", 128, 64);
+	PlayVoice(4, "ps3/s20/21/442000021", 128);
 	OutputLine(NULL, "　それでええんね？」",
-		   NULL, " Got it?\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " Got it?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
 	ChangeBustshot( 0, "Sa_HannbesoB1", 200, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "ps3/s20/04/440400102", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/04/440400102", 128);
 	OutputLine(NULL, "「……はい、……はい。」",
 		   NULL, "\"Yes... yes...\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「その代わり、わしを怒らせたら知らんぞ。",
 		   NULL, "\"But if you make me mad,", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "悟史なんて帰ってこないヤツのために部屋を残しとく謂れはないんだからのぉ！",
 		   NULL, " I'm gonna rip this room apart!", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "　お前が帰ってこんようになったり、他所様にわしが虐めてるなんてことを言いよったら、",
-		   NULL, " If you escape from this house or tell people about what's happening...", Line_ContinueAfterTyping);
-	SetValidityOfInput( FALSE );
+		   NULL, " If you escape from this house or tell people about what's happening...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 800 );
-	SetValidityOfInput( TRUE );
-	PlaySE(4, "", 128, 64);
+	// (backup) SetValidityOfInput( TRUE );
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "…この部屋、大変なことになってまうん、よう肝に刻んどれえ。",
 		   NULL, " everything in there's gonna end up in the garbage.", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "わぁったな？！」",
 		   NULL, " Get it?!\"", Line_Normal);
 	ClearMessage();
@@ -354,78 +402,92 @@ void main()
 	ChangeBustshot( 0, "Sa_MuhyouA1", 200, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "ps3/s20/04/440400103", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/04/440400103", 128);
 	OutputLine(NULL, "「……はい、……はい、…ありがとうございますありがとうございます…。」",
 		   NULL, "\"...Yes... yes... Thank you for giving me a chance...\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　きっとこの部屋に通帳がある。",
-		   NULL, "Teppei was sure the bankbook was inside Satoshi's room.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Teppei was sure the bankbook was inside Satoshi's room.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…だが、自分がこの部屋を荒らした痕跡をわずかにでも気取ったら沙都子は面倒なことになるだろう。",
 		   NULL, "...But Satoko would lose it if he went inside.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　面倒な約束をしたな、とは思ったが、この部屋なんていうどうでもいい人質で沙都子の口が封じれるなら、考えてみれば悪い話ではなかった。",
-		   NULL, "He wasn't pleased about the promise he made with her, but at least it would keep Satoko under control.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "He wasn't pleased about the promise he made with her, but at least it would keep Satoko under control.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…よく言い聞かせれば、学校に行かせてもいいんじゃないだろうか。",
-		   NULL, "...It might not hurt him to send her off to school.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "...It might not hurt him to send her off to school.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　明日も休ませると、あの女教師、今度は警察と一緒に乗り込んで来かねない。",
 		   NULL, "If he kept her home again tomorrow, that teacher might come to the house with the police in tow.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子を学校へ行かせられなかった理由は、学校で余計なことをしゃべるんじゃないかという恐れだけだ。",
-		   NULL, "He was only keeping her at home because he was afraid that Satoko would talk to other people.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "He was only keeping her at home because he was afraid that Satoko would talk to other people.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　その恐れさえないなら、むしろ沙都子は学校に行かせた方がいい。",
-		   NULL, "If she wasn't going to do that, it'd be better for him to send her to school.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "If she wasn't going to do that, it'd be better for him to send her to school.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それに、沙都子が学校に行っている間なら、こっそり悟史の部屋を調べることもできる。",
 		   NULL, "He could sneak into Satoshi's room while she was out.", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps2/21/442000022", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps2/21/442000022", 128);
 	OutputLine(NULL, "「沙都子。お前がいい子にしたったんから、風邪ももうええぇころじゃんね。",
 		   NULL, "\"Satoko, you've been a good girl, so I guess your cold is all better now.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/21/442000023", 128, 64);
+	PlayVoice(4, "ps3/s20/21/442000023", 128);
 	OutputLine(NULL, "お前、明日から学校行けぇ。」",
-		   NULL, " Go back to school tomorrow.\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " Go back to school tomorrow.\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
 	ChangeBustshot( 0, "Sa_MuhyouA2", 200, TRUE );
 	DisplayWindow();
 
-	PlaySE(4, "ps3/s20/04/440400103", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/04/440400103", 128);
 	OutputLine(NULL, "「…………ありがとうございますありがとうございます…。」",
-		   NULL, "\"Thank you so much... Thank you so much...\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "\"Thank you so much... Thank you so much...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　施しを受けたら礼を言えと仕込んだが、何度も繰り返されると気持ち悪い。",
-		   NULL, "He was the one who told her to say 'thank you' when he gives her approval to do something.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "He was the one who told her to say 'thank you' when he gives her approval to do something.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鉄平は自分勝手にそう思った。",
 		   NULL, "But it annoyed him to hear her say it over and over.", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "S20/21/442000024", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/21/442000024", 128);
 	OutputLine(NULL, "「早ぅいがんね、ざったいわこのダラズが。",
 		   NULL, "\"Get out of my sight, you little brat.", Line_WaitForInput);
 	OutputLine(NULL, "……あぁもう！",
 		   NULL, " Gah!", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/21/442000025", 128, 64);
+	PlayVoice(4, "ps3/s20/21/442000025", 128);
 	OutputLine(NULL, "　面白ないん！！」",
 		   NULL, " You're so annoying!!\"", Line_Normal);
 	ClearMessage();
