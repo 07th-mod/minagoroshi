@@ -5,13 +5,11 @@ void main()
 	SetSpeedOfMessage( FALSE, 0 );
 
 	PlayBGM( 0, "it_moves", 120, 0 );
-	DrawScene( "Fure1", 3000 );
+	DrawScene( "background/Fure1", 3000 );
 	SetValidityOfInput( FALSE );
 	Wait( 3000 );
 	SetValidityOfInput( TRUE );
-	DrawScene( "Fure2", 3000 );
-
-	SetSpeedOfMessage( FALSE, 0 );
+	DrawScene( "background/Fure2", 3000 );
 
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -173,11 +171,10 @@ void main()
 		   NULL, "So what are you doing?", Line_Normal);
 	ClearMessage();
 
-	if(GetGlobalFlag(GArtStyle) == 1) {
-		DrawFragment("minacubemap", "FragmentGroup", 5000);
-	} else {
-		DrawScene( "Kakera2", 1000 );
-	}
+	SetValidityOfInterface(FALSE);
+	SetValidityOfSaving(FALSE);
+	DisableWindow();
+	DrawFragment("minacubemap", "FragmentGroup", 5000);
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　記憶のカケラで積み木遊び？",
@@ -225,9 +222,7 @@ void main()
 		   NULL, " Try and hold it up to the light...", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 0, 1000, FALSE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それらはそれぞれが、",
@@ -245,17 +240,12 @@ void main()
 	ClearMessage();
 
 	PlayBGM( 0, "Instict", 120, 0 );
-
+	DisableWindow();
+	SetValidityOfInput( FALSE );
 	StopFragment(1000);
-
-	if(GetGlobalFlag(GArtStyle) == 1) {
-		DrawSceneWithMask( "kakerabg", "maskc", 1, 0, 1300 );
-		DrawFragment("minacubemap", "FragmentCube", 5000);
-	} else {
-		DrawSceneWithMask( "Kakera1", "maskc", 1, 0, 1300 );
-	}
-
-
+	DrawSceneWithMask( "black", "maskc", 1, 0, 1000 );
+	DrawFragment("minacubemap", "FragmentCube", 5000);
+	SetValidityOfInput( TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それは……、",
@@ -296,11 +286,14 @@ void main()
 		   NULL, " That makes things easier.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
+	SetValidityOfInput( FALSE );
 	StopFragment(1000);
-
-	DrawFilm( 2, 0xaa, 0xaa, 0xaa, 256, 0, 0, TRUE );
-	DrawBustshot( 0, "Kei_Ikari1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawScene( "GK1", 400 );
+	DrawBustshot( 1, "sprite/flashback/kei1_ikari1_", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawScene( "background/flashback/GK1", 1000 );
+	SetValidityOfInput( TRUE );
+	SetValidityOfInterface(TRUE);
+	SetValidityOfSaving(TRUE);
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　「鬼隠し編」の世界では、前原圭一が闇に心を囚われてしまった。",
@@ -313,12 +306,13 @@ void main()
 		   NULL, "He couldn't accept the kind words his friends offered him, and eventually beat them to death, not knowing of their kindness.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	DisableWindow();
 	PlaySE( 0, "s_furu", 128, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_tataku", 128, 64 );
-	DrawScene( "ryuuketu1", 200 );
+	DrawSceneWithMask("background/ryuuketu1", "maskaa", 1, 0, 100 );
 
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -333,18 +327,15 @@ void main()
 		   NULL, "That had nothing to do with his story, though.", Line_Normal);
 	ClearMessage();
 
-	SetValidityOfInput( FALSE );
-	Wait( 2000 );
-	SetValidityOfInput( TRUE );
-	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskright", 1, 0, 2000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そっちのカケラは「綿流し編」よ。",
 		   NULL, "That Fragment is the \"Watanagashi\" chapter.", Line_Normal);
 	ClearMessage();
 
-	DrawBustshot( 2, "Si_DefA1#", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawScene( "Mati7", 400 );
+	DrawBustshot( 2, "sprite/flashback/Si1a_Def_A1_", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawScene( "background/flashback/Mati7", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　この世界で囚われたのは園崎詩音。",
@@ -357,8 +348,7 @@ void main()
 		   NULL, "She killed many people out of revenge for her boyfriend's disappearance, as he went missing in 1982.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	DrawSceneWithMask( "So_D1", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "background/flashback/So_D1", "maskup", 1, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　梨花もがんばったんだけどね。",
@@ -371,7 +361,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だから「目明し編」の世界では、もう一度同じ展開になったので、拷問より自害を選んだのだけれど。",
@@ -383,26 +373,20 @@ void main()
 		   NULL, "That Fragment over there is called the \"Tatarigoroshi\" chapter.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-
-	DrawBustshotWithFiltering( 1, "Sa_HannbesoB1", "maskup", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 0, FALSE );
-	DrawBustshotWithFiltering( 2, "Tetu1", "maskup", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawSceneWithMask( "Ho1_Houjouke", "maskup", 1, 0, 300 );
+	DrawBustshot( 1, "sprite/flashback/Sa1b_hannbeso_b1_", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawBustshot( 2, "sprite/flashback/tetu_1_", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawScene( "background/flashback/Ho1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……沙都子の叔父が帰ってきて、沙都子を連れ去って閉じ込めてしまう。",
 		   NULL, "Satoko's uncle came back and locked her up inside her house.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	FadeFilm( 0, TRUE );
-
-
-	if(GetGlobalFlag(GArtStyle) == 1) {
-		DrawFragment("minacubemap", "FragmentWeirdShape", 1000);
-		DrawScene( "Fure2", 1000 );
-	} else {
-		DrawScene( "Kakera2", 1000 );
-	}
+	DrawScene( "black", 1000 );
+	SetValidityOfInterface(FALSE);
+	SetValidityOfSaving(FALSE);
+	DrawFragment("minacubemap", "FragmentWeirdShape", 1000);
+	DrawScene( "background/Fure2", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ある意味、これは最高に運のない世界。",
@@ -436,12 +420,14 @@ void main()
 		   NULL, "Rika was there until just a moment ago.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
+	SetValidityOfInput( FALSE );
 	StopFragment(1000);
-
-	DrawScene( "black", 1000 );
-	DrawFilm( 2, 0xaa, 0xaa, 0xaa, 256, 0, 0, TRUE );
-	DrawBustshot( 0, "Re_Hi_DefA1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawScene( "GK2", 400 );
+	DrawBustshot( 1, "sprite/flashback/Re2a_Hig_Def_A1_", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawScene( "background/flashback/GK1", 1000 );
+	SetValidityOfInput( TRUE );
+	SetValidityOfInterface(TRUE);
+	SetValidityOfSaving(TRUE);
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　この世界で囚われたのは竜宮レナ。",
@@ -454,16 +440,15 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-	DrawBustshotWithFiltering( 2, "Kei_Komaru", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawSceneWithMask( "GK3", "maskright", 1, 0, 300 );
+	DrawBustshot( 2, "sprite/flashback/Kei1_Komaru_", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawScene( "background/flashback/GK3", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　とても意外だったのは、前原圭一が私たちのように、別の世界の記憶を持っていたこと。",
 		   NULL, "It surprised me to learn that Keiichi Maebara had a memory of the other worlds, just like we do.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
-	FadeFilm( 0, TRUE );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　でも、あれほど顕著な例は確かに珍しいけど、日常においては誰もが記憶を持っているはず。",
@@ -486,12 +471,10 @@ void main()
 		   NULL, "It's like the strange feeling you get when you do something for the first time, but it feels like you've done it before.", Line_Normal);
 	ClearMessage();
 
-	if(GetGlobalFlag(GArtStyle) == 1) {
-		DrawFragment("minacubemap", "FragmentGroup", 2000);
-		DrawScene( "Fure2", 1000 );
-	} else {
-		DrawScene( "Kakera2", 1000 );
-	}
+	SetValidityOfInterface(FALSE);
+	SetValidityOfSaving(FALSE);
+	DrawFragment("minacubemap", "FragmentGroup", 2000);
+	DrawScene( "background/Fure2", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　誰もが別の世界でのＩＦを断片的に覚えているけれど、それを知覚することができない。",
@@ -553,8 +536,13 @@ void main()
 		   NULL, "I'm sure you're not interested in hearing my story.", Line_Normal);
 	ClearMessage();
 
-	StopFragment(400);
-	DrawScene( "black", 400 );
+	DisableWindow();
+	SetValidityOfInput( FALSE );
+	StopFragment(1000);
+	DrawScene( "black", 1000 );
+	SetValidityOfInput( TRUE );
+	SetValidityOfInterface(TRUE);
+	SetValidityOfSaving(TRUE);
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　うん？",
@@ -596,8 +584,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 0, "Kei_Def2", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/flashback/Kei1_Def2_", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　例えば、梨花の友人たちの中でも一際存在感の大きい人物、",
@@ -609,13 +596,13 @@ void main()
 		   NULL, " is Keiichi Maebara.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-
+	DisableWindow();
 	PlaySE( 0, "s_furu", 128, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 600 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_tataku", 128, 64 );
-	DrawScene( "ryuuketu1", 0 );
+	DrawSceneWithMask("background/ryuuketu1", "maskaa", 1, 0, 100 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　彼は「鬼隠し編」で疑心暗鬼に囚われて、竜宮レナと園崎魅音を殴り殺してしまった。",
@@ -633,7 +620,7 @@ void main()
 		   NULL, "In other words, what Keiichi Maebara did in Onikakushi was not inevitable.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　必然というのは、",
@@ -670,8 +657,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 0, "Kei_Warai", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/flashback/Kei1_Warai_", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　前原圭一というコマが、直情的で思い込みが激しいというのは事実のようだけど。",
@@ -689,9 +675,7 @@ void main()
 		   NULL, "In other words, even though something might seem inevitable in one world, that may not be the case if you compare it to a different one.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	FadeBustshotWithFiltering( 0, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
-	DisplayWindow();
+	DrawScene("black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　逆を言えば、起こすべくして起こされている事実は、世界をいくつ跨いだところで、毎回変わりなく繰り返されるということ。",
