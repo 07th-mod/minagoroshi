@@ -14,194 +14,216 @@ void main()
 	DrawSceneWithMask( "Re_Tel", "maskup", 1, 0, 300 );
 	PlayBGM( 0, "higurashi", 120, 0 );
 
-	PlaySE(4, "ps3/s20/00/shimiko44001", 128, 64);
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>沁子</color>", NULL, "<color=#f5e6d3>Shimiko</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/shimiko44001", 128);
 	OutputLine(NULL, "「お待ちください、今代わりますね。",
 		   NULL, "\"Please hold on a moment, I'll get her.", Line_WaitForInput);
 	OutputLine(NULL, "……お魎さん、役所の自治係の人から電話が入ってますけど。」",
 		   NULL, " ...Oryou-san, someone from the municipal government is calling...\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/17/442300043", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#d7e6de>お魎</color>", NULL, "<color=#d7e6de>Oryou</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/17/442300043", 128);
 	OutputLine(NULL, "「……あぁん、もしもし。」",
 		   NULL, "\"...Aah, hello?\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/00/443000001", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/443000001", 128);
 	OutputLine(NULL, "「どうも園崎顧問、こんにちは。",
 		   NULL, "\"Hello, Sonozaki-san.", Line_WaitForInput);
 	OutputLine(NULL, "自治の相田でございます。",
 		   NULL, " This is Aida from the municipal government.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/00/443000002", 128, 64);
+	PlayVoice(4, "ps3/s20/00/443000002", 128);
 	OutputLine(NULL, "先日はおはぎをどうもご馳走さまでした。」",
 		   NULL, " Thank you very much for the ohagi the other day.\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/17/442300044", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#d7e6de>お魎</color>", NULL, "<color=#d7e6de>Oryou</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/17/442300044", 128);
 	OutputLine(NULL, "「いいんねいいんね。",
 		   NULL, "\"You're quite welcome.", Line_WaitForInput);
 	OutputLine(NULL, "こちらこそ文化祭りの時は世話んなったんね。",
 		   NULL, " Thank you for your work at the culture festival.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300045", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300045", 128);
 	OutputLine(NULL, "野点傘の件、ありがとよぅ。",
 		   NULL, " Also for providing that large parasol.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300046", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300046", 128);
 	OutputLine(NULL, "あれ、一本いくらくらいすんかんね。",
 		   NULL, " How much does that thing cost?", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300047", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300047", 128);
 	OutputLine(NULL, "すったら毎年使うもんなんだから自治で一本、買っといてくらんとよ。」",
 		   NULL, " We use it every year, so we might as well buy one ourselves.\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/00/443000003", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/443000003", 128);
 	OutputLine(NULL, "「あれはですね、一応、先生からの借り物になっておりまして。",
 		   NULL, "\"We borrowed that one from a teacher.", Line_WaitForInput);
 	OutputLine(NULL, "一応、値段を調べたんですが、国産だと２０万くらいするらしいんですよ。",
 		   NULL, " I checked out the price, but the domestically-made ones cost about 200,000 yen.", Line_WaitForInput);
-	PlaySE(4, "S20/00/443000004", 128, 64);
+	PlayVoice(4, "ps3/s20/00/443000004", 128);
 	OutputLine(NULL, "中国製によく似たものがありまして、こっちなら８万円くらいで何とか買えそうでして…。」",
-		   NULL, " I also found one made in China, and it's less than half the price...\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " I also found one made in China, and it's less than half the price...\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE(4, "ps3/s20/17/442300048", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#d7e6de>お魎</color>", NULL, "<color=#d7e6de>Oryou</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/17/442300048", 128);
 	OutputLine(NULL, "「別に中国製でもどこ製でも構わんぎゃあ、お呼びする先生に失礼んならんとよ、よぅ選んどくれぇな。」",
 		   NULL, "\"I don't care if it's made in China or not. Just get one so we don't have to cause any more trouble for the teachers.\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/00/443000005", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/443000005", 128);
 	OutputLine(NULL, "「一応ですね、今、その８万の傘の方を取り寄せさせていただいております。",
 		   NULL, "\"We're actually ordering it already.", Line_WaitForInput);
 	OutputLine(NULL, "届きましたら、顧問にも一度見ていただきまして、それで判断ということではいかがでしょうか…。」",
 		   NULL, " Once it arrives, you might want to take a look at it and make a final decision...\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/17/442300049", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#d7e6de>お魎</color>", NULL, "<color=#d7e6de>Oryou</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/17/442300049", 128);
 	OutputLine(NULL, "「それから、もう３年、江戸千家が続いとるんね、先生がたまには他の先生もお呼びしないとバランスがようないっちゅうんしゃあ。",
 		   NULL, "\"Also, we've been holding the same Edo-style tea ceremony for the past three years. We should probably get an instructor from a different style.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300050", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300050", 128);
 	OutputLine(NULL, "表でも裏でもいいから他の先生をちょいと自治の方で来年までに探してもらってもいいかんね。」",
 		   NULL, " Can you look for a new instructor for next year?\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/00/443000006", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/443000006", 128);
 	OutputLine(NULL, "「は、はぁ……そうですか…。",
 		   NULL, "\"O-Oh... I see...", Line_WaitForInput);
 	OutputLine(NULL, "わ…わかりました！",
 		   NULL, " W-Will do, ma'am!", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/00/443000007", 128, 64);
+	PlayVoice(4, "ps3/s20/00/443000007", 128);
 	OutputLine(NULL, "　ちょっとこちらでもお茶の先生を探してみます。",
 		   NULL, " We'll find a different tea ceremony instructor.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/00/443000008", 128, 64);
+	PlayVoice(4, "ps3/s20/00/443000008", 128);
 	OutputLine(NULL, "…それでですね顧問。",
 		   NULL, " ...About that, Advisor.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/00/443000009", 128, 64);
+	PlayVoice(4, "ps3/s20/00/443000009", 128);
 	OutputLine(NULL, "実は今日はちょぉっとご相談がございまして。」",
 		   NULL, " I had something else to ask you about.\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/17/442300051", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#d7e6de>お魎</color>", NULL, "<color=#d7e6de>Oryou</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/17/442300051", 128);
 	OutputLine(NULL, "「こっちの傘の話ばっかりですまんね。",
 		   NULL, "\"And here's me going on about a parasol.", Line_WaitForInput);
 	OutputLine(NULL, "で、何の話なんしゃあ。」",
 		   NULL, " So, what do you need?\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/00/443000010", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/443000010", 128);
 	OutputLine(NULL, "「実はですね、雛見沢にお住まいの北条沙都子さんの件で顧問のお耳に入っておりますかどうかと思いましてお電話させていただいたんです。」",
 		   NULL, "\"We were wondering if you've heard anything about the case of Satoko Houjou-san in Hinamizawa.\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/17/442300052", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#d7e6de>お魎</color>", NULL, "<color=#d7e6de>Oryou</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/17/442300052", 128);
 	OutputLine(NULL, "「……北条沙都子ぉ？",
 		   NULL, "\"...Satoko Houjou?", Line_WaitForInput);
 	OutputLine(NULL, "　あぁん！",
 		   NULL, " Haaah?", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300053", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300053", 128);
 	OutputLine(NULL, "　バチ当たり北条のとこの娘かぁ。",
 		   NULL, " You're talking about that blasted Houjou girl?", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300054", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300054", 128);
 	OutputLine(NULL, "何かしよりましたんかいね。」",
 		   NULL, " What did she do?\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "S20/00/443000011", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/443000011", 128);
 	OutputLine(NULL, "「いえ、実はですね。",
 		   NULL, "\"Well...", Line_WaitForInput);
 	OutputLine(NULL, "最近、叔父さんと同居を始めたとかでですね、",
 		   NULL, " She's recently moved in with her uncle,", Line_WaitForInput);
-	PlaySE(4, "S20/00/443000012", 128, 64);
+	PlayVoice(4, "ps3/s20/00/443000012", 128);
 	OutputLine(NULL, "その叔父さんから虐待を受けているとか、そんな話は顧問のお耳には入っておりますでしょうか。」",
-		   NULL, " but she's being abused, apparently... have you heard anything about it?\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " but she's being abused, apparently... have you heard anything about it?\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE(4, "S20/17/442300055", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#d7e6de>お魎</color>", NULL, "<color=#d7e6de>Oryou</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/17/442300055", 128);
 	OutputLine(NULL, "「叔父？",
 		   NULL, "\"Her uncle?", Line_WaitForInput);
 	OutputLine(NULL, "　沙都子がぁ？",
 		   NULL, " Satoko's being abused?", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300056", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300056", 128);
 	OutputLine(NULL, "　私ゃあそんな話は知らんがね！」",
 		   NULL, " I've never heard of anything like that!\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "S20/00/443000013", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/443000013", 128);
 	OutputLine(NULL, "「いえいえいえ、知らなければ結構なんです。",
 		   NULL, "\"Oh, well, if you don't know, that's okay.", Line_WaitForInput);
 	OutputLine(NULL, "実はですね、そういった旨の陳情が児童相談所に入ったらしいです。",
 		   NULL, " To tell you the truth, someone from Hinamizawa came to petition to the child consultation center.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/00/443000014", 128, 64);
+	PlayVoice(4, "ps3/s20/00/443000014", 128);
 	OutputLine(NULL, "相談所が言うにはだいぶ強い口調で来られていると、そういう話らしいんです。",
-		   NULL, " According to the center, that petitioner was very persistent.", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/00/443000015", 128, 64);
+		   NULL, " According to the center, that petitioner was very persistent. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/443000015", 128);
 	OutputLine(NULL, "それでですね、相談所の係長から、お魎さんのお耳に入ってる話なら取り扱いを急いだほうがいいんじゃないかという話が来まして、」",
-		   NULL, " The manager felt that it was better to talk with you, if you already knew about it...\"", Line_Normal);
+		   NULL, "The manager felt that it was better to talk with you, if you already knew about it...\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/17/442300057", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#d7e6de>お魎</color>", NULL, "<color=#d7e6de>Oryou</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/17/442300057", 128);
 	OutputLine(NULL, "「私ゃあ何も知らんし、全然わからん！",
 		   NULL, "\"I don't know anything, and I don't care!", Line_WaitForInput);
 	OutputLine(NULL, "　なぁんでわしが北条のバチ当たり娘何ぞに骨を折らんしゃああかんがね！！",
 		   NULL, " Why would I do anything for that pitiful child?!", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300058", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300058", 128);
 	OutputLine(NULL, "　園崎家は全然知りませんし関係も何もありゃんせんね！！」",
-		   NULL, " The Sonozaki family has nothing to do with this!!\"", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, " The Sonozaki family has nothing to do with this!!\"", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE(4, "ps3/s20/00/443000016", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/443000016", 128);
 	OutputLine(NULL, "「では……連町の方からそういう話が出てるとか、そういう話はお耳には…、」",
 		   NULL, "\"Have you heard anything about it from the town council...?\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/17/442300059", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#d7e6de>お魎</color>", NULL, "<color=#d7e6de>Oryou</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/17/442300059", 128);
 	OutputLine(NULL, "「知らん知らん！！！",
 		   NULL, "\"No, no!!", Line_WaitForInput);
 	OutputLine(NULL, "　何の話しゃあね！！",
 		   NULL, " What are you saying?!", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300060", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300060", 128);
 	OutputLine(NULL, "　公由んところが北条のバチ当たり娘になんぞ肩入れしたらんきゃあ、すったらんなぁんて園崎には話が入らんね、どういうこっちゃあ！！",
 		   NULL, " If Kimiyoshi was helping that blasted Houjou child, then the Sonozaki family would know about it!!", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300061", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300061", 128);
 	OutputLine(NULL, "　誰じゃあね、その相談所に陳情したったちゅうんわ！！」",
 		   NULL, " Who is petitioning the child consultation center?!\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "S20/00/443000017", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/00/443000017", 128);
 	OutputLine(NULL, "「クラスメートが何人かいらっしゃった…",
-		   NULL, "\"I heard some of her classmates were there...", Line_ContinueAfterTyping);
-	SetValidityOfInput( FALSE );
+		   NULL, "\"I heard some of her classmates were there...", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
 	Wait( 800 );
-	SetValidityOfInput( TRUE );
+	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "とまぁ、そういう感じなんですが。",
 		   NULL, " Well, as far as I know, anyway.", Line_WaitForInput);
 	OutputLine(NULL, "……ではこれはクラスの子たちが独自にやったことで、連町も顧問もご存じない、関係ない話という認識でもよろしいでしょうか？」",
 		   NULL, " ...I guess it's just something that her classmates are doing, and the village has nothing to do with it?\"", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "ps3/s20/17/442300062", 128, 64);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#d7e6de>お魎</color>", NULL, "<color=#d7e6de>Oryou</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s20/17/442300062", 128);
 	OutputLine(NULL, "「そんに決まっとんしゃあ、なぁん勝手な真似をしさらしとん！！",
 		   NULL, "\"Of course not!!", Line_WaitForInput);
 	OutputLine(NULL, "　知らん知らん！！",
 		   NULL, " I don't know anything!!", Line_WaitForInput);
-	PlaySE(4, "ps3/s20/17/442300063", 128, 64);
+	PlayVoice(4, "ps3/s20/17/442300063", 128);
 	OutputLine(NULL, "　村は沙都子とは何の関係もなあね！！」",
 		   NULL, " The village has nothing to do with Satoko!!\"", Line_Normal);
 	ClearMessage();
@@ -211,27 +233,31 @@ void main()
 	FadeOutBGM( 2, 0, FALSE );
 	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　その内容は自治係から児童相談所に伝えられた。",
 		   NULL, "The contents of this conversation were forwarded to the child consultation center.", Line_Normal);
 	ClearMessage();
 
 	PlayBGM( 0, "Feel", 120, 0 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……つまり、裏にお魎がいないということは、この陳情は特別扱いする必要はないということだ。",
-		   NULL, "If Oryou wasn't behind the commotion, then they had no need to take the case seriously.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "If Oryou wasn't behind the commotion, then they had no need to take the case seriously.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　相談所の係長は、もし仮に明日も来ても話だけ聞いて、",
 		   NULL, "The manager told his staff to listen to what the petitioners have to say,", Line_WaitForInput);
 	OutputLine(NULL, "決して安易な口約束をしないようにと窓口の職員に釘を刺すのだった。",
 		   NULL, " but to never say anything promising the girl's safety.", Line_Normal);
 	ClearMessage();
 
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「前原圭一くんか。",
 		   NULL, "\"Keiichi Maebara-kun, huh?", Line_WaitForInput);
-	PlaySE(4, "", 128, 64);
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "こういう子が将来、行政専門のクレーマーになるんだろうなぁ！」",
 		   NULL, " I guess a boy like that will grow up to be a political advocate in the future!\"", Line_Normal);
 	ClearMessage();

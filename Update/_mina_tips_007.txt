@@ -6,6 +6,8 @@ void main()
 
 	DrawSceneWithMask( "Ho_R1", "maskup", 1, 0, 300 );
 
+	ClearMessage();
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鉄平は、沙都子がもう少し金を持っているだろうと思っていた。",
 		   NULL, "Teppei suspected that Satoko was hiding more money somewhere.", Line_Normal);
 	ClearMessage();
@@ -14,10 +16,12 @@ void main()
 	DrawBustshotWithFiltering( 2, "Sa_MuhyouA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 	DisplayWindow();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが実際には沙都子は無一文だった。",
-		   NULL, "But in reality, she had none at all.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "But in reality, she had none at all.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　今までどうやって生活してきたのかと聞くと、",
 		   NULL, "Teppei had asked her how she survived until now,", Line_WaitForInput);
 	OutputLine(NULL, "同居してた友人に世話になっていたので、自分はお金が必要なかったと返事が返ってきた。",
@@ -26,32 +30,38 @@ void main()
 
 	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鉄平は、賭場などで悪いお金を多少は稼いでいた。",
-		   NULL, "Teppei had made some money off of illegal gambling.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Teppei had made some money off of illegal gambling.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　その蓄えが多少はあったから当分は問題なかったが、",
 		   NULL, "While he had some of that money saved up,", Line_WaitForInput);
 	OutputLine(NULL, "そもそも鉄平にとってその金は軍資金兼、遊興費であり、生活費に回すなど不愉快極まりないことだった。",
 		   NULL, " he had no intention to use it on living expenses.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが、沙都子が金を持っていないはずがない。",
 		   NULL, "However, there was no way Satoko didn't have the money.", Line_WaitForInput);
 	OutputLine(NULL, "鉄平はそう考えた。",
 		   NULL, " Teppei was convinced of that.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鉄平の妻、つまり沙都子の叔母は、事故で死んだ沙都子の両親からかなりの金の入った預金通帳を奪っているはずだった。",
-		   NULL, "Teppei's wife, Satoko's aunt, must have taken away the family bankbook when Satoko's parents died in the accident.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Teppei's wife, Satoko's aunt, must have taken away the family bankbook when Satoko's parents died in the accident.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　その叔母は去年死に、悟史も失踪。",
-		   NULL, "But her aunt also died last year, and Satoshi is gone too.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "But her aunt also died last year, and Satoshi is gone too.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だとしたら、その通帳は最後のひとりの沙都子が持っているに違いなかった。",
 		   NULL, "That means Satoko should have hidden the bankbook somewhere.", Line_Normal);
 	ClearMessage();
@@ -61,26 +71,31 @@ void main()
 	DrawBustshot( 0, "Sa_MuhyouB2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
 	DisplayWindow();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが、沙都子をいくら脅しても、そんなものを受け取っていないと繰り返すのみだった。",
-		   NULL, "However, no matter how much he threatened her, she told him that she didn't know anything about it.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "However, no matter how much he threatened her, she told him that she didn't know anything about it.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　きっと隠してるに違いないと思い、鉄平が納得行くように沙都子を詰問してみた。",
-		   NULL, "He continued to question Satoko, still believing that she was hiding it somewhere.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "He continued to question Satoko, still believing that she was hiding it somewhere.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子自身に暴力を加えると傷が残り、女教師や相談所に疑われる。",
 		   NULL, "He couldn't beat her, because her teacher and the child consultation center would suspect him.", Line_Normal);
 	ClearMessage();
 
 	DrawScene( "black", 400 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だから沙都子は殴らない。",
-		   NULL, "So he wouldn't beat her.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "So he wouldn't beat her.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　言葉や暴言で殴り、物や家具を殴ったり壊したりして見せた。",
 		   NULL, "Instead, he spoke to her in a loud and violent voice, and broke furniture in front of her.", Line_ContinueAfterTyping);
 
@@ -102,44 +117,52 @@ void main()
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_tataku", 128, 64 );
 
-	OutputLineAll(NULL, "", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　こういう脅し方ももちろん鉄平の得意とするものだ。",
 		   NULL, "Threatening people like that is Teppei's forte.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが、沙都子は持っていない知らないと半狂乱になって答えるのみで、本当に持っていなさそうだった。",
-		   NULL, "However, Satoko continued to claim that she had no clue about the bankbook. She didn't seem to be lying.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "However, Satoko continued to claim that she had no clue about the bankbook. She didn't seem to be lying.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子の怯えた小動物のような仕草に、鉄平は居間をひとつ、完全に荒らしきった後、ようやく納得するのだった。",
 		   NULL, "After destroying the whole living room, leaving Satoko frightened like a scared little animal, Teppei finally believed that Satoko had no idea where the bankbook was.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……となれば、通帳はどこに？",
 		   NULL, "...In that case, where could it be?", Line_WaitForInput);
 	OutputLine(NULL, "　鉄平は２つ考えた。",
 		   NULL, " Teppei had two ideas.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　１つは叔母がへそくりのようにどこかに未だ隠し持っていること。",
-		   NULL, "One idea was that his wife hid it somewhere in secret.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "One idea was that his wife hid it somewhere in secret.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　もう１つは、叔母が死んだ後、それを悟史が奪い、やはりどこかに隠し持っていること。",
-		   NULL, "The other idea was that Satoshi took it after his wife's death, and hid it somewhere else.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "The other idea was that Satoshi took it after his wife's death, and hid it somewhere else.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　どちらにせよ、この家のどこかに隠されているだろうという結論に至った。",
 		   NULL, "Either way, he was certain that it was hidden somewhere in this house.", Line_Normal);
 	ClearMessage();
 
 	DrawScene( "Ho_R1", 400 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子には自分で荒らした居間の片付けを命じ、鉄平は二階建ての狭くない家の中を彷徨い始めた。",
 		   NULL, "He told Satoko to clean up the mess he made in the living room, and started searching around the house.", Line_Normal);
 	ClearMessage();
@@ -147,68 +170,81 @@ void main()
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
 	DrawSceneWithMask( "Ho_2", "maskright", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……実は、この頃には鉄平は沙都子を持て余し始めていた。",
 		   NULL, "...Teppei was starting to get bored with Satoko.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　風の噂では、沙都子の両親は相当の金を残していたはずだ。",
-		   NULL, "He'd heard that Satoko's parents had a lot of money saved up.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "He'd heard that Satoko's parents had a lot of money saved up.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そしてそれを叔母は全て独り占めしていた。",
-		   NULL, "But his wife had taken control of that money herself.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "But his wife had taken control of that money herself.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　守銭奴だったから、犬が何でも持ち帰って律儀に取って置くように、多分、通帳も手付かずで丸々残っているはずだ。",
 		   NULL, "Since his wife had been quite thrifty, he was sure that she left the bankbook somewhere without using it.", Line_Normal);
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　まとまった金が手に入ったら、どこか別の土地へ行くのも悪くないと思い始めていた。",
-		   NULL, "Once he got his hands on that money, he could move somewhere else entirely.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "Once he got his hands on that money, he could move somewhere else entirely.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　穀倉の辺りの賭場には多少のツテもある。",
-		   NULL, "Teppei was still acquainted with a few people from the gambling spot in Gogura.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Teppei was still acquainted with a few people from the gambling spot in Gogura.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　昔世話したヤツらがまだヤサにしてたはずだ。",
-		   NULL, "People he used to help out are still hanging around that area.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n", Line_ContinueAfterTyping);
+		   NULL, "People he used to help out are still hanging around that area.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　当時の恩でゴネて転がりこむか。",
 		   NULL, "They still owe him.", Line_WaitForInput);
 	OutputLine(NULL, "寝床くらいは貸してくれるはずだ。",
 		   NULL, " They should at least let him crash there.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　確かに沙都子に家事を任せる気楽さはあるが、学校や児童相談所から監視を受けており、窮屈さは否めない。",
-		   NULL, "It was great that Satoko takes care of all the chores around the house, but Teppei felt uncomfortable about being watched by both the school and the consultation center.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "It was great that Satoko takes care of all the chores around the house, but Teppei felt uncomfortable about being watched by both the school and the consultation center.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　自らを暴力の塊であると認める鉄平にとって、今後も沙都子に暴行しない保証など、自分に対してすら出せるわけがなかった。",
-		   NULL, "Teppei, all too aware that he's a man of violence, couldn't stand living with Satoko without being violent towards her.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, "Teppei, all too aware that he's a man of violence, couldn't stand living with Satoko without being violent towards her.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
 	PlayBGM( 1, "yabaisemi", 120, 0 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…そう思えば思うほどに、無抵抗な沙都子を思い切りぶん殴ってやりたい衝動に駆られるのだった。",
 		   NULL, "The more he suffered, the stronger his urge to beat up Satoko grew.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　抵抗する相手を屈服させる愉しみしか知らなかった鉄平にとって、",
 		   NULL, "Since Teppei only knew joy through forcing others who resisted to submit,", Line_WaitForInput);
 	OutputLine(NULL, "無抵抗の沙都子がどこまで乱暴すれば抵抗してくれるかを試すことは、最後に試してみたい愉しみだった。",
-		   NULL, " testing to see how violent he could be before the helpless Satoko resisted him was something he was excited to try eventually.", Line_WaitForInput);
-	OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping);
+		   NULL, " testing to see how violent he could be before the helpless Satoko resisted him was something he was excited to try eventually.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　知恵が訪問して以来の不愉快さは未だ消えず、",
 		   NULL, "Still upset over the visitation by the school teacher,", Line_WaitForInput);
 	OutputLine(NULL, "ここを出る時にその鬱憤を晴らすために沙都子を滅茶苦茶にしてやろうというルールが、いつの間にか鉄平の内側に作られていたのである……。",
