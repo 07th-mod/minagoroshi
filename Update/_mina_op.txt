@@ -708,8 +708,8 @@ void main()
 		   NULL, "Like I said, what seems inevitable in one life could just be a random event in another.", Line_Normal);
 	ClearMessage();
 
-	DrawBustshot( 2, "Me_WinkB2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawScene( "GK1", 400 );
+	DrawBustshot( 2, "sprite/flashback/Me1b_Wink_a1_", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawScene( "background/flashback/GK1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…例えば園崎魅音が催す部活の種目がいい例ね。",
@@ -724,8 +724,7 @@ void main()
 
 
 	DisableWindow();
-	ChangeBustshot( 2, "Me_AkuwaraiA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/flashback/Me1a_Akuwarai_A1_", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　でも現実にはほとんどの世界で種目は異なっている。",
@@ -737,7 +736,7 @@ void main()
 		   NULL, "That means that the games they play in the club are randomly decided by Mion Sonozaki.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　これは、複数の世界を見ることのできる私たちにはあっさりとわかることだけれど。",
@@ -767,8 +766,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshot( 0, "Me_WaraiA1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
-	DisplayWindow();
+	DrawBustshot( 1, "sprite/flashback/Me1a_Warai_A1_", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　つまり園崎魅音は、「放課後には絶対部活で遊びたい」、",
@@ -794,8 +792,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 0, "maskdown" , 1, FALSE, 0, 0, 300, TRUE );
-	DisplayWindow();
+	FadeBustshotWithFiltering( 1, "maskdown" , 1, FALSE, 0, 0, 1000, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　では話を、前原圭一にもう一度戻すわね。",
@@ -902,10 +899,10 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　少なくとも",
-		   NULL, "You see it?", Line_ContinueAfterTyping);
-	SetSpeedOfMessage( TRUE, 128 );
+		   NULL, "You see it?", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	SetSpeedOfMessage( TRUE, 128 );
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「鬼隠し編」",
 		   NULL, "The Onikakushi,", Line_ContinueAfterTyping);
@@ -917,11 +914,8 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 700 );
 	SetValidityOfInput( TRUE );
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「目明し編」",
-		   NULL, "Meakashi,", Line_ContinueAfterTyping);
+		   NULL, " Meakashi,", Line_ContinueAfterTyping);
 	SetValidityOfInput( FALSE );
 	Wait( 700 );
 	SetValidityOfInput( TRUE );
@@ -943,35 +937,37 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それぞれの世界で、",
-		   NULL, "In each world,", Line_WaitForInput);
+		   NULL, "In each world,", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Kei_Def1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/flashback/Kei1_Def1_", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "前原圭一が、",
-		   NULL, " either Keiichi Maebara,", Line_WaitForInput);
+		   NULL, "either Keiichi Maebara,", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 1, "Si_DefB1#", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/flashback/Si1a_Def_A1_", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 400, TRUE );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "あるいは園崎詩音が、",
-		   NULL, " Shion Sonozaki,", Line_WaitForInput);
+		   NULL, "Shion Sonozaki,", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshot( 0, "Re_DefB1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
-	DisplayWindow();
+	DrawBustshot( 2, "sprite/flashback/Re1b_Def_B1_", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "あるいは竜宮レナが、自身の妄想を加速させ凶行に至ってゆく。",
-		   NULL, " or Rena Ryuugu became violent as their delusions grew stronger.", Line_Normal);
+		   NULL, "or Rena Ryuugu became violent as their delusions grew stronger.", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 0, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
-	DisplayWindow();
+	FadeBustshotWithFiltering( 2, "mask00" , 0, FALSE, 0, 0, 1000, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　前原圭一と園崎詩音、そして竜宮レナは皆、近い位置にいて交友関係を持つけれど、生まれも育ちもまったく違う他人同士。",
@@ -1146,17 +1142,16 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Tomi_Def#", "maskup", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, FALSE );
-	DrawBustshotWithFiltering( 1, "Ta_Def#", "maskup", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/flashback/Tomi1_Def_", "maskup", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, FALSE );
+	DrawBustshotWithFiltering( 1, "sprite/flashback/Ta1_Def_", "maskup", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……そう、富竹ジロウと鷹野三四は、この舞台においてほぼ絶対的運命で殺される。",
 		   NULL, "...Right. Jirou Tomitake and Miyo Takano are always killed in those worlds.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	DrawScene( "M_Y4", 1000 );
+	DrawScene( "black", 1000 );
+	DrawScene( "background/flashback/M_Y4", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　しかも、その殺され方などは全ての世界において不変。",
@@ -1180,8 +1175,8 @@ void main()
 		   NULL, "After all, they are always murdered, regardless of who falls to Rule X.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	DrawSceneWithMask( "Ji2", "maskup", 1, 0, 300 );
+	DrawScene( "black", 1000 );
+	DrawSceneWithMask( "background/flashback/Ji2", "maskup", 1, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　つまり、毎年、綿流しの夜に富竹ジロウと鷹野三四が殺されるという、もう１つの異なるルール、Ｙがあることがわかる。",
@@ -1196,7 +1191,7 @@ void main()
 		   NULL, " Don't you see how funny this is?", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　「鬼隠し編」や「綿流し編」で、あるいは「罪滅し編」で、毎回、富竹ジロウたちが殺されるわよね？",
@@ -1247,24 +1242,20 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そう。",
-		   NULL, "That's right.", Line_WaitForInput);
+		   NULL, "That's right.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Oisi1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Ta_Def#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/flashback/Oisi1_1_", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, FALSE );
+	DrawBustshotWithFiltering( 2, "sprite/flashback/Ta1_Def_", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "大石蔵人と鷹野三四というコマよ。",
-		   NULL, " I'm referring to Kuraudo Ooishi and Miyo Takano.", Line_Normal);
+		   NULL, "I'm referring to Kuraudo Ooishi and Miyo Takano.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	FadeBustshotWithFiltering( 1, "mask00" , 0, FALSE, 0, 0, 400, FALSE );
-	FadeBustshotWithFiltering( 2, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
-	DrawBustshot( 0, "Oisi4", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
-	DisplayWindow();
+	DrawScene( "black", 1000 );
+	DrawBustshot( 1, "sprite/flashback/Oisi1_4_", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　大石蔵人というコマの役割については、これまでのカケラを重ね合わせれば見えてくる。",
@@ -1292,8 +1283,8 @@ void main()
 		   NULL, "Why is he so obsessed with the serial murders in Hinamizawa?", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	DrawSceneWithMask( "Damu2", "maskup", 1, 0, 300 );
+	DrawScene( "black", 1000 );
+	DrawSceneWithMask( "background/flashback/Damu2", "maskup", 1, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そう。",
@@ -1313,8 +1304,8 @@ void main()
 		   NULL, "You will see that if you look at the \"Himatsubushi\" chapter.", Line_Normal);
 	ClearMessage();
 
-	DrawBustshot( 0, "Oisi4", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
+	DrawBustshot( 1, "sprite/flashback/Oisi1_4_", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　また当時、ダム戦争が激化している最中に大石はいた。",
@@ -1373,9 +1364,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 0, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
-	DrawBustshotWithFiltering( 2, "Ta_def#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	FadeBustshotWithFiltering( 1, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
+	DrawBustshotWithFiltering( 2, "sprite/flashback/Ta1_Def_", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　もう１つのコマ、鷹野三四もまったく同じ。",
@@ -1393,13 +1383,10 @@ void main()
 		   NULL, "However, just like Ooishi, she also gives them the idea that the Sonozaki family is behind all the mysterious incidents that happen in the village.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-
-	DrawScene( "Tosyo7", 0 );
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Re_BikkuriB1#", "maskup", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, FALSE );
-	DrawBustshotWithFiltering( 1, "Ta_warai#", "maskup", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawScene( "black", 1000 );
+	DrawBustshot( 2, "sprite/flashback/Re2b_bikkuri_B1_", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawBustshot( 1, "sprite/flashback/Ta1_warai_", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawScene( "background/flashback/ke_ky2", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鷹野三四が特に過剰に干渉した例が、竜宮レナに対してね。",
@@ -1412,10 +1399,8 @@ void main()
 		   NULL, "For Miyo Takano, Rena Ryuugu was the perfect prey, grasping at straws to try and identify the force she suspected.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	DisableWindow();
-	DrawBustshot( 0, "Ta_Def#", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
-	DisplayWindow();
+	DrawScene( "black", 1000 );
+	DrawBustshot( 0, "sprite/flashback/Ta1_Def_", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鷹野三四は、当人の逃れられぬ運命によって、結局殺されてしまうわけだけど。",
@@ -1427,9 +1412,7 @@ void main()
 		   NULL, "If she had survived and seen Rena take over the school, she would've laughed long and loud.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	FadeBustshotWithFiltering( 0, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
-	DisplayWindow();
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　さて、実は今紹介したコマがそういう役割を果たすのに至ることにも、ルールがあるのに気付いたかしら？",
@@ -1453,7 +1436,7 @@ void main()
 		   NULL, "You should already have an answer to this mystery in your Fragments on hand.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "So2", 400 );
+	DrawScene( "background/flashback/So2", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　つまり、園崎本家は何があっても自分たちが黒幕であると振舞うというブラフの伝統の存在。",
@@ -1465,8 +1448,8 @@ void main()
 		   NULL, "They always pretend to be the villains in order to make sure that people continue to fear them.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	DrawScene( "Hi2", 400 );
+	DrawScene( "black", 1000 );
+	DrawScene( "background/flashback/Hi1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　その結果、村人たちは、ダム戦争以来、常に裏で園崎家が暗躍していることを疑わなくなった。",
@@ -1484,7 +1467,7 @@ void main()
 		   NULL, "Actually, the whole village is fooled by it.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　こうして考えると、",
@@ -1725,7 +1708,7 @@ void main()
 		   NULL, "The fact that Rika Furude always dies each time.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Sora3", 400 );
+	DrawScene( "background/flashback/sora", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それは例えるなら、昭和５８年６月を塞がれて袋小路にされたようなもの。",
@@ -1746,8 +1729,8 @@ void main()
 		   NULL, " It's following the exact same rule, Rule Y.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
-	DrawSceneWithMask( "M_Y4", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 1000 );
+	DrawSceneWithMask( "background/flashback/M_Y4", "maskleft", 1, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　富竹ジロウと鷹野三四は、絶対確実に綿流しの夜に殺される。",
@@ -1760,8 +1743,8 @@ void main()
 		   NULL, "Furude Rika's date of death is not always the same, but she's always dead by the middle of June.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	DrawScene( "Moon", 400 );
+	DrawScene( "black", 1000 );
+	DrawScene( "background/flashback/moon", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　富竹ジロウたちは、綿流しの祭りの帰路を襲われているのだと思われるから、殺される日時にバラつきがないのだろう。",
@@ -1791,7 +1774,7 @@ void main()
 		   NULL, " because a similar powerful conviction vows to kill her too.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だからつまり、古手梨花が必ず殺される法則は富竹ジロウたちが殺されるのと同じルールＹに則っていると考えることができるのではなかろうか。",
@@ -1887,7 +1870,9 @@ void main()
 		   NULL, " It happened in the Watanagashi and the Meakashi chapters.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "ryuuketu1", 400 );
+	DisableWindow();
+	PlaySE( 0, "thisikuki", 128, 64 );
+	DrawSceneWithMask("background/ryuuketu1", "maskaa", 1, 0, 100 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　この世界での古手梨花は、自害もあるけど、とりあえず園崎詩音によりルールＸで殺されたと断言できる。",
@@ -1921,7 +1906,7 @@ void main()
 		   NULL, "That might have caused them to show some \"disturbance\".", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ルールＹにとっての目的が、単に梨花を葬るだけなら問題はないだろうけど。",
@@ -2025,7 +2010,7 @@ void main()
 		   NULL, " another truth behind Rule Y.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Fure2", 1000 );
+	DrawScene( "background/Fure2", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ここにあるカケラは、ルールＸが巻き起こす派手な騒動に主眼が置かれたものばかりだけど、",
@@ -2167,16 +2152,16 @@ void main()
 		   NULL, "However, a miracle happened in the Tsumihoroboshi chapter.", Line_Normal);
 	ClearMessage();
 
-	DrawBustshot( 0, "Kei_Def2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawScene( "GK1", 400 );
+	DrawBustshot( 0, "sprite/flashback/Kei1_Def2_", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	DrawScene( "background/flashback/GK1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　前原圭一が、他の世界のわずかなカケラを偶然に知覚でき、ルールＸを打ち破ったのだ。",
 		   NULL, "Keiichi Maebara was able to recognize a small Fragment from another world by chance, and he beat Rule X.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	DrawScene( "Moon", 400 );
+	DrawScene( "black", 1000 );
+	DrawScene( "background/flashback/moon", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…結局、ルールＹによって梨花はその晩、殺されてしまうわけだけど。",
@@ -2196,7 +2181,7 @@ void main()
 		   NULL, "That was a huge leap forward.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　かつての梨花は、錠前が３つあることまでは気付けたが、いくら手を尽くしても打ち破れず、",
@@ -2354,27 +2339,25 @@ void main()
 		   NULL, " in just those two weeks.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "si_Mina_01", 1000 );
+	DrawScene( "white", 2000 );
+	DrawScene( "black", 2000 );
+	DrawScene( "text/si_Mina_01", 2000 );
 	Wait( 15000 );
-	DrawScene( "Tyuui", 1000 );
+	DrawScene( "text/Tyuui", 1000 );
 	Wait( 3000 );
-	DrawScene( "Mina_T1", 1000 );
+	DrawScene( "prologue/Mina_T1", 1000 );
 	SetValidityOfInput( FALSE );
-	Wait( 10000 );
+	Wait( 6000 );
 	SetValidityOfInput( TRUE );
-	DrawScene( "Mina_T2", 3000 );
+	DrawScene( "prologue/Mina_T2", 1000 );
 	SetValidityOfInput( FALSE );
-	Wait( 10000 );
+	Wait( 6000 );
 	SetValidityOfInput( TRUE );
 
+	FadeOutBGM( 0, 3000, FALSE );
 	DrawScene( "black", 3000 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	SetValidityOfInput( FALSE );
-	Wait( 5000 );
+	Wait( 3000 );
 	SetValidityOfInput( TRUE );
 	SetSpeedOfMessage( FALSE, 0 );
 }
