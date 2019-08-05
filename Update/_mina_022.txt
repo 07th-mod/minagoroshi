@@ -2286,9 +2286,9 @@ void main()
 	PlayVoice(4, "ps3/s12/09/280900200", 128);
 	OutputLine(NULL, "「……あら、するとどういうことになるのかしら。」",
 		   NULL, "\"...I see. And what's that supposed to mean?\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 
-	PlayVoice(4, "", 128);
+	PlayVoice(4, "ps2/09/280900201", 128);
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「つまり、三佐は昨日すでに亡くなられていたことになってしまいます。」",
 		   NULL, "\"It means that you were already dead yesterday.\"", Line_Normal);
