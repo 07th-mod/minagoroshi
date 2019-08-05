@@ -1738,11 +1738,11 @@ void main()
 		   NULL, " You're all going to make it out okay!\"", Line_Normal);
 	ClearMessage();
 
-	PlayVoice(4, "ps2/00/mana28014", 128);
+	PlayVoice(4, "", 128);
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「みんな営林署へ集まれぇぇ！！",
 		   NULL, "\"Everyone gather at the forestry service!", Line_WaitForInput);
-	PlayVoice(4, "ps2/00/mana28015", 128);
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "　４丁目は違うだろ、郵便局裏の公民館だぞ！！」",
 		   NULL, " No, not the people from District 4! You're supposed to go to the community center behind the post office!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1929,11 +1929,11 @@ void main()
 		   NULL, " Your cooperation would be appreciated.\"", Line_Normal);
 	ClearMessage();
 
-	PlayVoice(4, "ps2/00/manb28001", 128);
+	PlayVoice(4, "", 128);
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「よし来た！",
 		   NULL, "\"All right!", Line_WaitForInput);
-	PlayVoice(4, "ps2/00/manb28002", 128);
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "　若いのは率先して手伝えー！！」",
 		   NULL, " Let's help them out!\"", Line_Normal);
 	ClearMessage();
@@ -3021,10 +3021,10 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「第４小隊より本部。",
 		   NULL, "\"This is the Fourth Platoon.", Line_WaitForInput);
-	PlaySE(4, "ps2/00/forcet28002", 128, 64);
+	PlaySE(4, ""ps2/00/forcet28002", 128, 64);
 	OutputLine(NULL, "滅菌終了。",
 		   NULL, " Sterilization complete.", Line_WaitForInput);
-	PlaySE(4, "ps2/00/forcet28003", 128, 64);
+	PlaySE(4, ""ps2/00/forcet28003", 128, 64);
 	OutputLine(NULL, "脱走者なし。」",
 		   NULL, " No one escaped.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }

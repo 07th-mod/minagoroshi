@@ -2,7 +2,7 @@ void main()
 {
 	EnableJumpingOfReturnIcon();
 
-	DrawSceneWithMask( "Hu_R2", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "background/hu_r1", "maskup", 1, 0, 300 );
 	PlayBGM( 0, "Iru", 120, 0 );
 
 	ClearMessage();
@@ -19,8 +19,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Sa_AkuwaraiB1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/normal/sa2b_akuwarai_b1_2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/04/440400093", 128);
@@ -29,9 +28,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Ha_AuA1%", "maskleft", 1, -200, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/transparent/ha1_au_2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/12/441100015", 128);
@@ -62,11 +59,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 2, "Sa_WaraiA1#", 200, TRUE );
-	DisplayWindow();
-	DisableWindow();
-	ChangeBustshot( 1, "Ha_WaraiA1%", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/normal/sa2a_warai_a1_0", 400, TRUE );
+	ChangeBustshot( 1, "sprite/transparent/ha1_warai_2", 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子が何かを言うたびに羽入も相槌を打つ。",
@@ -110,7 +104,7 @@ void main()
 		   NULL, "...But I don't want to hurt her feelings by thinking about that.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　古手家に伝わる古い古文書に出て来る奇跡の話が、全て事実でそれが羽入を指すなら、",
@@ -141,7 +135,7 @@ void main()
 		   NULL, "There's a legend in the Furude family that says that Oyashiro-sama will be reborn if a girl is born to the family seven generations in a row.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Hu_R3", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "background/hu_r1", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…確かに私の代になって羽入は久し振りにコミュニケーションができる人間と出会えた。",
@@ -159,19 +153,16 @@ void main()
 		   NULL, "The villagers' image of Oyashiro-sama doesn't quite match up with that of Hanyuu.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-
-	DrawScene( "Hu_R1", 0 );
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Ha_WaraiA1%", "maskright", 1, 120, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, FALSE );
-
-	DrawBustshotWithFiltering( 1, "Sa_WaraiA1#", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshot( 2, "sprite/transparent/ha1_warai_2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, FALSE );
+	DrawBustshot( 1, "sprite/normal/sa2a_warai_a1_0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子と一緒に並んでうつ伏せになって、頬杖をしながらテレビを楽しむその姿からはとてもとても。",
 		   NULL, "Especially when I see her lying on her belly and watching TV with Satoko.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	Wait( 1000 );
 	DrawScene( "black", 1000 );
 }

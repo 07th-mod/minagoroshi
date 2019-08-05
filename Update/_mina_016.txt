@@ -2382,7 +2382,7 @@ void main()
 	PlayVoice(4, "ps3/s12/01/180101193", 128);
 	OutputLine(NULL, "「えぇ。",
 		   NULL, "\"Yes.", Line_WaitForInput);
-	PlayVoice(4, "ps3/s12/01/180101194", 128);
+	PlayVoice(4, "", 128);
 	OutputLine(NULL, "相談所が腰を上げるまで、どこまでも戦うのが仲間の務めですから。",
 		   NULL, " We'll keep fighting until they save Satoko. That's our mission.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/01/180101195", 128);
@@ -2528,8 +2528,8 @@ void main()
 		   NULL, " well...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s12/01/180101200", 128);
+	PlayVoice(4, "", 128);
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「教育委員会とか、そういう辺りから、何かの圧力が掛かったってわけか。」",
 		   NULL, "\"Is she being pressured by the Board of Education or something?\"", Line_Normal);
 	ClearMessage();
