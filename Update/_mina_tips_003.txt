@@ -2,7 +2,7 @@ void main()
 {
 	EnableJumpingOfReturnIcon();
 
-	DrawScene( "Sora4", 400 );
+	DrawScene( "background/sora", 400 );
 	PlayBGM( 0, "Feel", 120, 0 );
 
 	ClearMessage();
@@ -61,7 +61,7 @@ void main()
 		   NULL, " she wouldn't be bothered by my ugly horns at all.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Sora5", 400 );
+	DrawScene( "background/sora5", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　その淡い期待は実った。",
@@ -101,7 +101,7 @@ void main()
 		   NULL, "We spent all day together.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ただ、家族、とりわけ母親は僕の存在を強く否定した。",
@@ -159,7 +159,7 @@ void main()
 		   NULL, "She loved running around in the woods, and doing mischievous things.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka2", 400 );
+	DrawScene( "background/aka2", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……………だが、昭和５８年６月。",
@@ -195,7 +195,7 @@ void main()
 		   NULL, " we can still find happiness within this endless world.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　古手梨花の人生は確かに運命の袋小路に埋もれ、悲惨の一言に尽きる。",
@@ -239,6 +239,7 @@ void main()
 		   NULL, " I can still be by their side.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	Wait( 1000 );
 	DrawScene( "black", 1000 );
 }
