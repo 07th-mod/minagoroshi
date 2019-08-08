@@ -2,9 +2,9 @@ void main()
 {
 	EnableJumpingOfReturnIcon();
 
-	PlayBGM( 0, "yorumushi", 120, 0 );
+	PlayBGM( 0, "yoru", 120, 0 );
 
-	DrawSceneWithMask( "Ho_R1", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "background/ho_r1", "maskup", 1, 0, 300 );
 
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -13,8 +13,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Sa_MuhyouA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/normal/sa1a_muhyou_a1_0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが実際には沙都子は無一文だった。",
@@ -66,10 +65,8 @@ void main()
 		   NULL, "That means Satoko should have hidden the bankbook somewhere.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Ho_R1", 400 );
-	DisableWindow();
-	DrawBustshot( 0, "Sa_MuhyouB2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
-	DisplayWindow();
+	DrawBustshot( 0, "sprite/normal/sa1b_muhyou_b2_2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	DrawScene( "background/ho_r1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが、沙都子をいくら脅しても、そんなものを受け取っていないと繰り返すのみだった。",
@@ -97,29 +94,27 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　言葉や暴言で殴り、物や家具を殴ったり壊したりして見せた。",
-		   NULL, "Instead, he spoke to her in a loud and violent voice, and broke furniture in front of her.", Line_ContinueAfterTyping);
+		   NULL, "Instead, he spoke to her in a loud and violent voice, and broke furniture in front of her.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	DisableWindow();
 	PlaySE( 0, "s_furu", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 200 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_tataku", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 200 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 128, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 400 );
 	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_tataku", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 400 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_Down", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 600 );
+	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_furu", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 200 );
+	Wait( 400 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_tataku", 128, 64 );
-
-	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　こういう脅し方ももちろん鉄平の得意とするものだ。",
@@ -160,7 +155,7 @@ void main()
 		   NULL, "Either way, he was certain that it was hidden somewhere in this house.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Ho_R1", 400 );
+	DrawScene( "background/ho_r1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子には自分で荒らした居間の片付けを命じ、鉄平は二階建ての狭くない家の中を彷徨い始めた。",
@@ -168,7 +163,7 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	DrawSceneWithMask( "Ho_2", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/ho_2", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……実は、この頃には鉄平は沙都子を持て余し始めていた。",
@@ -229,7 +224,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-	PlayBGM( 1, "yabaisemi", 120, 0 );
+	PlayBGM( 1, "semi_r", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…そう思えば思うほどに、無抵抗な沙都子を思い切りぶん殴ってやりたい衝動に駆られるのだった。",
@@ -251,6 +246,7 @@ void main()
 		   NULL, " Teppei promised himself that he would destroy Satoko's life before leaving the village...", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	Wait( 1000 );
 	DrawScene( "black", 1000 );
 }

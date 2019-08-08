@@ -3,13 +3,14 @@ void main()
 	EnableJumpingOfReturnIcon();
 
 	PlayBGM( 0, "semi", 120, 0 );
-	DrawScene( "Si_H2", 400 );
+	DrawScene( "background/si_h2", 400 );
 
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/00/bada44001", 128);
 	OutputLine(NULL, "「これが航空券だ。",
-		   NULL, "\"Here's your plane ticket.", Line_WaitForInput);
+		   NULL, "\"Here's your plane ticket.", Line_Continue);
+	Wait( 1900 );
 	OutputLine(NULL, "遅れんなよ。",
 		   NULL, " Don't be late.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/00/bada44002", 128);
@@ -20,18 +21,20 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/00/badb44001", 128);
 	OutputLine(NULL, "「おおきにおおきに。",
-		   NULL, "\"Thanks a lot.", Line_WaitForInput);
+		   NULL, "\"Thanks a lot.", Line_Continue);
+	Wait( 1300 );
 	OutputLine(NULL, "ほい間宮ン。」",
 		   NULL, " Here, Mamiya.\"", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 0, "Rina_Warai", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawSceneWithMask( "Hoteru", "maskleft", 1, 0, 300 );
+	DrawBustshot( 0, "sprite/normal/rina_warai_2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	DrawSceneWithMask( "background/hoteru", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#cd74a7>リナ</color>", NULL, "<color=#cd74a7>Rina</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/20/442400001", 128);
 	OutputLine(NULL, "「きゃははは、サンキュー！",
-		   NULL, "\"Kyahahaha! Thank you!", Line_WaitForInput);
+		   NULL, "\"Kyahahaha! Thank you!", Line_Continue);
+	Wait( 2500 );
 	OutputLine(NULL, "　私、札幌って一度行ってみたかったのよねー。」",
 		   NULL, " I've always wanted to go to Sapporo.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -43,23 +46,24 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "Rina_Def", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/rina_def_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#cd74a7>リナ</color>", NULL, "<color=#cd74a7>Rina</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/20/442400002", 128);
 	OutputLine(NULL, "「大丈夫だよ。",
-		   NULL, "\"Don't worry.", Line_WaitForInput);
+		   NULL, "\"Don't worry.", Line_Continue);
+	Wait( 1300 );
 	OutputLine(NULL, "あいつ馬鹿だもん。",
-		   NULL, " He's stupid.", Line_WaitForInput);
+		   NULL, " He's stupid.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "Rina_Warai", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/rina_warai_2", 200, TRUE );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#cd74a7>リナ</color>", NULL, "<color=#cd74a7>Rina</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/20/442400003", 128);
 	OutputLine(NULL, "でかいのはナニと態度だけー。」",
-		   NULL, " He's got a big dick and a big attitude, but that's all he's got going for him.\"", GetGlobalFlag(GLinemodeSp));
+		   NULL, "He's got a big dick and a big attitude, but that's all he's got going for him.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
@@ -68,7 +72,8 @@ void main()
 		   NULL, "\"Heehahaha, is that so?\"", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 0, "yabaisemi", 120, 0 );
+	FadeOutBGM( 0, 300, FALSE );
+	PlayBGM( 1, "semi_r", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　その時、突然、タイヤの鋭い泣き声がいくつも聞こえてくる。",
@@ -98,12 +103,13 @@ void main()
 		   NULL, "He quickly hid himself behind the curtain.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Si_H2", 200 );
+	DrawScene( "background/si_h2", 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/00/badb44002", 128);
 	OutputLine(NULL, "「畜生、嗅ぎ付けやがった！！",
-		   NULL, "\"Shit! They're here!!", Line_WaitForInput);
+		   NULL, "\"Shit! They're here!!", Line_Continue);
+	Wait( 1800 );
 	OutputLine(NULL, "　ズラかれッ！！」",
 		   NULL, " Run!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -111,7 +117,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#cd74a7>リナ</color>", NULL, "<color=#cd74a7>Rina</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/20/442400004", 128);
 	OutputLine(NULL, "「ちょっと…、嘘、マジ？！",
-		   NULL, "\"Are you serious?!", Line_WaitForInput);
+		   NULL, "\"Are you serious?!", Line_Continue);
+	Wait( 1600 );
 	OutputLine(NULL, "　何で今日バレるのよ！」",
 		   NULL, " But why?!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -119,7 +126,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/00/badb44003", 128);
 	OutputLine(NULL, "「間宮ン、ボケっとすんな！！",
-		   NULL, "\"Come on, Mamiya!!", Line_WaitForInput);
+		   NULL, "\"Come on, Mamiya!!", Line_Continue);
+	Wait( 1500 );
 	OutputLine(NULL, "　捕まったら殺されンぞ！！！」",
 		   NULL, " They're going to kill you!!!\"", Line_Normal);
 	ClearMessage();
@@ -129,6 +137,7 @@ void main()
 		   NULL, "They heard the men running up the stairs. They sounded angry.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	Wait( 1000 );
 	DrawScene( "black", 1000 );
 }

@@ -7,7 +7,7 @@ void main()
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "Ｎｏ．",
-		   NULL, "No.", Line_ContinueAfterTyping);
+		   NULL, "No.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -26,7 +26,7 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "来訪者　　前原圭一　外４名（関係：友人）",
-		   NULL, "Visitor: Keiichi Maebara and four other\n         friends.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Visitor: Keiichi Maebara and four other friends.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 	SetSpeedOfMessage( FALSE, 0 );
 
@@ -46,8 +46,8 @@ void main()
 		   NULL, "- I'm cleaning out the refrigerator, so please\n  remove your personal belongings by this\n  evening.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	PlaySE( 0, "s_page", 128, 64 );
-
 	Wait( 1000 );
 	DrawScene( "black", 1000 );
 }

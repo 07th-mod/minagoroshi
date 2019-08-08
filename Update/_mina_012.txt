@@ -1,19 +1,20 @@
 void main()
 {
 
+	DrawScene( "white", 1000 );
 	PlayBGM( 0, "semi", 120, 0 );
-	DrawSceneWithMask( "white", "maskdown", 1, 0, 1300 );
-	DrawScene( "Sora2", 1000 );
+	PlayBGM( 2, "suzume", 120, 0 );
+	DrawSceneWithMask( "background/sora", "maskm1", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "white", "maskright", 1, 0, 300 );
-	DrawSceneWithMask( "Tosyo1", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/tosyo1", "maskright", 1, 0, 300 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	DrawSceneWithMask( "Mati_Ji1", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/mati_ji1", "maskright", 1, 0, 300 );
 	SetSpeedOfMessage( FALSE, 0 );
 
 	ClearMessage();
@@ -23,8 +24,8 @@ void main()
 		   NULL, "\".........How long are they going to make us wait?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DrawBustshotWithFiltering( 2, "Si_TohohoA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawSceneWithMask( "Mati_Ji3", "maskright", 1, 0, 300 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "sprite/normal/si3_tohoho_a1_0", "maskright", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/06/180600195", 128);
@@ -33,8 +34,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Me_DefA2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/normal/me1a_def_a1_1", "maskleft", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/03/180300327", 128);
@@ -47,8 +47,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 2, "Re_NandeA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/normal/re1a_nande_a1_2", "maskright", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200383", 128);
@@ -57,8 +56,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 1, "Me_TohohoA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 1, "sprite/normal/me1a_tohoho_a1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/03/180300329", 128);
@@ -70,8 +68,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshot( 0, "Ri_DefA1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
-	DisplayWindow();
+	DrawBustshot( 0, "sprite/normal/ri1_def_a1_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/05/180500628", 128);
@@ -79,7 +76,7 @@ void main()
 		   NULL, "\"...This world is tragic. So many kids are being abused.\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
@@ -95,7 +92,7 @@ void main()
 		   NULL, "I wrote down my name at the registration, as Mion can't let them know she's from the Sonozaki family.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Mati_Ji2", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/mati_ji1", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/01/180100653", 128);
@@ -153,8 +150,8 @@ void main()
 		   NULL, " We're her classmates.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>事務員</color>", NULL, "<color=#f5e6d3>Office Worker</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/jimua18004", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「お話の内容ですが、概要をお聞かせいただいてもよろしいですか？」",
 		   NULL, "\"Would you please give me a general summary of what you wish to discuss?\"", Line_Normal);
 	ClearMessage();
@@ -198,8 +195,8 @@ void main()
 		   NULL, "With that done, she was talking on the phone and explaining to someone what I just told her.", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 2, "Re_DefA1", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawSceneWithMask( "Mati_Ji3", "maskleft", 1, 0, 300 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 2, "sprite/normal/re1a_def_a1_2", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200384", 128);
@@ -216,8 +213,8 @@ void main()
 		   NULL, " She told me to wait for a few more minutes.\"", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 1, "Si_MajimeA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 0, FALSE );
-	DrawSceneWithMask( "Mati_Ji1", "maskleft", 1, 0, 300 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "sprite/normal/si3_majime_a1_0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/06/180600196", 128);
@@ -226,8 +223,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Ri_DefA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 2, "sprite/normal/ri1_def_a1_0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/180500629", 128);
@@ -237,8 +234,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 1, "Me_DefB2", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/normal/me1b_def_a1_1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/03/mio081601", 128);
@@ -249,8 +245,9 @@ void main()
 		   NULL, " I guess we came to the right place.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DrawBustshotWithFiltering( 1, "Re_DefA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 0, FALSE );
-	DrawSceneWithMask( "Mati_Ji3", "maskleft", 1, 0, 300 );
+	DisableWindow();
+	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 1, "sprite/normal/re1a_def_a1_2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/02/180200385", 128);
@@ -271,8 +268,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshot( 2, "Ri_FumanA1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/normal/ri1_fuman_a1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/05/180500630", 128);
@@ -291,12 +287,9 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawSceneWithMask( "Mati_Ji2", "maskright", 1, 0, 300 );
+	FadeOutBGM( 0, 300, FALSE );
+	FadeOutBGM( 2, 300, FALSE );
+	DrawSceneWithMask( "background/mati_ji1", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>事務員</color>", NULL, "<color=#f5e6d3>Office Worker</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/jimua18007", 128);
@@ -320,14 +313,13 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	PlayBGM( 0, "semi", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　示された方へ行くと１番から３番までの３つの相談室があった。",
 		   NULL, "As we walked, we soon saw rooms numbered one through three.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Mati_Ji4", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/ke2", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/01/180100666", 128);
@@ -342,8 +334,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Me_TokuiA1", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/normal/me1a_tokui_a1_2", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/03/180300333", 128);
@@ -355,8 +346,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Re_KomaruA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/normal/re1a_komaru_a1_0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/02/180200387", 128);
@@ -366,8 +356,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 1, "Si_MajimeA1", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/normal/si3_majime_a1_0", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/06/180600197", 128);
@@ -384,6 +373,7 @@ void main()
 		   NULL, " It's this one.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	PlaySE( 0, "s_knock", 128, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
@@ -391,16 +381,17 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ノックすると、中から中年のおばさんのどうぞという声が聞こえた。",
-		   NULL, "As I knocked, I heard the voice of a lady telling me to come in.", Line_Normal);
+		   NULL, "As I knocked, I heard the voice of a man telling me to come in.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka5", "maskright", 7, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/01/180100669", 128);
 	OutputLine(NULL, "「失礼します…。」",
 		   NULL, "\"Hello...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DrawSceneWithMask( "background/ke5", "maskright", 7, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　中は非常に狭い部屋だった。",
@@ -422,9 +413,9 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　相談員の女性はその向こうに座り、どうぞと席を勧める。",
-		   NULL, "The lady was sitting on the other side of the counter.", Line_WaitForInput);
+		   NULL, "The man was sitting on the other side of the counter.", Line_WaitForInput);
 	OutputLine(NULL, "…でも、席は２人分しかなかった。",
-		   NULL, " She told us to take a seat, but there were only two chairs...", Line_Normal);
+		   NULL, " He told us to take a seat, but there were only two chairs...", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -470,7 +461,6 @@ void main()
 		   NULL, "\"So, how may I help you today?\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka4", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/01/180100670", 128);
@@ -489,9 +479,6 @@ void main()
 		   NULL, "We heard that you put a hold on her case. We're here today so we can explain to you how urgent the matter is...\"", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Me_DefA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　魅音が頷く。",
@@ -500,10 +487,9 @@ void main()
 		   NULL, " It seemed like I was doing okay so far.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka5", "maskleft", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200004", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「説明、と申しますと、どんな説明でしょうか？",
 		   NULL, "\"What are you trying to explain to us?", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200005", 128);
@@ -531,8 +517,6 @@ void main()
 		   NULL, " But from what we understand, the child consultation center has decided to wait and see, right?\"", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 1, "Si_MajimeA1", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 0, FALSE );
-	DrawSceneWithMask( "Ka5", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/06/180600198", 128);
@@ -548,27 +532,26 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　俺の言い方がぬるいのが我慢ならなかったのだろう。",
-		   NULL, "Shion probably didn't like how politely I was speaking to her.", Line_WaitForInput);
+		   NULL, "Shion probably didn't like how politely I was speaking to him.", Line_WaitForInput);
 	OutputLine(NULL, "詩音がさっそく食って掛かる。",
 		   NULL, " She was already flaring up with rage at the social worker.", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　魅音的には噛み付いてほしくないようだったが、",
-		   NULL, "It looked like Mion didn't want her to tear into her.", Line_WaitForInput);
+		   NULL, "It looked like Mion didn't want her to tear into him.", Line_WaitForInput);
 	OutputLine(NULL, "変に止めようとすると余計に詩音が加熱すると思ったらしく、とりあえず最後まで言わせてやるようだった。",
 		   NULL, " However, she let Shion finish, as she'd get even more furious if we tried to stop her.", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが、相談員の女性もさすがに大人なのか、落ち着いた表情をまったく崩さず、諭すように応じた。",
-		   NULL, "The lady seemed to be used to people losing their temper, and she continued without reacting to Shion's outburst.", Line_Normal);
+		   NULL, "The man seemed to be used to people losing their temper, and he continued without reacting to Shion's outburst.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka4", "maskleft", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200006", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「まず誤解を解いておきたいと思いますけど、北条さんの件は現在対応中です。",
 		   NULL, "\"I would like to make it clear that we are still working on her case. The results are still pending.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200007", 128);
@@ -599,8 +582,6 @@ void main()
 		   NULL, "While their mature phrasing made me start to think it might be rude and harsh to say they were abandoning her, Rena quietly opened her mouth.", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 2, "Re_DefA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawSceneWithMask( "Ka5", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/02/180200388", 128);
@@ -623,23 +604,19 @@ void main()
 		   NULL, "The fact is, they left her in that house without taking any actions to prevent her from being abused.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka4", "maskleft", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200008", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「昨夜は相談所の者が直接お伺いし、ご事情を伺わせていただきました。",
 		   NULL, "\"We sent a social worker to her house and they met with her guardian.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200009", 128);
 	OutputLine(NULL, "それ以上のことは、プライバシーがありますのでお話できませんが、決して見殺しなんてことはありません。",
 		   NULL, " We cannot talk about the case any further for privacy reasons. However, we are not neglecting her. ", GetGlobalFlag(GLinemodeSp));
 	PlayVoice(4, "ps2/00/181200010", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "北条さん親子が健全な生活を送れるよう引き続き指導していくつもりです。」",
 		   NULL, "We are going to look after her and her father so they can have a healthy life together.\"", Line_Normal);
 	ClearMessage();
-
-	DrawBustshotWithFiltering( 2, "Si_OdorokiA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawSceneWithMask( "Ka5", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/06/180600201", 128);
@@ -648,20 +625,13 @@ void main()
 	PlayVoice(4, "ps2/06/180600202", 128);
 	OutputLine(NULL, "叔父と姪です。",
 		   NULL, " He's her uncle.", Line_WaitForInput);
-
-	DisableWindow();
-	ChangeBustshot( 2, "Si_IkariA1", 200, TRUE );
-	DisplayWindow();
-
 	PlayVoice(4, "ps2/06/180600203", 128);
 	OutputLine(NULL, "……本当に事態を把握してんですか？！」",
 		   NULL, " Are you sure you really did an investigation?!\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka4", "maskleft", 1, 0, 300 );
-
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200011", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「…失礼しました。",
 		   NULL, "\"Excuse me...", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200012", 128);
@@ -674,7 +644,7 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　すかさず詩音が揚げ足を取る。",
-		   NULL, "Shion had pounced on her mistake immediately.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Shion had pounced on his mistake immediately.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -682,7 +652,6 @@ void main()
 		   NULL, "I didn't think she needed to be so snappy... but at this point I was starting to understand how different their sense of urgency was from ours.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka5", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/01/180100679", 128);
@@ -700,10 +669,9 @@ void main()
 		   NULL, " Isn't that a crime?\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka4", "maskleft", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200014", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「誘拐というのは言い過ぎですね。",
 		   NULL, "\"It wasn't a kidnapping.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200015", 128);
@@ -714,9 +682,6 @@ void main()
 		   NULL, " According to article 821 of the constitution, the legal guardian of a child is...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 0, "Si_IkariA1", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/06/180600204", 128);
@@ -727,11 +692,9 @@ void main()
 		   NULL, " How can he still be considered her guardian?\"", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 2, "Me_TohohoA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawSceneWithMask( "Ka5", "maskright", 1, 0, 300 );
 
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s12/11/180700136", 128);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps2/03/180300335", 128);
 	OutputLine(NULL, "「そりゃ詩音…。",
 		   NULL, "\"Shion...", Line_WaitForInput);
 	PlayVoice(4, "ps2/03/180300336", 128);
@@ -748,9 +711,6 @@ void main()
 		   NULL, " That guy is her legal guardian?\"", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	ChangeBustshot( 2, "Me_YowakiB2", 200, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/03/180300337", 128);
@@ -767,8 +727,8 @@ void main()
 		   NULL, " They have to have one.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200017", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「それは民法の第８１８条ですね。」",
 		   NULL, "\"That's article 818 of the civil code.\"", Line_Normal);
 	ClearMessage();
@@ -779,9 +739,6 @@ void main()
 		   NULL, "\"When Satoko's parents died, her uncle and aunt automatically became her guardians?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	ChangeBustshot( 2, "Me_majimeA1", 200, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/03/180300341", 128);
@@ -790,18 +747,11 @@ void main()
 	PlayVoice(4, "ps2/03/180300342", 128);
 	OutputLine(NULL, "沙都子には叔父夫婦しか親類がいないようだったからね…。",
 		   NULL, " It seems her aunt and uncle were Satoko's only relatives...", Line_WaitForInput);
-
-	DisableWindow();
-	ChangeBustshot( 2, "Me_TohohoB2", 200, TRUE );
-	DisplayWindow();
-
 	PlayVoice(4, "ps2/03/180300343", 128);
 	OutputLine(NULL, "もちろん沙都子たちが望めば、他の人が親権者になることもあったかもしれないけど…、」",
 		   NULL, " If Satoko and Satoshi refused them, they could've had a different guardian, though...\"", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 1, "Si_MajimeA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 0, FALSE );
-	DrawSceneWithMask( "Ka4", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/06/180600206", 128);
@@ -816,9 +766,6 @@ void main()
 		   NULL, "They were different from Rika-chama. Lots of people wanted to be her guardian, but Father Kimiyoshi got custody of her.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Ri_KomaruA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/05/180500631", 128);
@@ -859,8 +806,7 @@ void main()
 		   NULL, "But maybe there were small thorns left in the village, and they were stinging Satoko occasionally...", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 0, "Me_TohohoA1", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawSceneWithMask( "Ka5", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "background/ke5", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/03/180300344", 128);
@@ -881,20 +827,11 @@ void main()
 		   NULL, " It was this ridiculously tiny place!\"", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	FadeBustshotWithFiltering( 0, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
-	DrawBustshotWithFiltering( 2, "Re_NandeB1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/02/180200389", 128);
 	OutputLine(NULL, "「……何だか嫌な話だね。",
 		   NULL, "\"That's horrible...", Line_WaitForInput);
-
-	DisableWindow();
-	ChangeBustshot( 2, "Re_DefB1", 200, TRUE );
-	DisplayWindow();
-
 	PlayVoice(4, "ps2/02/180200390", 128);
 	OutputLine(NULL, "でも、親権者が一年間も沙都子ちゃんを放置してたんでしょ？",
 		   NULL, " But this guardian neglected Satoko-chan for over a year, right?", Line_WaitForInput);
@@ -906,10 +843,8 @@ void main()
 		   NULL, " Can he?\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka4", "maskleft", 1, 0, 300 );
-
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200018", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「そうですね。",
 		   NULL, "\"Well...", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200019", 128);
@@ -917,19 +852,23 @@ void main()
 		   NULL, " In Part IV, Chapter 4 of the Civil Code, there are provisions for the loss of custody.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	DisableWindow();
 	PlaySE( 0, "s_page", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 200 );
+	Wait( 400 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_page", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 200 );
+	Wait( 400 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_page", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 500 );
+	SetValidityOfInput( TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　カウンターの上に置かれた分厚い本をばらばらと捲り、俺たちのそのページを示してくれた。",
-		   NULL, "The lady opened a thick book on the counter and showed us that page.", Line_Normal);
+		   NULL, "The man opened a thick book on the counter and showed us that page.", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -937,9 +876,6 @@ void main()
 		   NULL, "I didn't completely understand what it says on there, but it seemed that a parent can lose custody when they're being irresponsible.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Re_DefA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/02/180200393", 128);
@@ -974,8 +910,8 @@ void main()
 		   NULL, " That's too slow!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200020", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「いえいえ…、本当にそのようなことがあった場合には、児童の安全のため、緊急の一時保護をすることもあります。",
 		   NULL, "\"Well, if something urgent happens, we can temporarily protect her under our custody.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200021", 128);
@@ -983,8 +919,6 @@ void main()
 		   NULL, " We will also need approval of the family court in that case.\"", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 2, "Me_MajimeB2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawSceneWithMask( "Ka5", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/03/180300349", 128);
@@ -999,15 +933,12 @@ void main()
 		   NULL, "What is the center's opinion on that?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200022", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「それはプライバシーがありますのでお応えできませんが、もちろんその点についても相談所の方で説明を求めています。」",
 		   NULL, "\"I can't answer for privacy reasons, but the center requested an explanation on that matter as well.\"", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Re_KomaruA2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/02/180200394", 128);
@@ -1015,8 +946,8 @@ void main()
 		   NULL, "\"And you accepted his explanation, so you decided to wait and see?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200023", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「……ですから先ほども申しましたように、現在対応中です。",
 		   NULL, "\"......Like I've mentioned, we are currently working on this case.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200024", 128);
@@ -1024,7 +955,6 @@ void main()
 		   NULL, " The safety of the child is our number one priority, and we will make sure that she will have a healthy lifestyle in a safe environment.\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka4", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　どうも話がうまく通じていないように思う…。",
@@ -1058,6 +988,8 @@ void main()
 		   NULL, "I understood that something really bad was going to happen if we didn't take any action right now!", Line_Normal);
 	ClearMessage();
 
+	DrawSceneWithMask( "background/ke5", "maskup", 1, 0, 300 );
+
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/01/180100688", 128);
 	OutputLine(NULL, "「大体、去年だって叔父叔母揃って虐めてたんですよ。",
@@ -1070,15 +1002,12 @@ void main()
 		   NULL, " You still have the records from last year, don't you?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200025", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「過去の件についてはプライバシーでお応えできませんが、もちろん総合的に判断した上で対応しております。」",
 		   NULL, "\"I can't discuss her past record with you for privacy reasons, but we are taking everything into consideration.\"", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Re_BikkuriB1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/02/180200395", 128);
@@ -1090,8 +1019,8 @@ void main()
 		   NULL, "He called the school and told them that she has a cold, but don't you think it's a bit odd that she hasn't come to the school since he showed up?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200026", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「そうですね。ただ風邪で二日休むこともないとは言えません。",
 		   NULL, "\"That's true. But then she really might be sick.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200027", 128);
@@ -1099,10 +1028,6 @@ void main()
 		   NULL, " I think we should keep our eyes on her and see what happens.\"", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 1, "Me_OdorokiA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/03/180300352", 128);
@@ -1113,14 +1038,12 @@ void main()
 		   NULL, " Her uncle is forcing her to stay with him!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200028", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「もちろん、当方の職員が直接、児童に聞き取りも行い、その上で判断しております。」",
 		   NULL, "\"Our social worker spoke with the child, and made their decision after doing so.\"", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 0, "Si_MajimeA1", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawSceneWithMask( "Ka5", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/06/180600213", 128);
@@ -1131,8 +1054,8 @@ void main()
 		   NULL, " Are you not taking this case seriously because she made a false report long ago?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200029", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「過去の件はプライバシーでお応えできません。",
 		   NULL, "\"I cannot talk about that for privacy reasons.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200030", 128);
@@ -1140,7 +1063,6 @@ void main()
 		   NULL, " We're taking everything into consideration.\" ", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka4", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/01/180100691", 128);
@@ -1151,9 +1073,6 @@ void main()
 		   NULL, " She may have told you that she's not being abused, but I don't believe that statement.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Re_KomaruA2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/02/180200397", 128);
@@ -1161,9 +1080,6 @@ void main()
 		   NULL, "\"Do you know that people can lose the will to seek help when they have depression?\"", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Si_IkariA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/06/180600215", 128);
@@ -1180,9 +1096,6 @@ void main()
 		   NULL, " You'll end up hurt if you don't do something about this while I'm still asking politely!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Me_OdorokiA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/03/180300354", 128);
@@ -1193,7 +1106,6 @@ void main()
 		   NULL, " You're making us look bad!\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ka5", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/01/180100693", 128);
@@ -1207,9 +1119,6 @@ void main()
 		   NULL, " I just wanted to make that clear!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	DrawBustshot( 0, "Re_NandeA1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/02/180200398", 128);
@@ -1228,31 +1137,25 @@ void main()
 		   NULL, "Some of us were getting emotional, but Mion calmed them down, and Rena summed it up nicely.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……俺たちはひとまずそこで間を置き、向こうの出方を伺った。",
 		   NULL, "I stopped speaking to see what she was going to say next.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200031", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「…えーと、保護司さんではなく福祉司さんですね。",
 		   NULL, "\"...Umm, you mean her case worker.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200032", 128);
 	OutputLine(NULL, "お話はわかりました。",
 		   NULL, " I understand your concerns.", Line_WaitForInput);
-	PlayVoice(4, "ps2/00/181200030", 128);
+	PlayVoice(4, "ps2/00/181200033", 128);
 	OutputLine(NULL, "沙都子さんのお友達、",
 		   NULL, " I will tell them that Satoko-san's friends,", Line_Continue);
 	SetSpeedOfMessage( TRUE, 128 );
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 2000 );
+	Wait( 4000 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "３、",
 		   NULL, " three,", Line_Continue);
@@ -1267,13 +1170,13 @@ void main()
 	OutputLine(NULL, "５…、",
 		   NULL, " five...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 400 );
+	Wait( 1000 );
 	// (backup) SetValidityOfInput( TRUE );
 	SetSpeedOfMessage( FALSE, 0 );
 	OutputLine(NULL, "５人からその旨の訴えがあったことを児童福祉司に伝えます。",
 		   NULL, " five of her friends came here and made an appeal to us. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相談員</color>", NULL, "<color=#f5e6d3>Counselor</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/181200034", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "引き続き慎重に対応してまいりますので、今後も何かございましたらお知らせいただければと思います。",
 		   NULL, "We will continue to work closely on this case, so please let us know when you have further information.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/181200035", 128);
@@ -1285,18 +1188,18 @@ void main()
 		   NULL, "and thank you very much for sharing your valuable time with us today.\"", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 1000 );
-	PlayBGM( 0, "higurashi", 120, 0 );
-	DrawScene( "Sora", 1000 );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
+	DrawScene( "background/sora", 1000 );
+	PlayBGM( 1, "higurashi", 120, 0 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	DrawScene( "Sora2", 1000 );
+	DrawScene( "background/sora2", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
-	DrawScene( "white", 400 );
-	DrawSceneWithMask( "Kouen", "maskup", 1, 0, 300 );
+	DrawScene( "white", 1000 );
+	DrawScene( "background/mati4_01", 1000 );
 	SetSpeedOfMessage( FALSE, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1310,8 +1213,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Si_TohohoA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/sunset/si3_tohoho_a1_0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/06/180600219", 128);
@@ -1320,8 +1222,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Re_KomaruA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/sunset/re1a_komaru_a1_0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200400", 128);
@@ -1329,16 +1230,13 @@ void main()
 		   NULL, "\"But they also didn't try to kick us out.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/02/180200401", 128);
 	OutputLine(NULL, "……あの人は多分、相談窓口の人で、沙都子ちゃんの件を直接担当してる人じゃないんだよ。",
-		   NULL, " She's probably just a person who deals with complaints, not the actual social worker that deals with Satoko-chan.", Line_WaitForInput);
+		   NULL, " He's probably just a person who deals with complaints, not the actual social worker that deals with Satoko-chan.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/02/180200402", 128);
 	OutputLine(NULL, "だからああいう言い方になっちゃうんだよ。」",
-		   NULL, " That's why she was phrasing everything the way she did.\"", Line_Normal);
+		   NULL, " That's why he was phrasing everything the way he did.\"", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	FadeBustshotWithFiltering( 1, "mask00" , 0, FALSE, 0, 0, 400, FALSE );
-	FadeBustshotWithFiltering( 2, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
-	DisplayWindow();
+	DrawScene( "background/mati4_01", 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/01/180100696", 128);
@@ -1347,8 +1245,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshot( 2, "Me_TohohoA1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
-	DisplayWindow();
+	DrawBustshot( 2, "sprite/sunset/me1a_tohoho_a1_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/03/180300356", 128);
@@ -1362,9 +1259,8 @@ void main()
 		   NULL, " We didn't get pushed or pulled...\"", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 1, "Si_OdorokiA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 0, FALSE );
-	DrawBustshot( 2, "Me_TohohoA1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawSceneWithMask( "Kouen", "maskleft", 1, 0, 300 );
+	DisableWindow();
+	DrawBustshotWithFiltering( 1, "sprite/sunset/si3_odoroki_a1_2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/06/180600220", 128);
@@ -1374,8 +1270,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 2, "Re_DefA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/sunset/re1a_def_a1_2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200403", 128);
@@ -1383,10 +1278,10 @@ void main()
 		   NULL, "\"That's not true.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/02/180200404", 128);
 	OutputLine(NULL, "ちゃんと今日の話を伝えてくれるって言ってた。",
-		   NULL, " She said they will forward our information to the social worker.", Line_WaitForInput);
+		   NULL, " He said they will forward our information to the social worker.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/02/180200405", 128);
 	OutputLine(NULL, "あの人は直接、沙都子ちゃんのことを知らないから、私たちから見たら冷たい言い方になっちゃうんだよ。」",
-		   NULL, " Like I said, she doesn't know Satoko-chan in person, so she didn't really have any stake in it herself.\"", Line_Normal);
+		   NULL, " Like I said, he doesn't know Satoko-chan in person, so he didn't really have any stake in it himself.\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1396,30 +1291,29 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 2, "Re_DefB1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/sunset/re1b_def_b1_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200406", 128);
 	OutputLine(NULL, "「無駄だったとは思わないよ。",
-		   NULL, "\"I don't think it was a waste of time.", Line_WaitForInput);
+		   NULL, "\"I don't think it was a waste of time.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 2, "Re_KomaruB1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/sunset/re1b_komaru_b2_0", 200, TRUE );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200407", 128);
 	OutputLine(NULL, "……でも、本当の担当者の人には、私たちの熱意は伝わらないだろうね。",
-		   NULL, " But I don't think our passion will be understood by the actual person who is working on the case. ", GetGlobalFlag(GLinemodeSp));
+		   NULL, "But I don't think our passion will be understood by the actual person who is working on the case. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/02/180200408", 128);
 	OutputLine(NULL, "北条沙都子の友人５人が保護を求めて本日夕方陳情アリって程度には伝えてくれると思う…。」",
-		   NULL, "She'll just tell them that Satoko Houjou's five friends came and requested for them to take her under their custody...\"", Line_Normal);
+		   NULL, "He'll just tell them that Satoko Houjou's five friends came and requested for them to take her under their custody...\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 1, "Si_MajimeA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 1, "sprite/sunset/si3_majime_a1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/06/180600221", 128);
@@ -1432,8 +1326,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 2, "Me_TohohoA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/sunset/me1a_tohoho_a1_0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/03/180300359", 128);
@@ -1451,7 +1344,6 @@ void main()
 		   NULL, "Someone even threatened to hurt them if they didn't do anything while she was still asking them politely...\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Sora2", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　魅音の話によると、児童相談所というのはものすごくトラブルが多いところらしく、",
@@ -1459,6 +1351,10 @@ void main()
 	OutputLine(NULL, "詩音みたいな感情的な人間が押し掛けてくることは珍しいことではないらしい。",
 		   NULL, " It's not a rare thing for them to get an aggressive visitor like Shion.", Line_Normal);
 	ClearMessage();
+
+	DisableWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 2, "sprite/sunset/re1b_komaru_b2_0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200409", 128);
@@ -1469,8 +1365,6 @@ void main()
 		   NULL, " They might treat us coldly if they took our passion for simple anger...\"", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	DrawSceneWithMask( "Kouen", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/01/180100698", 128);
@@ -1481,9 +1375,6 @@ void main()
 		   NULL, " Can't you talk to them instead of me?\"", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Si_MajimeA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/06/180600223", 128);
@@ -1494,11 +1385,11 @@ void main()
 		   NULL, " They just listen to her because she is Mion Sonozaki.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/06/180600225", 128);
 	OutputLine(NULL, "今日の対応を見ましたよね？",
-		   NULL, " You saw how they treated us today... ", GetGlobalFlag(GLinemodeSp));
+		   NULL, " You saw how they treated us today...", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 2, "Si_WinkA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 1, "sprite/sunset/si3_wink_a1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/06/180600226", 128);
@@ -1513,8 +1404,8 @@ void main()
 
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Me_AkuwaraiA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 2, "sprite/sunset/me1a_akuwarai_a1_2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　魅音が曖昧に笑ってはぐらかす。",
@@ -1543,14 +1434,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DisplayWindow();
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DisableWindow();
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawBustshotWithFiltering( 2, "Ri_KomaruA2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 1, "sprite/sunset/ri1_komaru_a2_0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 	PlayBGM( 0, "Cradle_song", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -1560,8 +1445,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 1, "Me_YowakiB2", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/sunset/me1b_yowaki_a1_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/03/180300363", 128);
@@ -1573,9 +1457,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 2, "Si_MajimeA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 1, "sprite/sunset/si3_majime_a1_0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/06/180600228", 128);
@@ -1590,9 +1473,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 1, "Re_KomaruA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 2, "sprite/sunset/re1a_komaru_a1_0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200411", 128);
@@ -1635,7 +1517,7 @@ void main()
 		   NULL, "We'd have to do everything we can to save her from that situation.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Sora2", 1000 );
+	DrawScene( "background/sora2", 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　車の音などの町の雑音に耳を傾け、俺たちは再びぼんやりと空を見上げるのだった。",
@@ -1698,14 +1580,15 @@ void main()
 		   NULL, "I muttered to myself, hoping that someone would respond with a good idea... but the silence reminded me that everyone was just as stuck as me...", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 0, "Ri_KomaruA1", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawSceneWithMask( "Kouen", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/180500633", 128);
 	OutputLine(NULL, "「……圭一。」",
 		   NULL, "\"......Keiichi.\"", Line_Normal);
 	ClearMessage();
+
+	DrawBustshot( 0, "sprite/sunset/ri1_komaru_a2_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	DrawScene( "background/mati4_01", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/01/180100701", 128);
@@ -1720,8 +1603,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Ri_FumanA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/sunset/ri1_fuman_a1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/180500634", 128);
@@ -1748,20 +1630,21 @@ void main()
 	OutputLine(NULL, "……今は思いつかないけど、",
 		   NULL, " You didn't have a good idea at that moment...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 600 );
+	Wait( 3600 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "きっと最善手を思いつくから、俺を信じろって言った。",
-		   NULL, " but you said you would figure out something. You told her to trust you.", Line_WaitForInput);
+		   NULL, " but you said you would figure out something. You told her to trust you.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "Ri_KomaruA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/sunset/ri1_komaru_a2_0", 200, TRUE );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/180500637", 128);
 	OutputLine(NULL, "だから私は、",
-		   NULL, " So I", Line_Continue);
+		   NULL, "So I", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 2200 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "……信じた。",
 		   NULL, " ......trusted you...", Line_WaitForInput);
@@ -1769,12 +1652,12 @@ void main()
 	OutputLine(NULL, "……だから、",
 		   NULL, " I'm not going to believe it...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 700 );
+	Wait( 2700 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "……圭一の口から打つ手がないなんて、悲しい言葉が漏れるなんて、",
-		   NULL, " I'm not going to believe that you would even mention that you had no idea...", Line_Continue);
+		   NULL, " I'm not going to believe that you would even mention that you have no idea...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 600 );
+	Wait( 5400 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "…信じない。」",
 		   NULL, " I'm not going to believe that...\"", GetGlobalFlag(GLinemodeSp));
@@ -1808,7 +1691,7 @@ void main()
 	OutputLine(NULL, "……だって、",
 		   NULL, " Because...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 1800 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "………あなたは運命なんか、やすやす打ち破ってくれる人なんだもの……。",
 		   NULL, " you can easily defeat fate...", Line_WaitForInput);
@@ -1816,7 +1699,7 @@ void main()
 	OutputLine(NULL, "……………だから、",
 		   NULL, " So...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 2400 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "…………助けて。",
 		   NULL, " please help... ", GetGlobalFlag(GLinemodeSp));
@@ -1828,7 +1711,7 @@ void main()
 	OutputLine(NULL, "…………沙都子を、",
 		   NULL, " Help Satoko...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 1800 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "……………助けて………………。」",
 		   NULL, " ...help her...\"", GetGlobalFlag(GLinemodeSp));
@@ -1841,8 +1724,7 @@ void main()
 		   NULL, " My heart was feeling the same way.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
-	PlayBGM( 1, "higurashi", 120, 0 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……くそくそくそ…ッ！！！",
@@ -1929,9 +1811,9 @@ void main()
 		   NULL, "But now, after betraying Rika-chan and seeing her tears, I finally realized just how serious it is...", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 2, "Si_IkariA1", "maskup", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 0, FALSE );
-	DrawBustshotWithFiltering( 1, "Me_YowakiA1", "maskup", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 0, FALSE );
-	DrawSceneWithMask( "Kouen", "maskup", 1, 0, 300 );
+	DrawBustshot( 2, "sprite/sunset/si3_ikari_a1_2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawBustshot( 1, "sprite/sunset/me1b_yowaki_a1_2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawSceneWithMask( "background/mati4_01", "maskup", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　………詩音を見る。",
@@ -1949,10 +1831,7 @@ void main()
 		   NULL, "Mion tried to calm her down, but she didn't have any ideas either.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	FadeBustshotWithFiltering( 1, "mask00" , 0, FALSE, 0, 0, 400, FALSE );
-	FadeBustshotWithFiltering( 2, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
-	DisplayWindow();
+	DrawScene( "background/mati4_01", 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　………レナは？",
@@ -1968,8 +1847,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 0, "Re_KomaruA1", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 1300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 0, "sprite/sunset/re1a_komaru_a1_0", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　………だが、……レナもまた打ちのめされていた。",
@@ -2026,9 +1904,6 @@ void main()
 		   NULL, "She believes that we can do something if we all come together...", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そうさ、俺たちが言った。",
@@ -2056,7 +1931,7 @@ void main()
 		   NULL, "I burn brightly and give strength to everyone.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 0, "G_Tactics", 120, 0 );
+	FadeOutBGM( 0, 300, FALSE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　………そうさ、俺は前原圭一。",
@@ -2085,7 +1960,8 @@ void main()
 		   NULL, "When the fire is lit, there will be wind. Mion and Shion will become stronger too!", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Kouen", "maskup", 1, 0, 300 );
+	DrawScene( "background/mati4_01", 1000 );
+	PlayBGM( 0, "G_Tactics", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/01/180100705", 128);
@@ -2100,8 +1976,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Ri_FumanA1", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/sunset/ri1_fuman_a1_0", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/180500647", 128);
@@ -2146,7 +2021,6 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "mask00" , 0, FALSE, 0, 0, 400, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/01/180100711", 128);
@@ -2197,8 +2071,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Me_TohohoA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/sunset/me1a_tohoho_a1_0", "maskright", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/03/180300365", 128);
@@ -2219,8 +2092,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Re_NandeA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/normal/re1a_nande_a1_2", "maskleft", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200415", 128);
@@ -2295,9 +2167,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 2, "Si_OdorokiA1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
+	DrawBustshotWithFiltering( 1, "sprite/sunset/si3_odoroki_a1_2", "maskleft", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/06/180600231", 128);
@@ -2315,22 +2186,26 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshot( 1, "Me_AkuwaraiA2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 8, 400, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/sunset/me1a_akuwarai_a1_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/03/180300366", 128);
 	OutputLine(NULL, "「な、",
 		   NULL, "\"I...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 500 );
+	Wait( 1500 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "……何を考えてるんだか知らないけど、……くっくっく。",
-		   NULL, " I have no idea what's on your mind... heh heh heh.", Line_WaitForInput);
+		   NULL, " I have no idea what's on your mind... heh heh heh.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DisableWindow();
+	ChangeBustshot( 2, "sprite/sunset/me1a_wink_a1_1", 200, TRUE );
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/03/180300367", 128);
 	OutputLine(NULL, "何だかおじさんも面白そうな気がしてきたよ。",
-		   NULL, " But it sounds very interesting.", Line_WaitForInput);
+		   NULL, "But it sounds very interesting.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/03/180300368", 128);
 	OutputLine(NULL, "……これで泣き寝入りなんて我が部らしくもない。",
 		   NULL, " ...It isn't like our club to cry ourselves to sleep.", Line_WaitForInput);
@@ -2345,8 +2220,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshot( 0, "Re_WaraiA1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
-	DisplayWindow();
+	DrawBustshot( 0, "sprite/sunset/re1a_warai_a1_2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200417", 128);
@@ -2361,8 +2235,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 1, "Me_DefA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/sunset/me1a_def_a1_1", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/03/180300370", 128);
@@ -2379,22 +2252,24 @@ void main()
 		   NULL, " Remember everyone...", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/01/180100728", 128);
 	OutputLine(NULL, "あの相談員は俺たちに宣戦布告をしてくれやがったわけだが、ご丁寧にも次の手も教えてくれてたわけさ。",
-		   NULL, " That lady really pissed us off today, but she also told us what our next option is.", Line_WaitForInput);
+		   NULL, " That man really pissed us off today, but he also told us what our next option is.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/01/180100729", 128);
 	OutputLine(NULL, "多分、意識しなかったんだろうけどな。",
-		   NULL, " She never thought she was giving us a hint.", Line_WaitForInput);
+		   NULL, " He never thought he was giving us a hint.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/01/180100730", 128);
 	OutputLine(NULL, "墓穴を掘ってくれたもんだぜ。",
-		   NULL, " She made a huge mistake. ", GetGlobalFlag(GLinemodeSp));
+		   NULL, " He made a huge mistake. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/01/180100731", 128);
 	OutputLine(NULL, "……しかも、そいつはどうやら俺のもっとも得意とする戦術になりそうだぜ…！！」",
 		   NULL, "......On top of that, that next option is something that I'm really good at...!!\"", Line_Normal);
 	ClearMessage();
 
-	CallScript( "&eyeCamp" );
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, TRUE );
 	SetValidityOfSkipping( FALSE );
-	DrawSceneWithMask( "GetTIP_mina012", "mask1900", 7, 0, 400 );
+	DrawSceneWithMask( "tips/gettip_mina012", "mask1900", 7, 0, 400 );
 	Wait( 5000 );
 	DrawSceneWithMask( "black", "mask1900", 7, 0, 400 );
 	SetValidityOfSkipping( TRUE );
