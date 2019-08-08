@@ -18,6 +18,8 @@ void BrandLogo()
 
 	SetGlobalFlag(GFlag_FirstPlay, 1);
 
+	ModCallScriptSection("&opening", "OpeningQuestion");
+
 	DrawBG( "07thlogo", 1000, TRUE );
 	Wait( 2000 );
 	DrawSceneWithMask( "mangagamer", "logomask", 0, 0, 1000 );
@@ -25,6 +27,8 @@ void BrandLogo()
 	DrawSceneWithMask( "07th-mod", "logomask", 0, 0, 1000 );
 	Wait( 2000 );
 	DrawSceneWithMask( "black", "logomask", 0, 0, 1000 );
+
+	ModCallScriptSection("&opening", "OpeningLaunch");
 }
 
 void Title()
