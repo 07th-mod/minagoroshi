@@ -3,7 +3,7 @@ void main()
 	EnableJumpingOfReturnIcon();
 
 	PlayBGM( 0, "Gray_2", 120, 0 );
-	DrawScene( "Ho_R1", 400 );
+	DrawScene( "background/ho_r1", 400 );
 
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -84,7 +84,7 @@ void main()
 		   NULL, "Teppei could leave this awful village behind as soon as he found his brother's bankbook.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ho_R1", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "background/ho_r1", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　外を歩くと、村人の目がきついように感じたので、鉄平は外には出なかった。",
@@ -127,11 +127,6 @@ void main()
 	OutputLine(NULL, "　多少家具が壊れたって知ったことじゃない。",
 		   NULL, "What did it matter to him how much furniture he broke?", Line_Normal);
 	ClearMessage();
-
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "　鉄平は押入れの中身を全て引っ張り出して、天井の板を外してみたり、",
-		   NULL, "He cleared out the closet, and went up to the attic...", Line_ContinueAfterTyping);
-
 	PlaySE( 0, "s_Down", 128, 64 );
 	StartShakingOfWindow( 241, 40, 0, 2, 3*2, FALSE );
 	StartShakingOfAllObjects( 241, 40, 0, 2, 3*2, TRUE );
@@ -145,8 +140,9 @@ void main()
 	StartShakingOfWindow( 248, 40, 0, 2, 4*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 4*2, TRUE );
 
-	OutputLineAll(NULL, "", Line_WaitForInput);
-
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	OutputLine(NULL, "　鉄平は押入れの中身を全て引っ張り出して、天井の板を外してみたり、",
+		   NULL, "He cleared out the closet, and went up to the attic...", Line_WaitForInput);
 	OutputLine(NULL, "タンスの引き出しを全て引っ張りだして中身をぶちまけ、引き出し全てを引っこ抜いてまで調べた。",
 		   NULL, " He also pulled out all the chests and searched them thoroughly.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -163,29 +159,22 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
-	DrawSceneWithMask( "Ho_2", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "background/ho_2", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そんな調子で家の中を荒らし続け、",
 		   NULL, "He messed up the whole first floor", Line_WaitForInput);
 	OutputLine(NULL, "二階に上がり、手始めにこの部屋から探そうと思った時、",
-		   NULL, " and went up to the second floor to search some more.", Line_ContinueAfterTyping);
-	SetValidityOfInput( FALSE );
-	Wait( 800 );
-	SetValidityOfInput( TRUE );
-	OutputLine(NULL, "後から沙都子が飛びついてきた。",
-		   NULL, " The next moment, Satoko went and tried to tackle him.", Line_ContinueAfterTyping);
-
+		   NULL, " and went up to the second floor to search some more.", Line_WaitForInput);
 	StartShakingOfWindow( 241, 40, 0, 0, 5*2, FALSE );
-	StartShakingOfAllObjects( 241, 40, 0, 0, 5*2, TRUE );
-
-	OutputLineAll(NULL, "", Line_Normal);
+	StartShakingOfAllObjects( 241, 40, 0, 0, 5*2, FALSE );
+	OutputLine(NULL, "後から沙都子が飛びついてきた。",
+		   NULL, " The next moment, Satoko went and tried to tackle him.", Line_Normal);
 
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Sa_SakebuB1", "maskright", 7, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/normal/sa1b_sakebu_b1_2", "maskright", 7, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/04/440400094", 128);
@@ -200,8 +189,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 2, "Sa_NakuA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/normal/sa1a_naku_a1_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/04/440400095", 128);
@@ -214,11 +202,9 @@ void main()
 		   NULL, "Teppei immediately assumed that she was hiding the bankbook in there.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-
-	PlaySE( 0, "s_furu", 128, 64 );
 	DisableWindow();
+	PlaySE( 0, "s_furu", 128, 64 );
 	FadeBustshotWithFiltering( 2, "maskleft" , 7, FALSE, 0, 0, 300, TRUE );
-	DisplayWindow();
 	PlaySE( 0, "s_Down", 128, 64 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -226,8 +212,7 @@ void main()
 		   NULL, "He threw her off and forced his way inside the room.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 	DisableWindow();
-	DrawBustshotWithFiltering( 0, "Sa_SakebuA1", "maskright", 7, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 0, "sprite/normal/sa1a_sakebu_a1_2", "maskright", 7, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…だが沙都子は半狂乱になってそれを食い止めようとした。",
@@ -242,16 +227,12 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_NakuB1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1b_naku_b1_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/04/440400096", 128);
-	OutputLine(NULL, "「……えっく！",
-		   NULL, "\"Hic......!", Line_WaitForInput);
-	PlayVoice(4, "ps3/s20/04/440400096", 128);
-	OutputLine(NULL, "　その部屋は…にーにーの部屋ですのよ…。",
-		   NULL, " That room belongs to... Nii-nii...", Line_WaitForInput);
+	OutputLine(NULL, "「……えっく！　その部屋は…にーにーの部屋ですのよ…。",
+		   NULL, "\"Hic......! That room belongs to... Nii-nii...", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/04/440400097", 128);
 	OutputLine(NULL, "…にーにーが帰ってきた時、大変なことになってたら…にーにーが悲しみますのよ…。",
 		   NULL, " Nii-nii will be hurt... if he comes home and... sees his room destroyed...", Line_WaitForInput);
@@ -262,22 +243,17 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/21/442000013", 128);
-	OutputLine(NULL, "「何じゃい、兄貴の部屋だからって、それだけで駄目なんかい。",
-		   NULL, "\"You don't want me there just 'cause it's your brother's room?", Line_WaitForInput);
-	OutputLine(NULL, "悟史なんか生きとるかどうかもわからんわな。」",
-		   NULL, " You don't even know if he's still alive!\"", Line_Normal);
+	OutputLine(NULL, "「何じゃい、兄貴の部屋だからって、それだけで駄目なんかい。悟史なんか生きとるかどうかもわからんわな。」",
+		   NULL, "\"You don't want me there just 'cause it's your brother's room? You don't even know if he's still alive!\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_SakebuB1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1b_sakebu_b1_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/04/440400099", 128);
-	OutputLine(NULL, "「にーにーは生きてるんですのよ！！",
-		   NULL, "\"Nii-nii is alive!!", Line_WaitForInput);
-	OutputLine(NULL, "　きっと帰ってきますのよ！！",
-		   NULL, " He will come back home!!", Line_WaitForInput);
+	OutputLine(NULL, "「にーにーは生きてるんですのよ！！　きっと帰ってきますのよ！！",
+		   NULL, "\"Nii-nii is alive!! He will come back home!!", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/04/440400100", 128);
 	OutputLine(NULL, "　わああぁああぁあん！！",
 		   NULL, " Waaaaaaaah!!", Line_WaitForInput);
@@ -288,10 +264,8 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/21/442000014", 128);
-	OutputLine(NULL, "「…何言うてんな。",
-		   NULL, "\"...What are you saying?", Line_WaitForInput);
-	OutputLine(NULL, "わしゃあ荒らすんと違う。",
-		   NULL, " I'm not going to destroy the room.", Line_WaitForInput);
+	OutputLine(NULL, "「…何言うてんな。わしゃあ荒らすんと違う。",
+		   NULL, "\"...What are you saying? I'm not going to destroy the room.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/21/442000015", 128);
 	OutputLine(NULL, "この部屋をな？",
 		   NULL, " I'm just...", Line_WaitForInput);
@@ -306,23 +280,18 @@ void main()
 		   NULL, " I need to clean it up.\"", Line_Normal);
 	ClearMessage();
 
-	PlayVoice(4, "", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「だめッ！！",
 		   NULL, "\"No!!", Line_WaitForInput);
-	PlayVoice(4, "", 128);
 	OutputLine(NULL, "　だめええぇええええ、わああああああん、わああぁああぁあッ！！！",
 		   NULL, " No, you can't! Waaaaaaah!! Waaaaaaaaah!!", Line_WaitForInput);
-	PlayVoice(4, "", 128);
 	OutputLine(NULL, "　にーにー、にーにーー！！！",
 		   NULL, " Nii-nii!! Nii-nii!!", Line_WaitForInput);
-	PlayVoice(4, "", 128);
 	OutputLine(NULL, "　うわああああぁあぁあぁぁッ！！！」",
 		   NULL, " Waaaaaaaaah!!!\"", Line_Normal);
 	ClearMessage();
 
-	PlayVoice(4, "", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「なッ、何じゃいな、そんなに嫌か、わしがこの部屋に入るんがそんなに嫌かい…！！」",
 		   NULL, "\"The hell? You really don't want me to go inside, huh...?\"", Line_Normal);
 	ClearMessage();
@@ -355,10 +324,8 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/21/442000019", 128);
-	OutputLine(NULL, "「わぁったわあった！！",
-		   NULL, "\"Fine then!!", Line_WaitForInput);
-	OutputLine(NULL, "　沙都子がいい子にしてたらわしもこの部屋には入らん。",
-		   NULL, " If you promise to be a good girl, I won't go inside this room.", Line_WaitForInput);
+	OutputLine(NULL, "「わぁったわあった！！　沙都子がいい子にしてたらわしもこの部屋には入らん。",
+		   NULL, "\"Fine then!! If you promise to be a good girl, I won't go inside this room.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/21/442000020", 128);
 	OutputLine(NULL, "な？",
 		   NULL, " Alright?", Line_WaitForInput);
@@ -368,8 +335,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_HannbesoB1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1b_hannbeso_b1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/04/440400102", 128);
@@ -377,30 +343,24 @@ void main()
 		   NULL, "\"Yes... yes...\"", Line_Normal);
 	ClearMessage();
 
-	PlayVoice(4, "", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「その代わり、わしを怒らせたら知らんぞ。",
 		   NULL, "\"But if you make me mad,", Line_WaitForInput);
-	PlayVoice(4, "", 128);
 	OutputLine(NULL, "悟史なんて帰ってこないヤツのために部屋を残しとく謂れはないんだからのぉ！",
 		   NULL, " I'm gonna rip this room apart!", Line_WaitForInput);
-	PlayVoice(4, "", 128);
 	OutputLine(NULL, "　お前が帰ってこんようになったり、他所様にわしが虐めてるなんてことを言いよったら、",
 		   NULL, " If you escape from this house or tell people about what's happening...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 800 );
 	// (backup) SetValidityOfInput( TRUE );
-	PlayVoice(4, "", 128);
 	OutputLine(NULL, "…この部屋、大変なことになってまうん、よう肝に刻んどれえ。",
 		   NULL, " everything in there's gonna end up in the garbage.", Line_WaitForInput);
-	PlayVoice(4, "", 128);
 	OutputLine(NULL, "わぁったな？！」",
 		   NULL, " Get it?!\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_MuhyouA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1a_muhyou_a1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/04/440400103", 128);
@@ -461,8 +421,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_MuhyouA2", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1a_muhyou_a2_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/04/440400103", 128);
@@ -483,15 +442,14 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/21/442000024", 128);
-	OutputLine(NULL, "「早ぅいがんね、ざったいわこのダラズが。",
-		   NULL, "\"Get out of my sight, you little brat.", Line_WaitForInput);
-	OutputLine(NULL, "……あぁもう！",
-		   NULL, " Gah!", Line_WaitForInput);
+	OutputLine(NULL, "「早ぅいがんね、ざったいわこのダラズが。……あぁもう！",
+		   NULL, "\"Get out of my sight, you little brat. Gah!", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/21/442000025", 128);
 	OutputLine(NULL, "　面白ないん！！」",
 		   NULL, " You're so annoying!!\"", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	Wait( 1000 );
 	DrawScene( "black", 1000 );
 }
