@@ -215,7 +215,8 @@ void main()
 		   NULL, " but to never say anything promising the girl's safety.", Line_Normal);
 	ClearMessage();
 
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
+	
+	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "「前原圭一くんか。",
 		   NULL, "\"Keiichi Maebara-kun, huh?", Line_WaitForInput);
 	OutputLine(NULL, "こういう子が将来、行政専門のクレーマーになるんだろうなぁ！」",
