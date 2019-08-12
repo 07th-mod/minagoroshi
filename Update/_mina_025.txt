@@ -1,16 +1,16 @@
 void main()
 {
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 0, 300, FALSE );
+	FadeOutBGM( 1, 300, FALSE );
+	FadeOutBGM( 2, 300, FALSE );
+	FadeOutBGM( 3, 300, FALSE );
+	DrawScene( "black", 300 );
 	ClearMessage();
 
 	PlayBGM( 1, "Suzume", 120, 0 );
 	DrawSceneWithMask( "white", "maskm1", 1, 0, 1300 );
-	DrawScene( "Hu_R1", 0 );
+	DrawScene( "background/hu_r1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　目が覚めると、ちょうど日捲りカレンダーと沙都子が見えた。",
@@ -38,8 +38,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 1, 300, FALSE );
 	PlayBGM( 0, "Feel", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -51,12 +50,8 @@ void main()
 		   NULL, " The day I die.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Hu_R2", "maskright", 1, 0, 300 );
-
 	DisableWindow();
-	DrawBustshot( 7, "filter_Hanyu", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 400, TRUE );
-	DrawBustshotWithFiltering( 2, "Ha_DefA1%", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10*2, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/transparent/ha1_def_0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/12/281100047", 128);
@@ -65,8 +60,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Sa_WaraiA1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/normal/sa1a_warai_a1_0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400021", 128);
@@ -86,8 +80,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 1, "Sa_AkireruB1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 1, "sprite/normal/sa1b_akireru_b1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400022", 128);
@@ -111,8 +104,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 1, "Sa_OdorokiB1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 1, "sprite/normal/sa1b_odoroki_b1_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400024", 128);
@@ -124,8 +116,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 2, "Ha_WaraiA1%", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/transparent/ha1_warai_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/280500158", 128);
@@ -150,8 +141,8 @@ void main()
 		   NULL, "...That would be a lot of fun.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	DrawScene( "Hu_R3", 1000 );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
+	DrawSceneWithMask( "background/hu_r1", "maskup", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　学校へ行く時間になっても、体が鈍かった。",
@@ -187,8 +178,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshot( 2, "Sa_DefA1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
-	DisplayWindow();
+	DrawBustshot( 2, "sprite/normal/sa1a_def_a1_2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400026", 128);
@@ -209,15 +199,14 @@ void main()
 		   NULL, " I'm", Line_Continue);
 	SetSpeedOfMessage( FALSE, 0 );
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 1200 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "今日はお休みしますです。」",
 		   NULL, " taking the day off today.\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 2, "Sa_YareyareA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/normal/sa1a_yareyare_a1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400028", 128);
@@ -235,14 +224,15 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 2, "Sa_AkireruA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/normal/sa1a_akireru_a1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400030", 128);
 	OutputLine(NULL, "「…………………？？」",
 		   NULL, "\".........??\"", Line_Normal);
 	ClearMessage();
+
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　今日になってどんな努力があるというのか。",
@@ -435,12 +425,8 @@ void main()
 		   NULL, "Without effort, not even one question will be solved.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Hu_R1", "maskleft", 1, 0, 300 );
-
-	DisableWindow();
-	DrawBustshot( 7, "filter_Hanyu", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 400, TRUE );
-	DrawBustshotWithFiltering( 0, "Ha_DefA1%", "maskc", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9*2, 1300, TRUE );
-	DisplayWindow();
+	DrawBustshot( 0, "sprite/transparent/ha1_def_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	DrawScene( "background/hu_r1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/12/281100048", 128);
@@ -534,8 +520,7 @@ void main()
 		   NULL, "My hundred years were wasted...", Line_Normal);
 	ClearMessage();
 
-	DrawBustshotWithFiltering( 0, "Sa_AkireruA1", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawSceneWithMask( "Hu_R3", "maskright", 1, 0, 300 );
+	DrawScene( "background/hu_r1", 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/280500163", 128);
@@ -547,8 +532,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_OdorokiB1", 200, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 0, "sprite/normal/sa1b_odoroki_b1_2", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400031", 128);
@@ -569,8 +553,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_YareyareA2", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1a_yareyare_a2_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400033", 128);
@@ -599,8 +582,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_HauA2", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1a_hau_a2_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#94a567>夏美</color>", NULL, "<color=#94a567>Natsumi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s04/36/310100805", 128);
@@ -611,33 +593,24 @@ void main()
 	// (backup) SetValidityOfInput( TRUE );
 	PlayVoice(4, "ps3/s12/04/280400036", 128);
 	OutputLine(NULL, "…今、すごく幸せですのよ。",
-		   NULL, " very happy right now.", Line_WaitForInput);
+		   NULL, " very happy right now.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_WaraiB1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1b_warai_b1_0", 200, TRUE );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#94a567>夏美</color>", NULL, "<color=#94a567>Natsumi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400037", 128);
 	OutputLine(NULL, "みんなと楽しく過ごせて、また梨花と一緒に暮らせるようになってとても嬉しいですの。",
-		   NULL, " I'm happy that I'm back with everyone, and that I'm living with you again.", Line_WaitForInput);
+		   NULL, "I'm happy that I'm back with everyone, and that I'm living with you again.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/04/280400038", 128);
 	OutputLine(NULL, "………だから、",
 		   NULL, " .........So...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 800 );
 	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "…梨花がいなくなったら、",
-		   NULL, " if I lose you...", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "私がどれだけ悲しい世界に生き続けなくちゃならないか、",
-		   NULL, " I'll be living in a very sad world...", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 700 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "……よく考えてほしいでございますのよ。」",
-		   NULL, " ...Just think about that.\"", Line_Normal);
+	OutputLine(NULL, "…梨花がいなくなったら、私がどれだけ悲しい世界に生き続けなくちゃならないか、……よく考えてほしいでございますのよ。」",
+		   NULL, " if I lose you... I'll be living in a very sad world... ...Just think about that.\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -645,28 +618,22 @@ void main()
 	OutputLine(NULL, "「…………ボクの、",
 		   NULL, "\".........The world", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 2800 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "いない世界。」",
 		   NULL, " without me.\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_hannbesoA3", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1a_hannbeso_a3_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400039", 128);
 	OutputLine(NULL, "「えぇ。",
 		   NULL, "\"Yes.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/04/280400040", 128);
-	OutputLine(NULL, "……梨花のいない世界なんて、",
-		   NULL, " ...The world without you...", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "…とても辛くて悲しい世界ですわ。」",
-		   NULL, " would be a very sad world.\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "……梨花のいない世界なんて、…とても辛くて悲しい世界ですわ。」",
+		   NULL, " ...The world without you... would be a very sad world.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -692,8 +659,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_HannbesoA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1a_hannbeso_a1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400041", 128);
@@ -714,8 +680,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Sa_YareyareA1", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/sa1a_yareyare_a1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/04/280400044", 128);
@@ -765,7 +730,6 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 0, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子は大急ぎで駆け出して行った。",
@@ -779,9 +743,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshot( 7, "filter_Hanyu", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 400, TRUE );
-	DrawBustshotWithFiltering( 2, "Ha_DefA1%", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10*2, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/transparent/ha1_def_0", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/12/281100050", 128);
@@ -796,8 +758,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 2, "Ha_YowakiA1%", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/transparent/ha1_yowaki_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/12/281100051", 128);
@@ -824,8 +785,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 2, "Ha_DefA1%", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/transparent/ha1_def_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/12/281100055", 128);
@@ -886,13 +846,8 @@ void main()
 	OutputLine(NULL, "でも、…梨花が望めば次の朝も訪れる。",
 		   NULL, " But if you wish for it, you'll see a brand new day, just like when morning comes.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/12/281100063", 128);
-	OutputLine(NULL, "……それはまたしても今年の６月かもしれないけれど、",
-		   NULL, " You might find yourself back in June of this year again...", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 5000 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "…朝は朝。」",
-		   NULL, " but it'll still be a brand new day.\"", Line_Normal);
+	OutputLine(NULL, "……それはまたしても今年の６月かもしれないけれど、…朝は朝。」",
+		   NULL, " You might find yourself back in June of this year again... but it'll still be a brand new day.\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -900,18 +855,8 @@ void main()
 	OutputLine(NULL, "「…………もっと小さい頃。",
 		   NULL, "\"......When I was younger,", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/05/280500180", 128);
-	OutputLine(NULL, "毎日が退屈で、",
-		   NULL, " every day seemed so boring.", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "毎朝、",
-		   NULL, " Every morning,", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 700 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "起きても同じ日が繰り返されてるんじゃないかって思ったことがある。",
-		   NULL, " I thought the same things would happen again after I woke up.", Line_WaitForInput);
+	OutputLine(NULL, "毎日が退屈で、毎朝、起きても同じ日が繰り返されてるんじゃないかって思ったことがある。",
+		   NULL, " every day seemed so boring. Every morning, I thought the same things would happen again after I woke up.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/05/280500181", 128);
 	OutputLine(NULL, "……それが本当になるだけのことだしね。」",
 		   NULL, " ...This just means that'll end up being true.\"", GetGlobalFlag(GLinemodeSp));
@@ -928,26 +873,15 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/280500182", 128);
-	OutputLine(NULL, "「多分、今日だろうと思っていたけど、",
-		   NULL, "\"I knew today was the day...", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "………あんたにはっきりと言われると堪えるわね。",
-		   NULL, " ......But it's still difficult to hear that from you.", Line_WaitForInput);
+	OutputLine(NULL, "「多分、今日だろうと思っていたけど、………あんたにはっきりと言われると堪えるわね。",
+		   NULL, "\"I knew today was the day... ......But it's still difficult to hear that from you.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/05/280500183", 128);
-	OutputLine(NULL, "……やっぱり終わるのね、",
-		   NULL, " ...It's going to come to an end", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "今回も。」",
-		   NULL, " again, huh?\"", Line_Normal);
+	OutputLine(NULL, "……やっぱり終わるのね、今回も。」",
+		   NULL, " ...It's going to come to an end again, huh?\"", Line_Normal);
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 2, "Ha_YowakiA1%", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/transparent/ha1_yowaki_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/12/281100066", 128);
@@ -961,19 +895,16 @@ void main()
 		   NULL, " Just like always.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-
-	DisableWindow();
-	FadeBustshotWithFiltering( 7, "mask00" , 1, FALSE, 0, 0, 400, FALSE );
-	FadeBustshotWithFiltering( 2, "mask00" , 1, FALSE, 0, 0, 400, TRUE );
-	DisplayWindow();
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　羽入は姿を消し、静寂の朝が訪れた。",
 		   NULL, "Hanyuu disappeared, and it went completely quiet inside the house.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "white", 400 );
-	DrawSceneWithMask( "Sora", "maskc", 1, 0, 300 );
+	DrawScene( "white", 1000 );
+	DrawSceneWithMask( "background/sora", "maskc", 1, 0, 1300 );
+	PlayBGM( 2, "suzume", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　今日をどうやって生きよう。",
@@ -1045,7 +976,7 @@ void main()
 	OutputLine(NULL, "「……今日を、",
 		   NULL, "\"...Today,", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 700 );
+	Wait( 2000 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "生きる。」",
 		   NULL, " I will live.\"", Line_Normal);
@@ -1063,18 +994,17 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 1000 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	PlayBGM( 0, "semi", 120, 0 );
-	DrawScene( "Hu1", 1000 );
+	FadeOutBGM( 0, 1000, TRUE );
+	SetValidityOfInput( FALSE );
+	Wait( 2000 );
+	SetValidityOfInput( TRUE );
+	PlayBGM( 1, "semi", 120, 0 );
+	DrawScene( "background/hu2", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 3000 );
 	SetValidityOfInput( TRUE );
-	DrawScene( "black", 1000 );
-	DrawSceneWithMask( "Hu_R3", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskm1", 1, 0, 1300 );
+	DrawScene( "background/hu_r1", 1000 );
 	SetSpeedOfMessage( FALSE, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1119,6 +1049,9 @@ void main()
 		   NULL, "Why should I wash these dishes?", Line_Normal);
 	ClearMessage();
 
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, FALSE );
+	DrawScene( "black", 1000 );
 	PlayBGM( 0, "Gray_2", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1132,7 +1065,6 @@ void main()
 		   NULL, "I will encounter a new Satoko in the next world.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　でも、私はさっき沙都子に言われて初めて気が付いた。",
@@ -1201,7 +1133,7 @@ void main()
 		   NULL, " because I don't want to leave this world.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Sora3", 400 );
+	DrawScene( "background/sora", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　この世界こそ、私の望んだ理想の世界だった。",
@@ -1253,7 +1185,7 @@ void main()
 		   NULL, " tonight.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　仲間たちは悲しむだろう。",
@@ -1372,8 +1304,9 @@ void main()
 		   NULL, "I held Satoko's pillow and continued to cry...", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	PlayBGM( 1, "M_Denwa8k", 120, 0 );
-	DrawSceneWithMask( "Hu_R2", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "background/hu_r1", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そんな時、無粋な電話が鳴った。",
@@ -1391,8 +1324,7 @@ void main()
 		   NULL, "...I picked up the phone, hoping that my friends would call to check on me.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 1, 300, FALSE );
 
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -1403,7 +1335,7 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
-	DrawSceneWithMask( "Re_Tel", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "background/re_tel", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>男</color>", NULL, "<color=#f5e6d3>Man</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/14/283400030", 128);
@@ -1490,14 +1422,13 @@ void main()
 		   NULL, "\"Why is it a fortunate for you if I'm home?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#797d8a>赤坂</color>", NULL, "<color=#797d8a>Akasaka</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s08/13/321000705", 128);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小此木</color>", NULL, "<color=#f5e6d3>Okonogi</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s12/14/283400037", 128);
 	OutputLine(NULL, "「いえ、",
 		   NULL, "\"Well.", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 1200 );
 	// (backup) SetValidityOfInput( TRUE );
-	PlayVoice(4, "ps3/s12/14/283400037", 128);
 	OutputLine(NULL, "実は、あなたの命が狙われている可能性があるっちゅうん連絡が入ってきたんです。」",
 		   NULL, " We got a tip from Tokyo that someone is planning to murder you.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1513,24 +1444,14 @@ void main()
 	OutputLine(NULL, "「この度の富竹氏たちの事件なんですが、",
 		   NULL, "\"Tokyo was investigating the murder of Tomitake-san and Takano-san.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/14/283400039", 128);
-	OutputLine(NULL, "東京の調査の結果、",
-		   NULL, " Their investigation concluded", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "入江所長が黒幕である可能性が高いっちゅう、連絡が入ってきました。」",
-		   NULL, " that there's a high possibility Dr. Irie is pulling the strings.\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "東京の調査の結果、入江所長が黒幕である可能性が高いっちゅう、連絡が入ってきました。」",
+		   NULL, " Their investigation concluded that there's a high possibility Dr. Irie is pulling the strings.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/280500191", 128);
-	OutputLine(NULL, "「…………入江が、",
-		   NULL, "\".........Irie is", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "黒幕……？！」",
-		   NULL, " behind everything?\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "「…………入江が、黒幕……？！」",
+		   NULL, "\".........Irie is behind everything?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
@@ -1597,14 +1518,14 @@ void main()
 		   NULL, "Because they were going to cancel their research, he tried to sell the research data and make a lot money off of it...", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Re_Tel", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "background/re_tel", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/280500192", 128);
 	OutputLine(NULL, "「………それは",
 		   NULL, "\"......Is that...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 700 );
+	Wait( 1000 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "…本当なのですか…。」",
 		   NULL, " really true...?\"", GetGlobalFlag(GLinemodeSp));
@@ -1766,7 +1687,7 @@ void main()
 		   NULL, " ...It's breaking the loop.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Re_Tel", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "background/re_tel", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小此木</color>", NULL, "<color=#f5e6d3>Okonogi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/14/283400042", 128);
@@ -1875,7 +1796,7 @@ void main()
 		   NULL, " ...Those questions and more made me uncertain about accepting help from Tokyo.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka1", 400 );
+	DrawScene( "background/aka1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　東京はひとつの組織だからひとつの意思を持つと思ってきた。",
@@ -1930,7 +1851,7 @@ void main()
 		   NULL, "If he hadn't told me that he was suspicious of Takano, would I have believed Okonogi without a doubt...?", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka2", 400 );
+	DrawScene( "background/aka2", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　いや、そんなことはない。",
@@ -2152,7 +2073,7 @@ void main()
 		   NULL, "I'm sure that double security will keep me safe.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Re_Tel", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "background/re_tel", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/280500195", 128);
@@ -2220,13 +2141,10 @@ void main()
 		   NULL, "\"That's what we want to believe...", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/14/283400057", 128);
 	OutputLine(NULL, "その疑いが解けるまで、ちょいとしばらく慎重にしてほしいっちゅうこってん、あんじょうご理解をいただきたいんですわ。」",
-		   NULL, " But you need to be careful of him until things are cleared up.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小此木</color>", NULL, "<color=#f5e6d3>Okonogi</color>", NULL, Line_ContinueAfterTyping); }
+		   NULL, " But you need to be careful of him until things are cleared up.", Line_WaitForInput);
 	PlayVoice(4, "ps2/14/283400058", 128);
-	OutputLine(NULL, "「……すったらん、しゃもないのー、です。」",
-		   NULL, "\"......So, I have no choice, huh...?\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "……すったらん、しゃもないのー、です。」",
+		   NULL, " ......So, I have no choice, huh...?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -2234,45 +2152,41 @@ void main()
 	OutputLine(NULL, "「え？",
 		   NULL, "\"No?", Line_WaitForInput);
 	PlayVoice(4, "ps2/05/280500202", 128);
-	OutputLine(NULL, "　ははははは…！」",
-		   NULL, " Hahahahaha...\"", Line_Normal);
+	OutputLine(NULL, "　ははははは…！",
+		   NULL, " Hahahahaha...", Line_WaitForInput);
+	PlayVoice(4, "ps3/s12/05/280500203", 128);
+	OutputLine(NULL, "……小此木もいつの間にかすっかり地元言葉になりましたです。」",
+		   NULL, " ...You've totally picked up the local dialect, Okonogi.\"", Line_Normal);
 	ClearMessage();
 
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s12/05/280500203", 128);
-	OutputLine(NULL, "「……小此木もいつの間にかすっかり地元言葉になりましたです。",
-		   NULL, "\"...You've totally picked up the local dialect, Okonogi.", Line_WaitForInput);
-	PlayVoice(4, "ps3/s12/14/283400059", 128);
-	OutputLine(NULL, "最初は普通の東京訛りだったです。」",
-		   NULL, " You used to have a Tokyo accent before.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小此木</color>", NULL, "<color=#f5e6d3>Okonogi</color>", NULL, Line_ContinueAfterTyping); }
+	PlayVoice(4, "ps3/s12/14/283400059", 128);
+	OutputLine(NULL, "「最初は普通の東京訛りだったです。",
+		   NULL, "\"I used to have a Tokyo accent before.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/14/283400060", 128);
-	OutputLine(NULL, "「直せと言われれば直せるつもりですがね。",
-		   NULL, "\"I like to think I can fix it if asked, though.", Line_WaitForInput);
+	OutputLine(NULL, "直せと言われれば直せるつもりですがね。",
+		   NULL, " I like to think I can fix it if asked, though.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/14/283400061", 128);
 	OutputLine(NULL, "地域に溶け込むのが仕事ですから。」",
 		   NULL, " But it's my job to blend in with the local culture.\"", Line_Normal);
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
-	DrawSceneWithMask( "Hu_R2", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　それで小此木との電話は終わった。",
 		   NULL, "I finished speaking with him.", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 0, 300, FALSE );
+	DrawSceneWithMask( "background/hu_r1", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　受話器を置くと同時に、私は電話帳を開き、興宮署の電話番号を探した。",
 		   NULL, "As soon as I hung up the phone, I opened my phone book and looked for the number to the Okinomiya police department.", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	PlaySE( 0, "s_page", 128, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 300 );
@@ -2284,8 +2198,9 @@ void main()
 	PlaySE( 0, "s_page", 128, 64 );
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	DrawSceneWithMask( "Sora", "maskright", 1, 0, 300 );
-	PlayBGM( 0, "higurashi", 120, 0 );
+	DrawScene( "background/sora", 300 );
+	PlayBGM( 1, "semi", 120, 0 );
+	PlayBGM( 2, "suzume", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　見れば時間はもうお昼前。",
@@ -2343,10 +2258,9 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 1300 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawScene( "Re_Tel", 1000 );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, FALSE );
+	DrawScene( "background/re_tel", 1000 );
 	PlayBGM( 0, "Nazo", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2519,13 +2433,18 @@ void main()
 		   NULL, " I'll send someone over immediately.\"", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 1000 );
+	DrawScene( "black", 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	DrawScene( "Denwa", 400 );
+	DrawScene( "background/denwa", 400 );
+	SetValidityOfInput( FALSE );
+	Wait( 1000 );
+	SetValidityOfInput( TRUE );
 	PlayBGM( 1, "semi", 120, 0 );
-	DrawSceneWithMask( "Ke_S2", "maskleft", 1, 0, 300 );
+	PlayBGM( 2, "suzume", 120, 0 );
+	DrawBustshot(1, "sprite/normal/kuma_def_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawSceneWithMask( "background/ke_s2", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/19/283100011", 128);
@@ -2596,7 +2515,7 @@ void main()
 		   NULL, "Ooishi couldn't let her die.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ke2", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "background/ke2", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/11/280700182", 128);
@@ -2613,17 +2532,16 @@ void main()
 		   NULL, "\"Hahahaha, this'll be a piece of cake!\"", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 0, 1300, FALSE );
+	FadeOutBGM( 1, 1300, FALSE );
+	FadeOutBGM( 2, 1300, FALSE );
 	DrawSceneWithMask( "black", "maskright", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 3000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 0, "semi", 120, 0 );
-	DrawScene( "Hu2", 1000 );
+	PlayBGM( 1, "semi", 120, 0 );
+	PlayBGM( 2, "suzume", 120, 0 );
+	DrawScene( "background/hu2", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>雲雀</color>", NULL, "<color=#f5e6d3>Hibari</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/hiba28001", 128);
@@ -2727,13 +2645,11 @@ void main()
 		   NULL, " There are police officers around the Furude shrine.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/00/hiba28016", 128);
 	OutputLine(NULL, "職質には特に注意されたし。」",
-		   NULL, " Please be mindful of them.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
+		   NULL, " Please be mindful of them. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>雲雀</color>", NULL, "<color=#f5e6d3>Hibari</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/hiba28017", 128);
-	OutputLine(NULL, "「今夜の決行ですが、様子を見た方がよろしいのでは。」",
-		   NULL, "\"We may have to postpone tonight's mission...\"", Line_Normal);
+	OutputLine(NULL, "今夜の決行ですが、様子を見た方がよろしいのでは。」",
+		   NULL, "We may have to postpone tonight's mission...\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小此木</color>", NULL, "<color=#f5e6d3>Okonogi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2753,10 +2669,9 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawScene( "Hu_R1", 1000 );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, FALSE );
+	DrawScene( "background/hu_r1", 1000 );
 	PlayBGM( 0, "Nazo", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2813,7 +2728,7 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
-	DrawSceneWithMask( "Hu1", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "background/hu2", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　３０分ほどして興宮署から４人の私服警官がやってきた。",
@@ -2825,7 +2740,7 @@ void main()
 		   NULL, "The local officer returned to his police box.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Hu_R2", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "background/hu_r1", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>警官</color>", NULL, "<color=#f5e6d3>Policeman</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/polia28001", 128);
@@ -2870,7 +2785,8 @@ void main()
 
 	DrawScene( "black", 400 );
 	PlayBGM( 1, "semi", 120, 0 );
-	DrawSceneWithMask( "Hu2", "maskup", 1, 0, 300 );
+	PlayBGM( 2, "suzume", 120, 0 );
+	DrawSceneWithMask( "background/hu2", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　私の家は倉庫小屋の２階だ。",
@@ -2984,7 +2900,7 @@ void main()
 		   NULL, " This is what living seriously is all about.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Hu_R3", "maskright", 1, 0, 1300 );
+	DrawSceneWithMask( "background/hu_r1", "maskright", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/280500214", 128);
@@ -2992,16 +2908,10 @@ void main()
 		   NULL, "\"......Hanyuu, are you there?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
 	DisableWindow();
-	DrawBustshot( 7, "filter_Hanyu", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 400, TRUE );
-	DrawBustshotWithFiltering( 0, "Ha_DefA1%", "maskm1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9*2, 1300, TRUE );
-	DisplayWindow();
+	FadeOutBGM( 0, 300, FALSE );
+	DrawBustshotWithFiltering( 0, "sprite/transparent/ha1_def_0", "maskm1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/12/281100069", 128);
@@ -3009,7 +2919,6 @@ void main()
 		   NULL, "\"...I'm here.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 0, "higurashi", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/280500215", 128);
@@ -3021,8 +2930,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "Ha_DefA2%", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/transparent/ha1_def2_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/12/281100070", 128);
@@ -3045,9 +2953,6 @@ void main()
 		   NULL, " I'll just have to accept whatever the result is.\"", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　羽入は相変わらずの傍観者の立場だった。",
@@ -3062,6 +2967,8 @@ void main()
 		   NULL, " but part of me was hoping she would say something more positive.", Line_Normal);
 	ClearMessage();
 
+	FadeOutBGM( 1, 300, FALSE );
+	FadeOutBGM( 2, 300, FALSE );
 	PlayBGM( 0, "livescene", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3148,8 +3055,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Ha_YowakiA1%", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/transparent/ha1_yowaki_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/12/281100073", 128);
@@ -3176,8 +3082,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "Ha_AuA1%", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/transparent/ha1_au_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/12/281100076", 128);
@@ -3403,7 +3308,7 @@ void main()
 		   NULL, " She's been living too long, and lost all of her hope...", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Hu_R3", 400 );
+	DrawScene( "background/hu_r1", 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　羽入は、何かあったら呼んでくださいなのですと言い、姿を消した。",
@@ -3437,10 +3342,5 @@ void main()
 	ClearMessage();
 
 	CallScript( "&eye" );
-	DrawScene( "black", 1000 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 0, 1000, TRUE );
 }
