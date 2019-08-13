@@ -2934,14 +2934,12 @@ void main()
 	OutputLine(NULL, "　ここまではわかります。",
 		   NULL, " Okay, I got that one...", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/11/180700050", 128);
-	OutputLine(NULL, "……それからそれから…？」",
-		   NULL, " then what do I do...?\"", Line_Normal);
-	ClearMessage();
-
+	OutputLine(NULL, "……それからそれから…？",
+		   NULL, " then what do I do...? ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/11/180700051", 128);
-	OutputLine(NULL, "「そこで、こう。いえいえ違います、持ち上げなくていいんです。",
-		   NULL, "\"Then you do it like this. No, don't lift it up.", Line_WaitForInput);
+	OutputLine(NULL, "そこで、こう。いえいえ違います、持ち上げなくていいんです。",
+		   NULL, "Then you do it like this. No, don't lift it up.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/11/180700052", 128);
 	OutputLine(NULL, "前へすっとせり出す感じです！",
 		   NULL, " Try and think of it as sliding it forward!", Line_WaitForInput);
@@ -2950,8 +2948,8 @@ void main()
 		   NULL, " But don't push it!", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/11/180700054", 128);
 	OutputLine(NULL, "　ホバークラフトのように、ほんのわずかだけ宙に浮かしてすっと…！！」",
-		   NULL, " Just slightly lift it up, like a hovercraft...\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+		   NULL, " Just slightly lift it up, like a hovercraft...\"", Line_Normal);
+	ClearMessage();
 
 	DisableWindow();
 	DrawBustshot(5, "eye/eye_base_b", 0, 60, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 2, 200, TRUE );
