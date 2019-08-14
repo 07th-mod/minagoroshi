@@ -2,70 +2,70 @@ void main()
 {
 	EnableJumpingOfReturnIcon();
 
-	PlayBGM( 1, "denwa_m", 120, 0 );
+	PlayBGM( 1, "denwa_m", 56, 0 );
 	SetValidityOfInput( FALSE );
 	Wait( 4000 );
 	SetValidityOfInput( TRUE );
 	FadeOutBGM( 1, 1000, FALSE );
 	DrawSceneWithMask( "background/denwa", "maskup", 1, 0, 300 );
-	PlayBGM( 0, "Mati", 120, 0 );
+	PlayBGM( 0, "Mati", 56, 0 );
 
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>所長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100001", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100001", 256, TRUE);
 	OutputLine(NULL, "「そうですか。裏に、町会も、その鬼ヶ淵死守同盟とかいう恫喝団体もいないとわかれば、これで安心でしょう。",
 		   NULL, "\"I see... We're good as long as we know that the town council and the Onigafuchi Guardians aren't involved.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100002", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100002", 256, TRUE);
 	OutputLine(NULL, "北条沙都子さんの件は、特別扱いせずに慎重に対応してください。」",
 		   NULL, " Please take care of Satoko Houjou-san's case without worrying about it too much.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442900001", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442900001", 256, TRUE);
 	OutputLine(NULL, "「はい。雛見沢の総意でないとわかればこちらも落ち着いて処理ができます。」",
 		   NULL, "\"I will. I'm glad to know that the whole village isn't backing them.\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>所長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100003", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100003", 256, TRUE);
 	OutputLine(NULL, "「しかし、私は好きになれませんね。裏に誰がいようがいなかろうが、常に公平な対応をするのが公務員です。",
 		   NULL, "\"I wouldn't agree with them if they were, though. No matter who is pulling the strings, we must treat every case equally. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>所長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100004", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100004", 256, TRUE);
 	OutputLine(NULL, "恫喝がまかり通るようなことがあったという先例を残したから、雛見沢は特別扱いだという妙なルールができてしまったのではないですか？」",
 		   NULL, "This whole odd rule that we have to give Hinamizawa special treatment is only due to the precedent set when we let threats influence us before.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442900002", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442900002", 256, TRUE);
 	OutputLine(NULL, "「……まぁ、確かに所長の仰るとおりだとは思いますが、……一応ですね、その…。」",
 		   NULL, "\"...Well, you're absolutely right, sir... but...\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>所長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100005", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100005", 256, TRUE);
 	OutputLine(NULL, "「わざわざ自治の係長が、連合町会が背景にいないことを確認してくれたんですから、うちの職員も厳粛に事務を進めてください。",
 		   NULL, "\"Please continue to work on this case. The manager from the municipal government assured us that the town council has nothing to do with this petition. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>所長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100006", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100006", 256, TRUE);
 	OutputLine(NULL, "雛見沢だからどうすべきかとお伺いを立てること自体がすでに公務員の心構えとして問題です。係長も、その辺をよく職員に教えてくれなければ困ります。」",
 		   NULL, "It's a problem that our organization is so afraid of one tiny community. As a manager, you should think about that a little.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442900003", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442900003", 256, TRUE);
 	OutputLine(NULL, "「はい、申し訳ございません…。とにかく、裏に村がいないとわかれば安心です。」",
 		   NULL, "\"Yes, I'm sorry... Anyway, I'm glad to hear that the village isn't supporting them...\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>所長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100007", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100007", 256, TRUE);
 	OutputLine(NULL, "「裏に村がいるとわかっても、対応を焦るべきではありません。何があろうとも！",
 		   NULL, "\"You must act the same way even if the village does support them. No matter who is behind the scenes!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100008", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100008", 256, TRUE);
 	OutputLine(NULL, "　北条沙都子さんの件は慎重に対応してください。",
 		   NULL, " Please be very careful with Satoko Houjou's case.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100009", 128, TRUE);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/442100009", 256, TRUE);
 	OutputLine(NULL, "くれぐれも異例の措置は取らないよう、担当に念を押しておいてくださいよ。」",
 		   NULL, " Don't try to give her any special treatment, you understand?\"", Line_Normal);
 	ClearMessage();

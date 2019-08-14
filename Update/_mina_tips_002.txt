@@ -3,7 +3,7 @@ void main()
 	EnableJumpingOfReturnIcon();
 
 	DrawSceneWithMask( "background/hu_r1", "maskup", 1, 0, 300 );
-	PlayBGM( 0, "Iru", 120, 0 );
+	PlayBGM( 0, "Iru", 56, 0 );
 
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -22,7 +22,7 @@ void main()
 	ModDrawCharacterWithFiltering(2, 4, "sprite/normal/sa2b_akuwarai_b1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 4, "ps3/s20/04/440400093", 128, TRUE);
+	ModPlayVoiceLS(4, 4, "ps3/s20/04/440400093", 256, TRUE);
 	OutputLine(NULL, "「ほっほっほっほ！　ざまぁないでございますわねー！！",
 		   NULL, "\"Ho ho ho ho! Look at you now!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -31,13 +31,13 @@ void main()
 	ModDrawCharacterWithFiltering(1, 12, "sprite/transparent/ha1_au_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 12, "ps3/s20/12/441100015", 128, TRUE);
+	ModPlayVoiceLS(4, 12, "ps3/s20/12/441100015", 256, TRUE);
 	OutputLine(NULL, "「あぅあぅあぅ、でも、とっても痛そうなのです…。」",
 		   NULL, "\"Au au au... but it looks so painful...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 5, "ps3/s20/05/440500063", 128, TRUE);
+	ModPlayVoiceLS(4, 5, "ps3/s20/05/440500063", 256, TRUE);
 	OutputLine(NULL, "「……みー。にぱ〜☆",
 		   NULL, "\"...Meep. Nipah~☆\"", GetGlobalFlag(GLinemodeSp));
 	ClearMessage();

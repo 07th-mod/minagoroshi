@@ -4,7 +4,7 @@ void main()
 	DrawScene( "black", 1000 );
 	SetSpeedOfMessage( FALSE, 0 );
 
-	PlayBGM( 0, "it_moves", 120, 0 );
+	PlayBGM( 0, "it_moves", 56, 0 );
 	DrawScene( "background/fure1", 3000 );
 	SetValidityOfInput( FALSE );
 	Wait( 3000 );
@@ -239,7 +239,7 @@ void main()
 		   NULL, " and its end.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 0, "Instict", 120, 0 );
+	PlayBGM( 0, "Instict", 56, 0 );
 	DisableWindow();
 	SetValidityOfInput( FALSE );
 	StopFragment(1000);
@@ -307,11 +307,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	PlaySE( 0, "s_furu", 128, 64 );
+	PlaySE( 0, "s_furu", 56, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_tataku", 128, 64 );
+	PlaySE( 0, "s_tataku", 56, 64 );
 	DrawSceneWithMask("background/ryuuketu1", "maskaa", 1, 0, 100 );
 
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -597,11 +597,11 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	PlaySE( 0, "s_furu", 128, 64 );
+	PlaySE( 0, "s_furu", 56, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 600 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_tataku", 128, 64 );
+	PlaySE( 0, "s_tataku", 56, 64 );
 	DrawSceneWithMask("background/ryuuketu1", "maskaa", 1, 0, 100 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1871,7 +1871,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlaySE( 0, "thisikuki", 128, 64 );
+	PlaySE( 0, "thisikuki", 56, 64 );
 	DrawSceneWithMask("background/ryuuketu1", "maskaa", 1, 0, 100 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
