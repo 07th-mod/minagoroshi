@@ -7,19 +7,19 @@ void main()
 
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/00/bada44001", 128);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/bada44001", 128, TRUE);
 	OutputLine(NULL, "「これが航空券だ。",
 		   NULL, "\"Here's your plane ticket.", Line_Continue);
 	Wait( 1900 );
 	OutputLine(NULL, "遅れんなよ。",
 		   NULL, " Don't be late.", Line_WaitForInput);
-	PlayVoice(4, "ps3/s20/00/bada44002", 128);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/bada44002", 128, TRUE);
 	OutputLine(NULL, "後のカネは現地だ。」",
 		   NULL, " You'll get the rest of the money when you get there.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/00/badb44001", 128);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/badb44001", 128, TRUE);
 	OutputLine(NULL, "「おおきにおおきに。",
 		   NULL, "\"Thanks a lot.", Line_Continue);
 	Wait( 1300 );
@@ -27,11 +27,11 @@ void main()
 		   NULL, " Here, Mamiya.\"", Line_Normal);
 	ClearMessage();
 
-	DrawBustshot( 0, "sprite/normal/rina_warai_2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	ModDrawCharacter(0, 20, "sprite/normal/rina_warai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawSceneWithMask( "background/hoteru", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#cd74a7>リナ</color>", NULL, "<color=#cd74a7>Rina</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/20/442400001", 128);
+	ModPlayVoiceLS(4, 20, "ps3/s20/20/442400001", 128, TRUE);
 	OutputLine(NULL, "「きゃははは、サンキュー！",
 		   NULL, "\"Kyahahaha! Thank you!", Line_Continue);
 	Wait( 2500 );
@@ -40,16 +40,16 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/00/bada44003", 128);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/bada44003", 128, TRUE);
 	OutputLine(NULL, "「……北条の野郎にゃ気取られてねぇだろうな。」",
 		   NULL, "\"......Are you sure Houjou isn't suspicious of you?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "sprite/normal/rina_def_0", 200, TRUE );
+	ModDrawCharacter(0, 20, "sprite/normal/rina_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#cd74a7>リナ</color>", NULL, "<color=#cd74a7>Rina</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/20/442400002", 128);
+	ModPlayVoiceLS(4, 20, "ps3/s20/20/442400002", 128, TRUE);
 	OutputLine(NULL, "「大丈夫だよ。",
 		   NULL, "\"Don't worry.", Line_Continue);
 	Wait( 1300 );
@@ -58,16 +58,16 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 0, "sprite/normal/rina_warai_2", 200, TRUE );
+	ModDrawCharacter(0, 20, "sprite/normal/rina_warai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#cd74a7>リナ</color>", NULL, "<color=#cd74a7>Rina</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps2/20/442400003", 128);
+	ModPlayVoiceLS(4, 20, "ps2/20/442400003", 128, TRUE);
 	OutputLine(NULL, "でかいのはナニと態度だけー。」",
 		   NULL, "He's got a big dick and a big attitude, but that's all he's got going for him.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/00/bada44004", 128);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/bada44004", 128, TRUE);
 	OutputLine(NULL, "「へははは、そうなのかよ。」",
 		   NULL, "\"Heehahaha, is that so?\"", Line_Normal);
 	ClearMessage();
@@ -106,7 +106,7 @@ void main()
 	DrawScene( "background/si_h2", 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/00/badb44002", 128);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/badb44002", 128, TRUE);
 	OutputLine(NULL, "「畜生、嗅ぎ付けやがった！！",
 		   NULL, "\"Shit! They're here!!", Line_Continue);
 	Wait( 1800 );
@@ -115,7 +115,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#cd74a7>リナ</color>", NULL, "<color=#cd74a7>Rina</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/20/442400004", 128);
+	ModPlayVoiceLS(4, 20, "ps3/s20/20/442400004", 128, TRUE);
 	OutputLine(NULL, "「ちょっと…、嘘、マジ？！",
 		   NULL, "\"Are you serious?!", Line_Continue);
 	Wait( 1600 );
@@ -124,7 +124,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>チンピラ</color>", NULL, "<color=#f5e6d3>Punk</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/00/badb44003", 128);
+	ModPlayVoiceLS(4, 0, "ps3/s20/00/badb44003", 128, TRUE);
 	OutputLine(NULL, "「間宮ン、ボケっとすんな！！",
 		   NULL, "\"Come on, Mamiya!!", Line_Continue);
 	Wait( 1500 );

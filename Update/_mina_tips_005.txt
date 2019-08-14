@@ -243,12 +243,12 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 0, 300, FALSE );
-	DrawBustshot( 0, "sprite/normal/tie_2_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	ModDrawCharacter(0, 22, "sprite/normal/tie_2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawScene( "background/ho1", 400 );
 	PlayBGM( 0, "Cradle_song", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/22/441400005", 128);
+	ModPlayVoiceLS(4, 22, "ps3/s20/22/441400005", 128, TRUE);
 	OutputLine(NULL, "「私、興宮分校教諭の知恵と申します…！",
 		   NULL, "\"I'm a teacher from the Hinamizawa Branch School. My name is Chie!", Line_Continue);
 	Wait( 5000 );
@@ -267,25 +267,25 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/21/442000001", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000001", 128, TRUE);
 	OutputLine(NULL, "「あぁん？",
 		   NULL, "\"Huh?", Line_Continue);
 	Wait( 1500 );
 	OutputLine(NULL, "　何じゃいおどれ。",
 		   NULL, " What the hell?", Line_WaitForInput);
-	PlayVoice(4, "ps3/s20/21/442000002", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000002", 128, TRUE);
 	OutputLine(NULL, "何でおどれに沙都子会わせにゃならんね。」",
 		   NULL, " What do you want with Satoko?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/22/441400006", 128);
+	ModPlayVoiceLS(4, 22, "ps3/s20/22/441400006", 128, TRUE);
 	OutputLine(NULL, "「今日、北条さんが学校をお休みしましたけれど、連絡がなかったもので何かあったのかと思いお伺いさせていただきました。」",
 		   NULL, "\"I came here because she didn't come to school today. I wasn't able to get ahold of her, so I'm wondering what happened.\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/21/442000003", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000003", 128, TRUE);
 	OutputLine(NULL, "「ああぁん…？",
 		   NULL, "\"Huh...?", Line_Continue);
 	Wait( 1900 );
@@ -294,19 +294,19 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/22/441400007", 128);
+	ModPlayVoiceLS(4, 22, "ps3/s20/22/441400007", 128, TRUE);
 	OutputLine(NULL, "「はい。",
 		   NULL, "\"Yes.", Line_Continue);
 	Wait( 1100 );
 	OutputLine(NULL, "沙都子ちゃんはいますか？",
 		   NULL, " Is she home?", Line_WaitForInput);
-	PlayVoice(4, "ps3/s20/22/441400008", 128);
+	ModPlayVoiceLS(4, 22, "ps3/s20/22/441400008", 128, TRUE);
 	OutputLine(NULL, "　ちょっとお話したいことがあるのですが。」",
 		   NULL, " I need to talk with her.\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/21/442000004", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000004", 128, TRUE);
 	OutputLine(NULL, "「あぁん、…風邪なんねぇ、そうそう",
 		   NULL, "\"She's sick. That's right... she has a cold.", Line_Continue);
 	Wait( 3700 );
@@ -315,25 +315,25 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/22/441400009", 128);
+	ModPlayVoiceLS(4, 22, "ps3/s20/22/441400009", 128, TRUE);
 	OutputLine(NULL, "「プリントとかをお渡ししたいですので、ちょっとだけお話することはできませんか？」",
 		   NULL, "\"I need to give her some handouts. May I please see her?\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/21/442000005", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000005", 128, TRUE);
 	OutputLine(NULL, "「どあほう。",
 		   NULL, "\"You idiot.", Line_Continue);
 	Wait( 1900 );
 	OutputLine(NULL, "おどれ話、聞いてなかったんかい。",
 		   NULL, " Weren't you listening to what I just said?", Line_WaitForInput);
-	PlayVoice(4, "ps3/s20/21/442000006", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000006", 128, TRUE);
 	OutputLine(NULL, "沙都子は風邪じゃ！",
 		   NULL, " Satoko is sick!", Line_WaitForInput);
-	PlayVoice(4, "ps3/s20/21/442000007", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000007", 128, TRUE);
 	OutputLine(NULL, "　うんうんうなっとるんね！！",
 		   NULL, " She's sleeping right now!", Line_WaitForInput);
-	PlayVoice(4, "ps3/s20/21/442000008", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000008", 128, TRUE);
 	OutputLine(NULL, "　それを会わせられるかいボケぇ！！」",
 		   NULL, " I can't let you see her!\"", Line_Normal);
 	ClearMessage();
@@ -362,10 +362,10 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "sprite/normal/tie_3_2", 200, TRUE );
+	ModDrawCharacter(0, 22, "sprite/normal/tie_3_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/22/441400010", 128);
+	ModPlayVoiceLS(4, 22, "ps3/s20/22/441400010", 128, TRUE);
 	OutputLine(NULL, "「そうですか…。",
 		   NULL, "\"I see...", Line_Continue);
 	Wait( 2200 );
@@ -374,28 +374,28 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/21/442000009", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000009", 128, TRUE);
 	OutputLine(NULL, "「知るかいなッ！！",
 		   NULL, "\"Who knows?", Line_Continue);
 	Wait( 2200 );
 	OutputLine(NULL, "　そんなもん、明日になってみなきゃわからんわ！！",
 		   NULL, " I won't know until tomorrow!", Line_WaitForInput);
-	PlayVoice(4, "ps3/s20/21/442000010", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000010", 128, TRUE);
 	OutputLine(NULL, "　このクソボケ！！」",
 		   NULL, " You idiot!\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/22/441400011", 128);
+	ModPlayVoiceLS(4, 22, "ps3/s20/22/441400011", 128, TRUE);
 	OutputLine(NULL, "「……………………そ、…そうですか。",
 		   NULL, "\"............I, I see.", Line_Continue);
 	Wait( 3700 );
 	OutputLine(NULL, "…わかりました。",
 		   NULL, " All right...", Line_WaitForInput);
-	PlayVoice(4, "ps3/s20/22/441400012", 128);
+	ModPlayVoiceLS(4, 22, "ps3/s20/22/441400012", 128, TRUE);
 	OutputLine(NULL, "では沙都子ちゃんによろしくお伝えください……。",
 		   NULL, " Please tell her that I came by...", Line_WaitForInput);
-	PlayVoice(4, "ps3/s20/22/441400013", 128);
+	ModPlayVoiceLS(4, 22, "ps3/s20/22/441400013", 128, TRUE);
 	OutputLine(NULL, "失礼します…。」",
 		   NULL, " Thank you...\"", Line_Normal);
 	ClearMessage();
@@ -483,7 +483,7 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s20/21/442000011", 128);
+	ModPlayVoiceLS(4, 21, "ps3/s20/21/442000011", 128, TRUE);
 	OutputLine(NULL, "「…ああん、ごんまん、おもろないんばっかね！！」",
 		   NULL, "\"...Aaah, fucking hell, this ain't gonna work at all!!\"", Line_Normal);
 	ClearMessage();

@@ -72,34 +72,34 @@ void main()
 
 	DisableWindow();
 	PlayBGM( 0, "t1", 120, 0 );
-	DrawBustshot(2, "sprite/normal/kei2_warai_2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 1, "sprite/normal/kei2_warai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s12/01/180100131", 128);
+	ModPlayVoiceLS(4, 1, "ps3/s12/01/180100131", 128, TRUE);
 	OutputLine(NULL, "「魅音〜、俺が持ってたら変態扱いなら、こりゃ誰が持ってりゃ変態扱いにならないんだ〜？",
 		   NULL, "\"Mion, if you think I would look like a pervert with this doll, who do you think deserves to have it?", Line_WaitForInput);
-	PlayVoice(4, "ps3/s12/01/180100132", 128);
+	ModPlayVoiceLS(4, 1, "ps3/s12/01/180100132", 128, TRUE);
 	OutputLine(NULL, "　う〜ん？」",
 		   NULL, " Huh?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshot(1, "sprite/normal/me2_odoroki_a1_1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 3, "sprite/normal/me2_odoroki_a1_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s12/03/180300031", 128);
+	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300031", 128, TRUE);
 	OutputLine(NULL, "「そそ、そんなことは知らないよ。",
 		   NULL, "\"I-I don't know...", Line_WaitForInput);
-	PlayVoice(4, "ps3/s12/03/180300032", 128);
+	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300032", 128, TRUE);
 	OutputLine(NULL, "まぁ、お人形なんて男の子の持つものじゃないよね〜って言っただけだしさ？」",
 		   NULL, " All I'm saying is that dolls aren't for boys.\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s12/01/180100133", 128);
+	ModPlayVoiceLS(4, 1, "ps3/s12/01/180100133", 128, TRUE);
 	OutputLine(NULL, "「ほほぅ、じゃお前が持てば万事解決じゃねぇか。",
 		   NULL, "\"I see... Then I guess you can have it.", Line_WaitForInput);
-	PlayVoice(4, "ps3/s12/01/180100134", 128);
+	ModPlayVoiceLS(4, 1, "ps3/s12/01/180100134", 128, TRUE);
 	OutputLine(NULL, "ほれ。」",
 		   NULL, " Here.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -159,16 +159,16 @@ void main()
 	DrawScene( "background/mati_o1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s12/05/180500167", 128);
+	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500167", 128, TRUE);
 	OutputLine(NULL, "「………………………圭一……。」",
 		   NULL, "\"...........Keiichi............\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 0, "sprite/transparent/ha1_yowaki_0", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModDrawCharacterWithFiltering(0, 12, "sprite/transparent/ha1_yowaki_", "0", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>羽入</color>", NULL, "<color=#f5e6d3>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
-	PlayVoice(4, "ps3/s12/12/181100052", 128);
+	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100052", 128, TRUE);
 	OutputLine(NULL, "「……梨花、…確率的なものかもしれないのですよ？」",
 		   NULL, "\"Rika... this might just be a coincidence, you know?\"", Line_Normal);
 	ClearMessage();
