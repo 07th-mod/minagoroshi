@@ -3344,16 +3344,15 @@ void main()
 		   NULL, "Ahahahahaha, hahahahahahahaha, ahhhahahahahahahaha!!", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/09/280900422", 128);
 	OutputLine(NULL, "　はっははははははは、あーっはっはははははははは！！！」",
-		   NULL, " Haaahahahahahahahaha, aaaaaahhhhhhhaahahahahahahahaha!!!", Line_Normal);
+		   NULL, " Haaahahahahahahahaha, aaaaaahhhhhhhaahahahahahahahaha!!!\"", Line_Normal);
 	ClearMessage();
 
 	DrawScene( "white", 2000 );
 
 	PlaySE( 0, "s_daidageki", 128, 64 );
-	DrawBustshot( 15, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawBustshot( 15, "End_1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
-	DrawBustshot( 15, "End_2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 800, TRUE );
-	DrawBustshot( 15, "End_3", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 3000, TRUE );
+	DrawScene( "end_1", 1000 );
+	DrawScene( "end_2", 2000 );
+	DrawScene( "end_3", 3000 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
