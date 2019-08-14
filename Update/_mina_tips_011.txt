@@ -3,7 +3,7 @@ void main()
 	EnableJumpingOfReturnIcon();
 
 	PlayBGM( 0, "Nazo", 120, 0 );
-	DrawScene( "Nort2", 400 );
+	DrawScene( "background/nort", 400 );
 
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -88,6 +88,7 @@ void main()
 		   NULL, "                                   Hifumi. T", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	Wait( 1000 );
 	DrawScene( "black", 1000 );
 }

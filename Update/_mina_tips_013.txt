@@ -3,7 +3,7 @@ void main()
 	EnableJumpingOfReturnIcon();
 
 	PlayBGM( 0, "Instict", 120, 0 );
-	DrawScene( "Fure2", 1000 );
+	DrawScene( "background/fure2", 1000 );
 
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -207,6 +207,7 @@ void main()
 		   NULL, "Do you want to come with me...?", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	Wait( 1000 );
 	DrawScene( "white", 7000 );
 }

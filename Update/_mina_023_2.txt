@@ -1,27 +1,23 @@
 void main()
 {
 
-	DrawScene( "white", 400 );
-	DrawScene( "Sora", 1000 );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
-	DrawScene( "Sora2", 1000 );
+	DrawScene( "white", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
+	FadeOutBGM( 2, 1000, FALSE );
+	DrawScene( "white", 2000 );
+	PlayBGM( 0, "higurashi", 120, 0 );
+	DrawScene( "background/sora2", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 	DrawScene( "white", 1000 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawSceneWithMask( "Sinryo_soto1", "maskup", 1, 0, 300 );
-	PlayBGM( 0, "higurashi", 120, 0 );
+	DrawSceneWithMask( "background/sinryou_soto1_02", "maskup", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	DrawSceneWithMask( "Sinryo_sinsatu1", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 1300 );
+	DrawSceneWithMask( "background/sinryou_sinsatu1", "maskright", 1, 0, 1300 );
 
 	SetSpeedOfMessage( FALSE, 0 );
 
@@ -43,7 +39,8 @@ void main()
 		   NULL, "...It's funny how they make such a big fuss about their own people when they don't care about what happens to other people's lives if it would get in the way of their research.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Sinryo_sinsatu2", "maskleft", 1, 0, 300 );
+	DrawBustshot(1, "sprite/normal/oko_def_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawSceneWithMask( "background/sinryou_sinsatu3", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そして部屋には、鷹野の部下の小此木の姿もあった。",
@@ -176,9 +173,8 @@ void main()
 		   NULL, "Irie looked upset that he was under suspicion after working so hard for the organization.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Iri_Def2+", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshot(2, "sprite/normal/iri2_def2_2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawSceneWithMask( "background/sinryou_sinsatu1", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/10/281000030", 128);
@@ -196,8 +192,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 2, "Iri_Majime+", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/normal/iri2_majime_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/10/281000032", 128);
@@ -243,8 +238,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 2, "Iri_Def1+", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/normal/iri2_def1_0", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/10/281000036", 128);
@@ -258,7 +252,8 @@ void main()
 		   NULL, " The people in Tokyo are also concerned about that.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DrawSceneWithMask( "Sinryo_sinsatu1", "maskright", 1, 0, 300 );
+	DrawBustshot(1, "sprite/normal/oko_def_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawSceneWithMask( "background/sinryou_sinsatu3", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小此木</color>", NULL, "<color=#f5e6d3>Okonogi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/14/283400017", 128);
@@ -293,7 +288,7 @@ void main()
 		   NULL, "Even though they're dead, I'm still in a pretty favorable situation.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Sinryo_sinsatu1", "maskup", 1, 0, 300 );
+	DrawSceneWithMask( "background/sinryou_sinsatu1", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/05/280500104", 128);
@@ -302,8 +297,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 1, "Iri_majime2+", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 8, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 1, "sprite/normal/iri2_majime2_0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/10/281000039", 128);
@@ -324,8 +318,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 1, "Iri_Majime+", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 1, "sprite/normal/iri2_majime_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/10/281000042", 128);
@@ -342,7 +335,8 @@ void main()
 		   NULL, " It's impossible...!\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Sinryo_sinsatu2", "maskright", 1, 0, 300 );
+	DrawBustshot(1, "sprite/normal/oko_def_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawSceneWithMask( "background/sinryou_sinsatu3", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小此木</color>", NULL, "<color=#f5e6d3>Okonogi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/14/283400019", 128);
@@ -359,9 +353,8 @@ void main()
 		   NULL, " But he still got infected.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Iri_Majime+", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshot(2, "sprite/normal/iri2_majime2_0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawSceneWithMask( "background/sinryou_sinsatu1", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/10/281000046", 128);
@@ -391,9 +384,6 @@ void main()
 		   NULL, " She's someone within the organization.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	ChangeBustshot( 2, "Iri_Majime2+", 200, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/10/281000048", 128);
@@ -415,7 +405,7 @@ void main()
 		   NULL, "......But I don't know how to persuade him that it's the truth.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　人は動機を求める生き物だ。",
@@ -450,7 +440,7 @@ void main()
 		   NULL, "In other words, it's stupid to assume that Takano isn't the culprit just because I don't know what her motive is.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ke5", "maskup", 1, 0, 300 );
+	DrawScene( "background/ke5", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小此木</color>", NULL, "<color=#f5e6d3>Okonogi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/14/283400023", 128);
@@ -502,11 +492,9 @@ void main()
 		   NULL, "Am I believing every crazy theory I hear just because I'm desperate to escape from my fate...?", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawBustshotWithFiltering( 0, "Iri_Majime+", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawSceneWithMask( "Sinryo_sinsatu2", "maskup", 1, 0, 300 );
+	FadeOutBGM( 1000, 0, FALSE );
+	DrawBustshot( 0, "sprite/normal/iri2_majime_2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	DrawScene( "background/sinryou_sinsatu1", 1000 );
 	PlayBGM( 0, "Nazo", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
@@ -517,6 +505,9 @@ void main()
 	OutputLine(NULL, "用心するに越したことはないでしょう。」",
 		   NULL, " We all need to be careful.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+
+	DrawBustshot(1, "sprite/normal/oko_def_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawSceneWithMask( "background/sinryou_sinsatu3", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小此木</color>", NULL, "<color=#f5e6d3>Okonogi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/14/283400026", 128);
@@ -535,7 +526,6 @@ void main()
 		   NULL, " ...For him, their protection wouldn't be too different from stalking.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Sinryo_sinsatu1", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小此木</color>", NULL, "<color=#f5e6d3>Okonogi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/14/283400028", 128);
@@ -557,7 +547,7 @@ void main()
 		   NULL, "...This isn't the first time they've warned me about this.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka1", 400 );
+	DrawScene( "background/aka1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　ただ、",
@@ -603,7 +593,7 @@ void main()
 		   NULL, "Irie is just a researcher, so he probably wouldn't know what's really going on.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka2", 400 );
+	DrawScene( "background/aka2", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　でも考えれば考えるほどにわからない。",
@@ -647,7 +637,7 @@ void main()
 		   NULL, " wolves looking after a flock of sheep.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　私は今日までの百年間。",
@@ -692,7 +682,8 @@ void main()
 		   NULL, "...However, he's not really reliable.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Sinryo_sinsatu1", "maskup", 1, 0, 300 );
+	DrawBustshot(1, "sprite/normal/oko_def_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	DrawSceneWithMask( "background/sinryou_sinsatu3", "maskup", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　小此木と目が合う。",
@@ -704,7 +695,7 @@ void main()
 		   NULL, "He smiled and told me not to worry, but I noticed an evil glint in his eyes.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskdown", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　………私も、いつの間にか雛見沢症候群を発症させてしまい、疑心暗鬼に取り憑かれてしまったか……？",
@@ -760,7 +751,7 @@ void main()
 		   NULL, " and my friends.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka1", 400 );
+	DrawScene( "background/aka1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　だが、小此木が鷹野の手先なら、鷹野を疑い始めている私を厳重に監視してくるだろう。",
@@ -810,4 +801,8 @@ void main()
 	OutputLine(NULL, "　……羽入が諦めるようにやはり今回も駄目なのか？",
 		   NULL, "Am I supposed to just take Hanyuu's advice and resign this time?", Line_Normal);
 	ClearMessage();
+
+	CallScript( "&eye" );
+	FadeOutBGM( 0, 1000, TRUE );
+
 }

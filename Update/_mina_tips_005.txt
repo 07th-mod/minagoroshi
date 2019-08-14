@@ -3,7 +3,7 @@ void main()
 	EnableJumpingOfReturnIcon();
 
 	PlayBGM( 0, "semi", 120, 0 );
-	DrawScene( "M_Hi11", 1000 );
+	DrawScene( "background/m_hi8", 1000 );
 
 	ClearMessage();
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -39,7 +39,7 @@ void main()
 		   NULL, "Some source even told him that she had already been caught and killed.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka1", 400 );
+	DrawScene( "background/aka1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　リナと自分が同棲しているというのは、この界隈では誰もが知る話だった。",
@@ -65,7 +65,7 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	DrawSceneWithMask( "Sora", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/sora", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　となると鉄平が戻る先は雛見沢だけだった。",
@@ -133,7 +133,7 @@ void main()
 		   NULL, " He found her at the store and dragged her back home.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ho_R1", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/ho_r1", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　家を開けさせると、中は埃まみれ。",
@@ -145,7 +145,7 @@ void main()
 		   NULL, "She'd been living at her friend's house for the past year, and the house had been abandoned.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka2", 400 );
+	DrawScene( "background/aka2", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鉄平は自分勝手にもそれに怒った。",
@@ -157,13 +157,14 @@ void main()
 		   NULL, "He told her that it was her responsibility to keep the house in order.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlaySE( 0, "s_Down", 128, 64 );
+	DisableWindow();
+	PlaySE( 0, "s_tataku", 128, 64 );
 	StartShakingOfWindow( 248, 40, 0, 2, 2*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 2*2, TRUE );
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 128, 64 );
+	PlaySE( 0, "s_tataku", 128, 64 );
 	StartShakingOfWindow( 248, 40, 0, 2, 2*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 2*2, TRUE );
 	SetValidityOfInput( FALSE );
@@ -195,7 +196,7 @@ void main()
 		   NULL, "Satoko started obeying him immediately, and cleaned up the house.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Ho2_Houjouke", 400 );
+	DrawScene( "background/ho1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　新しい住処に新しい女。",
@@ -211,7 +212,7 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　機嫌をよくした鉄平はそれを自慢したくて、仲間たちを呼び自宅で麻雀をした。",
-		   NULL, "Teppei called his buddies to show off his new beginning, and ended up played mahjong with them.", GetGlobalFlag(GLinemodeSp));
+		   NULL, "Teppei called his buddies to show off his new beginning, and ended up playing mahjong with them.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -241,17 +242,16 @@ void main()
 		   NULL, "However, someone arrived to interrupt this perfect life.", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawBustshotWithFiltering( 0, "Tie2", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 0, FALSE );
-	DrawSceneWithMask( "Ho1_Houjouke", "maskup", 1, 0, 300 );
+	FadeOutBGM( 0, 300, FALSE );
+	DrawBustshot( 0, "sprite/normal/tie_2_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	DrawScene( "background/ho1", 400 );
 	PlayBGM( 0, "Cradle_song", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/22/441400005", 128);
 	OutputLine(NULL, "「私、興宮分校教諭の知恵と申します…！",
-		   NULL, "\"I'm a teacher from the Hinamizawa Branch School. My name is Chie!", Line_WaitForInput);
+		   NULL, "\"I'm a teacher from the Hinamizawa Branch School. My name is Chie!", Line_Continue);
+	Wait( 5000 );
 	OutputLine(NULL, "　北条沙都子さんはいらっしゃいますか。」",
 		   NULL, " Is Satoko Houjou-san here?\"", Line_Normal);
 	ClearMessage();
@@ -269,7 +269,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/21/442000001", 128);
 	OutputLine(NULL, "「あぁん？",
-		   NULL, "\"Huh?", Line_WaitForInput);
+		   NULL, "\"Huh?", Line_Continue);
+	Wait( 1500 );
 	OutputLine(NULL, "　何じゃいおどれ。",
 		   NULL, " What the hell?", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/21/442000002", 128);
@@ -286,7 +287,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/21/442000003", 128);
 	OutputLine(NULL, "「ああぁん…？",
-		   NULL, "\"Huh...?", Line_WaitForInput);
+		   NULL, "\"Huh...?", Line_Continue);
+	Wait( 1900 );
 	OutputLine(NULL, "　学校ぉ…？」",
 		   NULL, " School...?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -294,7 +296,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/22/441400007", 128);
 	OutputLine(NULL, "「はい。",
-		   NULL, "\"Yes.", Line_WaitForInput);
+		   NULL, "\"Yes.", Line_Continue);
+	Wait( 1100 );
 	OutputLine(NULL, "沙都子ちゃんはいますか？",
 		   NULL, " Is she home?", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/22/441400008", 128);
@@ -305,7 +308,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/21/442000004", 128);
 	OutputLine(NULL, "「あぁん、…風邪なんねぇ、そうそう",
-		   NULL, "\"She's sick. That's right... she has a cold.", Line_WaitForInput);
+		   NULL, "\"She's sick. That's right... she has a cold.", Line_Continue);
+	Wait( 3700 );
 	OutputLine(NULL, "。…沙都子は風邪で熱ぅ出してるんですわ。」",
 		   NULL, " Satoko is resting because she has a fever...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -319,7 +323,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/21/442000005", 128);
 	OutputLine(NULL, "「どあほう。",
-		   NULL, "\"You idiot.", Line_WaitForInput);
+		   NULL, "\"You idiot.", Line_Continue);
+	Wait( 1900 );
 	OutputLine(NULL, "おどれ話、聞いてなかったんかい。",
 		   NULL, " Weren't you listening to what I just said?", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/21/442000006", 128);
@@ -357,13 +362,13 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ChangeBustshot( 0, "Tie3", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 0, "sprite/normal/tie_3_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/22/441400010", 128);
 	OutputLine(NULL, "「そうですか…。",
-		   NULL, "\"I see...", Line_WaitForInput);
+		   NULL, "\"I see...", Line_Continue);
+	Wait( 2200 );
 	OutputLine(NULL, "明日は登校できそうですか？」",
 		   NULL, " Do you think she can come to school tomorrow?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -371,7 +376,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/21/442000009", 128);
 	OutputLine(NULL, "「知るかいなッ！！",
-		   NULL, "\"Who knows?", Line_WaitForInput);
+		   NULL, "\"Who knows?", Line_Continue);
+	Wait( 2200 );
 	OutputLine(NULL, "　そんなもん、明日になってみなきゃわからんわ！！",
 		   NULL, " I won't know until tomorrow!", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/21/442000010", 128);
@@ -382,7 +388,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s20/22/441400011", 128);
 	OutputLine(NULL, "「……………………そ、…そうですか。",
-		   NULL, "\"............I, I see.", Line_WaitForInput);
+		   NULL, "\"............I, I see.", Line_Continue);
+	Wait( 3700 );
 	OutputLine(NULL, "…わかりました。",
 		   NULL, " All right...", Line_WaitForInput);
 	PlayVoice(4, "ps3/s20/22/441400012", 128);
@@ -395,7 +402,6 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 0, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　とりあえず追い返せたようだが、沙都子を学校に行かせないと色々とうるさそうだ。",
@@ -441,7 +447,7 @@ void main()
 		   NULL, " ......Shit.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Ho_R1", 400 );
+	DrawScene( "background/ho_r1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　しかも、夜には児童相談所まで来た。",
@@ -482,6 +488,7 @@ void main()
 		   NULL, "\"...Aaah, fucking hell, this ain't gonna work at all!!\"", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
 	Wait( 1000 );
 	DrawScene( "black", 1000 );
 }

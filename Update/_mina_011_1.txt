@@ -1,24 +1,20 @@
 void main()
 {
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 0, 300, FALSE );
+	FadeOutBGM( 1, 300, FALSE );
+	FadeOutBGM( 2, 300, FALSE );
+	FadeOutBGM( 3, 300, FALSE );
+	DrawScene( "black", 300 );
 	ClearMessage();
 
-	DrawScene( "Ma1", 1000 );
+	DrawScene( "white", 1000 );
+	PlayBGM( 2, "yoru", 120, 0 );
+	DrawScene( "background/ma2", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
-	DrawScene( "Ma2", 1000 );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
+	FadeOutBGM( 2, 300, FALSE );
 	PlayBGM( 1, "denwa_m", 120, 0 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
@@ -27,9 +23,8 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawSceneWithMask( "Ma_G3", "maskleft", 1, 0, 300 );
+	FadeOutBGM( 1, 300, FALSE );
+	DrawSceneWithMask( "background/ma_g3", "maskleft", 1, 0, 300 );
 	PlayBGM( 0, "Gray_2", 120, 0 );
 	SetSpeedOfMessage( FALSE, 0 );
 
@@ -52,7 +47,7 @@ void main()
 		   NULL, "Mion called me in the middle of the night.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Ho1_Houjouke", 1000 );
+	DrawScene( "background/ho1_01", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　児童相談所は学校からの連絡を受けて、さっそく今夜、沙都子の家を訪問したらしかった。",
@@ -65,8 +60,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshot( 0, "Tetu1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 9, 400, TRUE );
-	DisplayWindow();
+	DrawBustshot( 0, "sprite/night/tetu_1_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　叔父は、沙都子が今日登校しなかった理由は風邪のせいだった。",
@@ -87,8 +81,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 0, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DrawBustshotWithFiltering( 2, "Sa_MuhyouA1#", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/night/sa2a_muhyou_a1_0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子は積極的に話すことはなかったが、叔父が言うことに相槌を打ち、否定するようなことは言わなかったという。",
@@ -277,7 +270,7 @@ void main()
 	OutputLine(NULL, "「えーっと、",
 		   NULL, "\"Well...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 600 );
+	Wait( 2600 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "……うーーん、",
 		   NULL, " Umm...", Line_Continue);
@@ -296,12 +289,12 @@ void main()
 	OutputLine(NULL, "　えっとさ、",
 		   NULL, " See...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 2400 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "………確かに沙都子が今日、登校しなかったのは事実だけど、",
 		   NULL, " it is true that Satoko didn't show up at school today...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 700 );
+	Wait( 3400 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "…でも一日だよ？",
 		   NULL, " but it's just one day. ", GetGlobalFlag(GLinemodeSp));
@@ -328,7 +321,7 @@ void main()
 	OutputLine(NULL, "私たちは去年の沙都子がどういう状況にあったかよく知ってるから危機感を持ってるけど、",
 		   NULL, " We're concerned because we know what happened to her last year...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 7800 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "……実際、昨日今日で沙都子は何の虐待も受けていない。",
 		   NULL, " but she wasn't hurt yesterday or today.", Line_WaitForInput);
@@ -367,7 +360,7 @@ void main()
 		   NULL, " ...I'm sorry for yelling at you...\"", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Ma_G3", 400 );
+	DrawScene( "background/ma_g3", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　魅音が言ってるわけじゃないのに、魅音に言われたかのように勘違いしてつい声を荒げてしまった。",
@@ -440,7 +433,7 @@ void main()
 		   NULL, "\"Yes...!\"", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Ma_G3", 400 );
+	DrawScene( "background/ma_g3", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　話してる内に、相談所の様子見という見解に対する怒りも少し薄れた。",
@@ -623,7 +616,7 @@ void main()
 		   NULL, "......It must be even more painful to look at Satoko...", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Ma_G3", 400 );
+	DrawScene( "background/ma_g3", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　魅音はそれで電話を切った。",
@@ -813,15 +806,16 @@ void main()
 		   NULL, "\"You just moved to the village not too long ago.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/02/180200281", 128);
 	OutputLine(NULL, "沙都子ちゃんと知り合って半年も経ってないはずなのに。",
-		   NULL, " You've only known her for just a few months.", Line_WaitForInput);
+		   NULL, " You've only known her for just a few months. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/02/180200282", 128);
 	OutputLine(NULL, "……これだけ親身になって沙都子ちゃんのことを考えることができて。",
-		   NULL, " ...But you're so serious about saving her.", Line_WaitForInput);
+		   NULL, "...But you're so serious about saving her.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/02/180200283", 128);
 	OutputLine(NULL, "……そして、去年の沙都子ちゃんがどんな状況だったか見たことがないにもかかわらず、",
 		   NULL, " You don't even know what happened to her last year...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
+	Wait( 6800 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "……沙都子ちゃんがどんな辛い思いをしたか想像することができる。",
 		   NULL, " but you can imagine how hurt Satoko-chan is right now. ", GetGlobalFlag(GLinemodeSp));
@@ -905,7 +899,7 @@ void main()
 		   NULL, " I thought those same things myself.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka2", 1000 );
+	DrawSceneWithMask("background/aka2", "maskc", 0, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　………それで実際に、どうやって殺すか考えてみたんだ。",
@@ -918,7 +912,7 @@ void main()
 		   NULL, "First I'd assault him with a metal bat or something.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Mo3", 1000 );
+	DrawScene( "background/flashback/mo3", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　襲う前に下見をし、予め死体を埋める穴を掘っておく…。",
@@ -957,7 +951,7 @@ void main()
 		   NULL, "...I could very clearly imagine myself standing there, soaking with sweat and covered in mosquito bites.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そして俺はきっと、電話か何かで呼び出し、家から出てきた叔父を……撲殺する。",
@@ -969,7 +963,7 @@ void main()
 		   NULL, "Then I repeated my mantra, \"This is for Satoko. This is for Satoko,\" blaming her for that serious crime as I tried to avoid my own guilt over committing murder.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka1", 400 );
+	DrawSceneWithMask("background/aka1", "maskc", 0, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そんなことを沙都子が望んだのか？",
@@ -997,7 +991,7 @@ void main()
 		   NULL, ".........I wouldn't be able to tell anyone that I had killed someone.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "aka2", 400 );
+	DrawSceneWithMask("background/aka2", "maskc", 0, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　誰にも感謝されず、十字架だけを背負い続けて生きていく。",
@@ -1020,7 +1014,7 @@ void main()
 		   NULL, "...But the act of murder also meant shattering the thin path that could lead us back there.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/01/180100535", 128);
@@ -1141,12 +1135,12 @@ void main()
 	OutputLine(NULL, "…",
 		   NULL, "...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 150 );
+	Wait( 1800 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "何日もしない内に、",
 		   NULL, " but she...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
-	Wait( 1000 );
+	Wait( 1600 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "…………壊れてしまうんだ。」",
 		   NULL, " ......broke after only a few days...\"", Line_Continue);

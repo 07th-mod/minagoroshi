@@ -52,11 +52,7 @@ void main()
 	OutputLine(NULL, "ただし、機密保持は外部発覚阻止に優先するものとする。",
 		   NULL, " However, preserving secrecy will take priority over preventing exposure.", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 0, 300, FALSE );
 	PlaySE( 0, "s_page", 128, 64 );
 	PlayBGM( 0, "B_Dive", 120, 0 );
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -106,7 +102,7 @@ void main()
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	if (GetGlobalFlag(GADVMode)) { OutputLine(NULL, "", NULL, "<size=-2>", Line_Continue); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine(NULL, "", NULL, "<size=-4>", Line_Continue); }
 	OutputLine(NULL, "問．研究施設の致命的な事故により外部に秘匿施設が露呈した場合、通常は機密保持部隊が対処するが、露呈の規模により部隊の処理能力を超えたと判断される場合、機密保持のために、緊急マニュアル第３４号は適用してもよいのか。また処理能力超過の判断権限者は施設長と考えて良いのか。",
 		   NULL, "Q. If an accident has occurred and the nature of the Institute is revealed to the public, the Secrecy Preservation Unit will take steps to resolve the situation. However, if this information is spread too widely, can Emergency Manual 34 still be administered? Additionally, is the Institute Director responsible for making that decision?", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
@@ -136,10 +132,7 @@ void main()
 		   NULL, " However, the Institute Director may petition the urgency of its use to an official.", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	PlaySE( 0, "s_page", 128, 64 );
+	FadeOutBGM( 0, 300, FALSE );
 	PlaySE( 0, "s_suzu", 128, 64 );
 	SetColorOfMessage( TRUE, 0xff, 0x00, 0x00 );
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -160,7 +153,7 @@ void main()
 		   NULL, "     ", Line_ContinueAfterTyping);
 	SetSpeedOfMessage( FALSE, 0 );
 	OutputLine(NULL, "複写厳禁・持出厳禁",
-		   NULL, "Reproduction or removal of this document is prohibited.", Line_ContinueAfterTyping);
+		   NULL, "Reproduction or removal of this document is prohibited.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
@@ -500,10 +493,8 @@ void main()
 	ClearMessage();
 
 	PlaySE( 0, "s_page", 128, 64 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawScene( "File", 1000 );
+	FadeOutBGM( 0, 1000, FALSE );
+	DrawScene( "background/file", 1000 );
 	SetColorOfMessage( TRUE, 0xff, 0xff, 0xff );
 
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 6 ); }
@@ -663,9 +654,7 @@ void main()
 		   NULL, "January 1945", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-
-	Wait( 2000 );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	PlayBGM( 1, "type", 120, 0 );
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -675,8 +664,7 @@ void main()
 		   NULL, "To: Colonel Koizumi of the Supreme Council for the Direction of War", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	Wait( 2000 );
+	OutputLineAll(NULL, "", GetGlobalFlag(GLinemodeSp));
 	PlayBGM( 1, "type", 120, 0 );
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -686,22 +674,18 @@ void main()
 		   NULL, "from Hifumi Takano", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
 	OutputLine(NULL, "　　　　　　　　　　　",
 		   NULL, "    ", Line_Normal);
 	ClearMessage();
 	SetSpeedOfMessage( FALSE, 0 );
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DisableWindow();
+	FadeOutBGM( 0, 300, FALSE );
 	PlaySE( 0, "s_page", 128, 64 );
-
 	DrawScene( "black", 400 );
 	PlayBGM( 0, "semi", 120, 0 );
+	PlayBGM( 2, "suzume", 120, 0 );
 
 	SetSpeedOfMessage( TRUE, 128 );
 	OutputLineAll(NULL, "    ", Line_ContinueAfterTyping);
@@ -806,11 +790,7 @@ void main()
 		   NULL, "(Official seal omitted)", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
 	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	PlaySE( 0, "s_page", 128, 64 );
 	PlayBGM( 0, "B08_Izyou", 120, 0 );
 
@@ -967,18 +947,15 @@ void main()
 		   NULL, " If this occurs, one must seek treatment at HQ.", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DisableWindow();
+	FadeOutBGM( 0, 1300, FALSE );
 	PlaySE( 0, "s_page", 128, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 0, "hitoe_2", 120, 0 );
 	DrawSceneWithMask( "white", "maskm1", 1, 0, 1300 );
-	DrawScene( "black", 400 );
+	PlayBGM( 0, "hitoe_2", 120, 0 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　高級なソファーに大理石のテーブル、クリスタルの灰皿のある高級な会議室で、政府高官たちが状況を説明していた。",
@@ -1007,8 +984,8 @@ void main()
 		   NULL, "But on top of that, it was secretly researched for military use, and now there was a horrific situation caused by the director of the local research institute engaging in embezzlement.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官房長官</color>", NULL, "<color=#f5e6d3>Government Secretary</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282900001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「そんな危険な病気、初めて聞いたよ！",
 		   NULL, "\"I've never heard of such a dangerous disease!", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/282900002", 128);
@@ -1016,15 +993,15 @@ void main()
 		   NULL, " There's no cure for it?\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「はい。",
 		   NULL, "\"No.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000002", 128);
 	OutputLine(NULL, "国立研究所の説明では、重度感染者の発症に対する治療法は確立したばかりで、全住民への対応は事実上不可能とのことです。",
 		   NULL, " According to the national research center, they have recently found a method of treatment for the carriers of the disease, but they're still not capable of administering that treatment to the whole village. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000003", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "最短で２４時間以内、長くとも４８時間以内に山村の人口二千人が全て末期発症するとのことです。",
 		   NULL, "The entire populace is going to develop terminal symptoms within the next 24 to 48 hours.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000004", 128);
@@ -1063,8 +1040,8 @@ void main()
 	PlayVoice(4, "ps2/00/282900005", 128);
 	OutputLine(NULL, "　そもそもそういう事態を招いたのはその関係の連中の責任じゃないのかね！！",
 		   NULL, " Isn't this the responsibility of those who were funding the research? ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官房長官</color>", NULL, "<color=#f5e6d3>Government Secretary</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282900006", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "　第一、こんな危険な研究は今や日本の国益に貢献しないどころか、損ないかねんぞ！！",
 		   NULL, "Such a dangerous disease can't possibly be of any benefit to this country!", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/00/282900007", 128);
@@ -1098,7 +1075,7 @@ void main()
 		   NULL, "This is a good opportunity to rid Tokyo of its festering pus!\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Ke5", "maskdown", 1, 0, 300 );
+	DrawScene( "background/ke5", 1300 );
 	PlayBGM( 1, "higurashi", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
@@ -1112,8 +1089,8 @@ void main()
 		   NULL, "A man standing by the window slowly turned around and opened his mouth.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000005", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「総理。",
 		   NULL, "\"Prime Minister.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000006", 128);
@@ -1121,14 +1098,14 @@ void main()
 		   NULL, " Please give us your decision.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282100002", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「……………滅菌作戦を承認しない場合のシミュレートを聞かせてください。」",
 		   NULL, "\".........What happens if I don't approve this final resolution?\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000007", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「はい。",
 		   NULL, "\"Well...", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000008", 128);
@@ -1137,15 +1114,15 @@ void main()
 	PlayVoice(4, "ps2/00/283000009", 128);
 	OutputLine(NULL, "末期的な被害妄想に取り憑かれ反社会的な行為を行ないます。",
 		   NULL, " They will be overcome by persecution complexes, and they will begin behaving violently. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000010", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "想定されるのは、自殺、殺人、放火、強盗、強姦。",
 		   NULL, "Suicide, murder, arson, robbery, and rape are some of the things we predict will happen.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000011", 128);
 	OutputLine(NULL, "治安の完全なる崩壊です。",
 		   NULL, " There will be no peace within the village. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000012", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "騒動は恐らく雛見沢地区のみでなく周辺地区へも波及します。",
 		   NULL, "It probably won't stay within those boundaries either, but spread throughout the area.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000013", 128);
@@ -1156,34 +1133,34 @@ void main()
 		   NULL, " Sooner or later, they will find out about this mysterious disease.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000015", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "　野党は奇病の対応の不手際を政争の具に次期選挙を有利に運ぶでしょう。",
 		   NULL, "This will be a great advantage for the opposition during the next election.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000016", 128);
 	OutputLine(NULL, "また『東京』内でも総理の対応に批判が高まるでしょう。",
 		   NULL, " 'Tokyo' will also voice their criticisms of the Prime Minister. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000017", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "彼らの支持は総理の列島改造に欠かせません。",
 		   NULL, "You need their approval in order to make your political plans come to fruition.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000018", 128);
 	OutputLine(NULL, "そして何よりも、軍事目的での研究が政府内部から暴かれる可能性があります。",
 		   NULL, " More than anything, the government might reveal that this secret research was conducted for military purposes. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000019", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "これだけは断固阻止しなくては我が国に致命的信用ダメージを与えかねません。」",
 		   NULL, "If this happens, this country will have a crisis of faith in their leadership.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282100003", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「…………逆に、滅菌作戦を承認した場合はどうなりますか。」",
 		   NULL, "\".........What if I approve the final resolution?\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000020", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「はい。",
 		   NULL, "\"Well...", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000021", 128);
@@ -1192,14 +1169,14 @@ void main()
 	PlayVoice(4, "ps2/00/283000022", 128);
 	OutputLine(NULL, "ただし、奇病研究について発覚することはないでしょう。",
 		   NULL, " However, they will not discover the existence of this mysterious disease. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000023", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "もし万が一、奇病の軍事的研究が世界に発覚したら我が国はアジア地域でのイニシアチブを完全に喪失します。」",
 		   NULL, "If by chance the world were to discover our military research of the disease, our nation would completely lose its initiative in the Asian region.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官房長官</color>", NULL, "<color=#f5e6d3>Government Secretary</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282900015", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「他国の援助を受ける政党は一大キャンペーンを張るな！",
 		   NULL, "\"Support from those nations is a necessity for us!", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/282900016", 128);
@@ -1213,28 +1190,28 @@ void main()
 		   NULL, " Japan will be finished!\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000024", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「…シミュレートの結果では、第２党第３党が連立した場合、与野党の勢力は完全に反転します。",
 		   NULL, "\"According to our simulations, the balance of power will shift drastically if the second and third parties form a coalition government.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000025", 128);
 	OutputLine(NULL, "国際世論は我が国を一斉に非難。",
 		   NULL, " The whole world will hold us responsible. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000026", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "国連に対しＮＢＣ兵器開発疑惑の査察を要求するでしょう。",
 		   NULL, "The United Nations will accuse us of developing WMDs.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000027", 128);
 	OutputLine(NULL, "近隣国は政府主導でバッシングキャンペーンを展開、高支持率を背景に対日外交を強硬路線に転換します。",
 		   NULL, " Neighboring countries' governments will lead smear campaigns against us, drawing a hard line of anti-Japan diplomatic policies with high approval ratings. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000028", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "我が国は政治的焦土と化すでしょう。」",
 		   NULL, "In every way possible, the government of this country will be burned to the ground.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官房長官</color>", NULL, "<color=#f5e6d3>Government Secretary</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282900019", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「国際信用はぺんぺん草一本残らんということかね。",
 		   NULL, "\"So we'll lose the trust of all our allies, huh.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/282900020", 128);
@@ -1246,26 +1223,26 @@ void main()
 	PlayVoice(4, "ps2/00/282900022", 128);
 	OutputLine(NULL, "…………しかし！！",
 		   NULL, ".........But!! ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官房長官</color>", NULL, "<color=#f5e6d3>Government Secretary</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282900023", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "　全てを闇に葬るための犠牲が二千人とは多過ぎる！」",
 		   NULL, "It's way too difficult to cover up two thousand casualties!\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000029", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「…………日本国内において、生物兵器研究が行なわれていたことが露呈することだけは避けなければなりません。」",
-		   NULL, "\".........The most important thing is to prevent the public from knowing that this country was secretly researching biological weapons.", Line_Normal);
+		   NULL, "\".........The most important thing is to prevent the public from knowing that this country was secretly researching biological weapons.\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/282100024", 128);
 	OutputLine(NULL, "「……私は、どうやら大戦の亡霊の尻を拭くはめになりそうですね…。」",
-		   NULL, "...I guess we'll be wiping the ass of the ghost of the war...\"", Line_Normal);
+		   NULL, "\"...I guess we'll be wiping the ass of the ghost of the war...\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官房長官</color>", NULL, "<color=#f5e6d3>Government Secretary</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282900024", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「滅菌作戦は計画通りに隠密で実行できるのかね？！",
 		   NULL, "\"Are you sure this operation can be performed secretly?", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/282900025", 128);
@@ -1273,8 +1250,8 @@ void main()
 		   NULL, " If this mission goes public, this will become a greater scandal than the research itself!\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000031", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「はい、ご安心ください。",
 		   NULL, "\"Yes, it will be kept secret.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000032", 128);
@@ -1288,8 +1265,8 @@ void main()
 		   NULL, " You have nothing to worry about.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282100004", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「都市沈黙戦という言葉は初めて聞きましたが、これはガスによる虐殺のことですね？",
 		   NULL, "\"I've never heard of any mission like this, but it's basically mass murder via gas, correct?", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/282100005", 128);
@@ -1297,15 +1274,15 @@ void main()
 		   NULL, " I had no idea there were units specifically trained for that.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000035", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「ガス防護を知るにはガス戦を知らなければなりません。",
 		   NULL, "\"In order to know how to protect themselves from a gas attack, they must know what gas warfare is about.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000036", 128);
 	OutputLine(NULL, "ガス虐殺に備えるにはガス虐殺を知らねばなりません。",
 		   NULL, " In order to know how to fight against an enemy using gas, they must also know how to kill with it. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000037", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "装備実験隊は日本国が受ける可能性のある全ての攻撃に対し、日夜、研究を重ねています。」",
 		   NULL, "The Equipment Research Unit is prepared for any kind of attack.\"", Line_Normal);
 	ClearMessage();
@@ -1339,39 +1316,36 @@ void main()
 		   NULL, " The Irie Institute was one such evil...", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282100006", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
-	OutputLine(NULL, "「………………明かせぬ研究を葬るために、明かせぬ方法を取るか……。」",
-		   NULL, "\".........So we have to make a secret decision in order to keep this research undisclosed.\"", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
+	OutputLine(NULL, "「………………明かせぬ研究を葬るために、明かせぬ方法を取るか……。",
+		   NULL, "\".........So we have to make a secret decision in order to keep this research undisclosed.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/282100007", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
-	OutputLine(NULL, "「罪悪感の伴う任務だが、隊員から事実が漏れ出すことはないのかね？」",
-		   NULL, "\"Approving this is going to make us guilty. Are you sure that information will not leak from the members of this unit?\"", Line_Normal);
+	OutputLine(NULL, "罪悪感の伴う任務だが、隊員から事実が漏れ出すことはないのかね？」",
+		   NULL, " Approving this is going to make us guilty. Are you sure that information will not leak from the members of this unit?\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000038", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「ありえません。",
 		   NULL, "\"That will not happen.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000039", 128);
 	OutputLine(NULL, "隊員は第一空挺から精鋭を選抜し、さらに高い忠誠心を持つ者のみで構成しております。",
 		   NULL, " The members were carefully selected from a group of extremely loyal men. ", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000040", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "実戦はこれが初めてになりますが、練度は極めて高く、内部の機密保持も問題ありません。」",
 		   NULL, "We've never performed an operation such as this, but they are highly experienced, and they will not leak any information whatsoever.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282100008", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「……………まさに暗殺の専門部隊ですね。」",
 		   NULL, "\".........They're an assassination unit, huh.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000041", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「総理。",
 		   NULL, "\"Prime Minister.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000042", 128);
@@ -1379,8 +1353,8 @@ void main()
 		   NULL, " Please give us the approval to administer Emergency Manual 34.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282100009", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「…………防衛庁長官。",
 		   NULL, "\"......Director General of Defense.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/282100010", 128);
@@ -1394,8 +1368,8 @@ void main()
 		   NULL, " No... can you keep casualties to a minimum?\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000043", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「はい総理。",
 		   NULL, "\"Yes sir.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/00/283000044", 128);
@@ -1406,11 +1380,9 @@ void main()
 		   NULL, " We will execute the mission as soon as we get your approval.\"", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282100013", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「……………私には人口二千人を虐殺する命令など下せません。",
 		   NULL, "\".........I can't give the approval to slaughter two thousand innocent people.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/282100014", 128);
@@ -1418,14 +1390,14 @@ void main()
 		   NULL, " ...However, as Prime Minister, I have an obligation to minimize the number of casualties.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>官房長官</color>", NULL, "<color=#f5e6d3>Government Secretary</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282900026", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「総理、…胸中をお察しします。」",
 		   NULL, "\"Prime Minister... I understand your dilemma.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282100015", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「…………………長官。",
 		   NULL, "\"............Director General.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/282100016", 128);
@@ -1436,8 +1408,8 @@ void main()
 		   NULL, " If these two thousand people can't be treated, please do what's best to prevent additional victims.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>防衛庁長官</color>", NULL, "<color=#f5e6d3>Director General of Defense</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/283000046", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「はい！",
 		   NULL, "\"Yes sir!", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/283000047", 128);
@@ -1448,10 +1420,11 @@ void main()
 		   NULL, " We'll return with positive results!\"", Line_Normal);
 	ClearMessage();
 
+	FadeOutBGM( 1, 400, FALSE );
 	DrawScene( "black", 400 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282100018", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「…………二千人の犠牲が朗報と呼べるならですがね。",
 		   NULL, "\".........That's if you can call two thousand casualties a positive result.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/00/282100019", 128);
@@ -1486,8 +1459,8 @@ void main()
 		   NULL, " He was in such a rage that his research was being shut down... that he felt as if his life itself was being denied.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/282100023", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「………彼を狂気に駆り立てた理由は永遠に闇の中ということですか。」",
 		   NULL, "\"......So no one will ever really know what made him commit such a horrific crime.\"", Line_Normal);
 	ClearMessage();
@@ -1506,7 +1479,6 @@ void main()
 		   NULL, "The execution of Emergency Manual 34 is\napproved.", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	Wait( 2000 );
 
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 6 ); }
@@ -1516,7 +1488,6 @@ void main()
 		   NULL, "    June 23rd, 1983", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	Wait( 2000 );
 
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 7 ); }
@@ -1526,7 +1497,6 @@ void main()
 		   NULL, "                           Prime Minister XXXX", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 	Wait( 2000 );
 
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 8 ); }
@@ -1536,23 +1506,19 @@ void main()
 		   NULL, "   Director General of the Defense Agency XXXX", Line_ContinueAfterTyping);
 
 	FadeOutBGM( 1, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
 
 	OutputLineAll(NULL, "", Line_Normal);
 
 	ClearMessage();
 	SetSpeedOfMessage( FALSE, 0 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 0, 400, FALSE );
 	DrawScene( "black", 400 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	DrawScene( "M_Y1", 1000 );
+	DrawScene( "white", 1000 );
 	PlayBGM( 0, "Typewriter", 120, 0 );
+	DrawScene( "background/m_y1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/forcea28001", 128);
@@ -1595,7 +1561,8 @@ void main()
 		   NULL, "Members of the town council were yelling angrily while counting up the villagers.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "M_Y2", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "background/m_y2", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　山中の数箇所から危険な火山ガスが噴出し、ガス流によって外部と寸断され、村が孤立したというのだ。",
@@ -1624,17 +1591,15 @@ void main()
 		   NULL, "Soldiers wearing gas masks guided the villagers to the evacuation center.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
-	DrawSceneWithMask( "M_Y3", "maskleft", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/00007591", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「…何で兵隊さんは災害なのに鉄砲持ってきとるんしゃあ。」",
 		   NULL, "\"...Why do you all have guns?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forceb28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「皆さんが避難した後の家屋を守るためです。",
 		   NULL, "\"These are to protect your homes after the evacuation.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/forceb28002", 128);
@@ -1642,17 +1607,15 @@ void main()
 		   NULL, " We're expecting looters.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/00007594", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「………雛見沢にそんな輩はおらんのしゃ…。」",
 		   NULL, "\"......No one in Hinamizawa would do something like that...\"", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	DrawSceneWithMask( "M_Y1", "maskright", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forcec28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「第１小隊、避難誘導順調。",
 		   NULL, "\"This is the 1st Platoon. The evacuation is on schedule.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/forcec28002", 128);
@@ -1687,20 +1650,20 @@ void main()
 		   NULL, " A soldier will come and help you!\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/eldb28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「おおぉぉ、梨花ちゃまが殺されたからオヤシロさまがお怒りになったのじゃ…。」",
 		   NULL, "\"Aaaah, Oyashiro-sama is angry because Rika-chama was murdered...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/eldc28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「オヤシロさまオヤシロさまオヤシロさま…、どうか怒りをお鎮めください…。」",
 		   NULL, "\"Oyashiro-sama... Oyashiro-sama... Please forgive our sins....\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/eldd28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「防災訓練どおりに避難すちゃれー！",
 		   NULL, "\"Remember our emergency drills!", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/eldd28002", 128);
@@ -1708,8 +1671,8 @@ void main()
 		   NULL, " Group leaders have to contact a town council member when everyone in their group has shown up!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/elde28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「鬼ヶ淵から瘴気が溢れ出したんね…。",
 		   NULL, "\"Miasma is coming out of the swamp...", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/elde28002", 128);
@@ -1717,8 +1680,8 @@ void main()
 		   NULL, " Oyashiro-sama must be furious...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/eldf28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「こんなに大勢いるんじゃ、助かる方法なんかなかとよぉ。",
 		   NULL, "\"There are too many of us here! We'll never make it out alive!", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/eldf28002", 128);
@@ -1726,8 +1689,8 @@ void main()
 		   NULL, " Let me die in this village!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forcee28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「大丈夫です。",
 		   NULL, "\"Don't worry.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/forcee28002", 128);
@@ -1738,8 +1701,8 @@ void main()
 		   NULL, " You're all going to make it out okay!\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>男</color>", NULL, "<color=#f5e6d3>Man</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/mana28014", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「みんな営林署へ集まれぇぇ！！",
 		   NULL, "\"Everyone gather at the forestry service!", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/mana28015", 128);
@@ -1747,8 +1710,8 @@ void main()
 		   NULL, " No, not the people from District 4! You're supposed to go to the community center behind the post office!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forcef28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「皆さん、防災訓練と同じです。",
 		   NULL, "\"It's exactly the same as in the emergency drills.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/forcef28002", 128);
@@ -1785,7 +1748,7 @@ void main()
 		   NULL, "One such trooper cried under his mask, but the villagers never saw his tears...", Line_Normal);
 	ClearMessage();
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
-	DrawSceneWithMask( "M_Y7", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "background/m_y7", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/forceg28001", 128);
@@ -1818,7 +1781,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 400 );
-	DrawScene( "Re_Tel", 400 );
+	DrawScene( "background/re_tel", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　また、ある者は興宮の親戚に電話をしようとしたが、電話は繋がらなかった。",
@@ -1876,8 +1839,8 @@ void main()
 		   NULL, "One old war veteran listened to the noise from the radio and muttered.", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/eldg28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「………アメさんの妨害電波食らった時もこんな音がしたんね…。」",
 		   NULL, "\"......This is exactly how it sounded when the Americans jammed the radio waves during the war...\"", Line_Normal);
 	ClearMessage();
@@ -1892,7 +1855,7 @@ void main()
 		   NULL, "However, he turned off the radio when his son urged him to evacuate...", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "YGk2", 400 );
+	DrawScene( "background/ygk3", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　災害時に定められた集合場所に村人は集められていた。",
@@ -1915,10 +1878,10 @@ void main()
 		   NULL, "The soldiers told them to stay inside so they could keep track of the number of evacuees.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "YGk1", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/ygk1", "maskright", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forceh28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「万一のガス流に備えて窓は全て閉めてください。",
 		   NULL, "\"Please close all of the windows to prevent the gas from entering.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/forceh28002", 128);
@@ -1929,8 +1892,8 @@ void main()
 		   NULL, " Your cooperation would be appreciated.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>男</color>", NULL, "<color=#f5e6d3>Man</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/manb28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「よし来た！",
 		   NULL, "\"All right!", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/manb28002", 128);
@@ -1967,37 +1930,22 @@ void main()
 		   NULL, "Coincidentally, the end to their night had almost arrived...", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "YGk3", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/ygk3", "maskright", 1, 0, 300 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/eldh28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
-	OutputLine(NULL, "「…ぜぇんぶ、",
-		   NULL, "\"...This is all", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "オヤシロさまの祟りなんしゃあ、",
-		   NULL, " Oyashiro-sama's curse!", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 1500 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "梨花ちゃま梨花ちゃま…、",
-		   NULL, " Rika-chama... Rika-chama....", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 1500 );
-	// (backup) SetValidityOfInput( TRUE );
-	OutputLine(NULL, "オヤシロさまオヤシロさま…。」",
-		   NULL, " Oyashiro-sama, Oyashiro-sama...\"", GetGlobalFlag(GLinemodeSp));
+	OutputLine(NULL, "「…ぜぇんぶ、オヤシロさまの祟りなんしゃあ、梨花ちゃま梨花ちゃま…、オヤシロさまオヤシロさま…。」",
+		   NULL, "\"...This is all Oyashiro-sama's curse! Rika-chama... Rika-chama.... Oyashiro-sama, Oyashiro-sama...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/eldi28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「やっぱり、古手神社の鬼隠しはオヤシロさまのお怒りの先触れだったんだ。」",
 		   NULL, "\"Oyashiro-sama demoned away those kids at the Furude Shrine in his fury...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/eldj28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「あの日、古手神社は鬼の国に飲み込まれたんよ…。",
 		   NULL, "\"The Furude Shrine was swallowed by the world of the demons that day...", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/eldj28002", 128);
@@ -2022,7 +1970,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 400 );
-	DrawScene( "JYT2", 1000 );
+	DrawScene( "background/jyt2", 1000 );
 
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -2086,7 +2034,7 @@ void main()
 		   NULL, "They really are just too superstitious.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "Torakku2", "maskright", 1, 0, 300 );
+	DrawScene( "background/torakku2", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/forcei28001", 128);
@@ -2101,8 +2049,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	DrawBustshotWithFiltering( 2, "Ta_Def", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 1300, TRUE );
-	DisplayWindow();
+	DrawBustshotWithFiltering( 2, "sprite/night/ta3_def_0", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/09/280900341", 128);
@@ -2113,21 +2060,18 @@ void main()
 		   NULL, " This is finally it.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/09/280900343", 128);
 	OutputLine(NULL, "…オヤシロさまの祟りが現実となる。",
-		   NULL, " The curse of Oyashiro-sama will become a reality tonight.", Line_WaitForInput);
+		   NULL, " The curse of Oyashiro-sama will become a reality tonight.", GetGlobalFlag(GLinemodeSp));
+	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	PlayBGM( 1, "suzu", 120, 0 );
 	DisableWindow();
-	ChangeBustshot( 2, "Ta_AkuWarai", 200, TRUE );
-	DisplayWindow();
+	FadeOutBGM( 0, 300, FALSE );
+	ChangeBustshot( 2, "sprite/night/ta3_akuwarai_2", 200, TRUE );
+	PlayBGM( 1, "suzu", 120, 0 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/09/280900344", 128);
 	OutputLine(NULL, "オヤシロさまの生まれ変わりである古手梨花を綿流しにするという冒涜によって、オヤシロさまの怒りが村に下される。",
-		   NULL, " For enacting Watanagashi on Rika Furude, Oyashiro-sama is punishing this village. ", GetGlobalFlag(GLinemodeSp));
+		   NULL, "For enacting Watanagashi on Rika Furude, Oyashiro-sama is punishing this village. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/09/280900345", 128);
 	OutputLine(NULL, "それで、この５年間の連続した祟りは本当の神罰に昇格される。",
@@ -2146,11 +2090,9 @@ void main()
 		   NULL, " Let's begin.\"", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	FadeOutBGM( 1, 1300, FALSE );
+	DrawSceneWithMask("black", "maskdown", 0, 0, 1300 );
+	PlayBGM( 0, "T1_Requiem", 120, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/forcej28001", 128);
@@ -2180,10 +2122,9 @@ void main()
 		   NULL, "The company commander crossed his heart, and began to speak.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 0, "T1_Requiem", 120, 0 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forcej28004", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「…………天に召します我らの父よ。",
 		   NULL, "\".........Dear Heavenly Father.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/forcej28005", 128);
@@ -2251,9 +2192,8 @@ void main()
 		   NULL, "She was talking to herself.", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	ChangeBustshot( 2, "Ta_Def", 200, TRUE );
-	DisplayWindow();
+	DrawBustshot(2, "sprite/night/ta3_def_0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	DrawSceneWithMask("background/torakku2", "maskup", 0, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/09/280900351", 128);
@@ -2306,8 +2246,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ChangeBustshot( 2, "Ta_Akuwarai", 200, TRUE );
-	DisplayWindow();
+	ChangeBustshot( 2, "sprite/night/ta3_akuwarai_2", 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/09/280900359", 128);
@@ -2358,7 +2297,6 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/forcej28009", 128);
@@ -2371,8 +2309,8 @@ void main()
 		   NULL, "And with the end of the silence...", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forcej28010", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「全小隊、滅菌を開始せよ。」",
 		   NULL, "\"Execute the operation now.\"", Line_Normal);
 	ClearMessage();
@@ -2382,8 +2320,12 @@ void main()
 		   NULL, "The order was given in as hollow and reluctant a manner as an order can possibly be...", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
-	DrawSceneWithMask( "YGk3", "maskleft", 1, 0, 300 );
+	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	Wait( 2000 );
+	DrawScene( "background/moon", 1000 );
+	DrawScene( "background/moon_01", 1000 );
+	DrawScene( "black", 1000 );
+	DrawScene( "background/ygk3", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　学校の教室の中には大勢の人たちがすし詰めの状態で不安に耐えていた。",
@@ -2464,45 +2406,45 @@ void main()
 		   NULL, "...It really was a very odd sight.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
-
-	PlaySE( 0, "s_Down", 100, 64 );
+	DisableWindow();
+	PlaySE( 0, "wa_003", 100, 64 );
 
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 100, 64 );
+	PlaySE( 0, "wa_003", 100, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 500 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 100, 64 );
+	PlaySE( 0, "wa_003", 100, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 100, 64 );
+	PlaySE( 0, "wa_003", 100, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 100, 64 );
+	PlaySE( 0, "wa_003", 100, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 300 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 100, 64 );
+	PlaySE( 0, "wa_003", 100, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 50 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 100, 64 );
+	PlaySE( 0, "wa_003", 100, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 100, 64 );
+	PlaySE( 0, "wa_003", 100, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 150 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 100, 64 );
+	PlaySE( 0, "wa_003", 100, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 200 );
 	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_Down", 100, 64 );
+	PlaySE( 0, "wa_003", 100, 64 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　例えるなら、何なのか。",
@@ -2515,7 +2457,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-	PlaySE( 0, "s_Down", 100, 64 );
+	PlaySE( 0, "wa_003", 100, 64 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　でも、転ぶのはドミノではなく、人間だった…。",
@@ -2532,7 +2474,7 @@ void main()
 		   NULL, "They opened those eyes wider to try and understand what was going on.", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "YGk2", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/ygk3", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　扉が少しだけ開き、そこからスプレー缶のような物を持った手が覗き、スプレー缶を教室奥へ２個、３個とさらに放り込んだ。",
@@ -2550,8 +2492,8 @@ void main()
 		   NULL, " even those at the window...", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 0 );
-	PlaySE( 0, "s_Down", 100, 64 );
+	DrawScene( "black", 100 );
+	PlaySE( 0, "wa_003", 100, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -2581,7 +2523,7 @@ void main()
 		   NULL, " were taken away so quickly and easily...", Line_Normal);
 	ClearMessage();
 
-	DrawSceneWithMask( "YG2", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/yg2", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　職員室脇の応接室でばたばたと騒ぎが起こる。",
@@ -2608,7 +2550,7 @@ void main()
 		   NULL, " in a matter of seconds.", Line_Normal);
 	ClearMessage();
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	DrawSceneWithMask( "GRY2", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/gry2", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/forcel28001", 128);
@@ -2619,8 +2561,8 @@ void main()
 		   NULL, " Four people are loose!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forcem28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「発砲許可！！",
 		   NULL, "\"You have permission to fire!!", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/forcem28002", 128);
@@ -2628,43 +2570,42 @@ void main()
 		   NULL, " Shoot, shoot, shoot!!!\"", Line_Normal);
 	ClearMessage();
 
-	HideWindow( 0 );
-	DrawFilm( 2, 0xff, 0x00, 0x00, 256, 0, 0, TRUE );
-	DrawScene( "white", 0 );
+	DisableWindow();
+	Negative( 1000, TRUE );
 
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 150 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 250 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
-
-	SetValidityOfInput( FALSE );
-	Wait( 50 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_gun", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 50 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_gun", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 50 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_gun", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 50 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_gun", 128, 64 );
+	DrawScene( "black", 100 );
+	DrawScene( "background/gry2", 200 );
 
 	SetValidityOfInput( FALSE );
 	Wait( 50 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 150 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 350 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 100 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	DrawScene( "black", 100 );
+	DrawScene( "background/gry2", 200 );
+
+	SetValidityOfInput( FALSE );
+	Wait( 150 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
@@ -2672,16 +2613,22 @@ void main()
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 150 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 250 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	DrawScene( "black", 100 );
+	DrawScene( "background/gry2", 200 );
 
 	SetValidityOfInput( FALSE );
 	Wait( 50 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 150 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
@@ -2689,12 +2636,18 @@ void main()
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 100 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
+	DrawScene( "black", 100 );
+	DrawScene( "background/gry2", 200 );
 
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 250 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 150 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
@@ -2702,7 +2655,7 @@ void main()
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 100 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
@@ -2710,21 +2663,19 @@ void main()
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 100 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 150 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 250 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 50 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_gun", 128, 64 );
+	DrawScene( "white", 50 );
+	DrawFilm( 2, 0xff, 0x00, 0x00, 256, 0, 100, TRUE );
 	SetSpeedOfMessage( FALSE, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2754,11 +2705,8 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-
-	SetSpeedOfMessage( FALSE, 0 );
 	FadeFilm( 0, TRUE );
-	DisplayWindow();
-	DrawSceneWithMask( "GRY1", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/gry2", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　４人の中には駐在警官が混じっていた。",
@@ -2811,41 +2759,22 @@ void main()
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 150 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 
-	DrawBustshot( 10, "Toketu1a", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 10, TRUE );
-
-	SetValidityOfInput( FALSE );
-	Wait( 50 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_gun", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 50 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_gun", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 50 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_gun", 128, 64 );
-	SetValidityOfInput( FALSE );
-	Wait( 50 );
-	SetValidityOfInput( TRUE );
-	PlaySE( 0, "s_gun", 128, 64 );
-
-	DrawBustshot( 10, "Toketu1b", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 10, TRUE );
+	DrawScene( "toketua", 100 );
 
 	SetValidityOfInput( FALSE );
 	Wait( 50 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 250 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
-	Wait( 50 );
+	Wait( 150 );
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 	SetValidityOfInput( FALSE );
@@ -2853,7 +2782,26 @@ void main()
 	SetValidityOfInput( TRUE );
 	PlaySE( 0, "s_gun", 128, 64 );
 
-	DrawBustshot( 10, "Toketu1c", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 10, TRUE );
+	DrawScene( "toketub", 100 );
+
+	SetValidityOfInput( FALSE );
+	Wait( 250 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 150 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+	SetValidityOfInput( FALSE );
+	Wait( 50 );
+	SetValidityOfInput( TRUE );
+	PlaySE( 0, "s_gun", 128, 64 );
+
+	DrawScene( "toketuc", 100 );
 
 	SetValidityOfInput( FALSE );
 	Wait( 50 );
@@ -2873,7 +2821,7 @@ void main()
 	PlaySE( 0, "s_gun", 128, 64 );
 
 	DrawFilm( 2, 0xff, 0x00, 0x00, 256, 0, 0, TRUE );
-	DrawScene( "white", 10 );
+	DrawScene( "white", 100 );
 	SetValidityOfInput( FALSE );
 	Wait( 50 );
 	SetValidityOfInput( TRUE );
@@ -2921,15 +2869,12 @@ void main()
 	ClearMessage();
 	DrawScene( "black", 400 );
 	FadeFilm( 0, TRUE );
-	DrawScene( "YG2", 400 );
+	DrawScene( "background/yg2", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/00/forcen28001", 128);
-	OutputLine(NULL, "「どうした！",
-		   NULL, "\"What happened?!", Line_WaitForInput);
-	PlayVoice(4, "ps3/s12/00/forcen28003", 128);
-	OutputLine(NULL, "　反撃されたか！",
-		   NULL, " Did they fight back?!", Line_WaitForInput);
+	OutputLine(NULL, "「どうした！　反撃されたか！",
+		   NULL, "\"What happened?! Did they fight back?!", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/00/forcen28003", 128);
 	OutputLine(NULL, "　応答しろ！！」",
 		   NULL, " Respond!!\"", GetGlobalFlag(GLinemodeSp));
@@ -2944,8 +2889,8 @@ void main()
 		   NULL, " One of the residential policemen shot back.\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forcep28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「射殺体を回収しろ。",
 		   NULL, "\"Collect those bodies.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/00/forcep28002", 128);
@@ -2954,7 +2899,7 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	DrawSceneWithMask( "GRY1", "maskright", 1, 0, 300 );
+	DrawSceneWithMask( "background/gry2", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　窓を乗り越えた隊員たちが４人の倒れる体に近付く…。",
@@ -2968,18 +2913,9 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 3000 );
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	SetValidityOfInput( FALSE );
-	Wait( 1000 );
-	SetValidityOfInput( TRUE );
-	PlayBGM( 1, "suzu", 120, 0 );
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forceq28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「第１小隊より本部。",
 		   NULL, "\"This is the First Platoon.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/forceq28002", 128);
@@ -3002,8 +2938,8 @@ void main()
 		   NULL, " No one escaped.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forces28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「第３小隊より本部。",
 		   NULL, "\"This is the Third Platoon.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/forces28002", 128);
@@ -3017,21 +2953,21 @@ void main()
 		   NULL, " It will be over soon.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forcet28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「第４小隊より本部。",
 		   NULL, "\"This is the Fourth Platoon.", Line_WaitForInput);
-	PlaySE(4, "ps2/00/forcet28002", 128, 64);
+	PlayVoice(4, "ps2/00/forcet28002", 128);
 	OutputLine(NULL, "滅菌終了。",
 		   NULL, " Sterilization complete.", Line_WaitForInput);
-	PlaySE(4, "ps2/00/forcet28003", 128, 64);
+	PlayVoice(4, "ps2/00/forcet28003", 128);
 	OutputLine(NULL, "脱走者なし。」",
 		   NULL, " No one escaped.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps2/00/forceu28001", 128);
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_Continue); }
 	OutputLine(NULL, "「第３小隊より本部。",
 		   NULL, "\"This is the Third Platoon.", Line_WaitForInput);
 	PlayVoice(4, "ps2/00/forceu28002", 128);
@@ -3051,16 +2987,8 @@ void main()
 		   NULL, " Start counting the bodies. Make sure the total matches the original number taken earlier tonight.\"", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
-	DrawScene( "Torakku2", 1000 );
-	DisableWindow();
-	DrawBustshotWithFiltering( 0, "Ta_Akuwarai", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 9, 300, TRUE );
-	DisplayWindow();
-	PlayBGM( 0, "T1_Requiem", 120, 0 );
+	DrawBustshot(0, "sprite/night/ta3_akuwarai_2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	DrawScene( "background/torakku2", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鷹野は指揮車の中でひとり笑っていた。",
@@ -3072,6 +3000,7 @@ void main()
 		   NULL, "She didn't physically see all those people dying silently.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
+	DrawScene( "scene/037", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……でも、鷹野には見えていた。",
@@ -3187,9 +3116,6 @@ void main()
 		   NULL, "\"You seem to be in a good mood...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	DisableWindow();
-	ChangeBustshot( 0, "Ta_Def", 200, TRUE );
-	DisplayWindow();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/09/280900369", 128);
@@ -3214,11 +3140,11 @@ void main()
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/09/280900372_1", 128);
-	OutputLine(NULL, "　くっくっく。",
-		   NULL, "Heh heh heh.", Line_Normal);
+	OutputLine(NULL, "「くっくっく。」",
+		   NULL, "\"Heh heh heh.\"", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "black", 400 );
+	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鷹野は聞こえるように笑うと、自慢の髪を翻して両手を広げながら言った。",
@@ -3286,7 +3212,7 @@ void main()
 		   NULL, "Takano was satisfied to know that.", Line_Normal);
 	ClearMessage();
 
-	DrawScene( "Moon", 400 );
+	DrawScene( "background/moon", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	PlayVoice(4, "ps3/s12/09/280900386", 128);
@@ -3374,7 +3300,7 @@ void main()
 		   NULL, "I am the curse of Oyashiro-sama.", Line_WaitForInput);
 	PlayVoice(4, "ps3/s12/09/280900410", 128);
 	OutputLine(NULL, "我を崇めよ、讃えよ、そして畏れよ！！",
-		   NULL, " Worship me, and be fearful!!\"", Line_Normal);
+		   NULL, " Worship me, and be fearful!!", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
@@ -3421,16 +3347,7 @@ void main()
 		   NULL, " Haaahahahahahahahaha, aaaaaahhhhhhhaahahahahahahahaha!!!", Line_Normal);
 	ClearMessage();
 
-	DisableWindow();
-	SetValidityOfInput( FALSE );
-	Wait( 5000 );
-	SetValidityOfInput( TRUE );
-
-	FadeOutBGM( 0, 0, FALSE );
-	FadeOutBGM( 1, 0, FALSE );
-	FadeOutBGM( 2, 0, FALSE );
-	FadeOutBGM( 3, 0, FALSE );
-	DrawBustshot( 19, "no_data", 0, 100, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
+	DrawScene( "white", 2000 );
 
 	PlaySE( 0, "s_daidageki", 128, 64 );
 	DrawBustshot( 15, "white", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, TRUE );
@@ -3445,21 +3362,21 @@ void main()
 	Wait( 8000 );
 	SetValidityOfInput( TRUE );
 
-	DrawSceneWithMask( "GetTip_minaep", "mask1900", 7, 0, 400 );
+	DrawSceneWithMask( "tips/gettip_minaep", "mask1900", 7, 0, 400 );
 	Wait( 5000 );
 	DrawSceneWithMask( "black", "mask1900", 7, 0, 400 );
 
-	DrawSceneWithMask( "Omake_Haikei", "mask4", 1, 0, 1500 );
+	DrawSceneWithMask( "omake_haikei", "mask4", 1, 0, 1500 );
 	PlaySE( 0, "s_jikuu", 128, 64 );
-	DrawSceneWithMask( "Omake_Jamp", "mask5", 1, 0, 1500 );
+	DrawSceneWithMask( "omake_jamp", "mask5", 1, 0, 1500 );
 	Wait( 10000 );
-	DrawSceneWithMask( "Omake_Haikei", "mask4", 1, 0, 1500 );
+	DrawSceneWithMask( "omake_haikei", "mask4", 1, 0, 1500 );
 	PlaySE( 0, "s_jikuu", 128, 64 );
-	DrawSceneWithMask( "Omake_Tip", "mask5", 1, 0, 1500 );
+	DrawSceneWithMask( "omake_tip", "mask5", 1, 0, 1500 );
 	Wait( 10000 );
-	DrawSceneWithMask( "Omake_Haikei", "mask4", 1, 0, 1500 );
+	DrawSceneWithMask( "omake_haikei", "mask4", 1, 0, 1500 );
 	PlaySE( 0, "s_jikuu", 128, 64 );
-	DrawSceneWithMask( "Omake_staff", "mask5", 1, 0, 1500 );
+	DrawSceneWithMask( "omake_staff", "mask5", 1, 0, 1500 );
 	Wait( 10000 );
 	DrawScene( "black", 1000 );
 }
