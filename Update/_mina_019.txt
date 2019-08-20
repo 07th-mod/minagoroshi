@@ -29,7 +29,7 @@ void main()
 	ModPlayVoiceLS(4, 18, "ps3/s12/18/183300157", 256, TRUE);
 	OutputLine(NULL, "自治の係長さんから連絡があってね。",
 		   NULL, " I got a call from the local government section.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 18, "ps2/18/183300158", 256, TRUE);
+	ModPlayVoiceLS(4, 18, "ps2/18/183300158", 540, TRUE);
 	OutputLine(NULL, "相談所の所長はあくまでもこっちの言い分を聞くつもりはないらしい。",
 		   NULL, " The child consultation center has no intention of listening to us.", Line_WaitForInput);
 	ModPlayVoiceLS(4, 18, "ps3/s12/18/183300159", 256, TRUE);
@@ -326,7 +326,7 @@ void main()
 	ModPlayVoiceLS(4, 1, "ps3/s12/01/180101549", 256, TRUE);
 	OutputLine(NULL, "「……どうやら、今年は綿流しの前に別の祭りになりそうだな。",
 		   NULL, "\"......It seems like we're going to be holding a festival on the day before Watanagashi too.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "ps2/01/180101550", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101550", 540, TRUE);
 	OutputLine(NULL, "相談所め、待ってろよ！！」",
 		   NULL, " To the consultation center!\"", Line_Normal);
 	ClearMessage();
@@ -797,10 +797,10 @@ void main()
 	ModPlayVoiceLS(4, 1, "ps3/s12/01/180101570", 256, TRUE);
 	OutputLine(NULL, "兵力充分、気合もたっぷりだ！",
 		   NULL, " Our force of arms is more than enough!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "ps2/01/180101571", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101571", 540, TRUE);
 	OutputLine(NULL, "　相談所の連中、さっきからカーテンの隙間から何度もこっちを伺ってるぜ。",
 		   NULL, " Those losers are peeping at us through the curtains right now.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "ps2/01/180101572", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101572", 540, TRUE);
 	OutputLine(NULL, "きっとビビってやがるころだぞ！」",
 		   NULL, " They must be quaking in their boots!\"", Line_Normal);
 	ClearMessage();
@@ -826,10 +826,10 @@ void main()
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/182100024", 256, TRUE);
 	OutputLine(NULL, "粛々と事務を進めるしかないでしょう。",
 		   NULL, " Other than our jobs, of course.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182100025", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182100025", 540, TRUE);
 	OutputLine(NULL, "陳情があれば聞くのは窓口の仕事です。",
 		   NULL, " If they want to protest, let them.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182100026", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182100026", 540, TRUE);
 	OutputLine(NULL, "私はちょっとこの後、出張があるので係長の方で対応してください。」",
 		   NULL, " I need to leave for a business trip now, so you can handle them.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -874,20 +874,20 @@ void main()
 	DrawSceneWithMask( "background/ke5", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/182900058", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900058", 540, TRUE);
 	OutputLine(NULL, "「所長は先日、代表３人と話をしてますよね。",
 		   NULL, "\"You spoke with three of those representatives the other day.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182900059", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900059", 540, TRUE);
 	OutputLine(NULL, "自治の話によると、雛見沢の連中は顔を覚えるのが早いそうです。",
 		   NULL, " According to the people from city hall, these Hinamizawans have a good memory. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/182900060", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900060", 540, TRUE);
 	OutputLine(NULL, "所長が駐車場に行くまでの間に面が割られちゃいます…。」",
 		   NULL, "If they see you walking outside to the parking lot, they'll recognize your face...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>事務員</color>", NULL, "<color=#f5e6d3>Office Worker</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/syokua18001", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/syokua18001", 540, TRUE);
 	OutputLine(NULL, "「係長、裏の職員通用口のとこにも何人か張り込んでるみたいっす！」",
 		   NULL, "\"Sir, there are some people protesting by the back door, too!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -900,10 +900,10 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/182900061", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900061", 540, TRUE);
 	OutputLine(NULL, "「…ダム戦争の当時は流血沙汰が当り前だったそうですから…。",
 		   NULL, "\"...During the dam conflict, it wasn't uncommon for people to get injured...", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182900062", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900062", 540, TRUE);
 	OutputLine(NULL, "もし所長の出張も、日を改められるものなら今日は控えた方がよろしいんじゃないかと……。」",
 		   NULL, " If you can postpone your business trip, I'd recommend you do so...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -960,10 +960,10 @@ void main()
 	DrawSceneWithMask( "background/ke5", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/182900063", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900063", 540, TRUE);
 	OutputLine(NULL, "「すごい人数です…。",
 		   NULL, "\"There are so many people out there...", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182900064", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900064", 540, TRUE);
 	OutputLine(NULL, "何だか、もうじき入ってきそうな勢いですね…。」",
 		   NULL, " They might barge in at any minute...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1215,10 +1215,10 @@ void main()
 	ModDrawCharacter(0, 11, "sprite/normal/oisi1_1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps2/11/180700331", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700331", 540, TRUE);
 	OutputLine(NULL, "「えぇとですねぇ、早い話がここはお役所の敷地内です。",
 		   NULL, "\"Well... you're on government property here...", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps2/11/180700332", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700332", 540, TRUE);
 	OutputLine(NULL, "特定の目的で占用することは禁じられてます。」",
 		   NULL, " Obstructing it for any given reason is prohibited.\"", Line_Normal);
 	ClearMessage();
@@ -1263,16 +1263,16 @@ void main()
 	OutputLine(NULL, "「この敷地内での無届集会がまずアウト。",
 		   NULL, "\"You're protesting here without permission, for one. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps2/11/180700334", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700334", 540, TRUE);
 	OutputLine(NULL, "それから鹿骨市児童相談所施行条例という条例があり、施設長は業務の支障になると認定した場合、敷地からの退去を命じることができるとなってるんです。」",
 		   NULL, "Also, there's a policy at this child consultation center, which allows the caretaker of the building to dismiss any client when he feels that they're disrupting their service.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 1, "ps2/01/180101581", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101581", 540, TRUE);
 	OutputLine(NULL, "「施設長？！",
 		   NULL, "\"The caretaker of the building?!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "ps2/01/180101582", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101582", 540, TRUE);
 	OutputLine(NULL, "　って誰です！！」",
 		   NULL, " Who is that?!\"", Line_Normal);
 	ClearMessage();
@@ -1281,22 +1281,22 @@ void main()
 	ModDrawCharacter(0, 11, "sprite/normal/oisi1_4_", "1", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps2/11/180700335", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700335", 540, TRUE);
 	OutputLine(NULL, "「まー、早い話が児童相談所の所長さんですなぁ。」",
 		   NULL, "\"Well, that would be the head of the office here.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 1, "ps2/01/180101583", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101583", 540, TRUE);
 	OutputLine(NULL, "「き、汚ぇえ！！",
 		   NULL, "\"What a cheap trick!!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "ps2/01/180101584", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101584", 540, TRUE);
 	OutputLine(NULL, "　話も一切聞かないつもりかよ！！",
 		   NULL, " He won't even let us speak our minds?!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "ps2/01/180101585", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101585", 540, TRUE);
 	OutputLine(NULL, "　じゃあ、俺たちはどう訴えればいいんですか！",
 		   NULL, " Where are we supposed to protest, then?!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "ps2/01/180101586", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101586", 540, TRUE);
 	OutputLine(NULL, "　敷地からの退去ってんだから、ここから出てそこの歩道からならいいわけですか？！」",
 		   NULL, " If we have to get off the property, can we do it across the road?!\"", Line_Normal);
 	ClearMessage();
@@ -1305,20 +1305,20 @@ void main()
 	ModDrawCharacter(0, 11, "sprite/normal/oisi1_1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps2/11/180700336", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700336", 540, TRUE);
 	OutputLine(NULL, "「公道での集会なら県の公安委員会に届出を出してください。",
 		   NULL, "\"If you want to use public roads, you have to get permission from the public safety department first.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps2/11/180700337", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700337", 540, TRUE);
 	OutputLine(NULL, "詳しくはお近くの警察署へお願いいたします。",
 		   NULL, " You'll have to contact them through the police.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps2/11/180700338", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700338", 540, TRUE);
 	OutputLine(NULL, "つまり、今日は解散せざるを得ないってことなんですよ。",
 		   NULL, " In other words, you have no choice but to disband for today. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps2/11/180700339", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700339", 540, TRUE);
 	OutputLine(NULL, "……まー、前原さん。",
 		   NULL, "...My my, Maebara-san.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps2/11/180700340", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700340", 540, TRUE);
 	OutputLine(NULL, "相当、向こうに嫌われちゃったということですなぁ…。」",
 		   NULL, " It seems they really do hate you...\"", Line_Normal);
 	ClearMessage();
@@ -1436,10 +1436,10 @@ void main()
 	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300646", 256, TRUE);
 	OutputLine(NULL, "また同じことになる。",
 		   NULL, " They'll just call the police again.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 3, "ps2/03/180300647", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "ps2/03/180300647", 540, TRUE);
 	OutputLine(NULL, "…所長はもう、私たちには一切会う気がないんだよ。",
 		   NULL, " The head of the consultation center has no intention of letting us in there ever again.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 3, "ps2/03/180300648", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "ps2/03/180300648", 540, TRUE);
 	OutputLine(NULL, "役所の機嫌を損ねるってのはこういうことだからね。」",
 		   NULL, " We must have really upset him.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1458,19 +1458,19 @@ void main()
 	ModDrawCharacter(2, 3, "sprite/normal/me2_yowaki_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 3, "ps2/03/180300649", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "ps2/03/180300649", 540, TRUE);
 	OutputLine(NULL, "「………ここからは息の長い戦い方しかなくなってくるね。",
 		   NULL, "\".........We'll just have to be patient.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 3, "ps2/03/180300650", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "ps2/03/180300650", 540, TRUE);
 	OutputLine(NULL, "敷地に入れないってんだから、せいぜい、最小の人数で正面の歩道から横断幕張って、要求貫徹を叫ぶくらいだね。",
 		   NULL, " If we can't protest on their property, we'll just have to do it from across the road.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 3, "ps2/03/180300651", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "ps2/03/180300651", 540, TRUE);
 	OutputLine(NULL, "それを延々と連日やり続けてプレッシャーを与えるしかない。」",
 		   NULL, " Seeing that every day will put a lot of pressure on them.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 1, "ps2/01/180101594", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101594", 540, TRUE);
 	OutputLine(NULL, "「短期決戦どころか、長期戦ってことかよ…！」",
 		   NULL, "\"That's going to take way too long...!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -1479,10 +1479,10 @@ void main()
 	ModDrawCharacter(2, 3, "sprite/normal/me2_tohoho_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 3, "ps2/03/180300652", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "ps2/03/180300652", 540, TRUE);
 	OutputLine(NULL, "「……お役所もヤクザだからねぇ。",
 		   NULL, "\"......The government is like the yakuza.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 3, "ps2/03/180300653", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "ps2/03/180300653", 540, TRUE);
 	OutputLine(NULL, "意固地になるとかえって逆効果かもしれない。」",
 		   NULL, " It'll get more complicated if we keep making them mad.\"", Line_Normal);
 	ClearMessage();
@@ -1946,23 +1946,23 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 21, "ps2/21/182000036", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000036", 540, TRUE);
 	OutputLine(NULL, "「……ぁぁん、もう、静がにやろぅ思うたんに、いきなりこれかい。",
 		   NULL, "\"...Aaah, fuck, I was just gonna look around for a minute.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000037", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000037", 540, TRUE);
 	OutputLine(NULL, "ツイとらんわ…ッ！！",
 		   NULL, " No damn luck!!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000038", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000038", 540, TRUE);
 	OutputLine(NULL, "　わしゃあんな、銭がいるんよ！",
 		   NULL, " All I need is some cash!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000039", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000039", 540, TRUE);
 	OutputLine(NULL, "　悟史の部屋に通帳が隠してあるんわ、わがっとん！！",
 		   NULL, " I know there's a bankbook inside his room!!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000040", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000040", 540, TRUE);
 	OutputLine(NULL, "　お前が悟史の部屋に隠したこともわがっとん！！",
 		   NULL, " I know that you hid it in there!! ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 21, "ps2/21/182000041", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000041", 540, TRUE);
 	OutputLine(NULL, "　大人しゅうあんじょうせいやッ！！」",
 		   NULL, "Be a good girl and tell me where it is!!\"", Line_Normal);
 	ClearMessage();
@@ -1996,7 +1996,7 @@ void main()
 
 	SetSpeedOfMessage( TRUE, 128 );
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 21, "ps2/21/182000042", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000042", 540, TRUE);
 	OutputLine(NULL, "「やっがましかッ！！」",
 		   NULL, "\"Shut the fuck up!!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2014,16 +2014,16 @@ void main()
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 4, "ps2/04/180400207", 256, TRUE);
+	ModPlayVoiceLS(4, 4, "ps2/04/180400207", 540, TRUE);
 	OutputLine(NULL, "「ぅ、…ふわああああぁあああぁああぁ！！",
 		   NULL, "\"Ah... Uwaaaaaaaaaaaaaah!!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 4, "ps2/04/180400208", 256, TRUE);
+	ModPlayVoiceLS(4, 4, "ps2/04/180400208", 540, TRUE);
 	OutputLine(NULL, "　あああぁああぁあん！！！",
 		   NULL, " Aaaaaaaaah!!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 4, "ps2/04/180400209", 256, TRUE);
+	ModPlayVoiceLS(4, 4, "ps2/04/180400209", 540, TRUE);
 	OutputLine(NULL, "　にーにー！！",
 		   NULL, " Nii-nii!!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 4, "ps2/04/180400210", 256, TRUE);
+	ModPlayVoiceLS(4, 4, "ps2/04/180400210", 540, TRUE);
 	OutputLine(NULL, "　にーにーー！！！」",
 		   NULL, " Nii-niiiii!!\"", Line_Normal);
 	ClearMessage();
@@ -2063,35 +2063,35 @@ void main()
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 4, "ps2/04/180400211", 256, TRUE);
+	ModPlayVoiceLS(4, 4, "ps2/04/180400211", 540, TRUE);
 	OutputLine(NULL, "「ぅわああああぁああああん、わああああああぁあぁあん！！！」",
 		   NULL, "\"Waaaaaaaah, waaaaaaaaaaah!!\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 21, "ps2/21/182000043", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000043", 540, TRUE);
 	OutputLine(NULL, "「…かぁぁ、…やってもうたん……。",
 		   NULL, "\"Fucking hell... that did it...", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000044", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000044", 540, TRUE);
 	OutputLine(NULL, "また来週来るっつうとったな相談所。",
 		   NULL, " The center's gonna be back here next week...", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000045", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000045", 540, TRUE);
 	OutputLine(NULL, "…腫れが引かんがったん、面倒なごとになるのぉ……。",
 		   NULL, " ...I'm gonna be in real shit if it's still swollen by then...", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000046", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000046", 540, TRUE);
 	OutputLine(NULL, "ああぁッ！！！",
 		   NULL, " Aaaaah, god damn it!!!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000047", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000047", 540, TRUE);
 	OutputLine(NULL, "　もうざったいわあ！！",
 		   NULL, " This is more trouble than it's worth!! ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 21, "ps2/21/182000048", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000048", 540, TRUE);
 	OutputLine(NULL, "　にーにーにーとやっかましッ！！",
 		   NULL, "Quit with the 'Nii-nii, Nii-nii' already!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000049", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000049", 540, TRUE);
 	OutputLine(NULL, "　おどれは壊れたラジオかい！！",
 		   NULL, " Are you supposed to be a broken record or something?!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000050", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000050", 540, TRUE);
 	OutputLine(NULL, "　黙らんかボケぇッ！！！」",
 		   NULL, " Can it, you little bitch!!!\"", Line_Normal);
 	ClearMessage();
@@ -2131,7 +2131,7 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 21, "ps2/21/182000051", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000051", 540, TRUE);
 	OutputLine(NULL, "「黙れッちゅうとんがわあらんかああッ、だぁれゆうとん！！！」",
 		   NULL, "\"I said shut up! Didn't you hear me?! Who are you whining to?!\"", Line_Normal);
 	ClearMessage();
@@ -2160,16 +2160,16 @@ void main()
 	ModDrawCharacterWithFiltering(1, 11, "sprite/normal/oisi1_5_", "2", "maskup", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps2/11/180700344", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700344", 540, TRUE);
 	OutputLine(NULL, "「おおっとぉ。",
 		   NULL, "\"Hey now.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps2/11/180700345", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700345", 540, TRUE);
 	OutputLine(NULL, "私に指一本でも触れると、執行妨害で現行犯逮捕しますよぅ？」",
 		   NULL, " If you touch me, I can arrest you for obstructing the law.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 1, "ps2/01/180101603", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101603", 540, TRUE);
 	OutputLine(NULL, "「く、くそぉおおぉ…ッ！！」",
 		   NULL, "\"Damn it...!!\"", Line_Normal);
 	ClearMessage();
@@ -2178,7 +2178,7 @@ void main()
 	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me2_odoroki_a1_", "1", "maskleft", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 3, "ps2/03/180300661", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "ps2/03/180300661", 540, TRUE);
 	OutputLine(NULL, "「やめなよ圭ちゃん、挑発に乗っちゃ駄目だよ！」",
 		   NULL, "\"Stop it, Kei-chan! He's just trying to piss you off!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2188,7 +2188,7 @@ void main()
 	ModDrawCharacterWithFiltering(2, 6, "sprite/normal/si1a_majime_a1_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 6, "ps2/06/180600413", 256, TRUE);
+	ModPlayVoiceLS(4, 6, "ps2/06/180600413", 540, TRUE);
 	OutputLine(NULL, "「大石のおじさま、そんな態度だときっと長生きできませんよ…！」",
 		   NULL, "\"Hey, old man... you won't live long with that kind of attitude...!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -2197,13 +2197,13 @@ void main()
 	ModDrawCharacter(1, 11, "sprite/normal/oisi1_2_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps2/11/180700346", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700346", 540, TRUE);
 	OutputLine(NULL, "「そりゃ怖い。",
 		   NULL, "\"Oh, now I'm scared.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps2/11/180700347", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700347", 540, TRUE);
 	OutputLine(NULL, "言葉をもうちょい選ばないと、あなたの場合は恐喝の現行犯になりますよ？",
 		   NULL, " If you keep on talking to me like that, I'll arrest you for threatening an officer.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps2/11/180700348", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700348", 540, TRUE);
 	OutputLine(NULL, "　んっふっふっふ…！」",
 		   NULL, " Nfu fu fu...!\"", Line_Normal);
 	ClearMessage();
@@ -2808,11 +2808,11 @@ void main()
 	ModDrawCharacter(0, 11, "sprite/normal/oisi1_4_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps2/11/180700409", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700409", 540, TRUE);
 	OutputLine(NULL, "施設長である相談所長がですね、",
 		   NULL, "like how the caretaker of a building can order people to vacate their property, ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps2/11/180700410", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700410", 540, TRUE);
 	OutputLine(NULL, "彼らが入ると事務に支障があるってんで権限の範囲内で敷地からの退去を命じてるわけなんです。」",
 		   NULL, "if he thinks that they can cause trouble for his business.\"", Line_Normal);
 	ClearMessage();
@@ -2823,33 +2823,33 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>園崎弁護士</color>", NULL, "<color=#f5e6d3>Sonozaki's Lawyer</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/sonol18001", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/sonol18001", 540, TRUE);
 	OutputLine(NULL, "「どうも。",
 		   NULL, "\"Hello.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/sonol18002", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/sonol18002", 540, TRUE);
 	OutputLine(NULL, "園崎法律相談事務所より参りました、弁護士の園崎です。",
 		   NULL, " I'm the attorney, Sonozaki, from the Sonozaki Law Consultancy Office. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>園崎弁護士</color>", NULL, "<color=#f5e6d3>Sonozaki's Lawyer</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/sonol18003", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/sonol18003", 540, TRUE);
 	OutputLine(NULL, "市児童相談所施行条例は拝見させていただきましたが、本件は不当で職権濫用に当ります。",
 		   NULL, "I went over the laws that apply to the child consultation center. Their claim is unjust, and it could be considered an abuse of their official authority.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/sonol18004", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/sonol18004", 540, TRUE);
 	OutputLine(NULL, "こちらは施行条例の複写。",
 		   NULL, " Here is a copy of the regulations.", Line_Normal);
 	ClearMessage();
 	PlaySE( 0, "s_page", 56, 64 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>園崎弁護士</color>", NULL, "<color=#f5e6d3>Sonozaki's Lawyer</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/sonol18005", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/sonol18005", 540, TRUE);
 	OutputLine(NULL, "また、前原圭一氏は雛見沢連合町会が委任した陳情団の団長です。",
 		   NULL, "Furthermore, Keiichi Maebara-san is the appointed leader of the Hinamizawa Unified Council.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/sonol18006", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/sonol18006", 540, TRUE);
 	OutputLine(NULL, "こちらが連合町会発行の委任状。",
 		   NULL, " This is the power of attorney issued by the council. ", GetGlobalFlag(GLinemodeSp));
 	PlaySE( 0, "s_page", 56, 64 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>園崎弁護士</color>", NULL, "<color=#f5e6d3>Sonozaki's Lawyer</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/sonol18007", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/sonol18007", 540, TRUE);
 	OutputLine(NULL, "雛見沢連合町会は鹿骨市役所自治係の立会いの下で結成された善意の住民団体です。",
 		   NULL, "The Hinamizawa Unified Council is a good samaritan organization of citizens formed under the observation of the Shishibone local government section.", Line_Normal);
 	ClearMessage();
@@ -2874,14 +2874,14 @@ void main()
 	PlaySE( 0, "s_page", 56, 64 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>園崎弁護士</color>", NULL, "<color=#f5e6d3>Sonozaki's Lawyer</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/sonol18008", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/sonol18008", 540, TRUE);
 	OutputLine(NULL, "よって前原圭一氏は正当な手続きを経て結成された住民団体の正当な代表者と認められます。",
 		   NULL, "That makes him a proper representative of the organization, and he went through the proper channels.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/sonol18009", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/sonol18009", 540, TRUE);
 	OutputLine(NULL, "この陳情を拒否するのは明らかな職権濫用であり、これは市職員服務規程にも違反します。",
 		   NULL, " Rejecting his appeal is a clear abuse of authority, and violates the municipal public servant regulations. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>園崎弁護士</color>", NULL, "<color=#f5e6d3>Sonozaki's Lawyer</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/sonol18010", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/sonol18010", 540, TRUE);
 	OutputLine(NULL, "以上から、児童相談所長の命令が失効することは明らかであり、それに対し警察がこれ以上の妨害を行なう場合、」",
 		   NULL, "Therefore, the order made by the head of the child consultation center is unlawful, and if the police continue to interfere with this movement, then...\"", Line_Normal);
 	ClearMessage();
@@ -3390,10 +3390,10 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/182900068", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900068", 540, TRUE);
 	OutputLine(NULL, "「いえそれが……、県議と市議の園崎議員が両方おいでで…、あと弁護士らしき人もいます。",
 		   NULL, "\"Well, actually... both the prefectural and municipal Sonozaki representatives are here... They have a lawyer with them too.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182900069", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900069", 540, TRUE);
 	OutputLine(NULL, "責任ある回答をといわれると、管理職以外では対応できません…。」",
 		   NULL, " They're asking for an answer, but only management has the authority to respond...\"", Line_Normal);
 	ClearMessage();
@@ -3412,7 +3412,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/182900070", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900070", 540, TRUE);
 	OutputLine(NULL, "「……自治の係長からは、折れといた方がいいって、ご助言いただきませんでしたっけ……。」",
 		   NULL, "\"...I thought he told you to concede...\"", Line_Normal);
 	ClearMessage();
@@ -3475,16 +3475,16 @@ void main()
 	FadeOutBGM( 1, 300, FALSE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/182900072", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900072", 540, TRUE);
 	OutputLine(NULL, "「……はい、もしもし。",
 		   NULL, "\"...Hello?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182900073", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900073", 540, TRUE);
 	OutputLine(NULL, "原山です。",
 		   NULL, " This is Harayama.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182900074", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900074", 540, TRUE);
 	OutputLine(NULL, "………あ、どうも、代わります。",
 		   NULL, " ......Oh, thank you. I'll let him know.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182900075", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900075", 540, TRUE);
 	OutputLine(NULL, "所長、自治です。」",
 		   NULL, " Sir, it's the municipality calling.\"", Line_Normal);
 	ClearMessage();
@@ -3506,7 +3506,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/183000070", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/183000070", 540, TRUE);
 	OutputLine(NULL, "「だから私、申し上げましたよね所長ぅ…。」",
 		   NULL, "\"I did tell you this would happen...\"", Line_Normal);
 	ClearMessage();
@@ -3521,10 +3521,10 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/183000071", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/183000071", 540, TRUE);
 	OutputLine(NULL, "「いや、別に自治はそういう係じゃありませんよ…はははは。",
 		   NULL, "\"That's not our job... hahahaha.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/183000072", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/183000072", 540, TRUE);
 	OutputLine(NULL, "自治の仕事は地域コミュニティの活性化と行政との連帯を…、」",
 		   NULL, " Our job is to support the growth of the local communities of the region, and...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3537,16 +3537,16 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/183000073", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/183000073", 540, TRUE);
 	OutputLine(NULL, "「こうなったら、向こうの言い分に譲歩するしかないですよ。",
 		   NULL, "\"At this point, you have no choice but to accept their request.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/183000074", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/183000074", 540, TRUE);
 	OutputLine(NULL, "建前はこの際、引っ込めた方がいいです。",
 		   NULL, " I think you should stop being so stubborn about policy.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/183000075", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/183000075", 540, TRUE);
 	OutputLine(NULL, "私どもも住民あっての行政なんですから。",
 		   NULL, " A government is there for its citizens.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/183000076", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/183000076", 540, TRUE);
 	OutputLine(NULL, "ねぇ所長さん…、",
 		   NULL, " Isn't that right...?", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
@@ -3575,10 +3575,10 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>相田</color>", NULL, "<color=#f5e6d3>Aida</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/183000077", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/183000077", 540, TRUE);
 	OutputLine(NULL, "「………まー、最終的な判断は所長にお任せします。",
 		   NULL, "\"......Well, it's your decision.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/183000078", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/183000078", 540, TRUE);
 	OutputLine(NULL, "…こちらも努力はしますが、",
 		   NULL, " We'll do our best to help...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
@@ -3599,7 +3599,7 @@ void main()
 		   NULL, " I know I did.", Line_Continue);
 	SetSpeedOfMessage( FALSE, 0 );
 	OutputLineAll(NULL, "", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/183000079", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/183000079", 540, TRUE);
 	OutputLine(NULL, "　連中を怒らしちゃいけないって！！」",
 		   NULL, " I know I told you not to get them upset!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -3619,17 +3619,17 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/182900076", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900076", 540, TRUE);
 	OutputLine(NULL, "「………所長。",
 		   NULL, "\"Sir......", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182900077", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900077", 540, TRUE);
 	OutputLine(NULL, "今日は３時で逃げ切ったとして、月曜にもまた来ますが、その時はどうするんですか…。",
 		   NULL, " Even if you manage to get away from them today, they'll come back again on Monday... What are you going to do then...?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182900078", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900078", 540, TRUE);
 	OutputLine(NULL, "自治にまでサジを投げられたらもう市長室にはとっくに話が行ってます。",
 		   NULL, " I'm sure that the mayor knows about this by now. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/182900079", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900079", 540, TRUE);
 	OutputLine(NULL, "月曜の庁議で多分、話が出ますよ…。」",
 		   NULL, "This'll definitely come up at the weekly meeting...\"", Line_Normal);
 	ClearMessage();
@@ -3688,13 +3688,13 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>所長</color>", NULL, "<color=#f5e6d3>Chief</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/b_182100071", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/b_182100071", 540, TRUE);
 	OutputLine(NULL, "「本庁？",
 		   NULL, "\"City hall?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/b_182100072", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/b_182100072", 540, TRUE);
 	OutputLine(NULL, "　自治じゃなく？",
 		   NULL, " Not the municipal offices...?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/b_182100073", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/b_182100073", 540, TRUE);
 	OutputLine(NULL, "　今度は誰です…！」",
 		   NULL, " Who is it now...?\"", Line_Normal);
 	ClearMessage();
@@ -3719,7 +3719,7 @@ void main()
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/capi18002", 256, TRUE);
 	OutputLine(NULL, "そうですね。",
 		   NULL, " That's right.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/capi18003", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/capi18003", 540, TRUE);
 	OutputLine(NULL, "雛見沢地区６町会を束ねる連合町会を代表されていらっしゃってる皆さんです。",
 		   NULL, " They're members of the town council in Hinamizawa.", Line_WaitForInput);
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/capi18004", 256, TRUE);
@@ -3742,10 +3742,10 @@ void main()
 	OutputLine(NULL, "よろしくお願いします。",
 		   NULL, " Please do so. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>市長</color>", NULL, "<color=#f5e6d3>Mayor</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/capi18010", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/capi18010", 540, TRUE);
 	OutputLine(NULL, "今日の話が終わりましたら、今日の６時までに市長室に直接報告にいらっしゃってください。",
 		   NULL, "After you're done, please come to the mayor's office and give me your report. I expect you by 6 PM.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/capi18011", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/capi18011", 540, TRUE);
 	OutputLine(NULL, "よろしくお願いいたします。」",
 		   NULL, " Thank you very much.\"", Line_Normal);
 	ClearMessage();
@@ -3792,13 +3792,13 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>市長</color>", NULL, "<color=#f5e6d3>Mayor</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 0, "ps2/00/capi18015", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/capi18015", 540, TRUE);
 	OutputLine(NULL, "「いいえいいえ。",
 		   NULL, "\"It's no problem at all.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/capi18016", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/capi18016", 540, TRUE);
 	OutputLine(NULL, "当方の職員が大変に失礼いたしました。",
 		   NULL, " I'm sorry that our staff were so impolite.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/capi18017", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/capi18017", 540, TRUE);
 	OutputLine(NULL, "市政が町会の皆さんとの連携で成り立っていることをよく指導しなかった私の不徳が招いた事態です。」",
 		   NULL, " I should've taught them better. Maintaining a good relationship between municipal governments and town councils is vital.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4013,17 +4013,17 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 21, "ps2/21/182000052", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000052", 540, TRUE);
 	OutputLine(NULL, "「…………ち。これ位で勘弁しちゃんがな。",
 		   NULL, "\".........Tch. That's enough for now.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000053", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000053", 540, TRUE);
 	OutputLine(NULL, "ええんか、通帳の場所、電話が終わるまでに思い出しとかんね……。」",
 		   NULL, " You better remember where you hid the bankbook by the time I come back.....!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 4, "ps2/04/180400212", 256, TRUE);
+	ModPlayVoiceLS(4, 4, "ps2/04/180400212", 540, TRUE);
 	OutputLine(NULL, "「……ぅっく……ひっく………。」",
 		   NULL, "\"...Ugh... hic......\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4141,10 +4141,10 @@ void main()
 	ModPlayVoiceLS(4, 21, "ps3/s12/21/182000064_2", 256, TRUE);
 	OutputLine(NULL, "　親が子の代わりに回答する言うとんね！！",
 		   NULL, " I'm just saying that I'll answer your questions in her place!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000067", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000067", 540, TRUE);
 	OutputLine(NULL, "　我ぇ今日は偉い強気やんね？！",
 		   NULL, " Can't you see what I'm saying?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000068", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000068", 540, TRUE);
 	OutputLine(NULL, "　どういうつもりじゃい、お前、名前言うてみぃッ！！！」",
 		   NULL, " What's your name, anyway?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4274,7 +4274,7 @@ void main()
 	PlayBGM( 0, "yabaisemi", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 21, "ps2/21/182000076", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000076", 540, TRUE);
 	OutputLine(NULL, "「……何のかんのあっても、",
 		   NULL, "\"No matter what happens...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
@@ -4287,7 +4287,7 @@ void main()
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "仲良し家族やんね。",
 		   NULL, " a happy family, right?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000077", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000077", 540, TRUE);
 	OutputLine(NULL, "…そこぉ、間違えちゃ駄目やんね、",
 		   NULL, " Don't you dare forget that...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
@@ -4298,25 +4298,25 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 4, "ps2/04/180400213", 256, TRUE);
+	ModPlayVoiceLS(4, 4, "ps2/04/180400213", 540, TRUE);
 	OutputLine(NULL, "「………………はい。」",
 		   NULL, "\"........Yes.\"", Line_Normal);
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 21, "ps2/21/182000078", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000078", 540, TRUE);
 	OutputLine(NULL, "「わしを怒らせると、悟史の部屋が大変なことになってまうんの、よぉく覚えといてぇな。",
 		   NULL, "\"Remember, if you upset me, I'll destroy Satoshi's room.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000079", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000079", 540, TRUE);
 	OutputLine(NULL, "……あぁ、ちゃんとうまく電話ができたら、もう金輪際、悟史の部屋には入らんと約束する。",
 		   NULL, " If you behave well, I promise you that I will never enter his room again.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000080", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000080", 540, TRUE);
 	OutputLine(NULL, "どうや、仲直りやんね！！",
 		   NULL, " Is that a deal?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000081", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000081", 540, TRUE);
 	OutputLine(NULL, "　な？",
 		   NULL, " Huh?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000082", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000082", 540, TRUE);
 	OutputLine(NULL, "　な？！」",
 		   NULL, " Huh?!\"", Line_Normal);
 	ClearMessage();
@@ -4332,23 +4332,23 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 21, "ps2/21/182000083", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000083", 540, TRUE);
 	OutputLine(NULL, "「な、わしら仲直りじゃ。",
 		   NULL, "\"We're making up now.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000084", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000084", 540, TRUE);
 	OutputLine(NULL, "な、な？",
 		   NULL, " Right?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000085", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000085", 540, TRUE);
 	OutputLine(NULL, "　な？！」",
 		   NULL, " Huh?!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 4, "ps2/04/180400214", 256, TRUE);
+	ModPlayVoiceLS(4, 4, "ps2/04/180400214", 540, TRUE);
 	OutputLine(NULL, "「………わかってますわ。",
 		   NULL, "\".........Yes...", Line_WaitForInput);
-	ModPlayVoiceLS(4, 4, "ps2/04/180400215", 256, TRUE);
+	ModPlayVoiceLS(4, 4, "ps2/04/180400215", 540, TRUE);
 	OutputLine(NULL, "……仲良しですもの………。」",
 		   NULL, " We're a happy family......\"", Line_Normal);
 	ClearMessage();
@@ -4383,7 +4383,7 @@ void main()
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/hara082304", 256, TRUE);
 	OutputLine(NULL, "いかがですかその後は。",
 		   NULL, " How's everything going so far?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 0, "ps2/00/182900099", 256, TRUE);
+	ModPlayVoiceLS(4, 0, "ps2/00/182900099", 540, TRUE);
 	OutputLine(NULL, "鉄平さんとの生活は問題ありませんか？」",
 		   NULL, " Are you having any problems with Teppei-san?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4409,7 +4409,7 @@ void main()
 	ModPlayVoiceLS(4, 4, "ps3/s12/04/180400217", 256, TRUE);
 	OutputLine(NULL, "「…………えぇ。",
 		   NULL, "\".........Yes.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 4, "ps2/04/180400218", 256, TRUE);
+	ModPlayVoiceLS(4, 4, "ps2/04/180400218", 540, TRUE);
 	OutputLine(NULL, "…………叔父さんとの生活はその後もうまく言っていましてよ…。」",
 		   NULL, " .........Everything is working out between my uncle and I.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -4456,11 +4456,11 @@ void main()
 	ModPlayVoiceLS(4, 1, "ps3/s12/01/180101625", 256, TRUE);
 	OutputLine(NULL, "「いいか沙都子、もう全部決着がつくぞ！！",
 		   NULL, "\"Satoko, we're about to come save you!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "ps2/01/180101626", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101626", 540, TRUE);
 	OutputLine(NULL, "　児童相談所の所長はお前がウンと頷けば即時に保護すると約束した！",
 		   NULL, " If you admit that you need help, the child consultation center will put you under their protection immediately! ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 1, "ps2/01/180101627", 256, TRUE);
+	ModPlayVoiceLS(4, 1, "ps2/01/180101627", 540, TRUE);
 	OutputLine(NULL, "　所長だけじゃないぞ、鹿骨市の市長もお前の救済に最優先指示を出してくれてる！！",
 		   NULL, "It's not just the center, either! The mayor of Shishibone City is supporting us too!", Line_WaitForInput);
 	ModPlayVoiceLS(4, 1, "ps3/s12/01/180101628", 256, TRUE);
@@ -4698,11 +4698,11 @@ void main()
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500928", 256, TRUE);
 	OutputLine(NULL, "それを克服しようとするあなたの強さ。",
 		   NULL, " You're trying to overcome that.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 5, "ps2/05/180500929", 256, TRUE);
+	ModPlayVoiceLS(4, 5, "ps2/05/180500929", 540, TRUE);
 	OutputLine(NULL, "………あなたは叔母の虐めを悟史の背中でやり過ごしてきたことに深い罪の思いをずっと抱いてきた。",
 		   NULL, " ......You felt guilty toward Satoshi because you hid behind his back when you were abused by your aunt. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 5, "ps2/05/180500930", 256, TRUE);
+	ModPlayVoiceLS(4, 5, "ps2/05/180500930", 540, TRUE);
 	OutputLine(NULL, "その贖罪のために、鉄平の虐めに耐えていることを知っているわ。",
 		   NULL, "I know that you're trying to take Teppei's abuse as a form of self-punishment.", Line_WaitForInput);
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500931", 256, TRUE);
@@ -4769,10 +4769,10 @@ void main()
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500943", 256, TRUE);
 	OutputLine(NULL, "……あなたは悟史がどれだけの強さを持っていたのか、身近にいて、まだ気付けないの…？",
 		   NULL, "...You don't even know what kind of strength Satoshi held within him...", Line_WaitForInput);
-	ModPlayVoiceLS(4, 5, "ps2/05/180500944", 256, TRUE);
+	ModPlayVoiceLS(4, 5, "ps2/05/180500944", 540, TRUE);
 	OutputLine(NULL, "　悟史はね、あなたのように怯えたり泣いたり縮こまったりしてるだけじゃない。",
 		   NULL, " Satoshi didn't just cry and quake in fear like you're doing.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 5, "ps2/05/180500945", 256, TRUE);
+	ModPlayVoiceLS(4, 5, "ps2/05/180500945", 540, TRUE);
 	OutputLine(NULL, "戦ったの。",
 		   NULL, " He fought.", Line_WaitForInput);
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500946", 256, TRUE);
@@ -5022,7 +5022,7 @@ void main()
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500972", 256, TRUE);
 	OutputLine(NULL, "　奥歯が震える？",
 		   NULL, " Are your teeth chattering?", Line_WaitForInput);
-	ModPlayVoiceLS(4, 5, "ps2/05/180500973", 256, TRUE);
+	ModPlayVoiceLS(4, 5, "ps2/05/180500973", 540, TRUE);
 	OutputLine(NULL, "　背中の産毛がぞわぞわする？",
 		   NULL, " Are you feeling shivers running down your spine?", Line_WaitForInput);
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500974", 256, TRUE);
@@ -5400,7 +5400,7 @@ void main()
 	ModPlayVoiceLS(4, 21, "ps3/s12/21/182000093", 256, TRUE);
 	OutputLine(NULL, "「何じゃいその目つきはあぁああ！！！",
 		   NULL, "\"What's with that look in your eyes, huuuuuh?!!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 21, "ps2/21/182000094", 256, TRUE);
+	ModPlayVoiceLS(4, 21, "ps2/21/182000094", 540, TRUE);
 	OutputLine(NULL, "　前歯全部へし折られてえかあああッ！！」",
 		   NULL, " I'm gonna push your front teeth in!!\"", Line_Normal);
 	ClearMessage();
@@ -5466,7 +5466,7 @@ void main()
 	ModPlayVoiceLS(4, 2, "ps3/s12/02/180200686", 256, TRUE);
 	OutputLine(NULL, "「沙都子ちゃんは助けを求めました！",
 		   NULL, "\"Satoko-chan asked for help!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 2, "ps2/02/180200687", 256, TRUE);
+	ModPlayVoiceLS(4, 2, "ps2/02/180200687", 540, TRUE);
 	OutputLine(NULL, "　これで相談所は動きます！」",
 		   NULL, " The child consultation center is going to take action now!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -5536,7 +5536,7 @@ void main()
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/180700417", 256, TRUE);
 	OutputLine(NULL, "ついさっき、北条家に警官が突入しました。",
 		   NULL, "The police entered the Houjou residence not a moment ago.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps2/11/180700418", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700418", 540, TRUE);
 	OutputLine(NULL, "沙都子さんに暴行を加える時間なんて与えません。」",
 		   NULL, " He wouldn't have had any time to hurt Satoko-chan.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -5791,10 +5791,10 @@ void main()
 	DrawSceneWithMask( "background/ho1_02", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps2/11/180700424", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700424", 540, TRUE);
 	OutputLine(NULL, "「どうも間一髪にはならなかったようですねぇ。",
 		   NULL, "\"We should've acted more quickly.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps2/11/180700425", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "ps2/11/180700425", 540, TRUE);
 	OutputLine(NULL, "…お役に立てなくて申し訳ない。」",
 		   NULL, " ...I'm sorry we weren't more help.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -5963,10 +5963,10 @@ void main()
 	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300670", 256, TRUE);
 	OutputLine(NULL, "急は要さないけどまだまだ色々と戦いは続くと思うよ。",
 		   NULL, " I think there will be more issues to come.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 3, "ps2/03/180300671", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "ps2/03/180300671", 540, TRUE);
 	OutputLine(NULL, "鉄平の親権が喪失すれば新しい後見人を定めなくちゃならない。",
 		   NULL, " Once Teppei loses his parental rights, they'll need to find a new guardian for Satoko.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 3, "ps2/03/180300672", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "ps2/03/180300672", 540, TRUE);
 	OutputLine(NULL, "沙都子の権利関係とか色々ね。",
 		   NULL, " Someone has to take care of her.", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
@@ -5995,7 +5995,7 @@ void main()
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500993", 256, TRUE);
 	OutputLine(NULL, "「……沙都子は診療所へ行きましたです。",
 		   NULL, "\"......Irie took Satoko to the clinic.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 5, "ps2/05/180500994", 256, TRUE);
+	ModPlayVoiceLS(4, 5, "ps2/05/180500994", 540, TRUE);
 	OutputLine(NULL, "でも、入江の話では見掛けより傷は浅いそうなのです。」",
 		   NULL, " He says her injuries aren't as bad as they look, though.\" ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
