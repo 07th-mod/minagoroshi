@@ -17,6 +17,7 @@ void main()
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 1300 );
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacter(0, 10, "sprite/normal/iri2_def2_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawScene( "background/sinryou_sinsatu1", 1000 );
 
@@ -54,7 +55,9 @@ void main()
 		   NULL, "\"......Satoko, you're all done, you know...?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacter(1, 4, "sprite/normal/sa2b_akireru_b1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacter(2, 9, "sprite/normal/ta2_warai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask( "background/sinryou_sinsatu3", "maskright", 1, 0, 300 );
 
@@ -201,7 +204,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(0, 12, "sprite/normal-70/ha1_yowaki_", "0", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModSetLayerFilter(0, 179, "none");
+	ModDrawCharacterWithFiltering(0, 12, "sprite/normal/ha1_yowaki_", "0", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100012", 256, TRUE);
@@ -246,7 +250,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(0, 12, "sprite/normal-70/ha1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 12, "sprite/normal/ha1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100013", 256, TRUE);
@@ -324,6 +328,7 @@ void main()
 
 	FadeOutBGM( 1, 400, FALSE );
 	FadeOutBGM( 2, 400, FALSE );
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacter(0, 10, "sprite/normal/iri2_def2_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawScene( "background/sinryou_sinsatu1", 400 );
 
@@ -840,7 +845,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 12, "sprite/normal-70/ha1_def_", "0", "mask00", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModSetLayerFilter(2, 179, "none");
+	ModDrawCharacterWithFiltering(2, 12, "sprite/normal/ha1_def_", "0", "mask00", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　入江が出て行くと、入れ替わりに羽入が戻ってきた。",
@@ -875,7 +881,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 12, "sprite/normal-70/ha1_warai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 12, "sprite/normal/ha1_warai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100014", 256, TRUE);
@@ -896,7 +902,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 12, "sprite/normal-70/ha1_au_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 12, "sprite/normal/ha1_au_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100016", 256, TRUE);
@@ -952,7 +958,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 12, "sprite/normal-70/ha1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 12, "sprite/normal/ha1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100017", 256, TRUE);
@@ -1067,7 +1073,7 @@ void main()
 		   NULL, "She was also timing how long it took her to answer, holding a stopwatch under the table.", Line_Normal);
 	ClearMessage();
 
-	ModDrawCharacter(2, 12, "sprite/normal-70/ha1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	ModDrawCharacter(2, 12, "sprite/normal/ha1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask( "background/sinryou_sinsatu1", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1085,7 +1091,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 12, "sprite/normal-70/ha1_yowaki_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 12, "sprite/normal/ha1_yowaki_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100019", 256, TRUE);
@@ -1102,7 +1108,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 12, "sprite/normal-70/ha1_warai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 12, "sprite/normal/ha1_warai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100021", 256, TRUE);
@@ -1365,6 +1371,7 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 0, 400, FALSE );
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacter(2, 10, "sprite/normal/iri2_def1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene( "background/sinryou_sinsatu1", 400 );
 	PlayBGM( 0, "demo_48khz", 56, 0 );
@@ -1513,7 +1520,8 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 200, TRUE );
-	ModDrawCharacterWithFiltering(2, 12, "sprite/normal-70/ha1_def_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModSetLayerFilter(2, 179, "none");
+	ModDrawCharacterWithFiltering(2, 12, "sprite/normal/ha1_def_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100023", 256, TRUE);
@@ -1538,7 +1546,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 12, "sprite/normal-70/ha1_au_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 12, "sprite/normal/ha1_au_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100025", 256, TRUE);
@@ -1560,6 +1568,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacterWithFiltering(2, 4, "sprite/normal/sa2a_warai_a1_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
@@ -1887,7 +1896,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 12, "sprite/normal-70/ha1_warai_", "2", "maskleft", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModSetLayerFilter(1, 179, "none");
+	ModDrawCharacterWithFiltering(1, 12, "sprite/normal/ha1_warai_", "2", "maskleft", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100026", 256, TRUE);
@@ -1938,6 +1948,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacterWithFiltering(1, 1, "sprite/normal/kei2_warai_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2144,7 +2155,8 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "mask00" , 0, FALSE, 0, 0, 300, FALSE );
-	ModDrawCharacterWithFiltering(0, 12, "sprite/normal-70/ha1_def_", "0", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModSetLayerFilter(0, 179, "none");
+	ModDrawCharacterWithFiltering(0, 12, "sprite/normal/ha1_def_", "0", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100027", 256, TRUE);
@@ -2174,7 +2186,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(0, 12, "sprite/normal-70/ha1_au_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 12, "sprite/normal/ha1_au_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100029", 256, TRUE);
@@ -2282,6 +2294,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/mati_o2", 400 );
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacter(0, 4, "sprite/normal/sa2b_def_b1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
@@ -2411,7 +2424,8 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/mati_o2", 300 );
-	ModDrawCharacterWithFiltering(0, 12, "sprite/normal-70/ha1_yowaki_", "0", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModSetLayerFilter(0, 179, "none");
+	ModDrawCharacterWithFiltering(0, 12, "sprite/normal/ha1_yowaki_", "0", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100032", 256, TRUE);
@@ -2583,7 +2597,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(0, 12, "sprite/normal-70/ha1_yowaki_", "0", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModDrawCharacterWithFiltering(0, 12, "sprite/normal/ha1_yowaki_", "0", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100033", 256, TRUE);
@@ -2690,7 +2704,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(0, 12, "sprite/normal-70/ha1_au_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 12, "sprite/normal/ha1_au_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100034", 256, TRUE);
@@ -2779,6 +2793,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacter(0, 1, "sprite/normal/kei2_warai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2876,7 +2891,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(0, 12, "sprite/normal-70/ha1_yowaki_", "0", "mask00", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModSetLayerFilter(0, 179, "none");
+	ModDrawCharacterWithFiltering(0, 12, "sprite/normal/ha1_yowaki_", "0", "mask00", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100036", 256, TRUE);
@@ -2949,7 +2965,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(0, 12, "sprite/normal-70/ha1_au_", "2", -240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 12, "sprite/normal/ha1_au_", "2", -240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100037", 256, TRUE);
@@ -3040,7 +3056,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(0, 12, "sprite/normal-70/ha1_yowaki_", "0", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModDrawCharacterWithFiltering(0, 12, "sprite/normal/ha1_yowaki_", "0", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100038", 256, TRUE);
@@ -3124,7 +3140,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(0, 12, "sprite/normal-70/ha1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 12, "sprite/normal/ha1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100039", 256, TRUE);
@@ -3557,6 +3573,7 @@ void main()
 	DrawSceneWithMask( "black", "maskdown", 1, 0, 1000 );
 	FadeOutBGM( 1, 400, FALSE );
 	FadeOutBGM( 2, 400, TRUE );
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacter(0, 3, "sprite/normal/me2_wink_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawScene( "background/mati_o4", 400 );
 
@@ -3746,7 +3763,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 12, "sprite/normal-70/ha1_def_", "0", "maskleft", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModSetLayerFilter(2, 179, "none");
+	ModDrawCharacterWithFiltering(2, 12, "sprite/normal/ha1_def_", "0", "maskleft", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100040", 256, TRUE);
@@ -3798,7 +3816,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(2, 12, "sprite/normal-70/ha1_def2_", "0", 240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 12, "sprite/normal/ha1_def2_", "0", 240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100041", 256, TRUE);
@@ -3824,7 +3842,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(2, 12, "sprite/normal-70/ha1_def_", "0", 240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 12, "sprite/normal/ha1_def_", "0", 240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100042", 256, TRUE);
@@ -4096,7 +4114,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 12, "sprite/normal-70/ha1_yowaki_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 12, "sprite/normal/ha1_yowaki_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100043", 256, TRUE);
@@ -4328,7 +4346,8 @@ void main()
 		   NULL, "No no no no....", Line_Normal);
 	ClearMessage();
 
-	ModDrawCharacter(0, 12, "sprite/normal-70/ha1_au_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	ModSetLayerFilter(0, 179, "none");
+	ModDrawCharacter(0, 12, "sprite/normal/ha1_au_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawSceneWithMask("background/mati_o4", "maskup", 0, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
@@ -4608,6 +4627,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacter(0, 1, "sprite/normal/kei2_warai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -4753,6 +4773,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacter(2, 1, "sprite/normal/kei2_majime_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -5489,7 +5510,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 12, "sprite/normal-70/ha1_def2_", "0", "mask00", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModSetLayerFilter(2, 179, "none");
+	ModDrawCharacterWithFiltering(2, 12, "sprite/normal/ha1_def2_", "0", "mask00", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100049", 256, TRUE);
@@ -5510,6 +5532,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacter(2, 2, "sprite/normal/re2b_warai_b1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 400, TRUE );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );

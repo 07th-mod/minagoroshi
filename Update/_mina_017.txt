@@ -28,6 +28,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacterWithFiltering(1, 18, "sprite/normal/ki_komaru_", "0", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f3ceb3>喜一郎</color>", NULL, "<color=#f3ceb3>Kiichiro</color>", NULL, Line_ContinueAfterTyping); }
@@ -340,6 +341,7 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacter(2, 2, "sprite/normal/re1b_komaru_b1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask( "background/js4_02", "maskleft", 1, 0, 300 );
 
@@ -564,6 +566,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacterWithFiltering(0, 2, "sprite/normal/re1a_def_a1_", "2", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }

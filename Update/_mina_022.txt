@@ -15,6 +15,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacterWithFiltering(1, 8, "sprite/normal/tomi1_komaru_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#945c44>富竹</color>", NULL, "<color=#945c44>Tomitake</color>", NULL, Line_ContinueAfterTyping); }
@@ -27,6 +28,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacterWithFiltering(2, 9, "sprite/normal/ta1_warai_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
@@ -239,6 +241,7 @@ void main()
 		   NULL, "...Tomitake knew from experience that he couldn't grasp what was on her mind when she wore a cold smile like that.", Line_Normal);
 	ClearMessage();
 
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacter(0, 9, "sprite/normal/ta1_akuwarai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawSceneWithMask( "background/ka1_01", "maskup", 1, 0, 1300 );
 
@@ -1985,7 +1988,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 9, "sprite/night/ta1_def_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModSetLayerFilter(2, 256, "night");
+	ModDrawCharacterWithFiltering(2, 9, "sprite/normal/ta1_def_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900194", 256, TRUE);
@@ -2003,7 +2007,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 9, "sprite/night/ta1_akuwarai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 9, "sprite/normal/ta1_akuwarai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900196", 256, TRUE);
@@ -2138,7 +2142,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 9, "sprite/night/ta1_def_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 9, "sprite/normal/ta1_def_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900198", 256, TRUE);
@@ -2159,7 +2163,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 9, "sprite/night/ta1_warai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 9, "sprite/normal/ta1_warai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900200", 256, TRUE);
@@ -2205,7 +2209,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(0, 9, "sprite/night/ta1_akuwarai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModSetLayerFilter(0, 256, "night");
+	ModDrawCharacter(0, 9, "sprite/normal/ta1_akuwarai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900003", 256, TRUE);
@@ -2229,7 +2234,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(0, 9, "sprite/night/ta1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 9, "sprite/normal/ta1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900205", 256, TRUE);
@@ -2238,7 +2243,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(0, 9, "sprite/night/ta1_akuwarai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 9, "sprite/normal/ta1_akuwarai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900206", 256, TRUE);
@@ -2269,7 +2274,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(0, 9, "sprite/night/ta1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 9, "sprite/normal/ta1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900209", 256, TRUE);
@@ -2341,7 +2346,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(0, 9, "sprite/night/ta1_hatena_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 9, "sprite/normal/ta1_hatena_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鷹野はそれを聞き、ほんのしばらくの間、きょとんとしたような表情を浮かべているように見えた。",
@@ -2360,7 +2365,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(0, 9, "sprite/night/ta1_akuwarai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 9, "sprite/normal/ta1_akuwarai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900218", 256, TRUE);
@@ -2372,7 +2377,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(0, 9, "sprite/night/ta1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 9, "sprite/normal/ta1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900220", 256, TRUE);
@@ -2399,7 +2404,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(0, 9, "sprite/night/ta1_akuwarai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 9, "sprite/normal/ta1_akuwarai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900222", 256, TRUE);
@@ -2419,7 +2424,8 @@ void main()
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "white", "maskleft", 1, 0, 300 );
 	PlayBGM( 1, "yoru", 56, 0 );
-	ModDrawCharacter(1, 19, "sprite/night/kuma_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	ModSetLayerFilter(1, 256, "night");
+	ModDrawCharacter(1, 19, "sprite/normal/kuma_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask( "background/ymo3", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
@@ -2429,7 +2435,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DrawScene( "background/ymo3", 300 );
-	ModDrawCharacterWithFiltering(2, 11, "sprite/night/oisi1_2_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 11, "sprite/normal/oisi1_2_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700039", 256, TRUE);
@@ -2438,7 +2444,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 11, "sprite/night/oisi1_4_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_4_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700040", 256, TRUE);
@@ -2465,7 +2471,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 10, "sprite/night/iri2_majime2_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 10, "sprite/normal/iri2_majime2_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 10, "ps3/s12/10/281000008", 256, TRUE);
@@ -2474,7 +2480,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 11, "sprite/night/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700041", 256, TRUE);
@@ -2489,7 +2495,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 11, "sprite/night/oisi1_4_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_4_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700044", 256, TRUE);
@@ -2507,7 +2513,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 11, "sprite/night/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700046", 256, TRUE);
@@ -2519,7 +2525,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(1, 10, "sprite/night/iri2_majime_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 10, "sprite/normal/iri2_majime_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 10, "ps3/s12/10/281000010", 256, TRUE);
@@ -2531,7 +2537,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 11, "sprite/night/oisi1_4_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_4_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700048", 256, TRUE);
@@ -2549,7 +2555,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 11, "sprite/night/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700050", 256, TRUE);
@@ -2561,7 +2567,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(1, 10, "sprite/night/iri2_majime2_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 10, "sprite/normal/iri2_majime2_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 10, "ps3/s12/10/281000013", 256, TRUE);
@@ -2570,7 +2576,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(2, 11, "sprite/night/oisi1_5_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_5_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700052", 256, TRUE);
@@ -2609,7 +2615,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(1, 10, "sprite/night/iri2_majime_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 10, "sprite/normal/iri2_majime_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 10, "ps3/s12/10/281000013_1", 256, TRUE);
@@ -2618,7 +2624,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(2, 11, "sprite/night/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700054", 256, TRUE);
@@ -2629,7 +2635,7 @@ void main()
 		   NULL, " Well, I'm sure the old man in forensics will take care of the investigation.\"", Line_Normal);
 	ClearMessage();
 
-	ModDrawCharacter(0, 19, "sprite/night/kuma_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	ModDrawCharacter(0, 19, "sprite/normal/kuma_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawSceneWithMask( "background/ymo1", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
@@ -2642,7 +2648,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 11, "sprite/night/oisi1_1_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 11, "sprite/normal/oisi1_1_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700056", 256, TRUE);
@@ -2663,7 +2669,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(1, 11, "sprite/night/oisi1_2_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 11, "sprite/normal/oisi1_2_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700058", 256, TRUE);
@@ -2685,7 +2691,7 @@ void main()
 		   NULL, "Irie was looking at the miserable corpse of Tomitake, and he kept saying the same thing.", Line_Normal);
 	ClearMessage();
 
-	ModDrawCharacter(2, 10, "sprite/night/iri2_majime2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	ModDrawCharacter(2, 10, "sprite/normal/iri2_majime2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask( "background/ymo3", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
@@ -2800,7 +2806,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(0, 9, "sprite/flashback/ta1_def_", "0", "maskc", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModSetLayerFilter(0, 256, "flashback");
+	ModDrawCharacterWithFiltering(0, 9, "sprite/normal/ta1_def_", "0", "maskc", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　そこに至った時、入江の脳裏に鷹野が浮かぶ。",
@@ -2824,7 +2831,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 400 );
-	ModDrawCharacter(2, 10, "sprite/night/iri2_majime_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	ModDrawCharacter(2, 10, "sprite/normal/iri2_majime_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene( "background/ymo1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
@@ -2837,7 +2844,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 11, "sprite/night/oisi1_4_", "1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 11, "sprite/normal/oisi1_4_", "1", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700060", 256, TRUE);
@@ -2858,7 +2865,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(1, 11, "sprite/night/oisi1_1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 11, "sprite/normal/oisi1_1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700062", 256, TRUE);
@@ -2873,7 +2880,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(1, 11, "sprite/night/oisi1_2_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 11, "sprite/normal/oisi1_2_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700063", 256, TRUE);
@@ -2886,7 +2893,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshot( 2, FALSE, 0, 0, 0, 0, 300, TRUE );
-	ModDrawCharacter(2, 19, "sprite/night/kuma_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacter(2, 19, "sprite/normal/kuma_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 19, "ps3/s12/19/283100006", 256, TRUE);
@@ -2945,8 +2952,10 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(2, 8, "sprite/flashback/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, FALSE );
-	ModDrawCharacter(1, 9, "sprite/flashback/ta1_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModSetLayerFilter(2, 256, "flashback");
+	ModDrawCharacter(2, 8, "sprite/normal/tomi1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, FALSE );
+	ModSetLayerFilter(1, 256, "flashback");
+	ModDrawCharacter(1, 9, "sprite/normal/ta1_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　富竹と鷹野は個人的に親しい関係だっただけじゃない。",
@@ -2970,7 +2979,8 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 400 );
-	ModDrawCharacter(2, 11, "sprite/night/oisi1_4_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	ModSetLayerFilter(2, 256, "night");
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_4_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene( "background/ymo1", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2986,7 +2996,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 10, "sprite/night/iri2_majime_", "2", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModSetLayerFilter(1, 256, "night");
+	ModDrawCharacterWithFiltering(1, 10, "sprite/normal/iri2_majime_", "2", "maskright", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#c89a80>入江</color>", NULL, "<color=#c89a80>Irie</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 10, "ps3/s12/10/281000027", 256, TRUE);
@@ -2998,7 +3009,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacter(2, 11, "sprite/night/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 11, "sprite/normal/oisi1_1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700071", 256, TRUE);
@@ -3075,7 +3086,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DrawSceneWithMask( "white", "maskleft", 1, 0, 300 );
-	ModDrawCharacter(1, 9, "sprite/night/ta1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	ModDrawCharacter(1, 9, "sprite/normal/ta1_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask( "background/torakku2", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }

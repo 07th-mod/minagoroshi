@@ -13,6 +13,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacterWithFiltering(2, 4, "sprite/normal/sa1a_muhyou_a1_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -65,6 +66,7 @@ void main()
 		   NULL, "That means Satoko should have hidden the bankbook somewhere.", Line_Normal);
 	ClearMessage();
 
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacter(0, 4, "sprite/normal/sa1b_muhyou_b2_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawScene( "background/ho_r1", 400 );
 

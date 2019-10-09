@@ -55,6 +55,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacterWithFiltering(0, 11, "sprite/normal/oisi1_1_", "0", "maskleft", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -467,6 +468,7 @@ void main()
 		   NULL, "...In fact, it was more plausible to think she was enraged when the lovesick Tomitake acted cold towards her, and she strangled his neck.", Line_Normal);
 	ClearMessage();
 
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacter(2, 11, "sprite/normal/oisi1_1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene( "background/ji2", 1000 );
 

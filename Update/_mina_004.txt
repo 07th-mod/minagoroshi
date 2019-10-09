@@ -39,6 +39,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re2b_warai_b1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
@@ -51,6 +52,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me2_warai_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -257,6 +259,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacterWithFiltering(0, 6, "sprite/normal/si1a_wink_a1_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
@@ -1417,7 +1420,8 @@ void main()
 		   NULL, " Are you staying here?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	ModDrawCharacter(1, 3, "sprite/sunset/me2_def_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
+	ModSetLayerFilter(1, 256, "sunset");
+	ModDrawCharacter(1, 3, "sprite/normal/me2_def_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawScene( "background/js4_01", 400 );
 	PlayBGM( 0, "z2_hig2", 56, 0 );
 
@@ -1443,7 +1447,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 6, "sprite/sunset/si1a_warai_a1_", "2", "maskright", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModSetLayerFilter(2, 256, "sunset");
+	ModDrawCharacterWithFiltering(2, 6, "sprite/normal/si1a_warai_a1_", "2", "maskright", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s12/06/180600044", 256, TRUE);
@@ -1455,7 +1460,8 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(0, 4, "sprite/sunset/sa2a_warai_a1_", "0", "maskleft", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModSetLayerFilter(0, 256, "sunset");
+	ModDrawCharacterWithFiltering(0, 4, "sprite/normal/sa2a_warai_a1_", "0", "maskleft", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "ps3/s12/04/180400103", 256, TRUE);
@@ -1467,7 +1473,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(1, 3, "sprite/sunset/me2_tohoho_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 3, "sprite/normal/me2_tohoho_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300130", 256, TRUE);
@@ -1480,7 +1486,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(2, 2, "sprite/sunset/re2a_warai_a1_", "2", "maskright", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re2a_warai_a1_", "2", "maskright", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s12/02/180200145", 256, TRUE);
@@ -1493,7 +1499,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 0, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(0, 5, "sprite/sunset/ri2_warai_a1_", "2", "maskleft", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModDrawCharacterWithFiltering(0, 5, "sprite/normal/ri2_warai_a1_", "2", "maskleft", 1, -240, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500227", 256, TRUE);
@@ -1503,7 +1509,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(2, 6, "sprite/sunset/si1a_wink_a1_", "0", "maskleft", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 6, "sprite/normal/si1a_wink_a1_", "0", "maskleft", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s12/06/180600046", 256, TRUE);
@@ -1512,7 +1518,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 6, "sprite/sunset/si1a_akuwarai_a1_", "2", 240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 6, "sprite/normal/si1a_akuwarai_a1_", "2", 240, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s12/06/180600047", 256, TRUE);
@@ -1560,7 +1566,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/js4_01", 300 );
-	ModDrawCharacter(2, 2, "sprite/sunset/re2a_def_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacter(2, 2, "sprite/normal/re2a_def_a1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s12/02/180200147", 256, TRUE);
@@ -1569,7 +1575,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 2, "sprite/sunset/re2b_warai_b1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 2, "sprite/normal/re2b_warai_b1_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s12/02/180200148", 256, TRUE);
@@ -1614,7 +1620,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 2, "sprite/sunset/re2a_warai_a1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re2a_warai_a1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s12/02/180200150", 256, TRUE);
@@ -1626,7 +1632,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 4, "sprite/sunset/sa2a_akuwarai_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa2a_akuwarai_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "ps3/s12/04/180400105", 256, TRUE);
@@ -1635,7 +1641,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/ji2_01", 300 );
-	ModDrawCharacterWithFiltering(2, 3, "sprite/sunset/me2_warai_a1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me2_warai_a1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300134", 256, TRUE);
@@ -1644,7 +1650,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 6, "sprite/sunset/si1a_tohoho_a1_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 6, "sprite/normal/si1a_tohoho_a1_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s12/06/180600048", 256, TRUE);
@@ -1669,7 +1675,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DrawScene( "background/ji2_01", 300 );
-	ModDrawCharacterWithFiltering(2, 5, "sprite/sunset/ri2_def_a1_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 5, "sprite/normal/ri2_def_a1_", "0", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500228", 256, TRUE);
@@ -1695,7 +1701,7 @@ void main()
 		   NULL, " He comes here every year to take pictures, right?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 4, "sprite/sunset/sa2a_warai_a1_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa2a_warai_a1_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "ps3/s12/04/180400106", 256, TRUE);
@@ -1707,7 +1713,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/ji2_01", 300 );
-	ModDrawCharacterWithFiltering(1, 3, "sprite/sunset/me2_tokui_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 3, "sprite/normal/me2_tokui_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300135", 256, TRUE);
@@ -1719,7 +1725,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(2, 2, "sprite/sunset/re2a_def_a1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re2a_def_a1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s12/02/180200152", 256, TRUE);
@@ -1732,7 +1738,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(1, 4, "sprite/sunset/sa2b_akuwarai_b1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa2b_akuwarai_b1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "ps3/s12/04/180400108", 256, TRUE);
@@ -1754,7 +1760,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(2, 6, "sprite/sunset/si1a_warai_a1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 6, "sprite/normal/si1a_warai_a1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s12/06/180600050", 256, TRUE);
@@ -1769,7 +1775,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/ji2_01", 300 );
-	ModDrawCharacterWithFiltering(2, 3, "sprite/sunset/me2_wink_a1_", "1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me2_wink_a1_", "1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300137", 256, TRUE);
@@ -1784,7 +1790,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(1, 5, "sprite/sunset/ri2_niko_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri2_niko_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500229", 256, TRUE);
@@ -1794,7 +1800,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(2, 2, "sprite/sunset/re2b_warai_b1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re2b_warai_b1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s12/02/180200154", 256, TRUE);
@@ -1828,7 +1834,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(1, 5, "sprite/sunset/ri2_warai_a1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 5, "sprite/normal/ri2_warai_a1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500230", 256, TRUE);
@@ -1859,7 +1865,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(2, 3, "sprite/sunset/me2_def_a1_", "1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 3, "sprite/normal/me2_def_a1_", "1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300140", 256, TRUE);
@@ -1872,7 +1878,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(1, 4, "sprite/sunset/sa2a_def_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 4, "sprite/normal/sa2a_def_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "ps3/s12/04/180400110", 256, TRUE);
@@ -1881,7 +1887,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(1, 4, "sprite/sunset/sa2b_warai_b1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
+	ModDrawCharacter(1, 4, "sprite/normal/sa2b_warai_b1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "ps3/s12/04/180400111", 256, TRUE);
@@ -1891,7 +1897,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(2, 6, "sprite/sunset/si1a_warai_a1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 6, "sprite/normal/si1a_warai_a1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s12/06/180600053", 256, TRUE);
@@ -1904,7 +1910,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(1, 5, "sprite/sunset/ri2_komaru_a2_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
+	ModDrawCharacterWithFiltering(1, 5, "sprite/normal/ri2_komaru_a2_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500232", 256, TRUE);
@@ -1927,7 +1933,7 @@ void main()
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 2, "maskleft" , 1, FALSE, 0, 0, 300, TRUE );
-	ModDrawCharacterWithFiltering(2, 2, "sprite/sunset/re2b_def_b1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
+	ModDrawCharacterWithFiltering(2, 2, "sprite/normal/re2b_def_b1_", "2", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s12/02/180200156", 256, TRUE);
@@ -1939,7 +1945,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 2, "sprite/sunset/re2b_warai_b1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 2, "sprite/normal/re2b_warai_b1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s12/02/180200158", 256, TRUE);
@@ -1952,7 +1958,7 @@ void main()
 
 	DisableWindow();
 	PlaySE( 0, "thisikuki", 56, 64 );
-	ModDrawCharacter(2, 2, "sprite/sunset/re2b_kaii_b1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(2, 2, "sprite/normal/re2b_kaii_b1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 2, "ps3/s12/02/180200160", 256, TRUE);

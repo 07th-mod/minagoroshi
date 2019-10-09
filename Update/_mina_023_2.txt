@@ -39,6 +39,7 @@ void main()
 		   NULL, "...It's funny how they make such a big fuss about their own people when they don't care about what happens to other people's lives if it would get in the way of their research.", Line_Normal);
 	ClearMessage();
 
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacter(1, 14, "sprite/normal/oko_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask( "background/sinryou_sinsatu3", "maskleft", 1, 0, 300 );
 
@@ -173,6 +174,7 @@ void main()
 		   NULL, "Irie looked upset that he was under suspicion after working so hard for the organization.", Line_Normal);
 	ClearMessage();
 
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacter(2, 10, "sprite/normal/iri2_def2_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask( "background/sinryou_sinsatu1", "maskleft", 1, 0, 300 );
 
@@ -493,6 +495,7 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 1000, 0, FALSE );
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacter(0, 10, "sprite/normal/iri2_majime_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawScene( "background/sinryou_sinsatu1", 1000 );
 	PlayBGM( 0, "Nazo", 56, 0 );

@@ -38,6 +38,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacterWithFiltering(0, 22, "sprite/normal/tie_3_", "2", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
@@ -493,6 +494,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacter(2, 6, "sprite/normal/si3_ikari_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask( "background/g2", "maskright", 1, 0, 300 );
 
@@ -526,6 +528,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacterWithFiltering(1, 22, "sprite/normal/tie_2_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
@@ -853,7 +856,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	ModDrawCharacterWithFiltering(0, 12, "sprite/normal-70/ha1_au_", "2", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModSetLayerFilter(0, 179, "none");
+	ModDrawCharacterWithFiltering(0, 12, "sprite/normal/ha1_au_", "2", "mask00", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100149", 256, TRUE);
@@ -877,7 +881,7 @@ void main()
 
 
 	DisableWindow();
-	ModDrawCharacter(0, 12, "sprite/normal-70/ha1_yowaki_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
+	ModDrawCharacter(0, 12, "sprite/normal/ha1_yowaki_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　羽入は悲しそうな表情を浮かべる。",
@@ -1025,6 +1029,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacterWithFiltering(0, 22, "sprite/normal/tie_3_", "2", "maskup", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2681,7 +2686,8 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "white", "maskc", 1, 0, 1300 );
-	ModDrawCharacter(0, 1, "sprite/flashback/kei1_ikari1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	ModSetLayerFilter(0, 256, "flashback");
+	ModDrawCharacter(0, 1, "sprite/normal/kei1_ikari1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawScene( "background/flashback/gk3", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2725,7 +2731,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 1000 );
-	ModDrawCharacter(0, 4, "sprite/flashback/sa1a_muhyou_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
+	ModDrawCharacter(0, 4, "sprite/normal/sa1a_muhyou_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawScene( "background/flashback/gk1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }

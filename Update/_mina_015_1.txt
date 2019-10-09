@@ -25,7 +25,9 @@ void main()
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "white", "maskright", 1, 0, 1300 );
+	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacter(2, 6, "sprite/normal/si3_odoroki_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacter(1, 4, "sprite/normal/sa1a_muhyou_a2_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask( "background/gk1", "maskright", 1, 0, 1300 );
 	PlayBGM( 0, "Feel", 56, 0 );
@@ -81,6 +83,7 @@ void main()
 		   NULL, "...Nobody had even asked her that.", Line_Normal);
 	ClearMessage();
 
+	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacter(0, 2, "sprite/normal/re1a_okoru_a1_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawSceneWithMask( "background/gk3", "maskright", 1, 0, 300 );
 
@@ -558,6 +561,7 @@ void main()
 		   NULL, " Nipah~☆\"", Line_Normal);
 	ClearMessage();
 
+	ModSetLayerFilter(3, 256, "none");
 	ModDrawCharacter(3, 4, "sprite/normal/sa1b_muhyou_b1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 20, 0, FALSE );
 	DrawSceneWithMask( "background/gk1", "maskright", 1, 0, 300 );
 
