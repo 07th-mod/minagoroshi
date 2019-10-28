@@ -5949,6 +5949,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 
+	DrawBustshot(5, "2choices", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 300, FALSE );
 	char				Item[2];
 	if(GetGlobalFlag(GLanguage) == 1) {
 		Item[0] = "I advised him on who he should give the doll to.";
@@ -5959,5 +5960,6 @@ void main()
 	}
 	//InitializeSelectedItem();
 	Select( 2, Item );
+	FadeBustshot( 5, FALSE, 0, 0, 0, 0, 300, TRUE );
 
 }
