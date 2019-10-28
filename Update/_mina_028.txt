@@ -886,31 +886,27 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　義理を重んじて戦うか、本当の敵を刻み込むために敢えて逃げ出すかッ…！！",
 		   NULL, "Should I fight them for her, or should I leave so I can confront my true enemy...?", Line_Normal);
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-	DrawScene( "black", 300 );
-
-	SetSpeedOfMessage( TRUE, 128 );
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "Ａ．沙都子を見殺しにして記憶を残す。",
-		   NULL, "A. Leave Satoko and keep my memories.", GetGlobalFlag(GLinemodeSp));
-	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
-	OutputLine(NULL, "Ｂ．沙都子を救いに戻り記憶を捨てる。",
-		   NULL, "B. Save Satoko and lose my memories.", Line_Normal);
 	ClearMessage();
-	SetSpeedOfMessage( FALSE, 0 );
 
-	DisableWindow();
+	SetValidityOfInput( FALSE );
+	DrawScene( "black", 300 );
+	Wait( 1300 );
+	DrawScene( "text/menu", 200 );
+	Wait( 2000 );
+	DrawScene( "text/menu_b", 200 );
+	Wait( 1000 );
+	DrawScene( "text/menu_a", 200 );
+	Wait( 800 );
+	DrawScene( "text/menu_b", 200 );
+	Wait( 1000 );
 	FadeOutBGM( 0, 1000, FALSE );
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 3, 1000, FALSE );
-	DrawScene( "black", 6000 );
+	DrawScene( "black", 1000 );
 	DrawScene( "background/ymo2", 1000 );
 	PlayBGM( 0, "hitoe_2", 56, 0 );
 	PlayBGM( 1, "kaze", 56, 0 );
+	SetValidityOfInput( TRUE );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
