@@ -5944,13 +5944,11 @@ void main()
 		   NULL, "\"Yes.......\"", Line_Normal);
 	ClearMessage();
 
-	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
-
-	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n\n", Line_ContinueAfterTyping); }
 
 
-	DrawBustshot(5, "2choices", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 300, FALSE );
-	char				Item[2];
+	DrawBustshot(5, "2choices-negative", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 25, 300, FALSE );
+	char Item[2];
 	if(GetGlobalFlag(GLanguage) == 1) {
 		Item[0] = "I advised him on who he should give the doll to.";
 		Item[1] = "I did nothing and watched the events unfold.";
