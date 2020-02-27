@@ -178,6 +178,15 @@ void ViewTips()
 	CallSection("ViewTipsDisplay");
 }
 
+void UpdateHighestChapter()
+{
+	int chapter;
+	chapter = LoadValueFromLocalWork(ChapterNumber);
+
+	if(GetGlobalFlag(GHighestChapter) < chapter)
+		SetGlobalFlag(GHighestChapter, chapter);
+}
+
 void Game()
 {
 	FadeOutBGM( 0, 1000, FALSE );
@@ -198,6 +207,8 @@ void Game()
 	if(LoadValueFromLocalWork(s_jump) <= 0)
 	{
 		CallScript( "_mina_op" );
+		StoreValueToLocalWork( ChapterNumber, 1 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 1)
 	{
@@ -208,7 +219,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 38);
 		StoreValueToLocalWork(NewTipsCount, 1);
 
-		StoreValueToLocalWork( ChapterNumber, 1 );
+		StoreValueToLocalWork( ChapterNumber, 2 );
 		SavePoint("Ch.1 終わり", "End of Chapter 1");
 
 		CallSection("ViewTips");
@@ -234,7 +245,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 39);
 		StoreValueToLocalWork(NewTipsCount, 1);
 
-		StoreValueToLocalWork( ChapterNumber, 2 );
+		StoreValueToLocalWork( ChapterNumber, 3 );
 		SavePoint("Ch.2 終わり", "End of Chapter 2");
 
 		CallSection("ViewTips");
@@ -245,11 +256,14 @@ void Game()
 	{
 		CallScript( "_mina_003_1" );
 		CallScript( "_mina_003_2" );
-
+		StoreValueToLocalWork( ChapterNumber, 4 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 4)
 	{
 		CallScript( "_mina_004" );
+		StoreValueToLocalWork( ChapterNumber, 5 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 5)
 	{
@@ -260,7 +274,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 40);
 		StoreValueToLocalWork(NewTipsCount, 1);
 
-		StoreValueToLocalWork( ChapterNumber, 3 );
+		StoreValueToLocalWork( ChapterNumber, 6 );
 		SavePoint("Ch.3 終わり", "End of Chapter 3");
 
 		CallSection("ViewTips");
@@ -270,10 +284,14 @@ void Game()
 	if(LoadValueFromLocalWork(s_jump) <= 6)
 	{
 		CallScript( "_mina_006" );
+		StoreValueToLocalWork( ChapterNumber, 7 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 7)
 	{
 		CallScript( "_mina_007" );
+		StoreValueToLocalWork( ChapterNumber, 8 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 8)
 	{
@@ -284,7 +302,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 41);
 		StoreValueToLocalWork(NewTipsCount, 1);
 
-		StoreValueToLocalWork( ChapterNumber, 4 );
+		StoreValueToLocalWork( ChapterNumber, 9 );
 		SavePoint("Ch.4 終わり", "End of Chapter 4");
 
 		CallSection("ViewTips");
@@ -295,6 +313,8 @@ void Game()
 	{
 		CallScript( "_mina_009_1" );
 		CallScript( "_mina_009_2" );
+		StoreValueToLocalWork( ChapterNumber, 10 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 10)
 	{
@@ -305,7 +325,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 42);
 		StoreValueToLocalWork(NewTipsCount, 1);
 
-		StoreValueToLocalWork( ChapterNumber, 5 );
+		StoreValueToLocalWork( ChapterNumber, 11 );
 		SavePoint("Ch.4 終わり", "End of Chapter 5");
 
 		CallSection("ViewTips");
@@ -316,6 +336,8 @@ void Game()
 	{
 		CallScript( "_mina_011_1" );
 		CallScript( "_mina_011_2" );
+		StoreValueToLocalWork( ChapterNumber, 12 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 12)
 	{
@@ -326,7 +348,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 43);
 		StoreValueToLocalWork(NewTipsCount, 2);
 
-		StoreValueToLocalWork( ChapterNumber, 6 );
+		StoreValueToLocalWork( ChapterNumber, 13 );
 		SavePoint("Ch.6 終わり", "End of Chapter 6");
 
 		CallSection("ViewTips");
@@ -336,6 +358,8 @@ void Game()
 	if(LoadValueFromLocalWork(s_jump) <= 13)
 	{
 		CallScript( "_mina_013" );
+		StoreValueToLocalWork( ChapterNumber, 14 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 14)
 	{
@@ -346,7 +370,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 45);
 		StoreValueToLocalWork(NewTipsCount, 2);
 
-		StoreValueToLocalWork( ChapterNumber, 7 );
+		StoreValueToLocalWork( ChapterNumber, 15 );
 		SavePoint("Ch.7 終わり", "End of Chapter 7");
 
 		CallSection("ViewTips");
@@ -357,6 +381,8 @@ void Game()
 	{
 		CallScript( "_mina_015_1" );
 		CallScript( "_mina_015_2" );
+		StoreValueToLocalWork( ChapterNumber, 16 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 16)
 	{
@@ -367,7 +393,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 47);
 		StoreValueToLocalWork(NewTipsCount, 1);
 
-		StoreValueToLocalWork( ChapterNumber, 8 );
+		StoreValueToLocalWork( ChapterNumber, 17 );
 		SavePoint("Ch.8 終わり", "End of Chapter 8");
 
 		CallSection("ViewTips");
@@ -377,6 +403,8 @@ void Game()
 	if(LoadValueFromLocalWork(s_jump) <= 17)
 	{
 		CallScript( "_mina_017" );
+		StoreValueToLocalWork( ChapterNumber, 18 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 18)
 	{
@@ -387,7 +415,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 48);
 		StoreValueToLocalWork(NewTipsCount, 0);
 
-		StoreValueToLocalWork( ChapterNumber, 9 );
+		StoreValueToLocalWork( ChapterNumber, 19 );
 		SavePoint("Ch.8 終わり", "End of Chapter 9");
 
 		CallSection("ViewTips");
@@ -397,7 +425,8 @@ void Game()
 	if(LoadValueFromLocalWork(s_jump) <= 19)
 	{
 		CallScript( "_mina_019" );
-
+		StoreValueToLocalWork( ChapterNumber, 20 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 20)
 	{
@@ -408,7 +437,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 48);
 		StoreValueToLocalWork(NewTipsCount, 1);
 
-		StoreValueToLocalWork( ChapterNumber, 10 );
+		StoreValueToLocalWork( ChapterNumber, 21 );
 		SavePoint("Ch.10 終わり", "End of Chapter 10");
 
 		CallSection("ViewTips");
@@ -419,15 +448,21 @@ void Game()
 	if(LoadValueFromLocalWork(s_jump) <= 21)
 	{
 		CallScript( "_mina_021" );
+		StoreValueToLocalWork( ChapterNumber, 22 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 22)
 	{
 		CallScript( "_mina_022" );
+		StoreValueToLocalWork( ChapterNumber, 23 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 23)
 	{
 		CallScript( "_mina_023_1" );
 		CallScript( "_mina_023_2" );
+		StoreValueToLocalWork( ChapterNumber, 24 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 24)
 	{
@@ -438,7 +473,7 @@ void Game()
 		StoreValueToLocalWork(NewTipsStart, 49);
 		StoreValueToLocalWork(NewTipsCount, 1);
 
-		StoreValueToLocalWork( ChapterNumber, 11 );
+		StoreValueToLocalWork( ChapterNumber, 25 );
 		SavePoint("Ch.11 終わり", "End of Chapter 11");
 
 		CallSection("ViewTips");
@@ -448,14 +483,20 @@ void Game()
 	if(LoadValueFromLocalWork(s_jump) <= 25)
 	{
 		CallScript( "_mina_025" );
+		StoreValueToLocalWork( ChapterNumber, 26 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 26)
 	{
 		CallScript( "_mina_026" );
+		StoreValueToLocalWork( ChapterNumber, 27 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 27)
 	{
 		CallScript( "_mina_027" );
+		StoreValueToLocalWork( ChapterNumber, 28 );
+		CallSection("UpdateHighestChapter");
 	}
 	if(LoadValueFromLocalWork(s_jump) <= 28)
 	{
