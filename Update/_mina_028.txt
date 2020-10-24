@@ -9,7 +9,7 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 1, "yoru", 56, 0 );
+	PlayBGM( 1, "yoru", 28, 0 );
 	DrawSceneWithMask( "background/moon", "maskc", 1, 0, 300 );
 	SetValidityOfInput( FALSE );
 	Wait( 3000 );
@@ -362,7 +362,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/ymo3", 400 );
-	PlayBGM( 1, "yabaisemi", 56, 0 );
+	PlayBGM( 1, "semi_r", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鳳１０</color>", NULL, "<color=#f5e6d3>Phoenix 10</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/oo1028001", 256, TRUE);
@@ -904,8 +904,6 @@ void main()
 	FadeOutBGM( 3, 1000, FALSE );
 	DrawScene( "black", 1000 );
 	DrawScene( "background/ymo2", 1000 );
-	PlayBGM( 0, "hitoe_2", 56, 0 );
-	PlayBGM( 1, "kaze", 56, 0 );
 	SetValidityOfInput( TRUE );
 
 
@@ -914,6 +912,7 @@ void main()
 	OutputLine(NULL, "「沙都子ッ！！！」",
 		   NULL, "\"Satoko!!!\"", Line_Normal);
 	ClearMessage();
+	PlayBGM( 0, "hitoe_2", 56, 0 );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1041,7 +1040,6 @@ void main()
 
 	DisableWindow();
 	FadeOutBGM( 0, 300, FALSE );
-	FadeOutBGM( 1, 300, FALSE );
 	PlaySE( 0, "s_furu", 56, 64 );
 	SetValidityOfInput( FALSE );
 	Wait( 150 );
@@ -1801,6 +1799,7 @@ void main()
 	OutputLine(NULL, "　だが、時間はそのまま徐々にゆっくりになり………そして停止した。",
 		   NULL, "However, time continued to slow even further... until it stopped.", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 1, 300, FALSE );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1866,6 +1865,7 @@ void main()
 	OutputLine(NULL, "……圭一だけが、気付いていなかった。",
 		   NULL, " except for Keiichi.", Line_Normal);
 	ClearMessage();
+	PlayBGM( 1, "kaze", 56, 0 );
 
 	ModDrawCharacter(1, 1, "sprite/kei1_ikari1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask("background/ymo2", "maskright", 0, 0, 300 );
@@ -1948,6 +1948,7 @@ void main()
 	OutputLine(NULL, "………嘘、圭ちゃん………。」",
 		   NULL, " No, Kei-chan......\"", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 1, 300, FALSE );
 
 	DrawScene( "black", 1000 );
 	ModSetLayerFilter(0, 256, "night");
@@ -2400,7 +2401,6 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/moon", 1000 );
-	PlayBGM( 1, "yoru", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　みんなに精神的な動揺がなかったわけがない。",
@@ -3357,10 +3357,10 @@ void main()
 	OutputLine(NULL, "それを見て何人かがげらげらと笑った…。",
 		   NULL, " They laughed at me as I did so...", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 0, 1000, FALSE );
 
 	DisableWindow();
 	PlayBGM( 0, "livescene", 56, 0 );
-	PlayBGM( 1, "suzu", 56, 0 );
 	ModSetLayerFilter(0, 179, "night");
 	ModDrawCharacterWithFiltering(0, 12, "sprite/ha1_yowaki_", "0", "maskc", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
@@ -3623,11 +3623,12 @@ void main()
 	OutputLine(NULL, "　という嫌味を、私は口にするのをやめたのだった…。",
 		   NULL, " I decided not to ask her such an unpleasant question...", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 0, 1300, FALSE );
+	FadeOutBGM( 1, 1300, FALSE );
+	PlayBGM( 2, "You", 56, 0 );
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 0, "mask00" , 1, FALSE, 0, 0, 400, TRUE );
-	FadeOutBGM( 0, 1000, FALSE );
-	FadeOutBGM( 1, 1000, FALSE );
 	DrawScene( "black", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3638,7 +3639,6 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/jy1", 1000 );
-	PlayBGM( 1, "yoru", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　社の賽銭箱の前に、何人かの男たちが待っていた。",
@@ -4388,10 +4388,8 @@ void main()
 		   NULL, " I don't want people to think of me as a monster!!\"", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 1, 1300, FALSE );
 	DrawScene( "white", 1300 );
 	DrawScene( "scene/309b", 1300 );
-	PlayBGM( 0, "You", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s12/01/280100229", 256, TRUE);
@@ -4620,6 +4618,7 @@ void main()
 	OutputLine(NULL, "……重ねる手があればだけど。",
 		   NULL, " ...If only they had hands to do so.", Line_Normal);
 	ClearMessage();
+	PlayBGM( 1, "higurashi", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　行こう、羽入。",
@@ -4661,7 +4660,8 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	FadeOutBGM( 0, 3000, FALSE );
+	FadeOutBGM( 1, 3000, FALSE );
+	FadeOutBGM( 2, 3000, FALSE );
 	DrawScene( "white", 3000 );
 
 }

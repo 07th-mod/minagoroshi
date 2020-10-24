@@ -9,7 +9,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "white", 1000 );
-	PlayBGM( 1, "suzume", 56, 0 );
+	PlayBGM( 1, "suzume", 28, 0 );
 	DrawSceneWithMask( "background/ma1", "maskm1", 1, 0, 1300 );
 	PlayBGM( 0, "Cafe", 56, 0 );
 	SetValidityOfInput( FALSE );
@@ -301,6 +301,7 @@ void main()
 
 	DisableWindow();
 	FadeOutBGM( 0, 300, FALSE );
+	FadeOutBGM( 1, 300, FALSE );
 	PlaySE( 0, "s_furu", 56, 64 );
 	// (backup) SetValidityOfInput( FALSE );
 	Wait( 150 );
@@ -934,7 +935,7 @@ void main()
 	StartShakingOfWindow( 245, 40, 0, 0, 4*2, FALSE );
 	StartShakingOfAllObjects( 245, 40, 0, 0, 4*2, TRUE );
 	PlayBGM( 0, "cafe", 56, 0 );
-	PlayBGM( 1, "suzume", 56, 0 );
+	PlayBGM( 1, "suzume", 28, 0 );
 	SetValidityOfInput( FALSE );
 	Wait( 150 );
 	SetValidityOfInput( TRUE );
@@ -1620,8 +1621,7 @@ void main()
 	OutputLine(NULL, "…忘れているような気がした。",
 		   NULL, " I was forgetting something...", Line_Normal);
 	ClearMessage();
-	PlayBGM( 0, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 0, "semi", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　でも何の覚えもない。",
@@ -1759,9 +1759,8 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 0, 400, FALSE );
-	FadeOutBGM( 2, 400, FALSE );
 	DrawScene( "black", 400 );
-	PlayBGM( 0, "msys15", 56, 0 );
+	PlayBGM( 0, "amber", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　何でレナがおはぎなんか作るんだ…？",

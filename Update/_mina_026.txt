@@ -1,8 +1,7 @@
 void main()
 {
 
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 	DrawScene( "background/hu_r1", 1000 );
 
 	ClearMessage();
@@ -259,7 +258,6 @@ void main()
 
 	DisableWindow();
 	FadeOutBGM( 1, 300, FALSE );
-	FadeOutBGM( 2, 300, FALSE );
 	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacterWithFiltering(2, 4, "sprite/sa1b_odoroki_b1_", "2", "maskright", 1, 240, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 	PlayBGM( 0, "demo_48khz", 56, 0 );
@@ -968,7 +966,7 @@ void main()
 		   NULL, "With a nod of my own, I opened my mouth and began to explain.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 0, "Cradle_song", 56, 0 );
+	PlayBGM( 0, "bellflower", 56, 0 );
 	DrawSceneWithMask( "background/hi1", "maskc", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -2162,7 +2160,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/file", 1000 );
-	PlayBGM( 0, "B_Dive", 56, 0 );
+	PlayBGM( 0, "pros", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　これも雛見沢に残る古い伝承が初めから答えを示していた。",
@@ -2506,7 +2504,6 @@ void main()
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "white", "maskc", 1, 0, 1300 );
 	DrawScene( "background/hu_r1", 1300 );
-	PlayBGM( 1, "higurashi", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/280500255", 256, TRUE);
@@ -2516,6 +2513,7 @@ void main()
 	OutputLine(NULL, "…ボクの話はこれで終わりなのです。」",
 		   NULL, " ...And that's the end of my story.\"", Line_Normal);
 	ClearMessage();
+	PlayBGM( 1, "semi", 28, 0 );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2560,6 +2558,7 @@ void main()
 	OutputLine(NULL, "「そうだ、そういえば、沙都子が病気みたいなことを言ってたよな…。」",
 		   NULL, "\"I remember... you told me that Satoko is ill...\"", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 1, 300, FALSE );
 
 	DisableWindow();
 	PlayBGM( 0, "T2", 56, 0 );
@@ -3032,7 +3031,7 @@ void main()
 	DrawScene( "background/hu_r1", 300 );
 	ModSetLayerFilter(0, 256, "none");
 	ModDrawCharacterWithFiltering(0, 3, "sprite/me1a_wink_a1_", "1", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
-	PlayBGM( 0, "B_Dive", 56, 0 );
+	PlayBGM( 0, "pros", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 3, "ps3/s12/03/280300058", 256, TRUE);
@@ -3975,7 +3974,6 @@ void main()
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
 	ModDrawCharacter(0, 1, "sprite/kei1_def1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawSceneWithMask( "background/hu_r1", "maskleft", 1, 0, 300 );
-	PlayBGM( 1, "yoru", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s12/01/280100175", 256, TRUE);
@@ -4153,7 +4151,7 @@ void main()
 	ClearMessage();
 
 	CallScript( "&eye" );
-	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 0, 1000, TRUE );
 	FadeOutBGM( 1, 1000, TRUE );
 
 }

@@ -7,8 +7,7 @@ void main()
 	FadeOutBGM( 1, 1000, FALSE );
 	FadeOutBGM( 2, 1000, TRUE );
 	DrawScene( "black", 1000 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 	DrawScene( "background/gr2", 1000 );
 	PlaySE( 0, "wa_001", 56, 64 );
 	SetValidityOfInput( FALSE );
@@ -628,8 +627,10 @@ void main()
 		   NULL, " Yeeeeeeeah!!!\"", Line_Normal);
 	ClearMessage();
 	SetSpeedOfMessage( FALSE, 0 );
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
 
-	PlayBGM( 0, "B04_Bukatu", 56, 0 );
+	PlayBGM( 2, "B04_Bukatu", 56, 0 );
 	PlaySE( 0, "wa_007", 56, 64 );
 	StartShakingOfWindow( 248, 40, 0, 2, 6*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 6*2, TRUE );
