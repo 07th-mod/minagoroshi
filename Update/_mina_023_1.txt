@@ -1,8 +1,7 @@
 void main()
 {
 
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 	DrawSceneWithMask( "white", "maskm1", 1, 0, 1300 );
 	DrawSceneWithMask( "background/kuruma2", "maskup", 1, 0, 1300 );
 
@@ -280,8 +279,9 @@ void main()
 	OutputLine(NULL, "「配置場所よりももっとずっと興宮寄りの水田地帯の路肩です。」",
 		   NULL, "\"We found him dead by the rice fields near Okinomiya.\"", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 1, 300, FALSE );
 
-	PlayBGM( 0, "msys17", 56, 0 );
+	PlayBGM( 0, "z02_kyousou", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…毎回見付かる富竹の死体の場所と違う。",

@@ -9,8 +9,6 @@ void main()
 	ClearMessage();
 
 	PlayBGM( 0, "G_Tactics", 56, 0 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
 	DrawSceneWithMask( "background/g3", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -498,6 +496,7 @@ void main()
 	OutputLine(NULL, "　俺たちがクラスの１０人ちょっとで現地に集まった時には、普段の閑静な図書館前の様子は嘘のように一変していた。",
 		   NULL, "By the time I get there with my ten classmates, the quiet atmosphere around the library had completely disappeared.", Line_Normal);
 	ClearMessage();
+	PlayBGM( 1, "semi", 28, 0 );
 
 	ModDrawCharacter(2, 2, "sprite/re2b_bikkuri_b1_", "1", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawSceneWithMask( "background/tosyo1", "maskup", 1, 0, 1300 );
@@ -809,7 +808,6 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 1, 300, FALSE );
-	FadeOutBGM( 2, 300, FALSE );
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
 	DrawSceneWithMask( "background/ke5", "maskright", 1, 0, 300 );
 
@@ -924,8 +922,7 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 	DrawSceneWithMask( "background/tosyo1", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -959,7 +956,6 @@ void main()
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
 	FadeOutBGM( 1, 300, FALSE );
-	FadeOutBGM( 2, 300, FALSE );
 	DrawSceneWithMask( "background/ke5", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
@@ -979,8 +975,7 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "white", "maskleft", 1, 0, 300 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 	DrawSceneWithMask( "background/tosyo1", "maskleft", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1327,7 +1322,6 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 1, 300, FALSE );
-	FadeOutBGM( 2, 300, FALSE );
 	PlayBGM( 0, "Cradle_song", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1722,8 +1716,7 @@ void main()
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 	DrawScene( "white", 1000 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 	DrawScene( "background/ho1", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
@@ -1936,8 +1929,7 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 1, 300, FALSE );
-	FadeOutBGM( 2, 300, FALSE );
-	PlayBGM( 0, "T2", 56, 0 );
+	PlayBGM( 0, "hgrs01", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "ps3/s12/04/180400200", 256, TRUE);
@@ -2144,7 +2136,7 @@ void main()
 	DrawScene( "black", 200 );
 	FadeOutBGM( 0, 2000, FALSE );
 	DrawScene( "black", 2000 );
-	PlayBGM( 1, "yabaisemi", 56, 0 );
+	PlayBGM( 1, "semi_r", 56, 0 );
 	DrawSceneWithMask( "background/mati2", "maskup", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2311,8 +2303,6 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
 	DrawSceneWithMask( "background/kuruma5_01", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -2583,8 +2573,6 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 0, 300, FALSE );
-	FadeOutBGM( 1, 300, FALSE );
-	FadeOutBGM( 2, 300, FALSE );
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3070,8 +3058,7 @@ void main()
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 	PlaySE( 0, "s_daidageki", 56, 64 );
 	StartShakingOfWindow( 248, 40, 0, 2, 4*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 4*2, TRUE );
@@ -3210,7 +3197,6 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 1, 1000, FALSE );
-	FadeOutBGM( 2, 1000, FALSE );
 	DrawScene( "background/mati_ji1", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -3703,8 +3689,7 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 0, 300, FALSE );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/182900085", 256, TRUE);
@@ -3840,6 +3825,7 @@ void main()
 	OutputLine(NULL, "　だから、お魎がそれだけ入れ込む前原圭一という少年に関心を持つのは当然のことだった。",
 		   NULL, "Because of that, he was very interested in this young Keiichi Maebara.", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 1, 300, FALSE );
 
 	DrawSceneWithMask( "background/ke5", "maskup", 1, 0, 300 );
 
@@ -3978,8 +3964,6 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	FadeOutBGM( 1, 2000, FALSE );
-	FadeOutBGM( 2, 2000, FALSE );
 	DrawScene( "black", 2000 );
 	PlayBGM( 0, "M_Denwa8k", 56, 0 );
 	SetValidityOfInput( FALSE );
@@ -3997,7 +3981,7 @@ void main()
 		   NULL, "He could ignore the call, but if it was someone from the child consultation center, they might become suspicious of him.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 1, "yabaisemi", 56, 0 );
+	PlayBGM( 1, "semi_r", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……もう沙都子には目に見える外傷をたくさん残してしまった。",
@@ -4047,8 +4031,7 @@ void main()
 		   NULL, "\"...Hello, who is it?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/hara082301", 256, TRUE);
@@ -4274,7 +4257,7 @@ void main()
 		   NULL, "Teppei grabbed Satoko's shoulders with all his might and whispered in her ear.", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 0, "yabaisemi", 56, 0 );
+	PlayBGM( 0, "semi_r", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#ddc16b>鉄平</color>", NULL, "<color=#ddc16b>Teppei</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 21, "ps2/21/182000076", 540, TRUE);
@@ -4373,7 +4356,6 @@ void main()
 		   NULL, "It was like a raptor gripping its prey with its sharp talons...", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 1000, FALSE );
 	DrawScene( "background/re_tel", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>原山</color>", NULL, "<color=#f5e6d3>Harayama</color>", NULL, Line_ContinueAfterTyping); }
@@ -4428,8 +4410,10 @@ void main()
 	OutputLine(NULL, "　あ、はいはい、どうぞ…。」",
 		   NULL, " Ah, sure, go ahead...\"", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 0, 1000, FALSE );
+	FadeOutBGM( 1, 1000, FALSE );
 
-	PlayBGM( 0, "T2", 56, 0 );
+	PlayBGM( 2, "T2", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s12/01/180101621", 256, TRUE);
@@ -4564,6 +4548,7 @@ void main()
 	OutputLine(NULL, "　……ちょっと待て、梨花ちゃんが代わる！」",
 		   NULL, " ...Hang on, Rika-chan wants to talk to you!\"", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 2, 1000, FALSE );
 
 	PlayBGM( 0, "Birth_and_death", 56, 0 );
 
@@ -5414,6 +5399,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	PlayBGM( 1, "semi", 28, 0 );
 	PlaySE( 0, "s_down", 56, 64 );
 	Wait( 300 );
 	PlaySE( 0, "s_down", 56, 64 );
@@ -5444,6 +5430,7 @@ void main()
 	OutputLine(NULL, "　ブチ破って入るぞこらぁッ！！」",
 		   NULL, " If you don't, we're going to break it down!!\"", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 1, 1000, FALSE );
 
 	DrawScene( "black", 2000 );
 	SetValidityOfInput( FALSE );
@@ -5634,13 +5621,11 @@ void main()
 
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 300 );
 	FadeOutBGM( 0, 1000, FALSE );
-	FadeOutBGM( 1, 1000, FALSE );
-	FadeOutBGM( 2, 1000, FALSE );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "background/ho1_02", "maskleft", 1, 0, 1300 );
-	PlayBGM( 1, "higurashi", 56, 0 );
+	PlayBGM( 0, "03_cele", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　北条家にはすでに警察の人が何人か来ていた。",
@@ -5738,7 +5723,6 @@ void main()
 	ClearMessage();
 
 	DrawScene( "scene/307", 400 );
-	PlayBGM( 0, "03_cele", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500988", 256, TRUE);
@@ -6097,6 +6081,7 @@ void main()
 	OutputLine(NULL, "「……沙都子は絶対に来ますですよ。」",
 		   NULL, "\"......Satoko will be coming for sure.\"", Line_Normal);
 	ClearMessage();
+	PlayBGM( 1, "higurashi", 28, 0 );
 
 	DrawScene( "white", 1300 );
 	DrawSceneWithMask( "background/ho1_02", "maskleft", 1, 0, 1300 );

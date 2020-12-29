@@ -284,7 +284,6 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "background/kuruma4", "maskleft", 1, 0, 300 );
-	PlayBGM( 1, "yoru", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8f6d8f>熊谷</color>", NULL, "<color=#8f6d8f>Kumagai</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 19, "ps3/s12/19/283100035", 256, TRUE);
@@ -304,6 +303,7 @@ void main()
 	OutputLine(NULL, "そこにはワゴン車が１台路肩に停車していた。",
 		   NULL, " There was a van parked just off the road.", Line_Normal);
 	ClearMessage();
+	PlayBGM( 1, "yoru", 28, 0 );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1096,7 +1096,7 @@ void main()
 	StartShakingOfWindow( 248, 40, 0, 2, 4*2, FALSE );
 	StartShakingOfAllObjects( 248, 40, 0, 2, 4*2, TRUE );
 	PlaySE( 0, "wa_003", 56, 64 );
-	PlayBGM( 1, "yabaisemi", 56, 0 );
+	PlayBGM( 2, "semi_r", 56, 0 );
 
 
 	SetSpeedOfMessage( TRUE, 128 );
@@ -1137,6 +1137,7 @@ void main()
 	DrawScene( "white", 1000 );
 	DrawScene( "black", 3000 );
 	FadeOutBGM( 1, 300, FALSE );
+	FadeOutBGM( 2, 300, FALSE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>興宮ＰＳ</color>", NULL, "<color=#f5e6d3>Okinomiya PS</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/vtp_okeijia_2004", 256, TRUE);
@@ -1378,7 +1379,7 @@ void main()
 	Wait( 3000 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "background/hu_r1", "maskup", 1, 0, 300 );
-	PlayBGM( 0, "yoru", 56, 0 );
+	PlayBGM( 0, "yoru", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　もう８時も過ぎた。",
@@ -1698,7 +1699,7 @@ void main()
 		   NULL, "\"......Hello... This is the Furude residence...\"", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 0, "yoru", 56, 0 );
+	PlayBGM( 0, "yoru", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>小宮山</color>", NULL, "<color=#f5e6d3>Komiyama</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/komi28001", 256, TRUE);
@@ -2374,5 +2375,4 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 1000 );
-	FadeOutBGM( 0, 1000, TRUE );
 }

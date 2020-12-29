@@ -2,8 +2,6 @@ void main()
 {
 
 	DrawSceneWithMask( "white", "maskm1", 1, 0, 1300 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
 	DrawSceneWithMask( "background/g2", "maskm1", 1, 0, 1300 );
 	PlayBGM( 0, "Gray_2", 56, 0 );
 
@@ -16,6 +14,7 @@ void main()
 	DrawSceneWithMask( "black", "maskleft", 7, 0, 300 );
 	PlaySE( 0, "s_door", 56, 64 );
 	DrawSceneWithMask( "background/gk3", "maskright", 7, 0, 300 );
+	PlayBGM( 1, "semi", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　遅刻してまで登校したのに、……沙都子の席は当然のように空席だった。",
@@ -777,9 +776,7 @@ void main()
 		   NULL, " If neither the child consultation center nor the Sonozaki family can save her, I have to do it on my own!", Line_Normal);
 	ClearMessage();
 
-	PlayBGM( 0, "yabaisemi", 56, 0 );
-	FadeOutBGM( 1, 300, FALSE );
-	FadeOutBGM( 2, 300, FALSE );
+	PlayBGM( 0, "semi_r", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 6, "ps3/s12/06/180600080", 256, TRUE);
@@ -814,11 +811,10 @@ void main()
 
 	DisableWindow();
 	FadeOutBGM( 0, 300, FALSE );
+	FadeOutBGM( 1, 300, FALSE );
 	FadeBustshotWithFiltering( 2, "mask00" , 0, FALSE, 0, 0, 300, TRUE );
 	ModDrawCharacter(0, 22, "sprite/tie_2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 300, TRUE );
 	PlayBGM( 0, "T2", 56, 0 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 22, "ps3/s12/22/181400031", 256, TRUE);
@@ -894,8 +890,6 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
-	FadeOutBGM( 1, 2000, FALSE );
-	FadeOutBGM( 2, 2000, FALSE );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
@@ -979,8 +973,6 @@ void main()
 	DrawSceneWithMask( "white", "maskleft", 1, 0, 300 );
 	FadeOutBGM( 1, 300, FALSE );
 	DrawSceneWithMask( "background/ho1", "maskright", 1, 0, 300 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　知恵は路肩に自分の車を停めると、初めて見る沙都子の家と、学校から持ってきた地図を見比べた。",
@@ -1320,11 +1312,9 @@ void main()
 
 	DisableWindow();
 	FadeOutBGM( 0, 1300, FALSE );
-	FadeOutBGM( 1, 1300, FALSE );
-	FadeOutBGM( 2, 1300, FALSE );
 	DrawSceneWithMask( "black", "maskleft", 1, 0, 1300 );
 	DrawSceneWithMask( "background/g1", "maskleft", 1, 0, 1300 );
-	PlayBGM( 1, "higurashi", 56, 0 );
+	PlayBGM( 1, "higurashi", 28, 0 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );

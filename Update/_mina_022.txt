@@ -107,7 +107,7 @@ void main()
 
 	DisableWindow();
 	ModDrawCharacter(2, 9, "sprite/ta1_akuwarai_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
-	PlayBGM( 0, "higurashi_utu", 56, 0 );
+	PlayBGM( 0, "z02_kyousou", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900036", 256, TRUE);
@@ -535,7 +535,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	PlayBGM( 0, "yabaisemi", 56, 0 );
+	PlayBGM( 0, "semi_r", 56, 0 );
 	ModDrawCharacter(2, 9, "sprite/ta1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
@@ -729,7 +729,7 @@ void main()
 
 	DisableWindow();
 	Negative( 400 , TRUE );
-	PlayBGM( 1, "yabaisemi", 56, 0 );
+	PlayBGM( 1, "semi_r", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900098", 256, TRUE);
@@ -1524,7 +1524,7 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 0, 300, FALSE );
-	PlayBGM( 1, "yoru", 56, 0 );
+	PlayBGM( 1, "yoru", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900170", 256, TRUE);
@@ -1812,7 +1812,7 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 1, 300, FALSE );
-	PlayBGM( 0, "higurashi", 56, 0 );
+	PlayBGM( 0, "higurashi", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　やがて、鷹野は本当に真っ暗な道の途中で車を停めた。",
@@ -2423,7 +2423,7 @@ void main()
 	Wait( 1500 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "white", "maskleft", 1, 0, 300 );
-	PlayBGM( 1, "yoru", 56, 0 );
+	PlayBGM( 1, "yoru", 28, 0 );
 	ModSetLayerFilter(1, 256, "night");
 	ModDrawCharacter(1, 19, "sprite/kuma_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask( "background/ymo3", "maskright", 1, 0, 300 );
@@ -3109,7 +3109,7 @@ void main()
 	OutputLine(NULL, "くすくすくす！」",
 		   NULL, " Hee hee hee!\"", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 0, 1000, TRUE );
 
 	CallScript( "&eye" );
-	FadeOutBGM( 0, 1000, TRUE );
 }

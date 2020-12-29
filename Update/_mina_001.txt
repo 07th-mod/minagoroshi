@@ -31,8 +31,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "white", 400 );
-	PlayBGM( 0, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 0, "semi", 28, 0 );
 	DrawSceneWithMask( "background/sora", "maskm1", 1, 0, 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
@@ -222,10 +221,11 @@ void main()
 	OutputLine(NULL, "　羽入は申し訳なさそうに俯く。",
 		   NULL, "Hanyuu muttered regretfully.", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 0, 300, FALSE );
 
 	DrawScene( "white", 400 );
 	DrawSceneWithMask( "background/sora", "maskm1", 1, 0, 400 );
-	PlayBGM( 1, "it_moves", 56, 0 );
+	PlayBGM( 0, "it_moves", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　昭和５８年６月の中旬。",
@@ -463,7 +463,7 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	FadeOutBGM( 1, 300, FALSE );
+	PlayBGM( 1, "semi", 28, 0 );
 	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacterWithFiltering(2, 2, "sprite/re2b_bikkuri_b1_", "1", "maskright", 1, 160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
 
@@ -590,6 +590,7 @@ void main()
 	OutputLine(NULL, "　世話焼きの好きな沙都子が厳しく言う。",
 		   NULL, "Satoko warned me with a stern voice.", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 1, 300, FALSE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　…本当に大した怪我ではないのだが、せっかく沙都子がこうまで言ってくれるのだから、顔を立てて頷くことにした。",
@@ -655,7 +656,6 @@ void main()
 
 	ModDrawCharacter(0, 1, "sprite/kei2_def2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );
 	DrawScene( "background/mo1", 1000 );
-	PlayBGM( 1, "soul_scour", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　圭一も不安そうだったが、今この場で一番の年長者である自分が取り乱すわけにはいかないと思っているのだろう。",
@@ -1481,8 +1481,7 @@ void main()
 
 	CallScript( "&eyeCamp" );
 	FadeOutBGM( 0, 1000, FALSE );
-	FadeOutBGM( 1, 1000, FALSE );
-	FadeOutBGM( 2, 1000, TRUE );
+	FadeOutBGM( 1, 1000, TRUE );
 	SetValidityOfSkipping( FALSE );
 	DrawSceneWithMask( "tips/gettip_mina001", "mask1900", 7, 0, 400 );
 	Wait( 5000 );

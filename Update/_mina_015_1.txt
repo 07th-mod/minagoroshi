@@ -9,8 +9,6 @@ void main()
 	ClearMessage();
 
 	DrawScene( "white", 1000 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
 	DrawSceneWithMask( "background/hi1", "maskm1", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
@@ -30,7 +28,7 @@ void main()
 	ModSetLayerFilter(1, 256, "none");
 	ModDrawCharacter(1, 4, "sprite/sa1a_muhyou_a2_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask( "background/gk1", "maskright", 1, 0, 1300 );
-	PlayBGM( 0, "Feel", 56, 0 );
+	PlayBGM( 0, "amber", 56, 0 );
 
 	SetSpeedOfMessage( FALSE, 0 );
 
@@ -990,6 +988,7 @@ void main()
 	DrawSceneWithMask( "white", "maskleft", 7, 0, 300 );
 	PlaySE( 0, "s_door", 56, 64 );
 	DrawSceneWithMask( "background/gk1", "maskright", 7, 0, 300 );
+	PlayBGM( 1, "semi", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　荒々しく引き戸が開き、校長が姿を現す。",
@@ -1004,7 +1003,6 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 0, 300, FALSE );
 	FadeOutBGM( 1, 300, FALSE );
-	FadeOutBGM( 2, 300, FALSE );
 	ModDrawCharacterWithFiltering(0, 4, "sprite/sa1a_muhyou_a1_", "0", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 	PlayBGM( 0, "hitoe_2", 56, 0 );
 
@@ -1331,8 +1329,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 1300 );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 	DrawSceneWithMask( "background/sinryou_sinsatu1", "maskup", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1495,7 +1492,6 @@ void main()
 
 	DrawScene( "black", 400 );
 	FadeOutBGM( 1, 300, FALSE );
-	FadeOutBGM( 2, 300, FALSE );
 	PlaySE( 0, "s_door", 56, 64 );
 	DrawSceneWithMask( "background/g2", "maskright", 7, 0, 300 );
 
@@ -1566,8 +1562,7 @@ void main()
 	FadeOutBGM( 0, 300, FALSE );
 	DrawScene( "background/g2", 300 );
 	ModDrawCharacter(0, 22, "sprite/tie_2_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 300, TRUE );
-	PlayBGM( 1, "semi", 56, 0 );
-	PlayBGM( 2, "suzume", 56, 0 );
+	PlayBGM( 1, "semi", 28, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#68aee5>知恵</color>", NULL, "<color=#68aee5>Chie</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 22, "ps3/s12/22/181400125", 256, TRUE);
@@ -1705,6 +1700,7 @@ void main()
 	OutputLine(NULL, "　ちょうど監督と梨花ちゃんが話しているところだった。",
 		   NULL, "I saw him talking with Rika-chan.", Line_Normal);
 	ClearMessage();
+	FadeOutBGM( 1, 300, FALSE );
 
 	DrawSceneWithMask( "background/g2", "maskright", 1, 0, 300 );
 	PlayBGM( 0, "Gray_2", 56, 0 );
