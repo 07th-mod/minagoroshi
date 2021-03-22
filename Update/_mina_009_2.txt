@@ -3,7 +3,9 @@ void main()
 
 	FadeOutBGM( 0, 1000, FALSE );
 	DrawScene( "white", 1000 );
-	PlayBGM( 1, "semi", 28, 0 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
+	ModPlayBGM( 1, "semi", 28, 0, 1 );
 	DrawSceneWithMask( "background/sora", "maskm1", 1, 0, 1300 );
 
 	SetSpeedOfMessage( FALSE, 0 );
@@ -84,7 +86,7 @@ void main()
 	OutputLine(NULL, "えっへっへ！」",
 		   NULL, " Ehehe!\"", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 1, 300, FALSE );
+	ModFadeOutBGM( 1, 300, FALSE, 1 );
 
 	DrawScene( "white", 3000 );
 	DrawScene( "black", 1000 );
@@ -271,8 +273,11 @@ void main()
 		   NULL, " If I asked people, they'd tell me where she went.", Line_Normal);
 	ClearMessage();
 
+	ModFadeOutBGM( 1, 300, FALSE, 0 );
+	ModFadeOutBGM( 2, 300, FALSE, 0 );
 	DrawSceneWithMask( "white", "maskleft", 1, 0, 300 );
-	PlayBGM( 1, "higurashi", 28, 0 );
+	ModPlayBGM( 1, "higurashi", 56, 0, 0 );
+	ModPlayBGM( 1, "higurashi", 28, 0, 1 );
 	DrawSceneWithMask( "background/ta2", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>年寄り</color>", NULL, "<color=#f5e6d3>Senior</color>", NULL, Line_ContinueAfterTyping); }
@@ -1146,7 +1151,8 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 1300 );
-	PlayBGM( 1, "higurashi", 28, 0 );
+	ModPlayBGM( 1, "higurashi", 56, 0, 0 );
+	ModPlayBGM( 1, "higurashi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　諦めきった悲しい笑顔。",
@@ -1740,8 +1746,10 @@ void main()
 		   NULL, "I put my shoes on and headed to the Irie Clinic.", Line_Normal);
 	ClearMessage();
 
+	ModFadeOutBGM( 0, 300, FALSE, 0 );
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	PlayBGM( 1, "higurashi", 28, 0 );
+	ModPlayBGM( 1, "yoru", 56, 0, 0 );
+	ModPlayBGM( 1, "higurashi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　とっくに診療時間は終わってる。",
@@ -1787,8 +1795,8 @@ void main()
 	OutputLine(NULL, "だが、私は別だった。",
 		   NULL, " but I'm special.", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 0, 400, FALSE );
-	FadeOutBGM( 1, 1000, FALSE );
+	ModFadeOutBGM( 0, 400, FALSE, 1 );
+	ModFadeOutBGM( 1, 1000, FALSE, 1 );
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
 	ModSetLayerFilter(1, 256, "none");

@@ -732,7 +732,8 @@ void main()
 	FadeOutBGM( 0, 300, FALSE );
 	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
 	ModDrawCharacterWithFiltering(1, 5, "sprite/ri2_def_a1_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
-	PlayBGM( 1, "higurashi", 28, 0 );
+	ModPlayBGM( 1, "higurashi", 56, 0, 0 );
+	ModPlayBGM( 1, "higurashi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500223", 256, TRUE);
@@ -756,7 +757,8 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 1000 );
-	PlayBGM( 0, "it_moves", 56, 0 );
+	ModPlayBGM( 0, "msys17", 56, 0, 0 );
+	ModPlayBGM( 0, "it_moves", 56, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　私はこのまま、ずっと何もせずうじうじしていたらどうなるかを、夢の中で想像した。",
@@ -1205,6 +1207,7 @@ void main()
 		   NULL, "We all nodded at her, without joking around.", Line_Normal);
 	ClearMessage();
 
+	ModFadeOutBGM( 0, 400, FALSE, 0 );
 	DrawScene( "background/js4", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1422,6 +1425,7 @@ void main()
 	ModSetLayerFilter(1, 256, "sunset");
 	ModDrawCharacter(1, 3, "sprite/me2_def_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawScene( "background/js4_01", 400 );
+	ModPlayBGM( 0, "z2_hig2", 56, 0, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300128", 256, TRUE);
@@ -2012,7 +2016,8 @@ void main()
 	FadeOutBGM( 0, 1000, FALSE );
 	FadeOutBGM( 1, 1000, TRUE );
 	DrawScene( "background/jyt2", 1000 );
-	PlayBGM( 1, "yoru", 28, 0 );
+	ModPlayBGM( 1, "yoru", 56, 0, 0 );
+	ModPlayBGM( 1, "yoru", 28, 0, 1 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );

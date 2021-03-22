@@ -26,18 +26,23 @@ void main()
 	ModPlayVoiceLS(3, 12, "ps2/12/mina011", 540, TRUE);
 	Wait( 5700 );
 	DrawScene( "black", 1000 );
-	PlayBGM( 1, "yoru", 28, 0 );
+	ModPlayBGM( 1, "yoru", 56, 0, 0 );
+	ModPlayBGM( 1, "yoru", 28, 0, 1 );
 	DrawScene( "background/jyt1", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
 	FadeOutBGM( 1, 1000, FALSE );
-	PlayBGM( 2, "suzume", 28, 0 );
+	ModPlayBGM( 0, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 28, 0, 1 );
 	DrawScene( "background/jt1", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
+	ModFadeOutBGM( 0, 1000, FALSE, 0 );
 	FadeOutBGM( 2, 1000, FALSE );
+	ModPlayBGM( 1, "higurashi", 56, 0, 0 );
 	DrawScene( "background/jt1_01", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
@@ -1190,7 +1195,9 @@ void main()
 	Wait( 1000 );
 
 	CallScript( "&eyeCamp" );
-	FadeOutBGM( 0, 1000, TRUE );
+	ModFadeOutBGM( 0, 1000, FALSE, 0 );
+	ModFadeOutBGM( 1, 1000, TRUE, 0 );
+	ModFadeOutBGM( 0, 1000, TRUE, 1 );
 	SetValidityOfSkipping( FALSE );
 	DrawSceneWithMask( "tips/gettip_mina020", "mask1900", 7, 0, 400 );
 	Wait( 5000 );

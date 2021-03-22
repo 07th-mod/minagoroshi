@@ -817,7 +817,7 @@ void main()
 		   NULL, "I bit down on an ice chip inside my mouth. It was pleasantly cold.", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 300, FALSE );
+	ModFadeOutBGM( 0, 300, FALSE, 1 );
 	DrawSceneWithMask( "background/moon", "maskup", 1, 0, 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -837,7 +837,7 @@ void main()
 	OutputLine(NULL, "………どうして梨花が、必ず昭和５８年に殺されるか、ですね？」",
 		   NULL, ".... You want to know why you're being murdered in 1983?\"", Line_Normal);
 	ClearMessage();
-	PlayBGM( 0, "instict", 56, 0 );
+	ModPlayBGM( 0, "instict", 56, 0, 1 );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }

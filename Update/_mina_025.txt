@@ -8,7 +8,8 @@ void main()
 	DrawScene( "black", 300 );
 	ClearMessage();
 
-	PlayBGM( 1, "suzume", 28, 0 );
+	ModPlayBGM( 1, "Suzume", 56, 0, 0 );
+	ModPlayBGM( 1, "suzume", 28, 0, 1 );
 	DrawSceneWithMask( "white", "maskm1", 1, 0, 1300 );
 	DrawScene( "background/hu_r1", 1000 );
 
@@ -39,7 +40,8 @@ void main()
 
 
 	FadeOutBGM( 1, 300, FALSE );
-	PlayBGM( 0, "amber", 56, 0 );
+	ModPlayBGM( 0, "Feel", 56, 0, 0 );
+	ModPlayBGM( 0, "amber", 56, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……多分、今日だろう。",
@@ -906,6 +908,7 @@ void main()
 
 	DrawScene( "white", 1000 );
 	DrawSceneWithMask( "background/sora", "maskc", 1, 0, 1300 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　今日をどうやって生きよう。",
@@ -999,7 +1002,8 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 1, "semi", 28, 0 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 1, "semi", 28, 0, 1 );
 	DrawScene( "background/hu2", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 3000 );
@@ -1051,6 +1055,7 @@ void main()
 	ClearMessage();
 
 	FadeOutBGM( 1, 1000, FALSE );
+	ModFadeOutBGM( 2, 1000, FALSE, 0 );
 	DrawScene( "black", 1000 );
 	PlayBGM( 0, "Gray_2", 56, 0 );
 
@@ -2199,7 +2204,9 @@ void main()
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
 	DrawScene( "background/sora", 300 );
-	PlayBGM( 1, "higurashi", 28, 0 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
+	ModPlayBGM( 1, "higurashi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　見れば時間はもうお昼前。",
@@ -2258,6 +2265,7 @@ void main()
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 1300 );
 	FadeOutBGM( 1, 1000, FALSE );
+	ModFadeOutBGM( 2, 1000, FALSE, 0 );
 	DrawScene( "background/re_tel", 1000 );
 	PlayBGM( 0, "Nazo", 56, 0 );
 
@@ -2439,7 +2447,9 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 1, "semi", 28, 0 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
+	ModPlayBGM( 1, "semi", 28, 0, 1 );
 	ModDrawCharacter(1, 19, "sprite/kuma_def_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask( "background/ke_s2", "maskleft", 1, 0, 300 );
 
@@ -2531,11 +2541,14 @@ void main()
 
 	FadeOutBGM( 0, 1300, FALSE );
 	FadeOutBGM( 1, 1300, FALSE );
+	ModFadeOutBGM( 2, 1300, FALSE, 0 );
 	DrawSceneWithMask( "black", "maskright", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 3000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 1, "semi", 28, 0 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
+	ModPlayBGM( 1, "semi", 28, 0, 1 );
 	DrawScene( "background/hu2", 1000 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>雲雀</color>", NULL, "<color=#f5e6d3>Skylark</color>", NULL, Line_ContinueAfterTyping); }
@@ -2665,6 +2678,7 @@ void main()
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
 	FadeOutBGM( 1, 1000, FALSE );
+	ModFadeOutBGM( 2, 1000, FALSE, 0 );
 	DrawScene( "background/hu_r1", 1000 );
 	PlayBGM( 0, "Nazo", 56, 0 );
 
@@ -2778,7 +2792,9 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 400 );
-	PlayBGM( 1, "semi", 28, 0 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
+	ModPlayBGM( 1, "semi", 28, 0, 1 );
 	DrawSceneWithMask( "background/hu2", "maskup", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2904,7 +2920,7 @@ void main()
 
 	DisableWindow();
 	FadeOutBGM( 0, 300, FALSE );
-	FadeOutBGM( 1, 300, FALSE );
+	ModFadeOutBGM( 1, 300, FALSE, 1 );
 	ModSetLayerFilter(0, 179, "none");
 	ModDrawCharacterWithFiltering(0, 12, "sprite/ha1_def_", "0", "maskm1", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
@@ -2914,7 +2930,7 @@ void main()
 		   NULL, "\"...I'm here.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	PlayBGM( 0, "higurashi", 28, 0 );
+	ModPlayBGM( 0, "higurashi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/280500215", 256, TRUE);
@@ -2948,7 +2964,7 @@ void main()
 	OutputLine(NULL, "ただ、あるがままに訪れる結果を眺めるのみです。」",
 		   NULL, " I'll just have to accept whatever the result is.\"", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 0, 300, FALSE );
+	ModFadeOutBGM( 0, 300, FALSE, 1 );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -2964,6 +2980,8 @@ void main()
 		   NULL, " but part of me was hoping she would say something more positive.", Line_Normal);
 	ClearMessage();
 
+	ModFadeOutBGM( 1, 300, FALSE, 0 );
+	ModFadeOutBGM( 2, 300, FALSE, 0 );
 	PlayBGM( 0, "livescene", 56, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
