@@ -413,7 +413,9 @@ void main()
 
 	CallScript( "&eyeCamp" );
 	FadeOutBGM( 0, 1000, FALSE );
-	FadeOutBGM( 1, 1000, TRUE );
+	ModFadeOutBGM( 1, 1000, FALSE, 0 );
+	ModFadeOutBGM( 2, 1000, TRUE, 0 );
+	ModFadeOutBGM( 1, 1000, TRUE, 1 );
 	SetValidityOfSkipping( FALSE );
 	DrawSceneWithMask( "tips/gettip_mina002", "mask1900", 7, 0, 400 );
 	Wait( 5000 );

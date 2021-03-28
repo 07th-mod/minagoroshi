@@ -962,7 +962,8 @@ void main()
 	SetValidityOfInput( FALSE );
 	Wait( 2000 );
 	SetValidityOfInput( TRUE );
-	PlayBGM( 1, "suzume", 28, 0 );
+	ModPlayBGM( 1, "suzume", 56, 0, 0 );
+	ModPlayBGM( 1, "suzume", 28, 0, 1 );
 	DrawSceneWithMask( "white", "maskm1", 1, 0, 1300 );
 	DrawScene( "background/ma1", 1000 );
 	SetValidityOfInput( FALSE );
@@ -2348,7 +2349,8 @@ void main()
 	SetSpeedOfMessage( FALSE, 0 );
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	PlayBGM( 1, "semi", 28, 0 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 1, "semi", 28, 0, 1 );
 	DrawSceneWithMask( "background/g2", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }

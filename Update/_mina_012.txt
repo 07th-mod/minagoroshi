@@ -2,7 +2,9 @@ void main()
 {
 
 	DrawScene( "white", 1000 );
-	PlayBGM( 0, "semi", 28, 0 );
+	ModPlayBGM( 0, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
+	ModPlayBGM( 0, "semi", 28, 0, 1 );
 	DrawSceneWithMask( "background/sora", "maskm1", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
@@ -290,6 +292,7 @@ void main()
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
 	FadeOutBGM( 0, 300, FALSE );
+	ModFadeOutBGM( 2, 300, FALSE, 0 );
 	DrawSceneWithMask( "background/mati_ji1", "maskright", 1, 0, 300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>事務員</color>", NULL, "<color=#f5e6d3>Office Worker</color>", NULL, Line_ContinueAfterTyping); }
@@ -314,7 +317,7 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
-	PlayBGM( 0, "semi", 28, 0 );
+	ModPlayBGM( 0, "semi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　示された方へ行くと１番から３番までの３つの相談室があった。",
@@ -1138,7 +1141,7 @@ void main()
 	OutputLine(NULL, "　ちょっと感情的な部分もあったが、魅音がうまくなだめ、レナが綺麗にまとめてくれたようだった。",
 		   NULL, "Some of us were getting emotional, but Mion calmed them down, and Rena summed it up nicely.", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 0, 300, FALSE );
+	ModFadeOutBGM( 0, 300, FALSE, 1 );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1193,7 +1196,8 @@ void main()
 
 	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
 	DrawScene( "background/sora", 1000 );
-	PlayBGM( 1, "higurashi", 28, 0 );
+	ModPlayBGM( 1, "higurashi", 56, 0, 0 );
+	ModPlayBGM( 1, "higurashi", 28, 0, 1 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
 	SetValidityOfInput( TRUE );
@@ -1437,12 +1441,13 @@ void main()
 	OutputLine(NULL, "……もしも園崎家が腰を上げてくれれば、沙都子なんてきっとすぐに助け出してくれると思った。",
 		   NULL, " but if the Sonozaki family forgave Satoko's family, it would be really easy for them to save her.", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 1, 300, FALSE );
+	ModFadeOutBGM( 1, 300, FALSE, 1 );
 
 	DisableWindow();
 	FadeBustshotWithFiltering( 1, "maskright" , 1, FALSE, 0, 0, 300, TRUE );
 	ModDrawCharacterWithFiltering(1, 5, "sprite/ri1_komaru_a2_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
-	PlayBGM( 0, "bellflower", 56, 0 );
+	ModPlayBGM( 0, "Cradle_song", 56, 0, 0 );
+	ModPlayBGM( 0, "bellflower", 56, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500632", 256, TRUE);
@@ -1732,7 +1737,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "black", 1000 );
-	PlayBGM( 1, "higurashi", 28, 0 );
+	ModPlayBGM( 1, "higurashi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　……くそくそくそ…ッ！！！",
@@ -1911,7 +1916,7 @@ void main()
 	OutputLine(NULL, "　…それでも俺たちが結束すれば何とかできるって信じてくれていた。",
 		   NULL, "She believes that we can do something if we all come together...", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 0, 300, FALSE );
+	ModFadeOutBGM( 0, 300, FALSE, 1 );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -1939,7 +1944,9 @@ void main()
 	OutputLine(NULL, "　威勢よく派手に盛り上がって景気をつける。",
 		   NULL, "I burn brightly and give strength to everyone.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 0, "G_Tactics", 56, 0 );
+
+	ModFadeOutBGM( 0, 300, FALSE, 0 );
+	ModPlayBGM( 0, "G_Tactics", 56, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　………そうさ、俺は前原圭一。",
@@ -1969,6 +1976,7 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/mati4_01", 1000 );
+	ModPlayBGM( 0, "G_Tactics", 56, 0, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s12/01/180100705", 256, TRUE);

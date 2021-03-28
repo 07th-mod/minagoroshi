@@ -1,7 +1,8 @@
 void main()
 {
 
-	PlayBGM( 0, "higurashi", 28, 0 );
+	ModPlayBGM( 0, "higurashi", 56, 0, 0 );
+	ModPlayBGM( 0, "higurashi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode) == 0) { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
@@ -174,7 +175,8 @@ void main()
 	ClearMessage();
 
 	PlaySE( 0, "s_page", 56, 64 );
-	PlayBGM( 0, "higurashi_utu", 56, 0 );
+	ModPlayBGM( 0, "B08_Izyou", 56, 0, 0 );
+	ModPlayBGM( 0, "higurashi_utu", 56, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　対処不能な事態が発生し最高決裁者がそれを認められる場合、機密保持と外部発覚阻止のため、入江機関（以下、機関と表記）は最終的解決をしなければならない。",
@@ -684,7 +686,9 @@ void main()
 	FadeOutBGM( 0, 300, FALSE );
 	PlaySE( 0, "s_page", 56, 64 );
 	DrawScene( "black", 400 );
-	PlayBGM( 0, "semi", 28, 0 );
+	ModPlayBGM( 0, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
+	ModPlayBGM( 0, "semi", 28, 0, 1 );
 
 	SetSpeedOfMessage( TRUE, 128 );
 	OutputLineAll(NULL, "    ", Line_ContinueAfterTyping);
@@ -789,9 +793,11 @@ void main()
 		   NULL, "(Official seal omitted)", Line_Normal);
 	ClearMessage();
 
-	FadeOutBGM( 0, 300, FALSE );
+	ModFadeOutBGM( 2, 0, FALSE, 0 );
+	ModFadeOutBGM( 0, 300, FALSE, 1 );
 	PlaySE( 0, "s_page", 56, 64 );
-	PlayBGM( 0, "higurashi_utu", 56, 0 );
+	ModPlayBGM( 0, "B08_Izyou", 56, 0, 0 );
+	ModPlayBGM( 0, "higurashi_utu", 56, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode) == 0) { SetDrawingPointOfMessage( 0, 8 ); }
 
@@ -1075,7 +1081,8 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/ke5", 1300 );
-	PlayBGM( 1, "higurashi", 28, 0 );
+	ModPlayBGM( 1, "higurashi", 56, 0, 0 );
+	ModPlayBGM( 1, "higurashi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/282100001", 256, TRUE);
@@ -1378,7 +1385,7 @@ void main()
 	OutputLine(NULL, "ご決裁がいただければ直ちに出動して作戦に入ります。」",
 		   NULL, " We will execute the mission as soon as we get your approval.\"", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 1, 400, FALSE );
+	ModFadeOutBGM( 1, 400, FALSE, 1 );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
@@ -1420,6 +1427,7 @@ void main()
 		   NULL, " We'll return with positive results!\"", Line_Normal);
 	ClearMessage();
 
+	ModFadeOutBGM( 1, 400, FALSE, 0 );
 	DrawScene( "black", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>総理大臣</color>", NULL, "<color=#f5e6d3>Prime Minister</color>", NULL, Line_ContinueAfterTyping); }
@@ -2092,6 +2100,7 @@ void main()
 
 	FadeOutBGM( 1, 1300, FALSE );
 	DrawSceneWithMask("black", "maskdown", 0, 0, 1300 );
+	ModPlayBGM( 0, "T1_Requiem", 56, 0, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps3/s12/00/forcej28001", 256, TRUE);
@@ -2120,7 +2129,7 @@ void main()
 	OutputLine(NULL, "　中隊長は胸元で十字を切り、全体に言った。",
 		   NULL, "The company commander crossed his heart, and began to speak.", Line_Normal);
 	ClearMessage();
-	PlayBGM( 0, "T1_Requiem", 56, 0 );
+	ModPlayBGM( 0, "T1_Requiem", 56, 0, 1 );
 
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
@@ -2955,8 +2964,8 @@ void main()
 	ModPlayVoiceLS(3, 12, "ps3/s12/09/280900440a", 256, TRUE);
 	Wait( 8600 );
 	DrawScene( "black", 3000 );
-	FadeOutBGM( 0, 1300, FALSE );
-	PlayBGM( 1, "suzu", 56, 0 );
+	ModFadeOutBGM( 0, 1300, FALSE, 1 );
+	ModPlayBGM( 1, "suzu", 56, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>自衛隊員</color>", NULL, "<color=#f5e6d3>Self-Defense Force Member</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 0, "ps2/00/forceq28001", 540, TRUE);
@@ -3030,8 +3039,8 @@ void main()
 	OutputLine(NULL, "機密保持部隊の全小隊は遺体数と点呼数の確認を厳重に行なわれたし。」",
 		   NULL, " Start counting the bodies. Make sure the total matches the original number taken earlier tonight.\"", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 1, 1300, FALSE );
-	PlayBGM( 0, "tsukisanbika", 56, 0 );
+	ModFadeOutBGM( 1, 1300, FALSE, 1 );
+	ModPlayBGM( 0, "tsukisanbika", 56, 0, 1 );
 
 	ModSetLayerFilter(0, 256, "night");
 	ModDrawCharacter(0, 9, "sprite/ta3_akuwarai_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );

@@ -8,7 +8,8 @@ void main()
 	DrawScene( "black", 300 );
 	ClearMessage();
 
-	PlayBGM( 0, "hgrs03", 56, 0 );
+	ModPlayBGM( 0, "cafe", 56, 0, 0 );
+	ModPlayBGM( 0, "hgrs03", 56, 0, 1 );
 	DrawScene( "white", 1000 );
 	DrawSceneWithMask( "background/hi1", "maskm1", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
@@ -319,7 +320,9 @@ void main()
 
 	DrawSceneWithMask( "black", "maskdown", 1, 0, 2000 );
 	FadeOutBGM( 0, 1000, TRUE );
-	PlayBGM( 1, "semi", 28, 0 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
+	ModPlayBGM( 1, "semi", 28, 0, 1 );
 	ModSetLayerFilter(2, 256, "none");
 	ModDrawCharacter(2, 9, "sprite/ta1_def_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
 	DrawScene( "background/jsa1", 1000 );
@@ -733,6 +736,8 @@ void main()
 	DisableWindow();
 	ModDrawCharacter(1, 8, "sprite/tomi1_komaru_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 	PlayBGM( 0, "B11_Rika", 56, 0 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　こ、こんなにも乙女顔で満面な笑みを浮かべる鷹野を、私は初めて見た。",
@@ -1232,6 +1237,8 @@ void main()
 	ClearMessage();
 
 	DrawSceneWithMask( "black", "maskright", 1, 0, 300 );
+	ModFadeOutBGM( 1, 400, FALSE, 0 );
+	ModFadeOutBGM( 2, 400, TRUE, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　私は灯りのスイッチを入れると扉を閉めた。",
@@ -1872,8 +1879,10 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
+	ModFadeOutBGM( 3, 300, FALSE, 0 );
 	ModDrawCharacter(1, 9, "sprite/ta1_def_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
-	PlayBGM( 1, "higurashi", 28, 0 );
+	ModPlayBGM( 1, "higurashi", 56, 0, 0 );
+	ModPlayBGM( 1, "higurashi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps2/09/180900094", 540, TRUE);
@@ -1949,6 +1958,7 @@ void main()
 
 
 	DisableWindow();
+	ModFadeOutBGM( 1, 300, FALSE, 0 );
 	ModDrawCharacter(1, 9, "sprite/ta1_akuwarai_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 	PlayBGM( 2, "yabaisemi", 56, 0 );
 
@@ -2038,8 +2048,9 @@ void main()
 	OutputLine(NULL, "そんな濃密な死と拷問で飾り立てられたのが、このオヤシロさまという存在なわけ！」",
 		   NULL, "Oyashiro-sama here was the one who made this brutal torture possible...!\"", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 2, 300, FALSE );
-	PlayBGM( 0, "z02_kyousou", 56, 0 );
+
+	ModFadeOutBGM( 2, 300, FALSE, 1 );
+	ModPlayBGM( 0, "z02_kyousou", 56, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　鷹野は芝居がかった身振りで、ご神体の像を仰いで見せた。",
@@ -2085,9 +2096,10 @@ void main()
 	ClearMessage();
 
 	DisableWindow();
-	FadeOutBGM( 0, 300, FALSE );
-	FadeOutBGM( 1, 300, FALSE );
-	FadeOutBGM( 3, 300, FALSE );
+	ModFadeOutBGM( 2, 300, FALSE, 0 );
+	ModFadeOutBGM( 0, 300, FALSE, 1 );
+	ModFadeOutBGM( 1, 300, FALSE, 1 );
+	ModFadeOutBGM( 3, 300, FALSE, 1 );
 	PlaySE( 0, "wa_003", 56, 64 );
 	Wait( 300 );
 	PlaySE( 0, "s_down", 56, 64 );
@@ -2403,7 +2415,8 @@ void main()
 	DisableWindow();
 	FadeOutBGM( 0, 300, FALSE );
 	ModDrawCharacterWithFiltering(2, 9, "sprite/ta1_def_", "0", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 10, 300, TRUE );
-	PlayBGM( 1, "semi", 28, 0 );
+	ModPlayBGM( 1, "higurashi", 56, 0, 0 );
+	ModPlayBGM( 1, "semi", 28, 0, 1 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 9, "ps3/s12/09/180900134", 256, TRUE);
@@ -2629,7 +2642,8 @@ void main()
 	OutputLine(NULL, "　彼らに眼前に迫りつつある死の運命を信じさせてください…。",
 		   NULL, "Please let them believe that death is upon them...", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 1, 300, TRUE );
+	ModFadeOutBGM( 1, 300, TRUE, 1 );
 
 	CallScript( "&eye" );
+	ModFadeOutBGM( 1, 1000, TRUE, 0 );
 }

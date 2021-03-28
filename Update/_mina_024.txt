@@ -2,7 +2,8 @@ void main()
 {
 
 	DrawScene( "black", 400 );
-	PlayBGM( 2, "suzume", 28, 0 );
+	ModPlayBGM( 2, "Suzume", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 28, 0, 1 );
 	DrawScene( "white", 1000 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
@@ -10,10 +11,11 @@ void main()
 	DrawSceneWithMask( "background/sora", "maskm1", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 2500 );
-	FadeOutBGM( 2, 1300, FALSE );
+	ModFadeOutBGM( 2, 1300, FALSE, 1 );
 	SetValidityOfInput( TRUE );
 	DrawSceneWithMask( "white", "maskright", 1, 0, 1300 );
-	PlayBGM( 1, "semi", 28, 0 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 1, "semi", 28, 0, 1 );
 	DrawSceneWithMask( "background/g1", "maskright", 1, 0, 1300 );
 	SetValidityOfInput( FALSE );
 	Wait( 1000 );
@@ -208,7 +210,7 @@ void main()
 	OutputLine(NULL, "「…………………………。」",
 		   NULL, "\"............\"", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 1, 1300, FALSE );
+	ModFadeOutBGM( 1, 1300, FALSE, 1 );
 
 	PlayBGM( 0, "livescene", 56, 0 );
 
@@ -584,7 +586,7 @@ void main()
 
 	DrawSceneWithMask( "black", "maskup", 1, 0, 1300 );
 	FadeOutBGM( 0, 1000, TRUE );
-	PlayBGM( 1, "semi", 28, 0 );
+	ModPlayBGM( 1, "semi", 28, 0, 1 );
 	DrawScene( "white", 400 );
 	DrawScene( "background/gk1", 1000 );
 
@@ -827,6 +829,8 @@ void main()
 		   NULL, "\"...All right. Let me hear it, then.\"", Line_Normal);
 	ClearMessage();
 
+	ModFadeOutBGM( 1, 1300, FALSE, 0 );
+	ModFadeOutBGM( 2, 1300, FALSE, 0 );
 	DrawSceneWithMask( "black", "maskdown", 1, 0, 1300 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
@@ -835,7 +839,7 @@ void main()
 	OutputLine(NULL, "それはこんな詩だった。",
 		   NULL, " It went something like this...", Line_Normal);
 	ClearMessage();
-	FadeOutBGM( 1, 1300, FALSE );
+	ModFadeOutBGM( 1, 1300, FALSE, 1 );
 
 	PlayBGM( 0, "Soul_scour", 56, 0 );
 	SetSpeedOfMessage( TRUE, 128 );
@@ -890,6 +894,8 @@ void main()
 
 	ModDrawCharacter(1, 5, "sprite/ri1_komaru_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawSceneWithMask( "background/gk3", "maskup", 1, 0, 1300 );
+	ModPlayBGM( 1, "semi", 56, 0, 0 );
+	ModPlayBGM( 2, "suzume", 56, 0, 0 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 1, "ps3/s12/01/280100049", 256, TRUE);
@@ -1592,7 +1598,9 @@ void main()
 
 	CallScript( "&eye" );
 	FadeOutBGM( 0, 1000, FALSE );
-	FadeOutBGM( 1, 1000, TRUE );
+	ModFadeOutBGM( 1, 1000, FALSE, 0 );
+	ModFadeOutBGM( 2, 1000, TRUE, 0 );
+	ModFadeOutBGM( 1, 1000, TRUE, 1 );
 	SetValidityOfSkipping( FALSE );
 	DrawSceneWithMask( "tips/gettip_mina024", "mask1900", 7, 0, 400 );
 	Wait( 5000 );
