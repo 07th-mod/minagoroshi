@@ -13,18 +13,18 @@ jobs:
         python-version: [3.8]
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Setup python (Windows VM is Python 3.7 by default, we need at least Python 3.8)
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
 
       - name: Run Release Script
         id: run_release
         env:
-          EXTRACT_KEY: ${{ secrets.EXTRACT_KEY }}
+          HIGURASHI_BASE_EXTRACT_KEY: ${{ secrets.HIGURASHI_BASE_EXTRACT_KEY }}
         run: |
           curl -OJ https://raw.githubusercontent.com/07th-mod/higurashi_release/master/deploy_higurashi/deploy_higurashi.py
           python deploy_higurashi.py ${{ github.event.repository.name }}
