@@ -25,22 +25,16 @@ void main()
 
 	SetSpeedOfMessage( TRUE, 128 );
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300033", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "org/mion6001", 256, TRUE);
 	OutputLine(NULL, "「だだ、",
-		   NULL, "\"I just...", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 800 );
-	// (backup) SetValidityOfInput( TRUE );
+		   NULL, "\"I just...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 3, "org/mion6002", 256, TRUE);
 	OutputLine(NULL, "だからさおじさん、",
-		   NULL, " This ol' man just thinks that...", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 1500 );
-	// (backup) SetValidityOfInput( TRUE );
+		   NULL, " This ol' man just thinks that...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 3, "org/mion6003", 256, TRUE);
 	OutputLine(NULL, "こういう可愛いお人形はさ、",
-		   NULL, " cute dolls like this are...", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 1700 );
-	// (backup) SetValidityOfInput( TRUE );
+		   NULL, " cute dolls like this are...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 3, "org/mion6004", 256, TRUE);
 	OutputLine(NULL, "ちゃんとした可愛い女の子に渡した方が似合うと思うんだよね！",
 		   NULL, " more for girly girls, you know...?", Line_Continue);
 	SetSpeedOfMessage( FALSE, 0 );
@@ -51,7 +45,7 @@ void main()
 	ModDrawCharacter(1, 3, "sprite/me2_hau_a1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 3, "ps3/s12/03/180300034", 256, TRUE);
+	ModPlayVoiceLS(4, 3, "org/mion6005", 256, TRUE);
 	OutputLine(NULL, "私みたいな男女に渡してもほら、人形の方が可哀想というか、あはははは…！」",
 		   NULL, "This doll doesn't deserve to be owned by a tomboy like me... Ahahahahaha!\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

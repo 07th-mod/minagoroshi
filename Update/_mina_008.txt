@@ -4230,14 +4230,17 @@ void main()
 		   NULL, "After we left the scene, a white van with two men in it followed us.", Line_Normal);
 	ClearMessage();
 
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>鶯</color>", NULL, "<color=#f5e6d3>Nightingale</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob7b6000", 256, TRUE);
 	OutputLine(NULL, "『鶯より白鷺、Ｒは安全圏へ脱出。",
 		   NULL, "\"Nightingale reporting. R is moving to the safe zone.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 0, "org/mob7b6001", 256, TRUE);
 	OutputLine(NULL, "引き続き警護されたし。』",
 		   NULL, " We will continue escorting her.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
-	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>白鷺</color>", NULL, "<color=#f5e6d3>Heron</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob7c6000", 256, TRUE);
 	OutputLine(NULL, "『白鷺了解。』",
 		   NULL, "\"This is Heron. Roger that.\"", Line_Normal);
 	ClearMessage();

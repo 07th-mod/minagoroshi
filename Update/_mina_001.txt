@@ -186,7 +186,7 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100004", 256, TRUE);
+	ModPlayVoiceLS(4, 12, "org/hanyu6006", 256, TRUE);
 	OutputLine(NULL, "「…………えっとえっと、",
 		   NULL, "\"Umm...", Line_Continue);
 	// (backup) SetValidityOfInput( FALSE );
@@ -198,8 +198,10 @@ void main()
 	Wait( 800 );
 	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "…昭和５８年、６月なのです。",
-		   NULL, "... It's June of 1983.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100005", 256, TRUE);
+		   NULL, "... It's June of 1983.", Line_Continue);
+	// (backup) SetValidityOfInput( FALSE );
+	Wait( 800 );
+	// (backup) SetValidityOfInput( TRUE );
 	OutputLine(NULL, "綿流しのお祭りが来週なのですから……えっとえっと……、」",
 		   NULL, " The Watanagashi festival is next week... so...\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }

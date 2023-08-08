@@ -1715,12 +1715,10 @@ void main()
 	ModDrawCharacterWithFiltering(0, 12, "sprite/ha1_def2_", "0", "maskright", 1, 0, 0, FALSE, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 12, "ps3/s12/12/181100094", 256, TRUE);
+	ModPlayVoiceLS(4, 12, "org/hanyu6000", 256, TRUE);
 	OutputLine(NULL, "「あとは、",
-		   NULL, "\"In that case...", Line_Continue);
-	// (backup) SetValidityOfInput( FALSE );
-	Wait( 1600 );
-	// (backup) SetValidityOfInput( TRUE );
+		   NULL, "\"In that case...", Line_WaitForInput);
+	ModPlayVoiceLS(4, 12, "org/hanyu6001", 256, TRUE);
 	OutputLine(NULL, "………狂信的な何者か、なのです。」",
 		   NULL, " it must be some religious fanatic...\"", Line_Normal);
 	ClearMessage();

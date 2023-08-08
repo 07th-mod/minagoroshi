@@ -115,13 +115,13 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700222", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "org/ooishi6164", 256, TRUE);
 	OutputLine(NULL, "「公由家には臭い話は聞いてないんだけどなぁ…。",
 		   NULL, "\"I've never heard of them getting up to anything fishy...", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700223", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "org/ooishi6165", 256, TRUE);
 	OutputLine(NULL, "やっぱり、村には信仰を軸にした狂信的な勢力が隠れてるってのかなぁ…。",
 		   NULL, " I guess there must be a fanatical religious sect lurking in the village...", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700224", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "org/ooishi6166", 256, TRUE);
 	OutputLine(NULL, "沼の底がどうなってるのか楽しみです。」",
 		   NULL, " I wonder what secret lies at the bottom of that swamp.\"", Line_Normal);
 	ClearMessage();
@@ -182,7 +182,7 @@ void main()
 	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700232", 256, TRUE);
 	OutputLine(NULL, "あるいは、古手梨花が話してくれると一番うれしいんですがね、なっはっは。",
 		   NULL, "Of course, it would be easier if that's what Rika Furude is going to tell me.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700233", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "org/ooishi6175", 256, TRUE);
 	OutputLine(NULL, "……熊ちゃんも今回の岐阜の件で、決め付ける捜査がどれだけ冤罪を生み出してきたか、よくわかったでしょう。」",
 		   NULL, " ...Kuma-chan, you must have learned exactly how false charges are made, seeing what happened in Gifu today.\"", Line_Normal);
 	ClearMessage();
@@ -197,13 +197,13 @@ void main()
 	ClearMessage();
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700234", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "org/ooishi6176", 256, TRUE);
 	OutputLine(NULL, "「結局、最後まで間違いは認めてませんからねぇ。",
 		   NULL, "\"He flat out refused to admit he made a mistake.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700235", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "org/ooishi6177", 256, TRUE);
 	OutputLine(NULL, "岐阜県警はあくまでもあの死体は鷹野三四だったで通すつもりのようです。",
 		   NULL, " The Gifu police department as a whole is still convinced that the body belongs to Miyo Takano.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 11, "ps3/s12/11/280700236", 256, TRUE);
+	ModPlayVoiceLS(4, 11, "org/ooishi6178", 256, TRUE);
 	OutputLine(NULL, "でもうちは鷹野三四生存で行きますよ。",
 		   NULL, " But we'll operate under the assumption that she lives. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#a59da9>大石</color>", NULL, "<color=#a59da9>Ooishi</color>", NULL, Line_ContinueAfterTyping); }
@@ -1353,9 +1353,12 @@ void main()
 	OutputLine(NULL, "神を欺くことなどできない、知られるのは宿命だったのよ。",
 		   NULL, " It's impossible to hide things from God. ", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f6d9a8>鷹野</color>", NULL, "<color=#f6d9a8>Takano</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 9, "ps3/s12/09/280900245", 256, TRUE);
-	OutputLine(NULL, "古手梨花をあっさり暗殺などできるわけがなかった。　…くすくす、いいわよ梨花ちゃん。",
-		   NULL, "Assassinating Rika Furude won't be so easy. ...Hee hee. All right, Rika-chan.", Line_Normal);
+	ModPlayVoiceLS(4, 9, "org/s12/09/280900245a_org", 256, TRUE);
+	OutputLine(NULL, "古手梨花をあっさり暗殺などできるわけがなかった。",
+		   NULL, "Assassinating Rika Furude won't be so easy.", Line_WaitForInput);
+	ModPlayVoiceLS(4, 9, "org/s12/09/280900245b_org", 256, TRUE);
+	OutputLine(NULL, "　…くすくす、いいわよ梨花ちゃん。",
+		   NULL, " ...Hee hee. All right, Rika-chan.", Line_Normal);
 	ClearMessage();
 
 	DrawScene( "black", 400 );
