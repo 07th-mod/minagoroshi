@@ -319,6 +319,12 @@ void main()
 	OutputLine(NULL, "「がッ！！！」",
 		   NULL, "\"Ugh!!\"", Line_Normal);
 	ClearMessage();
+
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f5e6d3>刑事</color>", NULL, "<color=#f5e6d3>Detective</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 0, "org/mob7h6000", 256, TRUE);
+	OutputLine(NULL, "「…ごッ！！！」",
+		   NULL, "\"...Agh!!\"", Line_Normal);
+	ClearMessage();
 	SetSpeedOfMessage( FALSE, 0 );
 
 	FadeOutBGM( 1, 300, FALSE );
