@@ -1178,8 +1178,8 @@ void main()
 		   NULL, "Rika-chan hushed Satoko and whispered into her ear.", Line_Normal);
 	ClearMessage();
 
-	ModDrawCharacter(2, 5, "sprite/ri1_komaru_a2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE ); //ERROR_EXISTING: Priority 10 on layer 2 used here. Conflict is 1 lines away (line 1182)
-	ModDrawCharacter(1, 4, "sprite/sa1b_sakebu_b1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 11, 0, FALSE ); //ERROR: Priority 10 already in use 1 lines ago (line 1181). Existing Layer: 2 Conflicting Layer: 1 Suggested Priority: 11
+	ModDrawCharacter(2, 5, "sprite/ri1_komaru_a2_", "0", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 0, FALSE );
+	ModDrawCharacter(1, 4, "sprite/sa1b_sakebu_b1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 0, FALSE );
 	DrawScene( "background/gk3", 400 );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
@@ -1192,7 +1192,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(1, 4, "sprite/sa1b_hannbeso_b1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
+	ModDrawCharacter(1, 4, "sprite/sa1b_hannbeso_b1_", "0", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "org/satoko6005", 256, TRUE);
@@ -1204,7 +1204,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(1, 4, "sprite/sa1a_naku_a1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE ); //ERROR_EXISTING: Priority 10 on layer 1 used here. Conflict is 9 lines away (line 1216)
+	ModDrawCharacter(1, 4, "sprite/sa1a_naku_a1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "org/satoko6007", 256, TRUE);
@@ -1213,7 +1213,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(2, 5, "sprite/ri1_majime_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 11, 200, TRUE ); //ERROR: Priority 10 already in use 9 lines ago (line 1207). Existing Layer: 1 Conflicting Layer: 2 Suggested Priority: 11ERROR_EXISTING: Priority 10 on layer 2 used here. Conflict is 12 lines away (line 1228)
+	ModDrawCharacter(2, 5, "sprite/ri1_majime_a1_", "2", 160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 10, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#6972c1>梨花</color>", NULL, "<color=#6972c1>Rika</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 5, "ps3/s12/05/180500685", 256, TRUE);
@@ -1225,7 +1225,7 @@ void main()
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
 	DisableWindow();
-	ModDrawCharacter(1, 4, "sprite/sa1b_sakebu_b1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 12, 200, TRUE ); //ERROR: Priority 10 already in use 12 lines ago (line 1216). Existing Layer: 2 Conflicting Layer: 1 Suggested Priority: 12
+	ModDrawCharacter(1, 4, "sprite/sa1b_sakebu_b1_", "2", -160, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 0, 200, TRUE );
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "org/satoko6008", 256, TRUE);
