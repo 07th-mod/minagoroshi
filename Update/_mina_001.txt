@@ -130,6 +130,9 @@ void main()
 	DrawSceneWithMask("black", "maskleft", 0, 0, 300 );
 	Wait( 300 );
 	DrawSceneWithMask( "scene/045", "maskright", 1, 0, 300 );
+	if (GetGlobalFlag(GHideCG)) {ModSetLayerFilter(0, 179, "none");}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(0, 12, "sprite/ha1_au_", "2", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );}
+	if (GetGlobalFlag(GHideCG)) {DrawSceneWithMask("background/mo1", "maskright", 0, 0, 300 );}
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　振り返ると、その口調を裏切らない、おどおどとした姿が目に入る。",
@@ -184,6 +187,9 @@ void main()
 	OutputLine(NULL, "　聞かれた瞬間に、聞かれることを思い出したという風だった。",
 		   NULL, "She finally realized that I was asking the same old question.", Line_Normal);
 	ClearMessage();
+
+	if (GetGlobalFlag(GHideCG)) {DisableWindow();}
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(0, 12, "sprite/ha1_yowaki_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 200, TRUE );}
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#8676cf>羽入</color>", NULL, "<color=#8676cf>Hanyuu</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 12, "org/hanyu6006", 256, TRUE);

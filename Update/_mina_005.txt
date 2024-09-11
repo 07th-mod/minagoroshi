@@ -506,6 +506,7 @@ void main()
 
 	DrawSceneWithMask( "black", "maskup", 1, 0, 1300 );
 	DrawSceneWithMask( "scene/304a", "maskup", 1, 0, 1300 );
+	if (GetGlobalFlag(GHideCG)) {DrawSceneWithMask("background/moon", "maskup", 1, 0, 1300 );}
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　グラスを片手に、再び窓辺に戻る。",

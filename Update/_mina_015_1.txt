@@ -142,6 +142,8 @@ void main()
 		   NULL, " .........Do your best, okay?\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
 
+	if (GetGlobalFlag(GHideCG)) {ModDrawCharacter(0, 4, "sprite/sa1a_muhyou_a1_", "0", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 0, FALSE );}
+	if (GetGlobalFlag(GHideCG)) {DrawSceneWithMask("background/gk3", "maskright", 0, 0, 300 );}
 
 	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#fcdb77>沙都子</color>", NULL, "<color=#fcdb77>Satoko</color>", NULL, Line_ContinueAfterTyping); }
 	ModPlayVoiceLS(4, 4, "ps3/s12/04/180400170", 256, TRUE);
@@ -175,6 +177,7 @@ void main()
 		   NULL, "\"............\"", Line_Normal);
 	ClearMessage();
 
+	if (GetGlobalFlag(GHideCG)) {DrawSceneWithMask("black", "maskdown", 0, 0, 300 );}
 
 	if (GetGlobalFlag(GADVMode)) { OutputLineAll("", NULL, Line_ContinueAfterTyping); }
 	OutputLine(NULL, "　沙都子は何も答えなかったが、逃げるような仕草もしなかった。",
@@ -698,7 +701,7 @@ void main()
 	OutputLine(NULL, "……沙都子本人が虐待を否定するから虐待はないの一点張りなんだ。",
 		   NULL, " they'll tell us that there's no abuse because you're denying that it's happening.", Line_WaitForInput);
 	ModPlayVoiceLS(4, 1, "org/keiichi6221", 256, TRUE);
-	OutputLine(NULL, "俺たち全員が沙都子を救いたいと思っても、」",
+	OutputLine(NULL, "俺たち全員が沙都子を救いたいと思っても、",
 		   NULL, " We all want to help you,", Line_WaitForInput);
 	ModPlayVoiceLS(4, 1, "org/keiichi6222", 256, TRUE);
 	OutputLine(NULL, "……沙都子が受け容れてくれなければ救えないんだ…！」",
