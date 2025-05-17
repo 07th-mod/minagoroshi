@@ -1595,18 +1595,20 @@ void main()
 		   NULL, "Mutter mutter mutter mutter!!!", Line_Normal);
 	ClearMessage();
 
+	DisableWindow();
+	ModDrawCharacterWithFiltering(1, 6, "sprite/si3_ikari_a1_", "2", "maskleft", 1, -160, 0, FALSE, 0, 0, 0, 0, 0, 0, 300, TRUE );
 
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#956f6e>圭一</color>", NULL, "<color=#956f6e>Keiichi</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 1, "org/shion6087", 256, TRUE);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>詩音</color>", NULL, "<color=#5ec69a>Shion</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 6, "org/shion6087", 256, TRUE);
 	OutputLine(NULL, "「はぁッ？！",
 		   NULL, "\"What?!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "org/shion6088", 256, TRUE);
+	ModPlayVoiceLS(4, 6, "org/shion6088", 256, TRUE);
 	OutputLine(NULL, "　去年のあんたたちは何をやってたんですか！！",
 		   NULL, " What the hell were you guys doing last year?!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "org/shion6089", 256, TRUE);
+	ModPlayVoiceLS(4, 6, "org/shion6089", 256, TRUE);
 	OutputLine(NULL, "　叔父叔母夫婦で共に虐めてたんです！！",
 		   NULL, " She was being abused by both her aunt and uncle!!", Line_WaitForInput);
-	ModPlayVoiceLS(4, 1, "org/shion6090", 256, TRUE);
+	ModPlayVoiceLS(4, 6, "org/shion6090", 256, TRUE);
 	OutputLine(NULL, "　まさか叔母だけが虐めてたって認識じゃないですよね？！」",
 		   NULL, " Please don't tell us that you were only aware about the abuse from her aunt!!\"", Line_Normal);
 	ClearMessage();
@@ -2080,13 +2082,13 @@ void main()
 	ClearMessage();
 
 	DrawScene( "background/ka1_01", 300 );
-	ModDrawCharacter(0, 3, "sprite/me1b_def_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 300, TRUE );
+	ModDrawCharacter(0, 2, "sprite/re1a_okoru_a1_", "1", 0, 0, 0, FALSE, 0, 0, 0, 0, 0, 0, 0, 5, 300, TRUE );
 
-	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#5ec69a>魅音</color>", NULL, "<color=#5ec69a>Mion</color>", NULL, Line_ContinueAfterTyping); }
-	ModPlayVoiceLS(4, 3, "org/rena6066", 256, TRUE);
+	if (GetGlobalFlag(GADVMode)) { OutputLine("<color=#f0953d>レナ</color>", NULL, "<color=#f0953d>Rena</color>", NULL, Line_ContinueAfterTyping); }
+	ModPlayVoiceLS(4, 2, "org/rena6066", 256, TRUE);
 	OutputLine(NULL, "「係長さん。",
 		   NULL, "\"Please.", Line_WaitForInput);
-	ModPlayVoiceLS(4, 3, "org/rena6067", 256, TRUE);
+	ModPlayVoiceLS(4, 2, "org/rena6067", 256, TRUE);
 	OutputLine(NULL, "その対応を決める期限を教えてください。」",
 		   NULL, " Tell us when you will make that decision.\"", GetGlobalFlag(GLinemodeSp));
 	if (GetGlobalFlag(GADVMode)) { ClearMessage(); } else { OutputLineAll(NULL, "\n", Line_ContinueAfterTyping); }
